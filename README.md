@@ -1,4 +1,4 @@
-# https://www.btcpayserver.com
+# https://www.btcpayserver.org
 
 btcpayserver is a project by @NicolasDorier, aiming to provide a
 checkout experience comparable to bitpay (since they are planning to
