@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1500px" height="500px" viewBox="0 0 1500 500" enable-background="new 0 0 1500 500" xml:space="preserve">
+<g id="Layer_3">
+	<path id="fillable2" fill="none" d="M740.911,369.566c-3.793,1.199-7.579,2.392-11.353,3.567
+		C404.22,474.823,135.02,494.85-14.996,496.265v8.292h1519.521V267.494v-25.319C1354.989,241.308,1086.387,260.004,740.911,369.566z
+		"/>
+	<g>
+		<g>
+			<defs>
+				<path id="SVGID_1_" d="M-14.995-10.444v485.077v21.632c150.014-1.415,419.216-21.439,744.555-123.13
+					c3.772-1.179,7.558-2.367,11.353-3.568c345.476-109.562,527.652-167.974,763.615-127.391V0L-14.995-10.444z"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  overflow="visible"/>
+			</clipPath>
+			
+				<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="311.5938" y1="-166.7588" x2="1860.7656" y2="-166.7588" gradientTransform="matrix(1.18 -0.2714 -0.2306 -1.0026 -535.4814 447.8035)">
+				<stop  offset="0.3473" style="stop-color:#0CB526"/>
+				<stop  offset="1" style="stop-color:#E7F600"/>
+			</linearGradient>
+			<polygon clip-path="url(#SVGID_2_)" fill="url(#SVGID_3_)" points="-67.36,799.877 1760.643,379.393 1636.692,-159.463 
+				-191.31,261.021 			"/>
+		</g>
+	</g>
+	
+		<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="-1853.791" y1="68.0938" x2="-475.6996" y2="-574.5209" gradientTransform="matrix(1 0 0 -1 1892 -46)">
+		<stop  offset="0.0473" style="stop-color:#007D22"/>
+		<stop  offset="0.335" style="stop-color:#09A525"/>
+		<stop  offset="0.4407" style="stop-color:#0CB526"/>
+		<stop  offset="0.6357" style="stop-color:#0CB526"/>
+		<stop  offset="0.6678" style="stop-color:#0CB526"/>
+	</linearGradient>
+	<path fill="url(#SVGID_4_)" d="M1644.776,38.551c0,0-397.21-34.547-835.5,211.456C363.696,481.247-14.995,496.158-14.995,496.158V0
+		h1659.771V38.551z"/>
+	<polygon opacity="0.4" fill="#E7F600" enable-background="new    " points="287.614,206.592 -1.119,391.479 -1.119,29.818 	"/>
+	<polygon id="smtri1" opacity="0.4" fill="#E7F600" enable-background="new    " points="96.264,161.038 -8.236,224.539 
+		-8.236,97.538 	"/>
+	<polygon id="smtri3" opacity="0.2" fill="#E7F600" enable-background="new    " points="148.514,353.993 44.014,417.493 
+		44.014,290.493 	"/>
+	<polygon id="smtri4" opacity="0.1" fill="#DDDDDD" enable-background="new    " points="277.507,160.156 173.007,223.656 
+		173.007,96.656 	"/>
+</g>
+</svg>

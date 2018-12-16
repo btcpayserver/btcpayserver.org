@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1500px" height="500px" viewBox="-250 0 1500 500" enable-background="new -250 0 1500 500" xml:space="preserve">
+<g id="Layer_3">
+	<g>
+		<path id="fillable2" fill="none" d="M493.424,372.558c-3.793,1.201-7.579,2.392-11.352,3.569
+			c-325.339,101.688-594.54,121.715-744.555,123.13v8.292h1519.521V270.486v-25.314
+			C1107.502,244.304,838.899,262.996,493.424,372.558z"/>
+		
+			<linearGradient id="fillable1_1_" gradientUnits="userSpaceOnUse" x1="-1583.6919" y1="-131.5137" x2="-1675.5088" y2="389.2056" gradientTransform="matrix(1 0 0 -1 2104 245)">
+			<stop  offset="0" style="stop-color:#007200"/>
+			<stop  offset="0.1" style="stop-color:#0CB526"/>
+			<stop  offset="0.75" style="stop-color:#e7f600"/>
+		</linearGradient>
+		<path id="fillable1" fill="url(#fillable1_1_)" d="M-262.482-7.447v485.072v21.632c150.014-1.415,419.216-21.441,744.555-123.13
+			c3.773-1.179,7.557-2.368,11.352-3.569c345.475-109.562,614.078-128.253,763.615-127.386V-7.447H-262.482z"/>
+	</g>
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-1522.6899" y1="-195.2705" x2="-1558.5723" y2="317.87" gradientTransform="matrix(1 0 0 -1 2104 245)">
+		<stop  offset="0" style="stop-color:#007D22"/>
+		<stop  offset="0.6401" style="stop-color:#0CB526"/>
+		<stop  offset="1" style="stop-color:#0CB526"/>
+	</linearGradient>
+	<path fill="url(#SVGID_1_)" d="M1397.289,7c0,0-361.5,0-835.5,246c-445.58,231.239-824.271,246.15-824.271,246.15V-16.375h1659.771
+		V7z"/>
+	<polygon opacity="0.25" fill="#e7f600" enable-background="new    " points="86.429,237.25 -252.482,482.25 -252.482,-7.75 	"/>
+	<polygon id="smtri1" opacity="0.75" fill="#e7f600" enable-background="new    " points="-64.982,91.75 -169.482,155.25 
+		-169.482,28.25 	"/>
+	<polygon id="smtri2" opacity="0.5" fill="#e7f600" enable-background="new    " points="-111.982,148.75 -216.482,212.25 
+		-216.482,85.25 	"/>
+	<polygon id="smtri3" opacity="0.25" fill="#e7f600" enable-background="new    " points="58.018,330.75 -46.482,394.25 
+		-46.482,267.25 	"/>
+	<polygon id="smtri4" opacity="0.15" fill="#DDDDDD" enable-background="new    " points="58.018,330.75 -46.482,394.25 
+		-46.482,267.25 	"/>
+</g>
+<style>
+	#smtri1, #smtri2, #smtri3{
+		transform-origin:50% 50%;
+		animation-name: buildIn;
+		animation-iteration-count:infinite;
+		animation-direction: alternate;
+		animation-easing-function:ease-in-out;
+	}
+	#smtri1{animation-duration:2s;}
+	#smtri2{animation-duration:4s;}
+	#smtri3{animation-duration:8s;}
+	#smtri4{
+		transform-origin:50% 50%;
+		transform: translateX(480px)translateY(30px)scale(0.75);
+		animation-name: buildIn2;
+		animation-iteration-count:infinite;
+		animation-direction: alternate;
+		animation-easing-function:ease-in-out;
+		animation-duration:3s;
+	}
+
+	@keyframes buildIn{
+		to{
+			transform: translateX(10px);
+		}
+	}
+
+	@keyframes buildIn2{
+		to{
+			transform: translateX(500px)translateY(30px)scale(0.75);
+		}
+	}
+
+</style>
+</svg>
