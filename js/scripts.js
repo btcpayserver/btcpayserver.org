@@ -212,7 +212,7 @@ function setJSEnvironment(){
     document.getElementById('videoPlayButton').removeAttribute('target', '');
     document.getElementById('nonJavascriptMessage').style.display='none';
 
-    document.getElementById('valueSelector').style.display='grid';
+    document.getElementById('valueSelectorHolder').style.display='block';
     document.querySelectorAll('.demoBlockText')[0].style.display='block';
     document.querySelectorAll('.payButtonLiveDemoInvoice')[0].style.display='block';
   }catch(err){}
