@@ -372,7 +372,8 @@ function adjustValue(d, e){
     document.querySelectorAll('.finalValue_')[0].outerHTML = '<input class="finalValue_" value="' + ( retrNum+1) + '" type="text" placeholder="' + ( retrNum+1) + '"'+ onclickStr +'/>';
   }
   if(d=='verify'){
-    if(isNaN(Number(e.key)) != false){
+    var allowed_ = ['.', 'Backspace', 'ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft'];
+    if(isNaN(Number(e.key)) != false && allowed_.includes(e.key) != true){
       document.querySelectorAll('.finalValue_')[0].outerHTML = '<input class="finalValue_" value="' + (5) + '" type="text" placeholder="' + (5) + '"'+ onclickStr +'/>';
       document.querySelectorAll('.finalValue_')[0].focus();
     }
