@@ -315,7 +315,7 @@ frameWatcher = setInterval(function(){
     // history.replaceState(null, null, '/#BTCPay_Server');
     document.getElementById('donationCTA').setAttribute('class', 'flyAwayCTA01');
     setTimeout(function(){
-      var sF_ = 0.75;
+      var sF_ = 0.85;
       var sH_ = 720;
       document.getElementById('donationCTA').style.display='none';
       var ifH_ = document.getElementById('invoiceHolder_');
