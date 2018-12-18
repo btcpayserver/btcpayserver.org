@@ -32,17 +32,14 @@ function closeMenu(){
 function endVideo(){
   document.getElementById('videoContainer').style.display = 'none'
   document.getElementById('videoContainer_video0').innerHTML='';
-  // document.querySelectorAll('#videoContainer_video0')[0].pause();
 }
 
 function playVideo(){
   var videoContainer_video0 = document.getElementById('videoContainer_video0');
   videoContainer_video0.innerHTML='<iframe id="videoContainerVideoPayload_0" src="https://www.youtube-nocookie.com/embed/ZIfJyq9RimM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-  //'<source src="/video/171221_05_Bitcoin.mp4" type="video/mp4">';
   document.getElementById('videoContainer').style.display = 'grid';
   document.getElementById('videoContainerVideoPayload_0').width = videoContainer_video0.clientWidth;
-  document.getElementById('videoContainerVideoPayload_0').height = videoContainer_video0.clientWidth/1.529;// + '" height="523"
-  // document.querySelectorAll('#videoContainer_video0')[0].play();
+  document.getElementById('videoContainerVideoPayload_0').height = videoContainer_video0.clientWidth/1.529;
 }
 
 function setClickWatch(){
@@ -284,10 +281,6 @@ function randomString(length) {
 
 
 function invoiceframePaybuttonSublitAndFlyIntoFrameView(btn){
-  var fVal_ = document.querySelectorAll('.finalValue_')[0].getAttribute('value');
-  var retrNum = Number(fVal_);
-  retrNum = retrNum <= 2 ? 2 : retrNum;
-  val_ = retrNum;
   document.getElementById('donationCTA').innerHTML = '<h2>Experience BTCPay Server and help Support the Project</h2><svg version="1.1" class="spinnerAnimated" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="283.46px" height="283.46px" viewBox="0 0 283.46 283.46" enable-background="new 0 0 283.46 283.46" xml:space="preserve"><circle fill="none" stroke="#329f65" stroke-width="30" stroke-linecap="round" stroke-miterlimit="10" cx="141.73" cy="141.73" r="106.762"/></svg><p class="genIn_">Generating your invoice...</p>';
 
 
@@ -352,32 +345,40 @@ window.informOfProgress = function(e,t){
     if(t.contentWindow.location.href === 'about:srcdoc' && iframeStageDetection>=3){
       window.location='/';
     }
-    console.log(t.contentWindow.location.href);
   }catch(err){this.console.log(err);}
   // history.replaceState('/', null, '/index.php');
 }
 
 
-function adjustValue(d, e){
+function adjustValue(d, e, t){
   var fVal_ = document.querySelectorAll('.finalValue_')[0].getAttribute('value');
   var retrNum = Number(fVal_);
-  retrNum = retrNum <= 2 ? 2 : retrNum;
+  retrNum = retrNum <= 1 ? 1 : retrNum;
 
   var onclickStr = " onkeyup=\"adjustValue('verify', event)\"";
 
   if(d=='minus'){
-    document.querySelectorAll('.finalValue_')[0].outerHTML = '<input class="finalValue_" value="' + ( retrNum-1) + '" type="text" placeholder="' + ( retrNum-1) + '"'+ onclickStr +'/>';
+    var minusedNo = retrNum-1 >= 1? retrNum-1 : 1;
+    document.querySelectorAll('.finalValue_')[0].outerHTML = '<input class="finalValue_" value="' + ( minusedNo) + '" type="text" placeholder="' + ( minusedNo) + '"'+ onclickStr +'/>';
+    val_ = minusedNo;
   }
   if(d=='plus'){
-    document.querySelectorAll('.finalValue_')[0].outerHTML = '<input class="finalValue_" value="' + ( retrNum+1) + '" type="text" placeholder="' + ( retrNum+1) + '"'+ onclickStr +'/>';
+    var plusNo = retrNum+1 >= 1? retrNum+1: 1;
+    document.querySelectorAll('.finalValue_')[0].outerHTML = '<input class="finalValue_" value="' + ( plusNo) + '" type="text" placeholder="' + ( plusNo) + '"'+ onclickStr +'/>';
+    val_=plusNo;
   }
   if(d=='verify'){
     var allowed_ = ['.', 'Backspace', 'ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft'];
     if(isNaN(Number(e.key)) != false && allowed_.includes(e.key) != true){
       document.querySelectorAll('.finalValue_')[0].outerHTML = '<input class="finalValue_" value="' + (5) + '" type="text" placeholder="' + (5) + '"'+ onclickStr +'/>';
       document.querySelectorAll('.finalValue_')[0].focus();
+      val_ = 5;
+    }else{
+      t.value = t.value;
+      val_ = t.value;
     }
   }
+
 
   if(retrNum<1){
     document.querySelectorAll('.finalValue_')[0].innerHTML = ( 1);
