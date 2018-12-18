@@ -355,7 +355,7 @@ function adjustValue(d, e, t){
   var retrNum = Number(fVal_);
   retrNum = retrNum <= 1 ? 1 : retrNum;
 
-  var onclickStr = " onkeyup=\"adjustValue('verify', event)\"";
+  var onclickStr = " onkeyup=\"adjustValue('verify', event, this)\"";
 
   if(d=='minus'){
     var minusedNo = retrNum-1 >= 1? retrNum-1 : 1;
