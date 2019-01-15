@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="description" content="BTCPay Server is a free, self-hosted and fully open-source cryptocurrency payment processor which enables you to receive Bitcoin and altcoin payments without any fees or third-party. With BTCPay you are your own payment processor. Funds go directly to your wallet; your private key is never required — enhanced security,  privacy, and censorship-resistance.">
     <meta name="keywords" content="btcpay">
-    <meta name="author" content="Ed Sinaswee">
+    <meta name="author" content="Ed Sinaswee at flat18.co.uk">
     <meta property="og:title" content="BTCPay Server">
     <meta property="og:description" content="BTCPay Server is a free, self-hosted and fully open-source cryptocurrency payment processor which enables you to receive Bitcoin and altcoin payments without any fees or third-party. With BTCPay you are your own payment processor. Funds go directly to your wallet; your private key is never required — enhanced security,  privacy, and censorship-resistance.">
     <meta property="og:image" content="favicon.png">
@@ -31,8 +31,10 @@
       <div class="pageContainerTopBackground">
         <div class="promoArea" id="promoArea">
           <div class="promoDetails">
-            <h1>Accept Bitcoin payments, 0% fees, no third-party </h1>
-            <p>BTCPay Server is a free, self-hosted and fully open-source cryptocurrency payment processor which enables you to receive Bitcoin and altcoin payments without any fees or third-party. With BTCPay you are your own payment processor. Funds go directly to your wallet; your private key is never required — enhanced security,  privacy, and censorship-resistance.</p>
+            <h1>Start Accepting Bitcoin payments with 0% fees & no third-party</h1>
+            <p>BTCPay Server is a free, self-hosted and fully open-source cryptocurrency payment processor designed with security, privacy and censorship-resistance at its core. <br><span id="infoButton01" style="display:none;"><i class="fas fa-info-circle"></i></span>
+            <span id="furtherQuote"><br>With BTCPay Server you receive Bitcoin and altcoin payments without any fees or third-party involvement. You are your own payment processor. Funds go directly to your wallet; your private key is never required.</span>
+            </p>
             <br>
             <a alt="Live demo on Mainnet" class="promoButton" href="https://mainnet.demo.btcpayserver.org" target="blank_">Live demo</a>
             <a alt="How it works video" class="promoButtonProminent" id="videoPlayButton" href="https://youtu.be/ZIfJyq9RimM" target="_blank" onclick="playVideo();"><i class="fas fa-play"></i>&nbsp;&nbsp;How it Works</a>
@@ -59,7 +61,15 @@
                 <div id="valueSelector">
                   <span class="valueControlBtn" onclick="adjustValue('minus')"><i class="fas fa-minus"></i></span>
                   <input class="finalValue_" value="5" type="text" placeholder="5" onkeyup="adjustValue('verify', event, this)"/>
-                  <p>USD</p>
+                  <p>
+                    <i class="fas fa-chevron-down clickable_ drowdownHacky_"></i>
+                    <select onchange="setCurrency(this)">
+                      <option value="USD">USD</option>
+                      <option value="GBP">GBP</option>
+                      <option value="EUR">EUR</option>
+                      <option value="BTC">BTC</option>
+                    </select>
+                  </p>
                   <span class="valueControlBtn" onclick="adjustValue('plus')"><i class="fas fa-plus"></i></span>
                 </div>
               </div>
@@ -68,11 +78,12 @@
                   <img src="img/pay-2.png" onclick="invoiceframePaybuttonSublitAndFlyIntoFrameView(this)"/>
                 </div>
               </div>
-
           </div>
         </div>
+
       </div>
       <div class="pageContainer" id="pageContainer">
+
       <a class="scrollPrompt" href="#modularInformationBlock">Scroll<i class="fas fa-chevron-down"></i></a>
         <div class="pageItem whiteToGrey">    
 
@@ -139,7 +150,6 @@
     <a alt="Try out the live demo on Mainnet" class="modernLink" href="https://mainnet.demo.btcpayserver.org/Account/Register">Try out the live demo&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
     </div>
     <div class="payloadVideo">
-
     </div>
   </div>
   <div class="payloadItem_" i="1" id="_Payload_1">
@@ -291,7 +301,7 @@
     </div>
     <div class="payloadVideo">
     </div>
-  </div>
+</div>
 
 
         </div>
@@ -303,19 +313,19 @@
       <div class="blockTrioMP" id="prominentTrioBlock">
         <div class="trioMPBlockItem">
           <h3>Demo</h3>
-          <div class="img_" style="background-image: url(img/merch-01-01.svg);"></div>
+          <div class="img_" style="background-image: url(img/demo2.png);"></div>
           <p class="inParagraphLink">See the software in action by playing around with the demo server on <a alt="demo server on Mainnet" href="https://mainnet.demo.btcpayserver.org/" target="blank_">Mainnet</a> or <a alt="Testnet" href="https://testnet.demo.btcpayserver.org/" target="blank_">Testnet</a><br>Also try the e-commerce demo <a alt="demo store" href="https://store.demo.btcpayserver.org/" target="blank_">Store</a> <a alt="Point of Sale" href="https://mainnet.demo.btcpayserver.org/apps/3utBTfSKkW4gK7aQMd2hW5Bh9Fpa/pos" target="blank_">Point of Sale App</a> or a <a alt="payment button" href="https://store.demo.btcpayserver.org/?page_id=44" target="blank_">Payment Button</a></p>
           <a alt="Try it" class="modernLink" href="https://mainnet.demo.btcpayserver.org/Account/Register" target="blank_">Try it&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
         </div>
         <div class="trioMPBlockItem">
           <h3>Docs</h3>
-          <div class="img_" style="background-image: url(img/coins-01.svg);"></div>
+          <div class="img_" style="background-image: url(img/docs2.png);"></div>
           <p>Need help using BTCPay? From basics to technical troubleshooting. Learn more and find answers to common questions and issues. Our extensive user-documentation covers everything to get you started.</p>
           <a alt="Read Docs" class="modernLink" href="http://docs.btcpayserver.org/" target="blank_">Read Docs&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
         </div>
         <div class="trioMPBlockItem">
           <h3>GitHub</h3>
-          <div class="img_" style="background-image: url(img/cust-01-01.svg);"></div>
+          <div class="img_" style="background-image: url(img/git.png);"></div>
           <p>Having a technical question not covered in docs? Developers and contributors who wish to help us are welcome to join us on GitHub and help us improve the software.</p>
           <a alt="Contribute" class="modernLink" href="https://github.com/btcpayserver" target="blank_">Contribute&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
         </div>
@@ -334,7 +344,7 @@
             <a alt="Telegram" class="modernLink_Cluster" href="https://t.me/btcpayserver" target="blank_"><i class="fab fa-telegram"></i>Telegram</a>
           </div>
         </div>
-        <img class="floatContentRight" src="img/man.png"/>
+        <img class="floatContentRight" src="img/community.png"/>
       </div>
     </div>
 
@@ -394,7 +404,7 @@
           </div>
           <p class="copyright_">Website built with ⚡ by <a alt="Flat 18 Microsystems Development LLC << FLAT18.CO.UK >>" href="https://flat18.co.uk">FLAT18.CO.UK</a>
           <br>
-          Released under MIT license
+          Content Released under MIT license
           <br>
           </p>
           </div>
