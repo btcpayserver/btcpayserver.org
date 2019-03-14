@@ -1,0 +1,64 @@
+<svg version="1.1" id="BG_WV_NSHR_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" width="1200px" height="300px" viewBox="0 0 1200 300" enable-background="new 0 0 1200 300" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="BG_WV_NSHR_SVGID_1_" width="1200" height="300"/>
+	</defs>
+	<clipPath id="BG_WV_NSHR_SVGID_2_">
+		<use xlink:href="#BG_WV_NSHR_SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#BG_WV_NSHR_SVGID_2_)">
+		<g id="Layer_3__9iI">
+			<g>
+				<g>
+					<defs>
+						<path id="BG_WV_NSHR_SVGID_3_" d="M674.482,268.234C779.702,345.188,1182.5,133.5,1268.5,305.5l21.223-321.248L-0.394-10.045L-43.5,21.5
+							l-47,78C487.5-37.5,513.5,150.5,674.482,268.234z"/>
+					</defs>
+					<clipPath id="BG_WV_NSHR_SVGID_4_">
+						<use xlink:href="#BG_WV_NSHR_SVGID_3_"  overflow="visible"/>
+					</clipPath>
+					
+						<linearGradient id="BG_WV_NSHR_SVGID_5_" gradientUnits="userSpaceOnUse" x1="1555.875" y1="1633.7773" x2="1870.6698" y2="837.5395" gradientTransform="matrix(1.18 -0.2714 0.2306 1.0026 -1488.4668 -765.647)">
+						<stop  offset="0" style="stop-color:#E7F600"/>
+						<stop  offset="0.0835" style="stop-color:#E1F401"/>
+						<stop  offset="0.1924" style="stop-color:#D1EF04"/>
+						<stop  offset="0.3154" style="stop-color:#B6E709"/>
+						<stop  offset="0.4489" style="stop-color:#90DC0F"/>
+						<stop  offset="0.5907" style="stop-color:#60CE17"/>
+						<stop  offset="0.7373" style="stop-color:#26BD22"/>
+						<stop  offset="0.7968" style="stop-color:#0CB526"/>
+					</linearGradient>
+					<polygon clip-path="url(#BG_WV_NSHR_SVGID_4_)" fill="url(#BG_WV_NSHR_SVGID_5_)" points="-24.5,376.5 1607.5,375.5 1459.379,-379.817 
+						-56.178,40.652 					"/>
+				</g>
+			</g>
+			
+				<linearGradient id="BG_WV_NSHR_SVGID_6_" gradientUnits="userSpaceOnUse" x1="-1086.1611" y1="1666.3662" x2="-528.5112" y2="2462.7734" gradientTransform="matrix(1 0 0 1 1500 -1965)">
+						<stop  offset="0" style="stop-color:#005044"/>
+						<stop  offset="0.2821" style="stop-color:#09A725"/>
+						<stop  offset="0.6321" style="stop-color:#1BD926"/>
+						<stop  offset="1" style="stop-color:#02623E"/>
+			</linearGradient>
+			<path fill="url(#BG_WV_NSHR_SVGID_6_)" d="M1297.5,269.5c-98-226-494.773,111.198-641-12c-127-107-172-285-668-195l3.637-65.854L1294.5-9.5
+				L1297.5,269.5z"/>
+		</g>
+		<g id="triangularis" opacity="0">
+			<polygon opacity="0.3" fill="#6BDB00" enable-background="new    " points="121.959,185.407 -30.479,283.021 -30.479,92.08 			
+				"/>
+			<polygon id="smtri1_1_" opacity="0.4" fill="#6BDB00" enable-background="new    " points="38.936,160.357 -16.236,193.884 
+				-16.236,126.833 			"/>
+			<polygon id="smtri3_1_" opacity="0.3" fill="#6BDB00" enable-background="new    " points="71.52,262.23 16.35,295.755 
+				16.35,228.704 			"/>
+			<polygon id="smtri4_1_" opacity="0.3" fill="#6BDB00" enable-background="new    " points="122.623,142.86 67.452,176.385 
+				67.452,109.334 			"/>
+		</g>
+		
+			<linearGradient id="BG_WV_NSHR_SVGID_7_" gradientUnits="userSpaceOnUse" x1="812.9717" y1="320.5791" x2="1082.5945" y2="-64.4825" gradientTransform="matrix(1 0 0 -1 -56 155)">
+			<stop  offset="0" style="stop-color:#09A725"/>
+			<stop  offset="1" style="stop-color:#0EB625"/>
+		</linearGradient>
+		<path fill="url(#BG_WV_NSHR_SVGID_7_)" d="M520.5,0c112,119,61.688,263.5,234,263.5s313-247,502-205v-63L520.5,0z"/>
+	</g>
+</g>
+</svg>
