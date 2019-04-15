@@ -38,65 +38,22 @@
             <span id="furtherQuote"><br>Receive your Bitcoin and altcoin payments without any fees or third-party involvement. You are your own payment processor. Funds go directly to your wallet; your private key is never required.</span>
             </p>
             <br>
+            <div class="prpmpLinkOrg">
             <a alt="Live demo on Mainnet" class="promoButton" href="https://mainnet.demo.btcpayserver.org" target="blank_">Live demo</a>
-            <a alt="How it works video" class="promoButtonProminent" id="videoPlayButton" href="https://youtu.be/ZIfJyq9RimM" target="_blank" onclick="playVideo();"><i class="fas fa-play"></i>&nbsp;&nbsp;How it Works</a>
           </div>
-          <div class="promoAnimation" id="don_Par_sPa">
-
-            <div id="cancelDonation" style="display:none;" onclick="cancelDonation();"><i class="fas fa-arrow-left"></i>&nbsp;cancel</div>
-
-            <div id="donationCTA">
-              <h2>Experience BTCPay Server<span class="precis_"> and help Support the Project</span></h2>
-
-              <div id="nonJavascriptMessage">
-                <h4>JavaScript is turned off in your browser. This demo will launch in a new tab with slightly diminished features.</h4>
-                <p>Enable JavaScript and reload this page to get the full experience or click below to try it out by making a <b>USD 5</b> donation to the project.</p>
-
-            <form method="POST" action="https://mainnet.demo.btcpayserver.org/api/v1/invoices">
-                <input type="hidden" name="storeId" value="EErYwCthBNfJUpuU1etH1uhg3x1YVH1q1F2zez7u1AAX" />
-                <input type="hidden" name="price" value="5" />
-                <input type="hidden" name="currency" value="USD" />
-                <input type="image" src="img/pay-2.png" name="submit" style="width:209px" alt="Pay with BtcPay, Self-Hosted Bitcoin Payment Processor">
-            </form> 
-
-              </div>
-              <div id="valueSelectorHolder" style="display:none;">
-                <div id="valueSelector">
-                  <span class="valueControlBtn" onclick="adjustValue('minus')"><i class="fas fa-minus"></i></span>
-                  <input class="finalValue_" value="5" type="text" placeholder="5" onkeyup="adjustValue('verify', event, this)"/>
-                  <p>
-                    <i class="fas fa-chevron-down clickable_ drowdownHacky_"></i>
-                    <select onchange="setCurrency(this)">
-                      <option value="USD">USD</option>
-                      <option value="GBP">GBP</option>
-                      <option value="EUR">EUR</option>
-                      <option value="BTC">BTC</option>
-                    </select>
-                  </p>
-                  <span class="valueControlBtn" onclick="adjustValue('plus')"><i class="fas fa-plus"></i></span>
-                </div>
-              </div>
-                <p class="demoBlockText" style="display:none;">
-                  Make a donation to get a taste of BTCPay Server invoicing and payment processing
-                </p>
-                <div class="payButtonLiveDemoInvoice" style="display:none;">
-                  <img src="img/pay-2.png" onclick="invoiceframePaybuttonSublitAndFlyIntoFrameView(this)"/>
-                </div>
-              </div>
+          </div>
+          <div class="modinvOuter" id="don_Par_sPa">
+          <div class="unfetteredVideoFrame" id="unfetteredVideoFrame">
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe  id="unfetteredVideo" src="https://player.vimeo.com/video/330290302?autoplay=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+          </div>
           </div>
         </div>
-
       </div>
       <div class="pageContainer" id="pageContainer">
-
-          
         <div class="pageItemInfo whiteToGrey" id="modularInformationBlock" dir='ltr'>  
           <span style="display:none;" onclick="carousel('l')" class="carouselControl c_left"><i class="fas fa-chevron-left"></i></span>  
           <div class="choices_holder" id="choices_holder" style="display:unset;">
             <div id="choices_" class="noJSChoices tiledPayloads" style="display: block;column-gap: 20px;width: 80vw;max-width: 1200px;padding: 50px 0;margin: auto;">
-
-
-
               <div alt="No fees" class="choice_">
                 <i class="n_iconography_ fab fa-creative-commons-zero"></i>
                 <span>Receive Bitcoin payments as a business or an individual. No fees. No third-party.</span>
@@ -262,6 +219,78 @@
         </div>
       </div>
     </div>
+    
+    <div class="pageItem ">
+      <div class="blockTrioMP" id="prominentTrioBlock">
+        <div class="trioMPBlockItem">
+          <h3>Demo</h3>
+          <div class="img_" style="background-image: url(img/demo2-01.png);"></div>
+          <p class="inParagraphLink">Have a go at the demo server on <a alt="demo server on Mainnet" href="https://mainnet.demo.btcpayserver.org/" target="blank_">Mainnet</a> or <a alt="Testnet" href="https://testnet.demo.btcpayserver.org/" target="blank_">Testnet</a><br>Also try the e-commerce demo <a alt="demo store" href="https://store.demo.btcpayserver.org/" target="blank_">Store</a> <a alt="Point of Sale" href="https://mainnet.demo.btcpayserver.org/apps/3utBTfSKkW4gK7aQMd2hW5Bh9Fpa/pos" target="blank_">Point of Sale App</a> or a <a alt="payment button" href="https://store.demo.btcpayserver.org/index.php/payment-button-demo/" target="blank_">Payment Button</a></p>
+          <a alt="Try it" class="modernLink" href="https://mainnet.demo.btcpayserver.org/Account/Register" target="blank_">Try it&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+        <div class="trioMPBlockItem">
+          <h3>Docs</h3>
+          <div class="img_" style="background-image: url(img/docs2-01.png);"></div>
+          <p>Need help using BTCPay? Our extensive user-documentation covers everything to get you started or help sort more technical issues.</p>
+          <a alt="Read Docs" class="modernLink" href="http://docs.btcpayserver.org/" target="blank_">Read Docs&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+        <div class="trioMPBlockItem">
+          <h3>GitHub</h3>
+          <div class="img_" style="background-image: url(img/git-01.png);"></div>
+          <p>Having a technical question not covered in docs or want to help improve the code? Help us out on GitHib.</p>
+          <a alt="Contribute" class="modernLink" href="https://github.com/btcpayserver" target="blank_">Contribute&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="pageItemP" id="makeADonation">
+      <div class="pageItemInnerSpacer">
+          <h2>Support the BTCPay Project</h2>
+        <div class="donParent">
+          <div id="closeDonationButton" style="display:none;" onclick="cDon();"><i class="fas fa-arrow-left"></i>&nbsp;cancel</div>
+<div class="promoteDonation" id="modPar">
+
+<div id="jsInvoiceWorkspacePre">
+
+<div id="nonJavascriptMessage">
+<span>Please enable JavaScript for the best experience of this donation invoicing module.</span>
+<form method="POST" action="https://mainnet.demo.btcpayserver.org/api/v1/invoices">
+<input type="hidden" name="storeId" value="EErYwCthBNfJUpuU1etH1uhg3x1YVH1q1F2zez7u1AAX" />
+<input type="hidden" name="price" value="5" />
+<input type="hidden" name="currency" value="USD" />
+<input type="image" src="img/pay-2.png" name="submit" style="width:209px" alt="Pay with BtcPay, Self-Hosted Bitcoin Payment Processor">
+</form> 
+</div>
+
+<div id="valueSelectorHolder" style="display:none;">
+<span class="valueControlBtn" onclick="adjV('minus')"><i class="fas fa-minus"></i></span>
+<input class="finalValue_" value="5" type="text" placeholder="5" onkeyup="adjV('verify', event, this)"/>
+<select onchange="setCurrency(this)">
+<option value="USD">USD</option>
+<option value="GBP">GBP</option>
+<option value="EUR">EUR</option>
+<option value="BTC">BTC</option>
+</select>
+<span class="valueControlBtn" onclick="adjV('plus')"><i class="fas fa-plus"></i></span>
+</div>
+
+
+<img id="GenerateInvoiceButton" src="img/pay-2-c.png" onclick="genInvoice_(this);"/>
+
+</div>
+<div class="text-center" id="statusButton" style="display:none;">
+<svg version="1.1" class="spinnerAnimated" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="283.46px" height="283.46px" viewBox="0 0 283.46 283.46" enable-background="new 0 0 283.46 283.46" xml:space="preserve"><circle fill="none" stroke="#329f65" stroke-width="30" stroke-linecap="round" stroke-miterlimit="10" cx="141.73" cy="141.73" r="106.762"/></svg><span class="genIn_">Generating your invoice...</span>
+</div>
+
+<div id="jsInvoiceWorkspace" style="display:none;" class=""></div>
+
+</div>
+
+<span class="demoBlockText" style="display:none;">Donate and try out live invoicing</span>
+</div>
+
+<p>See BTCPay Server invoicing and payment confirmation live by making a donation to the project.</p>
+</div>
+</div>
 
     <div class="pageItem background_texture_dots" id="communityCTA">
       <div class="pageItemInnerSpacer">
