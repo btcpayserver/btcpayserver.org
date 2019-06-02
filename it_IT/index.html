@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="BTCPay Server è un processore di pagamento self-hosted e completamente open-source. Sicuro, privato e resistente alla censura. ">
+    <meta name="keywords" content="btcpay">
+    <meta name="author" content="Ed Sinaswee">
+    <meta property="og:title" content="BTCPay Server">
+    <meta property="og:description" content="BTCPay Server è un processore di pagamento self-hosted e completamente open-source. Sicuro, privato e resistente alla censura. ">
+    <meta property="og:image" content="favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <title>BTCPay Server</title>
+    <link rel="stylesheet" type="text/css" href="/fonts/fa_/fa_.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <script>
+        window.jsEnviron = true;
+        window.cMod = "stickLeft";
+        window.donationTitle = ("Inserisci l'importo da donare ")[0] != "$" ? "Inserisci l'importo da donare " : "Enter an amount to donate";
+        window.noJSVideo = "Clicca qui per aprire il video in una nuova scheda.";
+    </script>
+</head>
+
+<body>
+    <div class="pageContainerTopBackground">
+        <div class="halfVertMenuBack">
+            <div class="menuBar" id="topMarker" dir='ltr'>
+                <div class="_Logo" onclick="window.location=\'/\'"></div>
+                <div class="mobileMenuShortcut" style="display:none !important;" onclick="toggleMobileMenu();"><i class="fas fa-bars"></i></div>
+                <div class="menuContents mc_noJS" id="menuContents">
+                    <div class="menuLinkParent"><a alt="CARATTERISTICHE" class="menuLink" href="#modularInformationBlock"><span>CARATTERISTICHE</span></a></div>
+                    <div class="menuLinkParent"><a alt="GUIDA" class="menuLink" target="blank_" href="http://docs.btcpayserver.org/"><span>GUIDA</span></a></div>
+                    <div class="menuLinkParent"><a alt="BLOG" class="menuLink" target="blank_" href="http://blog.btcpayserver.org/"><span>BLOG</span></a></div>
+                    <div class="menuLinkParent"><a alt="GITHUB" class="menuLink nullTrans" target="blank_" href="https://github.com/btcpayserver"><span class="nullTrans">GITHUB</span></a></div>
+                    <div class="menuLinkParent"><a alt="PROVA" class="menuLink" href="https://mainnet.demo.btcpayserver.org/Account/Register" target="blank_"><span>PROVA</span></a></div>
+                    <div class="menuLinkParent"><a alt="COMMUNITY" class="menuLink" href="#communityCTA"><span>COMMUNITY</span></a></div>
+                    
+                    <div class="menuLinkParent lnNomPar">
+                        <div id="lnNom" alt="Language" class="menuLink nullTrans" onclick="toggle_('#LanguagePicker')">
+                            <span class="nullTrans"><i class="fas fa-globe nullTrans"></i>&nbsp;it&nbsp;<i class="fas fa-caret-down nullTrans"></i></span>
+                            
+                            <ul id="LanguagePicker">
+                                <li class="nullTrans"><a class="nullTrans" href="/tr/">Türkçe</a></li><li class="nullTrans"><a class="nullTrans" href="/nl_NL/">Nederlands (NL)</a></li><li class="nullTrans"><a class="nullTrans" href="/ja_JP/">日本語 (JP)</a></li><li class="nullTrans"><a class="nullTrans" href="/fr_FR/">français (FR)</a></li><li class="nullTrans"><a class="nullTrans" href="/sr/">српски</a></li><li class="nullTrans"><a class="nullTrans" href="/">English</a></li><li class="nullTrans"><a class="nullTrans" href="/sk_SK/">slovenčina (SK)</a></li><li class="nullTrans"><a class="nullTrans" href="/fi_FI/">suomi (FI)</a></li><li class="nullTrans"><a class="nullTrans" href="/hr/">hrvatski</a></li><li class="nullTrans"><a class="nullTrans" href="/bg/">български</a></li><li class="nullTrans"><a class="nullTrans" href="/ca_ES/">català (ES)</a></li><li class="nullTrans"><a class="nullTrans" href="/he/">עברית</a></li><li class="nullTrans"><a class="nullTrans" href="/pt_PT/">português (PT)</a></li><li class="nullTrans"><a class="nullTrans" href="/hi/">हिन्दी</a></li><li class="nullTrans"><a class="nullTrans" href="/bs_BA/">bosanski (BA)</a></li><li class="nullTrans"><a class="nullTrans" href="/ar/">العربية</a></li><li class="nullTrans"><a class="nullTrans" href="/sl_SI/">slovenščina (SI)</a></li><li class="nullTrans"><a class="nullTrans" href="/pt_BR/">português (BR)</a></li><li class="nullTrans"><a class="nullTrans" href="/es_ES/">español (ES)</a></li><li class="nullTrans"><a class="nullTrans" href="/de_DE/">Deutsch (DE)</a></li><li class="nullTrans"><a class="nullTrans" href="/el_GR/">Ελληνικά (GR)</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="promoArea" id="promoArea">
+            <div class="promoDetails">
+                <h1>Inizia ad Accettare Pagamenti Bitcoin con 0% di Commissioni & Nessuna Terza parte. </h1>
+                <p>BTCPay Server è un processore di pagamento self-hosted e completamente open-source. Sicuro, privato e resistente alla censura. 
+                    <br><span id="infoButton01" style="display:none;"><i class="fas fa-info-circle"></i></span>
+                    <span id="furtherQuote"><br>RIcevi i tuoi pagamenti bitcoin senza commissioni e terze parti. Sei tu il tuo processore di pagamento. I fondi arrivano direttamente nel tuo wallet; le tue chiavi private non sono mai richieste. </span>
+                </p>
+                <br>
+                <div class="prpmpLinkOrg stickLeft" dir="ltr">
+
+                    <a alt="DEMO LIVE" class="promoButton" href="https://mainnet.demo.btcpayserver.org" target="blank_">DEMO LIVE</a>
+
+                    <form method="POST" class="promoButtonProminentParent" action="https://mainnet.demo.btcpayserver.org/api/v1/invoices">
+                        <input type="hidden" name="storeId" value="EErYwCthBNfJUpuU1etH1uhg3x1YVH1q1F2zez7u1AAX" />
+                        <input type="hidden" name="price" value="5" />
+                        <input type="hidden" name="currency" value="USD" />
+                        <button class="promoButtonProminent" onclick="mfC();return false;" name="submit" alt="Pay with BtcPay, Self-Hosted Bitcoin Payment Processor"><i class="fas fa-hand-holding-heart nullTrans"></i>&nbsp;&nbsp;DONA</button>
+                    </form>
+
+                </div>
+            </div>
+            <div class="modinvOuter" id="don_Par_sPa">
+                <a href="https://player.vimeo.com/video/330290302?color=0cb526&autoplay=0&title=0&byline=0&portrait=0" target="blank_" class="nonJavascriptMessage">Clicca qui per aprire il video in una nuova scheda.</a>
+                <div class="unfetteredVideoFrame" id="unfetteredVideoFrame">
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe id="unfetteredVideo" src="https://player.vimeo.com/video/330290302?color=0cb526&autoplay=0&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="pageContainer" id="pageContainer">
+
+        <div class="pageItemInfo whiteToGrey" id="modularInformationBlock" dir='ltr'>
+            <span style="display:none;" onclick="carousel('l')" class="carouselControl c_left"><i class="fas fa-chevron-left"></i></span>
+            <div class="choices_holder" id="choices_holder" style="display:unset;">
+                <div id="choices_" class="noJSChoices tiledPayloads" style="display: block;column-gap: 20px;width: 80vw;max-width: 1200px;padding: 50px 0;margin: auto;">
+
+                    <div alt="No fees" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fab fa-creative-commons-zero"></i>
+                        <span>Ricevi pagamenti bitcoin come azienda o come singolo. Nessuna commissione. Nessuna terza parte. </span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <a alt="PROVA IL DEMO LIVE" class="modernLink featuresBlockLink" href="https://mainnet.demo.btcpayserver.org/Account/Register">PROVA IL DEMO LIVE&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                    <div alt="No middleman" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-handshake"></i>
+                        <span>Software gratis e completamente open-source; Self-hosted e non-custodial. </span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                        </div>
+                    </div>
+                    <div alt="Deploy a Server" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-server"></i>
+                        <span>Possibilità di implementazione multiple. Da VPS cloud a hosting su un Raspberry Pi.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <div class="payloadVideo">
+                                <a alt="Clicca qui per aprire il video in una nuova scheda." href="https://www.youtube-nocookie.com/embed/NjslXYvp8bk" target="blank" class="ft-yt-vid-mod">Clicca qui per aprire il video in una nuova scheda.</a>
+                            </div>
+                            <ul>
+                                <li><a alt="Scegli un Metodo di Implementazione" href="https://docs.btcpayserver.org/deployment/deployment" target="blank_">Scegli un Metodo di Implementazione</a></li>
+                                <li><a alt="Distribuzione Web" href="https://docs.btcpayserver.org/deployment/lunanodewebdeployment" target="blank_">Distribuzione Web</a></li>
+                                <li><a alt="Distribuzione Azure" href="https://docs.btcpayserver.org/deployment/azuredeployment" target="blank_">Distribuzione Azure</a></li>
+                                <li><a alt="Distribuzione Docker" href="https://docs.btcpayserver.org/deployment/dockerdeployment" target="blank_">Distribuzione Docker</a></li>
+                                <li><a alt="Distribuzione Google Cloud" href="https://docs.btcpayserver.org/deployment/googleclouddeployment" target="blank_">Distribuzione Google Cloud</a></li>
+                                <li><a alt="Distribuzione manuale" href="https://docs.btcpayserver.org/deployment/manualdeployment" target="blank_">Distribuzione manuale</a></li>
+                                <li><a alt="Distribuzione hardware" href="https://docs.btcpayserver.org/deployment/hardwaredeployment" target="blank_">Distribuzione hardware</a></li>
+                                <li><a alt="Hosting di terze parti" href="https://docs.btcpayserver.org/deployment/thirdpartyhosting" target="blank_">Hosting di terze parti</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div alt="Not your keys" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-key"></i>
+                        <span>Le tue chiavi - I tuoi bitcoin. Per usare BTCPay le tue chiavi private non sono mai richieste. </span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                        </div>
+                    </div>
+                    <div alt="Lightning Network" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-bolt"></i>
+                        <span class="inParagraphLink">
+                        Accetta micro pagamenti con Lightning Network. Gestisci il tuo nodo Lightning personale. 
+                </span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <a alt="Scopri di più" class="modernLink featuresBlockLink" href="https://docs.btcpayserver.org/features/lightningnetwork" target="blank_">Scopri di più&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                    <div alt="e-Commerce integrations" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-shopping-cart"></i>
+                        <span>Integrazioni E-commerce: WooCommerce, Drupal, Presta, Magento e molti altri. </span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <ul>
+                                <li><a alt="WooCommerce" href="https://docs.btcpayserver.org/integrations/woocommerce" target="black_">WooCommerce</a></li>
+                                <li><a alt="Drupal" href="https://docs.btcpayserver.org/integrations/drupal" target="black_">Drupal</a></li>
+                                <li><a alt="Magento" href="https://docs.btcpayserver.org/integrations/magento" target="black_">Magento</a></li>
+                                <li><a alt="PrestaShop" href="https://docs.btcpayserver.org/integrations/prestashop" target="black_">PrestaShop</a></li>
+                                <li><a alt="Integrazione Personalizzata" href="https://docs.btcpayserver.org/integrations/customintegration" target="black_">Integrazione Personalizzata</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div alt="Enhanced Privacy & Security" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-mask"></i>
+                        <span>Massima privacy per te e i tuoi clienti. Usa il tuo full node. No AML/KYC.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                        </div>
+                    </div>
+                    <div alt="Payment Buttons" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-vector-square"></i>
+                        <span>Usalo sul tuo sito, aggiungi facilmente pulsanti per mance e donazioni. </span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <div class="payloadVideo">
+                                <a alt="Clicca qui per aprire il video in una nuova scheda." href="https://www.youtube-nocookie.com/embed/MIWGvl6_WzI" target="blank" class="ft-yt-vid-mod">Clicca qui per aprire il video in una nuova scheda.</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div alt="Point-Of-Sale" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-file-invoice-dollar"></i>
+                        <span>Vieni pagato di persona o online con la web app Pos (point of sale)</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <div class="payloadVideo">
+                                <a alt="Clicca qui per aprire il video in una nuova scheda." href="https://www.youtube-nocookie.com/embed/Mz4uajz0z9Y" target="blank" class="ft-yt-vid-mod">Clicca qui per aprire il video in una nuova scheda.</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div alt="Accounting" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-money-check"></i>
+                        <span>La contabilità si fa semplice con l'integrazione di QuickBooks e la possibilità di esportare le tue fatture. </span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <div class="payloadVideo">
+                                <a alt="Clicca qui per aprire il video in una nuova scheda." href="https://www.youtube-nocookie.com/embed/srgwL9ozg6c" target="blank" class="ft-yt-vid-mod">Clicca qui per aprire il video in una nuova scheda.</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div alt="Process payments for others" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-comments-dollar"></i>
+                        <span>Stack tecnologico completo per trasformarti tu stesso in un processore di pagemento. Per te o per gli altri.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <a alt="Scopri di più" class="modernLink featuresBlockLink" href="https://docs.btcpayserver.org/deployment/thirdpartyhosting">Scopri di più&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                    <div alt="Altcoin Support" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-coins"></i>
+                        <span>Integrazioni esterne per diverse altcoin, mantenute dalle rispettive community.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <ul>
+                                <li class="nullTrans">Bitcore (BTX)</li>
+                                <li class="nullTrans">Dash (DASH)</li>
+                                <li class="nullTrans">Dogecoin (DOGE)</li>
+                                <li class="nullTrans">Feathercoin (FTC)</li>
+                                <li class="nullTrans">Groestlcoin (GRS)</li>
+                                <li class="nullTrans">Litecoin (LTC)</li>
+                                <li class="nullTrans">Monacoin (MONA)</li>
+                                <li class="nullTrans">Polis (POLIS)</li>
+                                <li class="nullTrans">Viacoin (VIA)</li>
+                                <li>BGold (BTG) (conosciuto anche come Bitcoin Gold)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <span style="display:none;" onclick="carousel('r')" class="carouselControl c_right"><i class="fas fa-chevron-left"></i></span>
+        </div>
+
+        <div class="h-div h-divider_end_white_plain" style="z-index: 0;"></div>
+
+        <div class="pageItem ">
+            <div class="blockTrioMP" id="prominentTrioBlock">
+                <div class="trioMPBlockItem">
+                    <h3>PROVA</h3>
+                    <div class="img_" style="background-image: url(/img/demo2-01.png);"></div>
+                    <p class="inParagraphLink">Partecipa al demo server su <a alt="demo server on Mainnet" href="https://mainnet.demo.btcpayserver.org/" target="blank_">Mainnet</a>  o  <a alt="Testnet" href="https://testnet.demo.btcpayserver.org/" target="blank_">Testnet</a>
+                        <br>. Prova anche l'app demo e-commerce Store Point of Sale o un pulsante di pagamento <a alt="Negozio" href="https://store.demo.btcpayserver.org/" target="blank_">Negozio</a> <a alt="Point of Sale" href="https://mainnet.demo.btcpayserver.org/apps/3utBTfSKkW4gK7aQMd2hW5Bh9Fpa/pos" target="blank_">App Point of Sale (POS)</a>  <a alt="Pulsante di pagamento" href="https://store.demo.btcpayserver.org/index.php/payment-button-demo/" target="blank_">Pulsante di pagamento</a></p>
+                    <a alt="PROVALO" class="modernLink" href="https://mainnet.demo.btcpayserver.org/Account/Register" target="blank_">PROVALO&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+                <div class="trioMPBlockItem">
+                    <h3>GUIDA</h3>
+                    <div class="img_" style="background-image: url(/img/docs2-01.png);"></div>
+                    <p>Ti serve aiuto con BTCPay? La nostra ampia guida copre ogni passaggio, dai primi passi fino alle questioni tecniche più complesse. </p>
+                    <a alt="LEGGI DOCUMENTAZIONE" class="modernLink" href="http://docs.btcpayserver.org/" target="blank_">LEGGI DOCUMENTAZIONE&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+                <div class="trioMPBlockItem">
+                    <h3 class="nullTrans">GITHUB</h3>
+                    <div class="img_" style="background-image: url(/img/git-01.png);"></div>
+                    <p>Hai un quesito tecnico a cui non hai trovato risposta nella guida? Vuoi aiutarci a migliorare il codice? Vieni a trovarci su GitHub.</p>
+                    <a alt="CONTRIBUISCI" class="modernLink" href="https://github.com/btcpayserver" target="blank_">Contribuisci&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="pageItemP" id="makeADonation">
+            <div class="pageItemInnerSpacer">
+                <h2>Supporta il progetto BTCPay. </h2>
+
+                <div class="donParent">
+                    <div class="closeDonationButton" style="display:none;" onclick="cDon(this);"><i class="fas fa-arrow-left"></i>&nbsp;cancel</div>
+                    <div class="promoteDonation modPar">
+
+                        <div class="jsInvoiceWorkspacePre">
+
+                            <div class="nonJavascriptMessage">
+                                <span>Abilita JavaScript per goderti la migliore esperienza di questo modulo di donazione. </span>
+                                <form method="POST" action="https://mainnet.demo.btcpayserver.org/api/v1/invoices">
+                                    <input type="hidden" name="storeId" value="EErYwCthBNfJUpuU1etH1uhg3x1YVH1q1F2zez7u1AAX" />
+                                    <input type="hidden" name="price" value="5" />
+                                    <input type="hidden" name="currency" value="USD" />
+                                    <input type="image" src="/img/pay-2.png" name="submit" style="width:209px" alt="Pay with BtcPay, Self-Hosted Bitcoin Payment Processor">
+                                </form>
+                            </div>
+
+                            <div class="valueSelectorHolder oF_JS_Env" style="display:none;">
+                                <span class="valueControlBtn" onclick="adjV('minus', event, this)"><i class="fas fa-minus"></i></span>
+                                <input class="finalValue_" value="5" type="text" placeholder="5" onkeyup="adjV('verify', event, this)" />
+                                <select onchange="stC(this)">
+                                    <option value="USD">USD</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="BTC">BTC</option>
+                                </select>
+                                <span class="valueControlBtn" onclick="adjV('plus', event, this)"><i class="fas fa-plus"></i></span>
+                            </div>
+
+                            <img class="GenerateInvoiceButton oF_JS_Env" style="display:none;" class="oF_JS_Env" src="/img/pay-2-c.png" onclick="genInvoice_(this);" />
+
+                        </div>
+
+                        <div class="text-center statusButton" style="display:none;">
+                            <svg version="1.1" class="spinnerAnimated" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="283.46px" height="283.46px" viewBox="0 0 283.46 283.46" enable-background="new 0 0 283.46 283.46" xml:space="preserve">
+                                <circle fill="none" stroke="#329f65" stroke-width="30" stroke-linecap="round" stroke-miterlimit="10" cx="141.73" cy="141.73" r="106.762" />
+                            </svg><span class="genIn_">Stiamo generando la tua fattura...  </span>
+                        </div>
+
+                        <div class="jsInvoiceWorkspace" style="display:none;" class=""></div>
+
+                    </div>
+
+                    <span class="demoBlockText" style="display:none;">
+        <!-- PLACEHOLDER FOR ANY FUTURE TEXT -->
+      </span>
+                </div>
+
+                <p>Guarda la fatturazione di BTCPay Server e la conferma di pagamento in tempo reale facendo una donazione al progetto.</p>
+            </div>
+        </div>
+
+        <div class="pageItem background_texture_dots" id="communityCTA">
+            <div class="pageItemInnerSpacer">
+                <div class="pageItemTextContent floatContentLeft">
+                    <h2>UNISCITI ALLA COMMUNITY.</h2>
+                    <p>BTCPay Server è un progetto open-source, non un'azienda. Ci basiamo su una rete di collaboratori e utenti. Unisciti per migliorare, imparare e costruire BTCPay. </p>
+                    <div class="linkOrg-3">
+                        <a alt="Community on Mattermost" class="modernLink_Cluster" href="http://chat.btcpayserver.org/" target="blank_"><i class="svgPseudoIcon mattermost"></i>MATTERMOST</a>
+                        <a alt="Community on Github" class="modernLink_Cluster nullTrans" href="https://github.com/btcpayserver" target="blank_"><i class="fab fa-github"></i>GITHUB</a>
+                        <a alt="TELEGRAM" class="modernLink_Cluster" href="https://t.me/btcpayserver" target="blank_"><i class="fab fa-telegram"></i>TELEGRAM</a>
+                    </div>
+                </div>
+                <img class="floatContentRight" src="/img/community4-01.png" />
+            </div>
+        </div>
+
+        <div class="h-div h-divider_start5"></div>
+        <div class="blockGreenFoot">
+            <div class="footerBlock">
+                <div>
+                    <h3 class="ftbTr_" id="fBTrig_-0">BTCPAY BASI</h3>
+                    <ul class="ftb_" id="fBT_-0">
+                        <li><a alt="Introduzione" href="https://docs.btcpayserver.org/">Introduzione</a></li>
+                        <li><a alt="Utilizzo" href="https://docs.btcpayserver.org/btcpay-basics/usecase">Utilizzo</a></li>
+                        <li><a alt="Interfaccia" href="https://docs.btcpayserver.org/btcpay-basics/walkthrough">Interfaccia</a></li>
+                        <li><a alt="Primi Passi" href="https://docs.btcpayserver.org/btcpay-basics/gettingstarted">Primi Passi</a></li>
+                        <li><a alt=">BTCPay vs altri sistemi" href="https://docs.btcpayserver.org/btcpay-basics/btcpayvsothers">BTCPay vs altri sistemi</a></li>
+                        <li><a alt="Lightning Network" href="https://docs.btcpayserver.org/features/lightningnetwork">Lightning Network</a></li>
+                        <li><a alt="Provalo" href="https://mainnet.demo.btcpayserver.org/">Provalo</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="ftbTr_" id="fBTrig_-1">IMPLEMENTAZIONE</h3>
+                    <ul class="ftb_" id="fBT_-1">
+                        <li><a alt="Scegli un Metodo di Implementazione" href="https://docs.btcpayserver.org/deployment/deployment">Scegli un Metodo di Implementazione</a></li>
+                        <li><a alt="Distribuzione Web" href="https://docs.btcpayserver.org/deployment/lunanodewebdeployment">Distribuzione Web</a></li>
+                        <li><a alt="Distribuzione Azure" href="https://docs.btcpayserver.org/deployment/azuredeployment">Distribuzione Azure</a></li>
+                        <li><a alt="Distribuzione Docker" href="https://docs.btcpayserver.org/deployment/dockerdeployment">Distribuzione Docker</a></li>
+                        <li><a alt="Distribuzione Google Cloud" href="https://docs.btcpayserver.org/deployment/googleclouddeployment">Distribuzione Google Cloud</a></li>
+                        <li><a alt="Distribuzione manuale" href="https://docs.btcpayserver.org/deployment/manualdeployment">Distribuzione manuale</a></li>
+                        <li><a alt="Distribuzione hardware" href="https://docs.btcpayserver.org/deployment/manualdeployment">Distribuzione hardware</a></li>
+                        <li><a alt="Hosting di terze parti" href="https://docs.btcpayserver.org/deployment/thirdpartyhosting">Hosting di terze parti</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="ftbTr_" id="fBTrig_-2">INTEGRAZIONI E APP</h3>
+                    <ul class="ftb_" id="fBT_-2">
+                        <li><a alt="WooCommerce" href="https://docs.btcpayserver.org/integrations/woocommerce">WooCommerce</a></li>
+                        <li><a alt="Drupal" href="https://docs.btcpayserver.org/integrations/drupal">Drupal</a></li>
+                        <li><a alt="Magento" href="https://docs.btcpayserver.org/integrations/drupal">Magento</a></li>
+                        <li><a alt="PrestaShop" href="https://docs.btcpayserver.org/integrations/drupal">PrestaShop</a></li>
+                        <li><a alt="Integrazione Personalizzata" href="https://docs.btcpayserver.org/integrations/drupal">Integrazione Personalizzata</a></li>
+                        <li><a alt="Demo e-Shop" href="https://store.demo.btcpayserver.org/">Demo e-Shop</a></li>
+                        <li><a alt="Demo Point of Sale" href="https://mainnet.demo.btcpayserver.org/apps/3utBTfSKkW4gK7aQMd2hW5Bh9Fpa/pos">Demo Point of Sale</a></li>
+                        <li><a alt="Demo pulsante di pagamento" target="blank_" href="https://store.demo.btcpayserver.org/index.php/payment-button-demo/">Demo pulsante di pagamento</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="ftbTr_" id="fBTrig_-3">COMMUNITY</h3>
+                    <ul class="ftb_" id="fBT_-3">
+                        <li class="nullTrans"><a class="nullTrans" alt="GITHUB" href="https://github.com/btcpayserver/">GITHUB</a></li>
+                        <li><a alt="MATTERMOST" href="http://chat.btcpayserver.org/">Chat Mattermost</a></li>
+                        <li><a alt="DOMANDE FREQUENTI" href="https://docs.btcpayserver.org/faq-and-common-issues/faq">DOMANDE FREQUENTI</a></li>
+                        <li><a alt="Risoluzione Problemi" href="https://docs.btcpayserver.org/support-and-community/troubleshooting">Risoluzione Problemi</a></li>
+                        <li><a alt="Documenti per lo sviluppatore" href="https://docs.btcpayserver.org/development/">Documenti per lo sviluppatore</a></li>
+                        <li><a alt="Community" href="https://docs.btcpayserver.org/support-and-community/community">Community</a></li>
+                        <li><a alt="Aiuto" href="https://docs.btcpayserver.org/support-and-community/support">Aiuto</a></li>
+                        <li><a alt="Contribuisci" href="https://docs.btcpayserver.org/support-and-community/contribute">Contribuisci</a></li>
+                    </ul>
+                </div>
+
+                <p class="copyright_"><a class="nullTrans" alt="Flat 18 Microsystems Development LLC << FLAT18.CO.UK >>" href="https://flat18.co.uk">Sito fatto con ⚡ by  FLAT18.CO.UK</a>
+                    <br>
+                     Contenuto rilasciato sotto licenza MIT<br> Questo sito non usa cookies nè colleziona dati personali<br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="videoContainer" style="display:none;">
+        <span class="closeVideoWindow" onclick="endVideo();"><i class="fas fa-times"></i>&nbsp;Chiudi</span>
+        <div id="videoContainer_video0"></div>
+    </div>
+    <div id="systemAlert" style="display:none;"></div>
+    <div id="curtainGen" style="display:none;">
+        <span class="closeVideoWindow" onclick="closeCurtain();"><i class="fas fa-times"></i>&nbsp;Chiudi</span>
+        <div class="curtainWorkspace"></div>
+    </div>
+</body>
+<script src="/js/scripts.js"></script>
+
+</html>

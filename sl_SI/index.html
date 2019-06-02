@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="BTCPay Server je odprtokodni procesor za plačevanje s kripto valutami. Je varen, zaseben, odporen na cenzuro in brezplačen.">
+    <meta name="keywords" content="btcpay">
+    <meta name="author" content="Ed Sinaswee">
+    <meta property="og:title" content="BTCPay Server">
+    <meta property="og:description" content="BTCPay Server je odprtokodni procesor za plačevanje s kripto valutami. Je varen, zaseben, odporen na cenzuro in brezplačen.">
+    <meta property="og:image" content="favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <title>BTCPay Server</title>
+    <link rel="stylesheet" type="text/css" href="/fonts/fa_/fa_.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <script>
+        window.jsEnviron = true;
+        window.cMod = "stickLeft";
+        window.donationTitle = ("Vnesite znesek prispevka")[0] != "$" ? "Vnesite znesek prispevka" : "Enter an amount to donate";
+        window.noJSVideo = "Kliknite da odprete video v novem zavihku";
+    </script>
+</head>
+
+<body>
+    <div class="pageContainerTopBackground">
+        <div class="halfVertMenuBack">
+            <div class="menuBar" id="topMarker" dir='ltr'>
+                <div class="_Logo" onclick="window.location=\'/\'"></div>
+                <div class="mobileMenuShortcut" style="display:none !important;" onclick="toggleMobileMenu();"><i class="fas fa-bars"></i></div>
+                <div class="menuContents mc_noJS" id="menuContents">
+                    <div class="menuLinkParent"><a alt="ZNAČILNOSTI" class="menuLink" href="#modularInformationBlock"><span>ZNAČILNOSTI</span></a></div>
+                    <div class="menuLinkParent"><a alt="DOKUMENTACIJA" class="menuLink" target="blank_" href="http://docs.btcpayserver.org/"><span>DOKUMENTACIJA</span></a></div>
+                    <div class="menuLinkParent"><a alt="BLOG" class="menuLink" target="blank_" href="http://blog.btcpayserver.org/"><span>BLOG</span></a></div>
+                    <div class="menuLinkParent"><a alt="GITHUB" class="menuLink nullTrans" target="blank_" href="https://github.com/btcpayserver"><span class="nullTrans">GITHUB</span></a></div>
+                    <div class="menuLinkParent"><a alt="PREDSTAVITEV" class="menuLink" href="https://mainnet.demo.btcpayserver.org/Account/Register" target="blank_"><span>PREDSTAVITEV</span></a></div>
+                    <div class="menuLinkParent"><a alt="SKUPNOST" class="menuLink" href="#communityCTA"><span>SKUPNOST</span></a></div>
+                    
+                    <div class="menuLinkParent lnNomPar">
+                        <div id="lnNom" alt="Language" class="menuLink nullTrans" onclick="toggle_('#LanguagePicker')">
+                            <span class="nullTrans"><i class="fas fa-globe nullTrans"></i>&nbsp;sl&nbsp;<i class="fas fa-caret-down nullTrans"></i></span>
+                            
+                            <ul id="LanguagePicker">
+                                <li class="nullTrans"><a class="nullTrans" href="/tr/">Türkçe</a></li><li class="nullTrans"><a class="nullTrans" href="/nl_NL/">Nederlands (NL)</a></li><li class="nullTrans"><a class="nullTrans" href="/ja_JP/">日本語 (JP)</a></li><li class="nullTrans"><a class="nullTrans" href="/fr_FR/">français (FR)</a></li><li class="nullTrans"><a class="nullTrans" href="/sr/">српски</a></li><li class="nullTrans"><a class="nullTrans" href="/">English</a></li><li class="nullTrans"><a class="nullTrans" href="/sk_SK/">slovenčina (SK)</a></li><li class="nullTrans"><a class="nullTrans" href="/fi_FI/">suomi (FI)</a></li><li class="nullTrans"><a class="nullTrans" href="/hr/">hrvatski</a></li><li class="nullTrans"><a class="nullTrans" href="/bg/">български</a></li><li class="nullTrans"><a class="nullTrans" href="/ca_ES/">català (ES)</a></li><li class="nullTrans"><a class="nullTrans" href="/he/">עברית</a></li><li class="nullTrans"><a class="nullTrans" href="/pt_PT/">português (PT)</a></li><li class="nullTrans"><a class="nullTrans" href="/hi/">हिन्दी</a></li><li class="nullTrans"><a class="nullTrans" href="/bs_BA/">bosanski (BA)</a></li><li class="nullTrans"><a class="nullTrans" href="/it_IT/">italiano (IT)</a></li><li class="nullTrans"><a class="nullTrans" href="/ar/">العربية</a></li><li class="nullTrans"><a class="nullTrans" href="/pt_BR/">português (BR)</a></li><li class="nullTrans"><a class="nullTrans" href="/es_ES/">español (ES)</a></li><li class="nullTrans"><a class="nullTrans" href="/de_DE/">Deutsch (DE)</a></li><li class="nullTrans"><a class="nullTrans" href="/el_GR/">Ελληνικά (GR)</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="promoArea" id="promoArea">
+            <div class="promoDetails">
+                <h1>Začnite sprejemati Bitcoin plačila z 0% provizijami & brez posrednikov</h1>
+                <p>BTCPay Server je odprtokodni procesor za plačevanje s kripto valutami. Je varen, zaseben, odporen na cenzuro in brezplačen.
+                    <br><span id="infoButton01" style="display:none;"><i class="fas fa-info-circle"></i></span>
+                    <span id="furtherQuote"><br>Sprejemajte Bitcoin in altcoin plačila brez provizij in posrednikov. Ste sami svoj plačilni procesor. Sredstva gredo neposredno v vašo denarnico; vaš zasebni ključ ni nikoli zahtevan.</span>
+                </p>
+                <br>
+                <div class="prpmpLinkOrg stickLeft" dir="ltr">
+
+                    <a alt="PREDSTAVITEV V ŽIVO" class="promoButton" href="https://mainnet.demo.btcpayserver.org" target="blank_">PREDSTAVITEV V ŽIVO</a>
+
+                    <form method="POST" class="promoButtonProminentParent" action="https://mainnet.demo.btcpayserver.org/api/v1/invoices">
+                        <input type="hidden" name="storeId" value="EErYwCthBNfJUpuU1etH1uhg3x1YVH1q1F2zez7u1AAX" />
+                        <input type="hidden" name="price" value="5" />
+                        <input type="hidden" name="currency" value="USD" />
+                        <button class="promoButtonProminent" onclick="mfC();return false;" name="submit" alt="Pay with BtcPay, Self-Hosted Bitcoin Payment Processor"><i class="fas fa-hand-holding-heart nullTrans"></i>&nbsp;&nbsp;PRISPEVAJTE</button>
+                    </form>
+
+                </div>
+            </div>
+            <div class="modinvOuter" id="don_Par_sPa">
+                <a href="https://player.vimeo.com/video/330290302?color=0cb526&autoplay=0&title=0&byline=0&portrait=0" target="blank_" class="nonJavascriptMessage">Kliknite da odprete video v novem zavihku</a>
+                <div class="unfetteredVideoFrame" id="unfetteredVideoFrame">
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe id="unfetteredVideo" src="https://player.vimeo.com/video/330290302?color=0cb526&autoplay=0&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="pageContainer" id="pageContainer">
+
+        <div class="pageItemInfo whiteToGrey" id="modularInformationBlock" dir='ltr'>
+            <span style="display:none;" onclick="carousel('l')" class="carouselControl c_left"><i class="fas fa-chevron-left"></i></span>
+            <div class="choices_holder" id="choices_holder" style="display:unset;">
+                <div id="choices_" class="noJSChoices tiledPayloads" style="display: block;column-gap: 20px;width: 80vw;max-width: 1200px;padding: 50px 0;margin: auto;">
+
+                    <div alt="No fees" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fab fa-creative-commons-zero"></i>
+                        <span>Sprejemajte Bitcoin plačila kot podjetje ali posameznik. Brez provizij. Brez posrednikov.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <a alt="PREIZKUSITE PREDSTAVITEV V ŽIVO" class="modernLink featuresBlockLink" href="https://mainnet.demo.btcpayserver.org/Account/Register">PREIZKUSITE PREDSTAVITEV V ŽIVO&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                    <div alt="No middleman" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-handshake"></i>
+                        <span>Prosta in popolnoma odprtokodna programska oprema. Lastno gostovanje in skrbništvo.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                        </div>
+                    </div>
+                    <div alt="Deploy a Server" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-server"></i>
+                        <span>Različne možnosti za namestitev. Od VPS oblačnega do Rasberry Pi gostovanja</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <div class="payloadVideo">
+                                <a alt="Kliknite da odprete video v novem zavihku" href="https://www.youtube-nocookie.com/embed/NjslXYvp8bk" target="blank" class="ft-yt-vid-mod">Kliknite da odprete video v novem zavihku</a>
+                            </div>
+                            <ul>
+                                <li><a alt="Izbira načina namestitve" href="https://docs.btcpayserver.org/deployment/deployment" target="blank_">Izbira načina namestitve</a></li>
+                                <li><a alt="Web Namestitev" href="https://docs.btcpayserver.org/deployment/lunanodewebdeployment" target="blank_">Web Namestitev</a></li>
+                                <li><a alt="Azure Namestitev" href="https://docs.btcpayserver.org/deployment/azuredeployment" target="blank_">Azure Namestitev</a></li>
+                                <li><a alt="Docker Namestitev" href="https://docs.btcpayserver.org/deployment/dockerdeployment" target="blank_">Docker Namestitev</a></li>
+                                <li><a alt="Google Cloud Namestitev" href="https://docs.btcpayserver.org/deployment/googleclouddeployment" target="blank_">Google Cloud Namestitev</a></li>
+                                <li><a alt="Ročna Namestitev" href="https://docs.btcpayserver.org/deployment/manualdeployment" target="blank_">Ročna Namestitev</a></li>
+                                <li><a alt="Namestitev - Lastna strojna oprema" href="https://docs.btcpayserver.org/deployment/hardwaredeployment" target="blank_">Namestitev - Lastna strojna oprema</a></li>
+                                <li><a alt="Gostovanje na BTCPay strežniku" href="https://docs.btcpayserver.org/deployment/thirdpartyhosting" target="blank_">Gostovanje na BTCPay strežniku</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div alt="Not your keys" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-key"></i>
+                        <span>Vaši ključi - Vaši Bitcoini. Zasebni ključ se nikoli ne zahteva pri uporabi BTCPay.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                        </div>
+                    </div>
+                    <div alt="Lightning Omrežje" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-bolt"></i>
+                        <span class="inParagraphLink">
+                        Sprejmite mikro plačila preko Lightning omrežja. Lastno Lightning vozlišče.Lightning Omrežje
+                </span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <a alt="Spoznajte več" class="modernLink featuresBlockLink" href="https://docs.btcpayserver.org/features/lightningnetwork" target="blank_">Spoznajte več&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                    <div alt="e-Commerce integrations" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-shopping-cart"></i>
+                        <span>E-poslovanje, integracije: WooCommerce, Drupal, Presta, Magento in druge.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <ul>
+                                <li><a alt="WooCommerce" href="https://docs.btcpayserver.org/integrations/woocommerce" target="black_">WooCommerce</a></li>
+                                <li><a alt="Drupal" href="https://docs.btcpayserver.org/integrations/drupal" target="black_">Drupal</a></li>
+                                <li><a alt="Magento" href="https://docs.btcpayserver.org/integrations/magento" target="black_">Magento</a></li>
+                                <li><a alt="PrestaShop" href="https://docs.btcpayserver.org/integrations/prestashop" target="black_">PrestaShop</a></li>
+                                <li><a alt="Integracije po meri" href="https://docs.btcpayserver.org/integrations/customintegration" target="black_">Integracije po meri</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div alt="Enhanced Privacy & Security" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-mask"></i>
+                        <span>Največja zasebnost za vas in vaše stranke. Bitcoin polno vozlišče. Brez postopkov AML/KYC.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                        </div>
+                    </div>
+                    <div alt="Payment Buttons" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-vector-square"></i>
+                        <span>Preprosto dodajte plačilne gumbe za prispevke na spletno stran.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <div class="payloadVideo">
+                                <a alt="Kliknite da odprete video v novem zavihku" href="https://www.youtube-nocookie.com/embed/MIWGvl6_WzI" target="blank" class="ft-yt-vid-mod">Kliknite da odprete video v novem zavihku</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div alt="Point-Of-Sale" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-file-invoice-dollar"></i>
+                        <span>Sprejemajte plačila osebno ali preko spleta z aplikacijo POS (Point of Sale).</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <div class="payloadVideo">
+                                <a alt="Kliknite da odprete video v novem zavihku" href="https://www.youtube-nocookie.com/embed/Mz4uajz0z9Y" target="blank" class="ft-yt-vid-mod">Kliknite da odprete video v novem zavihku</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div alt="Accounting" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-money-check"></i>
+                        <span>Enostavno računovodstvo z integracijo Quick Book in možnostjo izvoza računov.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <div class="payloadVideo">
+                                <a alt="Kliknite da odprete video v novem zavihku" href="https://www.youtube-nocookie.com/embed/srgwL9ozg6c" target="blank" class="ft-yt-vid-mod">Kliknite da odprete video v novem zavihku</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div alt="Process payments for others" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-comments-dollar"></i>
+                        <span>Popolna tehnologija, ki vam omogoča, da postanete plačilni procesor za sebe ali druge.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <a alt="Spoznajte več" class="modernLink featuresBlockLink" href="https://docs.btcpayserver.org/deployment/thirdpartyhosting">Spoznajte več&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                    <div alt="Altcoin Support" class="choice_ stickLeft" dir="ltr">
+                        <i class="n_iconography_ fas fa-coins"></i>
+                        <span>Izbirne (Opt-in) integracije za več altcoinov, ki jih vzdržujejo njihove skupnosti.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <ul>
+                                <li class="nullTrans">Bitcore (BTX)</li>
+                                <li class="nullTrans">Dash (DASH)</li>
+                                <li class="nullTrans">Dogecoin (DOGE)</li>
+                                <li class="nullTrans">Feathercoin (FTC)</li>
+                                <li class="nullTrans">Groestlcoin (GRS)</li>
+                                <li class="nullTrans">Litecoin (LTC)</li>
+                                <li class="nullTrans">Monacoin (MONA)</li>
+                                <li class="nullTrans">Polis (POLIS)</li>
+                                <li class="nullTrans">Viacoin (VIA)</li>
+                                <li>BGold (BTG) (tudi Bitcoin Gold)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <span style="display:none;" onclick="carousel('r')" class="carouselControl c_right"><i class="fas fa-chevron-left"></i></span>
+        </div>
+
+        <div class="h-div h-divider_end_white_plain" style="z-index: 0;"></div>
+
+        <div class="pageItem ">
+            <div class="blockTrioMP" id="prominentTrioBlock">
+                <div class="trioMPBlockItem">
+                    <h3>PREDSTAVITEV</h3>
+                    <div class="img_" style="background-image: url(/img/demo2-01.png);"></div>
+                    <p class="inParagraphLink">Preizkusite predstavitveni strežnik na omrežju <a alt="demo server on Mainnet" href="https://mainnet.demo.btcpayserver.org/" target="blank_">Mainnet</a>  ali  <a alt="Testnet" href="https://testnet.demo.btcpayserver.org/" target="blank_">Testnet</a>
+                        <br> Preizkusite tudi predstavitveno E-trgovino Point of Sale Aplikacijo in Gumb za plačilo <a alt="Trgovina" href="https://store.demo.btcpayserver.org/" target="blank_">Trgovina</a> <a alt="Point of Sale" href="https://mainnet.demo.btcpayserver.org/apps/3utBTfSKkW4gK7aQMd2hW5Bh9Fpa/pos" target="blank_">Point of Sale Aplikacija</a>  <a alt="Gumb za plačilo" href="https://store.demo.btcpayserver.org/index.php/payment-button-demo/" target="blank_">Gumb za plačilo</a></p>
+                    <a alt="PREIZKUSITE" class="modernLink" href="https://mainnet.demo.btcpayserver.org/Account/Register" target="blank_">PREIZKUSITE&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+                <div class="trioMPBlockItem">
+                    <h3>DOKUMENTACIJA</h3>
+                    <div class="img_" style="background-image: url(/img/docs2-01.png);"></div>
+                    <p>Potrebujete pomoč pri uporabi BTCPay? Naša obsežna uporabniška dokumentacija zajema vse, da boste lahko začeli z uporabo ali pomagali pri reševanju tehničnih težav.</p>
+                    <a alt="PREBERITE DOKUMENTACIJO" class="modernLink" href="http://docs.btcpayserver.org/" target="blank_">PREBERITE DOKUMENTACIJO&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+                <div class="trioMPBlockItem">
+                    <h3 class="nullTrans">GITHUB</h3>
+                    <div class="img_" style="background-image: url(/img/git-01.png);"></div>
+                    <p>Ali imate tehnično vprašanje, ki ni zajeto v dokumentaciji, ali želite izboljšati izvorno kodo? Pomagajte nam na GitHubu.</p>
+                    <a alt="PRISPEVAJTE K PROJEKTU" class="modernLink" href="https://github.com/btcpayserver" target="blank_">Prispevajte k projektu&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="pageItemP" id="makeADonation">
+            <div class="pageItemInnerSpacer">
+                <h2>Podprite BTCPay projekt</h2>
+
+                <div class="donParent">
+                    <div class="closeDonationButton" style="display:none;" onclick="cDon(this);"><i class="fas fa-arrow-left"></i>&nbsp;cancel</div>
+                    <div class="promoteDonation modPar">
+
+                        <div class="jsInvoiceWorkspacePre">
+
+                            <div class="nonJavascriptMessage">
+                                <span>Prosimo, omogočite JavaScript za boljšo uporabniško izkušnjo z modulom za izdajanje računov.</span>
+                                <form method="POST" action="https://mainnet.demo.btcpayserver.org/api/v1/invoices">
+                                    <input type="hidden" name="storeId" value="EErYwCthBNfJUpuU1etH1uhg3x1YVH1q1F2zez7u1AAX" />
+                                    <input type="hidden" name="price" value="5" />
+                                    <input type="hidden" name="currency" value="USD" />
+                                    <input type="image" src="/img/pay-2.png" name="submit" style="width:209px" alt="Pay with BtcPay, Self-Hosted Bitcoin Payment Processor">
+                                </form>
+                            </div>
+
+                            <div class="valueSelectorHolder oF_JS_Env" style="display:none;">
+                                <span class="valueControlBtn" onclick="adjV('minus', event, this)"><i class="fas fa-minus"></i></span>
+                                <input class="finalValue_" value="5" type="text" placeholder="5" onkeyup="adjV('verify', event, this)" />
+                                <select onchange="stC(this)">
+                                    <option value="USD">USD</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="BTC">BTC</option>
+                                </select>
+                                <span class="valueControlBtn" onclick="adjV('plus', event, this)"><i class="fas fa-plus"></i></span>
+                            </div>
+
+                            <img class="GenerateInvoiceButton oF_JS_Env" style="display:none;" class="oF_JS_Env" src="/img/pay-2-c.png" onclick="genInvoice_(this);" />
+
+                        </div>
+
+                        <div class="text-center statusButton" style="display:none;">
+                            <svg version="1.1" class="spinnerAnimated" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="283.46px" height="283.46px" viewBox="0 0 283.46 283.46" enable-background="new 0 0 283.46 283.46" xml:space="preserve">
+                                <circle fill="none" stroke="#329f65" stroke-width="30" stroke-linecap="round" stroke-miterlimit="10" cx="141.73" cy="141.73" r="106.762" />
+                            </svg><span class="genIn_">Ustvarjanje računa...</span>
+                        </div>
+
+                        <div class="jsInvoiceWorkspace" style="display:none;" class=""></div>
+
+                    </div>
+
+                    <span class="demoBlockText" style="display:none;">
+        <!-- PLACEHOLDER FOR ANY FUTURE TEXT -->
+      </span>
+                </div>
+
+                <p>Oglejte si BTCPay Server izdajanje računov in potrditev plačila v živo, s prispevkom za projekt.</p>
+            </div>
+        </div>
+
+        <div class="pageItem background_texture_dots" id="communityCTA">
+            <div class="pageItemInnerSpacer">
+                <div class="pageItemTextContent floatContentLeft">
+                    <h2>PRIDRUŽITE SE SKUPNOSTI</h2>
+                    <p>BTCPay Server je odprtokodni projekt, ne podjetje. Zanašamo se na različne sodelujoče in uporabnike, ki omogočajo razvoj številnih primerov uporabe. Pridružite se nam pri izboljševanju, učenju in razvoju BTCPay.</p>
+                    <div class="linkOrg-3">
+                        <a alt="Community on Mattermost" class="modernLink_Cluster" href="http://chat.btcpayserver.org/" target="blank_"><i class="svgPseudoIcon mattermost"></i>MATTERMOST</a>
+                        <a alt="Community on Github" class="modernLink_Cluster nullTrans" href="https://github.com/btcpayserver" target="blank_"><i class="fab fa-github"></i>GITHUB</a>
+                        <a alt="TELEGRAM" class="modernLink_Cluster" href="https://t.me/btcpayserver" target="blank_"><i class="fab fa-telegram"></i>TELEGRAM</a>
+                    </div>
+                </div>
+                <img class="floatContentRight" src="/img/community4-01.png" />
+            </div>
+        </div>
+
+        <div class="h-div h-divider_start5"></div>
+        <div class="blockGreenFoot">
+            <div class="footerBlock">
+                <div>
+                    <h3 class="ftbTr_" id="fBTrig_-0">BTCPAY OSNOVE</h3>
+                    <ul class="ftb_" id="fBT_-0">
+                        <li><a alt="Uvod" href="https://docs.btcpayserver.org/">Uvod</a></li>
+                        <li><a alt="Primer uporabe" href="https://docs.btcpayserver.org/btcpay-basics/usecase">Primer uporabe</a></li>
+                        <li><a alt="Vmesnik in nastavitve" href="https://docs.btcpayserver.org/btcpay-basics/walkthrough">Vmesnik in nastavitve</a></li>
+                        <li><a alt="Kako začeti" href="https://docs.btcpayserver.org/btcpay-basics/gettingstarted">Kako začeti</a></li>
+                        <li><a alt=">BTCPay in drugi procesorji" href="https://docs.btcpayserver.org/btcpay-basics/btcpayvsothers">BTCPay in drugi procesorji</a></li>
+                        <li><a alt="Lightning Omrežje" href="https://docs.btcpayserver.org/features/lightningnetwork">Lightning Omrežje</a></li>
+                        <li><a alt="Preizkusite" href="https://mainnet.demo.btcpayserver.org/">Preizkusite</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="ftbTr_" id="fBTrig_-1">NAMESTITEV</h3>
+                    <ul class="ftb_" id="fBT_-1">
+                        <li><a alt="Izbira načina namestitve" href="https://docs.btcpayserver.org/deployment/deployment">Izbira načina namestitve</a></li>
+                        <li><a alt="Web Namestitev" href="https://docs.btcpayserver.org/deployment/lunanodewebdeployment">Web Namestitev</a></li>
+                        <li><a alt="Azure Namestitev" href="https://docs.btcpayserver.org/deployment/azuredeployment">Azure Namestitev</a></li>
+                        <li><a alt="Docker Namestitev" href="https://docs.btcpayserver.org/deployment/dockerdeployment">Docker Namestitev</a></li>
+                        <li><a alt="Google Cloud Namestitev" href="https://docs.btcpayserver.org/deployment/googleclouddeployment">Google Cloud Namestitev</a></li>
+                        <li><a alt="Ročna Namestitev" href="https://docs.btcpayserver.org/deployment/manualdeployment">Ročna Namestitev</a></li>
+                        <li><a alt="Namestitev - Lastna strojna oprema" href="https://docs.btcpayserver.org/deployment/manualdeployment">Namestitev - Lastna strojna oprema</a></li>
+                        <li><a alt="Gostovanje na BTCPay strežniku" href="https://docs.btcpayserver.org/deployment/thirdpartyhosting">Gostovanje na BTCPay strežniku</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="ftbTr_" id="fBTrig_-2">INTEGRACIJE IN APLIKACIJE</h3>
+                    <ul class="ftb_" id="fBT_-2">
+                        <li><a alt="WooCommerce" href="https://docs.btcpayserver.org/integrations/woocommerce">WooCommerce</a></li>
+                        <li><a alt="Drupal" href="https://docs.btcpayserver.org/integrations/drupal">Drupal</a></li>
+                        <li><a alt="Magento" href="https://docs.btcpayserver.org/integrations/drupal">Magento</a></li>
+                        <li><a alt="PrestaShop" href="https://docs.btcpayserver.org/integrations/drupal">PrestaShop</a></li>
+                        <li><a alt="Integracije po meri" href="https://docs.btcpayserver.org/integrations/drupal">Integracije po meri</a></li>
+                        <li><a alt="E-trgovina predstavitev" href="https://store.demo.btcpayserver.org/">E-trgovina predstavitev</a></li>
+                        <li><a alt="Point of Sale predstavitev" href="https://mainnet.demo.btcpayserver.org/apps/3utBTfSKkW4gK7aQMd2hW5Bh9Fpa/pos">Point of Sale predstavitev</a></li>
+                        <li><a alt="Gumb za plačilo predstavitev" target="blank_" href="https://store.demo.btcpayserver.org/index.php/payment-button-demo/">Gumb za plačilo predstavitev</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="ftbTr_" id="fBTrig_-3">SKUPNOST</h3>
+                    <ul class="ftb_" id="fBT_-3">
+                        <li class="nullTrans"><a class="nullTrans" alt="GITHUB" href="https://github.com/btcpayserver/">GITHUB</a></li>
+                        <li><a alt="MATTERMOST" href="http://chat.btcpayserver.org/">Mattermost Chat</a></li>
+                        <li><a alt="Pogosta vprašanja - FAQ" href="https://docs.btcpayserver.org/faq-and-common-issues/faq">Pogosta vprašanja - FAQ</a></li>
+                        <li><a alt="Odpravljanje težav" href="https://docs.btcpayserver.org/support-and-community/troubleshooting">Odpravljanje težav</a></li>
+                        <li><a alt="Razvijalska dokumentacija" href="https://docs.btcpayserver.org/development/">Razvijalska dokumentacija</a></li>
+                        <li><a alt="Skupnost" href="https://docs.btcpayserver.org/support-and-community/community">Skupnost</a></li>
+                        <li><a alt="Podpora" href="https://docs.btcpayserver.org/support-and-community/support">Podpora</a></li>
+                        <li><a alt="Prispevajte k projektu" href="https://docs.btcpayserver.org/support-and-community/contribute">Prispevajte k projektu</a></li>
+                    </ul>
+                </div>
+
+                <p class="copyright_"><a class="nullTrans" alt="Flat 18 Microsystems Development LLC << FLAT18.CO.UK >>" href="https://flat18.co.uk">Spletna stran ustvarjena z ⚡ by  FLAT18.CO.UK</a>
+                    <br>
+                     Vsebina izdana po licenci MIT<br> Ta spletna stran ne uporablja piškotkov niti ne zbira osebnih podatkov<br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="videoContainer" style="display:none;">
+        <span class="closeVideoWindow" onclick="endVideo();"><i class="fas fa-times"></i>&nbsp;zapri</span>
+        <div id="videoContainer_video0"></div>
+    </div>
+    <div id="systemAlert" style="display:none;"></div>
+    <div id="curtainGen" style="display:none;">
+        <span class="closeVideoWindow" onclick="closeCurtain();"><i class="fas fa-times"></i>&nbsp;zapri</span>
+        <div class="curtainWorkspace"></div>
+    </div>
+</body>
+<script src="/js/scripts.js"></script>
+
+</html>

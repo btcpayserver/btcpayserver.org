@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="שרת ביטיסי הוא ספק תשלומים קריפטוגרפיים באירוח עצמי ובעל קוד פתוח. הוא מאובטח, פרטי, עמיד לצנזורה וחינמי.">
+    <meta name="keywords" content="btcpay">
+    <meta name="author" content="Ed Sinaswee">
+    <meta property="og:title" content="BTCPay Server">
+    <meta property="og:description" content="שרת ביטיסי הוא ספק תשלומים קריפטוגרפיים באירוח עצמי ובעל קוד פתוח. הוא מאובטח, פרטי, עמיד לצנזורה וחינמי.">
+    <meta property="og:image" content="favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <title>BTCPay Server</title>
+    <link rel="stylesheet" type="text/css" href="/fonts/fa_/fa_.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <script>
+        window.jsEnviron = true;
+        window.cMod = "stickRight";
+        window.donationTitle = ("Enter an amount to donate")[0] != "$" ? "Enter an amount to donate" : "Enter an amount to donate";
+        window.noJSVideo = "הקליקו כדי לפתוח את הווידיאו בטאב חדש";
+    </script>
+</head>
+
+<body>
+    <div class="pageContainerTopBackground">
+        <div class="halfVertMenuBack">
+            <div class="menuBar" id="topMarker" dir='ltr'>
+                <div class="_Logo" onclick="window.location=\'/\'"></div>
+                <div class="mobileMenuShortcut" style="display:none !important;" onclick="toggleMobileMenu();"><i class="fas fa-bars"></i></div>
+                <div class="menuContents mc_noJS" id="menuContents">
+                    <div class="menuLinkParent"><a alt="מאפיינים" class="menuLink" href="#modularInformationBlock"><span>מאפיינים</span></a></div>
+                    <div class="menuLinkParent"><a alt="מסמכים" class="menuLink" target="blank_" href="http://docs.btcpayserver.org/"><span>מסמכים</span></a></div>
+                    <div class="menuLinkParent"><a alt="בלוג" class="menuLink" target="blank_" href="http://blog.btcpayserver.org/"><span>בלוג</span></a></div>
+                    <div class="menuLinkParent"><a alt="גיטהאב" class="menuLink nullTrans" target="blank_" href="https://github.com/btcpayserver"><span class="nullTrans">גיטהאב</span></a></div>
+                    <div class="menuLinkParent"><a alt="דמו" class="menuLink" href="https://mainnet.demo.btcpayserver.org/Account/Register" target="blank_"><span>דמו</span></a></div>
+                    <div class="menuLinkParent"><a alt="קהילה" class="menuLink" href="#communityCTA"><span>קהילה</span></a></div>
+                    
+                    <div class="menuLinkParent lnNomPar">
+                        <div id="lnNom" alt="Language" class="menuLink nullTrans" onclick="toggle_('#LanguagePicker')">
+                            <span class="nullTrans"><i class="fas fa-globe nullTrans"></i>&nbsp;he&nbsp;<i class="fas fa-caret-down nullTrans"></i></span>
+                            
+                            <ul id="LanguagePicker">
+                                <li class="nullTrans"><a class="nullTrans" href="/tr/">Türkçe</a></li><li class="nullTrans"><a class="nullTrans" href="/nl_NL/">Nederlands (NL)</a></li><li class="nullTrans"><a class="nullTrans" href="/ja_JP/">日本語 (JP)</a></li><li class="nullTrans"><a class="nullTrans" href="/fr_FR/">français (FR)</a></li><li class="nullTrans"><a class="nullTrans" href="/sr/">српски</a></li><li class="nullTrans"><a class="nullTrans" href="/">English</a></li><li class="nullTrans"><a class="nullTrans" href="/sk_SK/">slovenčina (SK)</a></li><li class="nullTrans"><a class="nullTrans" href="/fi_FI/">suomi (FI)</a></li><li class="nullTrans"><a class="nullTrans" href="/hr/">hrvatski</a></li><li class="nullTrans"><a class="nullTrans" href="/bg/">български</a></li><li class="nullTrans"><a class="nullTrans" href="/ca_ES/">català (ES)</a></li><li class="nullTrans"><a class="nullTrans" href="/pt_PT/">português (PT)</a></li><li class="nullTrans"><a class="nullTrans" href="/hi/">हिन्दी</a></li><li class="nullTrans"><a class="nullTrans" href="/bs_BA/">bosanski (BA)</a></li><li class="nullTrans"><a class="nullTrans" href="/it_IT/">italiano (IT)</a></li><li class="nullTrans"><a class="nullTrans" href="/ar/">العربية</a></li><li class="nullTrans"><a class="nullTrans" href="/sl_SI/">slovenščina (SI)</a></li><li class="nullTrans"><a class="nullTrans" href="/pt_BR/">português (BR)</a></li><li class="nullTrans"><a class="nullTrans" href="/es_ES/">español (ES)</a></li><li class="nullTrans"><a class="nullTrans" href="/de_DE/">Deutsch (DE)</a></li><li class="nullTrans"><a class="nullTrans" href="/el_GR/">Ελληνικά (GR)</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="promoArea" id="promoArea">
+            <div class="promoDetails">
+                <h1>התחילו לקבל תשלומים בביטקויין עם 0% עמלה ובלי צד שלישי.</h1>
+                <p>שרת ביטיסי הוא ספק תשלומים קריפטוגרפיים באירוח עצמי ובעל קוד פתוח. הוא מאובטח, פרטי, עמיד לצנזורה וחינמי.
+                    <br><span id="infoButton01" style="display:none;"><i class="fas fa-info-circle"></i></span>
+                    <span id="furtherQuote"><br>קבלו תשלומים בביטקוין ואלטקוין ללא עמלה וללא צורך בצד שלישי. אתם ספקי התשלומים של עצמכם. תשלומים מועברים ישירות לארנקכם; המפתח הפרטי שלכם לא נדרש לעולם.</span>
+                </p>
+                <br>
+                <div class="prpmpLinkOrg stickRight" dir="rtl">
+
+                    <a alt="דמו חי" class="promoButton" href="https://mainnet.demo.btcpayserver.org" target="blank_">דמו חי</a>
+
+                    <form method="POST" class="promoButtonProminentParent" action="https://mainnet.demo.btcpayserver.org/api/v1/invoices">
+                        <input type="hidden" name="storeId" value="EErYwCthBNfJUpuU1etH1uhg3x1YVH1q1F2zez7u1AAX" />
+                        <input type="hidden" name="price" value="5" />
+                        <input type="hidden" name="currency" value="USD" />
+                        <button class="promoButtonProminent" onclick="mfC();return false;" name="submit" alt="Pay with BtcPay, Self-Hosted Bitcoin Payment Processor"><i class="fas fa-hand-holding-heart nullTrans"></i>&nbsp;&nbsp;תרומה</button>
+                    </form>
+
+                </div>
+            </div>
+            <div class="modinvOuter" id="don_Par_sPa">
+                <a href="https://player.vimeo.com/video/330290302?color=0cb526&autoplay=0&title=0&byline=0&portrait=0" target="blank_" class="nonJavascriptMessage">הקליקו כדי לפתוח את הווידיאו בטאב חדש</a>
+                <div class="unfetteredVideoFrame" id="unfetteredVideoFrame">
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe id="unfetteredVideo" src="https://player.vimeo.com/video/330290302?color=0cb526&autoplay=0&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="pageContainer" id="pageContainer">
+
+        <div class="pageItemInfo whiteToGrey" id="modularInformationBlock" dir='ltr'>
+            <span style="display:none;" onclick="carousel('l')" class="carouselControl c_left"><i class="fas fa-chevron-left"></i></span>
+            <div class="choices_holder" id="choices_holder" style="display:unset;">
+                <div id="choices_" class="noJSChoices tiledPayloads" style="display: block;column-gap: 20px;width: 80vw;max-width: 1200px;padding: 50px 0;margin: auto;">
+
+                    <div alt="No fees" class="choice_ stickRight" dir="rtl">
+                        <i class="n_iconography_ fab fa-creative-commons-zero"></i>
+                        <span>קבלו תשלומים בביטקוין כעסק או כאדם פרטי. ללא עמלות. ללא צד שלישי.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <a alt="נסו את הדמו החי" class="modernLink featuresBlockLink" href="https://mainnet.demo.btcpayserver.org/Account/Register">נסו את הדמו החי&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                    <div alt="No middleman" class="choice_ stickRight" dir="rtl">
+                        <i class="n_iconography_ fas fa-handshake"></i>
+                        <span>קוד פתוח וחופשי. הוסטינג עצמי וללא צורך בצד שלישי.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                        </div>
+                    </div>
+                    <div alt="Deploy a Server" class="choice_ stickRight" dir="rtl">
+                        <i class="n_iconography_ fas fa-server"></i>
+                        <span>אפשרויות פריסה מגוונות. מפריסה בענן ועד פריסה בראסברי פאי.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <div class="payloadVideo">
+                                <a alt="הקליקו כדי לפתוח את הווידיאו בטאב חדש" href="https://www.youtube-nocookie.com/embed/NjslXYvp8bk" target="blank" class="ft-yt-vid-mod">הקליקו כדי לפתוח את הווידיאו בטאב חדש</a>
+                            </div>
+                            <ul>
+                                <li><a alt="בחירת שיטת הפריסה" href="https://docs.btcpayserver.org/deployment/deployment" target="blank_">בחירת שיטת הפריסה</a></li>
+                                <li><a alt="פריסה בווב" href="https://docs.btcpayserver.org/deployment/lunanodewebdeployment" target="blank_">פריסה בווב</a></li>
+                                <li><a alt="פריסה באז'ור" href="https://docs.btcpayserver.org/deployment/azuredeployment" target="blank_">פריסה באז'ור</a></li>
+                                <li><a alt="פריסה עם דוקר" href="https://docs.btcpayserver.org/deployment/dockerdeployment" target="blank_">פריסה עם דוקר</a></li>
+                                <li><a alt="פריסה בענן גוגל" href="https://docs.btcpayserver.org/deployment/googleclouddeployment" target="blank_">פריסה בענן גוגל</a></li>
+                                <li><a alt="פריסה ידנית" href="https://docs.btcpayserver.org/deployment/manualdeployment" target="blank_">פריסה ידנית</a></li>
+                                <li><a alt="פריסה בחומרה" href="https://docs.btcpayserver.org/deployment/hardwaredeployment" target="blank_">פריסה בחומרה</a></li>
+                                <li><a alt="אירוח ע"י צד שלישי" href="https://docs.btcpayserver.org/deployment/thirdpartyhosting" target="blank_">אירוח ע"י צד שלישי</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div alt="Not your keys" class="choice_ stickRight" dir="rtl">
+                        <i class="n_iconography_ fas fa-key"></i>
+                        <span>המפתחות שלך - הביטקוין שלך. לעולם לא נדרש מפתח פרטי על מנת להשתמש בביטיסיפיי.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                        </div>
+                    </div>
+                    <div alt="רשת הברק" class="choice_ stickRight" dir="rtl">
+                        <i class="n_iconography_ fas fa-bolt"></i>
+                        <span class="inParagraphLink">
+                        קבלו מיקרו-תשלומים עם רשת הברק. אירוח עצמי של חוליה ב
+                </span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <a alt="למדו עוד" class="modernLink featuresBlockLink" href="https://docs.btcpayserver.org/features/lightningnetwork" target="blank_">למדו עוד&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                    <div alt="e-Commerce integrations" class="choice_ stickRight" dir="rtl">
+                        <i class="n_iconography_ fas fa-shopping-cart"></i>
+                        <span>אינטגרציות עם שירותי מסחר דיגיטליים:
+וו-קומרס, דרופל, פרסטה, מג'נטו ועוד.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <ul>
+                                <li><a alt="וו-קומרס" href="https://docs.btcpayserver.org/integrations/woocommerce" target="black_">וו-קומרס</a></li>
+                                <li><a alt="דרופל" href="https://docs.btcpayserver.org/integrations/drupal" target="black_">דרופל</a></li>
+                                <li><a alt="מג'נטו" href="https://docs.btcpayserver.org/integrations/magento" target="black_">מג'נטו</a></li>
+                                <li><a alt="פרסטה שופ" href="https://docs.btcpayserver.org/integrations/prestashop" target="black_">פרסטה שופ</a></li>
+                                <li><a alt="אינטגרצייה מותאמת אישית" href="https://docs.btcpayserver.org/integrations/customintegration" target="black_">אינטגרצייה מותאמת אישית</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div alt="Enhanced Privacy & Security" class="choice_ stickRight" dir="rtl">
+                        <i class="n_iconography_ fas fa-mask"></i>
+                        <span>מקסימום פרטיות לך וללקוחות שלך. הרצה של חוליה מלאה של ביטקוין. ללא צורך ב AML/KYC.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                        </div>
+                    </div>
+                    <div alt="Payment Buttons" class="choice_ stickRight" dir="rtl">
+                        <i class="n_iconography_ fas fa-vector-square"></i>
+                        <span>הוסיפו כפתור תשלומים לקבלת תשר ותרומות באתר שלכם.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <div class="payloadVideo">
+                                <a alt="הקליקו כדי לפתוח את הווידיאו בטאב חדש" href="https://www.youtube-nocookie.com/embed/MIWGvl6_WzI" target="blank" class="ft-yt-vid-mod">הקליקו כדי לפתוח את הווידיאו בטאב חדש</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div alt="Point-Of-Sale" class="choice_ stickRight" dir="rtl">
+                        <i class="n_iconography_ fas fa-file-invoice-dollar"></i>
+                        <span>קבלו תשלומים ישירות או אונליין עם נקודת מכירה מבוססת ווב.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <div class="payloadVideo">
+                                <a alt="הקליקו כדי לפתוח את הווידיאו בטאב חדש" href="https://www.youtube-nocookie.com/embed/Mz4uajz0z9Y" target="blank" class="ft-yt-vid-mod">הקליקו כדי לפתוח את הווידיאו בטאב חדש</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div alt="Accounting" class="choice_ stickRight" dir="rtl">
+                        <i class="n_iconography_ fas fa-money-check"></i>
+                        <span>חשבונאות הופכת קלה עם אינטגרצייה לקוויק בוק וייצוא קבלות.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <div class="payloadVideo">
+                                <a alt="הקליקו כדי לפתוח את הווידיאו בטאב חדש" href="https://www.youtube-nocookie.com/embed/srgwL9ozg6c" target="blank" class="ft-yt-vid-mod">הקליקו כדי לפתוח את הווידיאו בטאב חדש</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div alt="Process payments for others" class="choice_ stickRight" dir="rtl">
+                        <i class="n_iconography_ fas fa-comments-dollar"></i>
+                        <span>חבילת טכנולוגיה שמאפשרת לך להפוך לספק התשלומים שלך או של אחרים.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <a alt="למדו עוד" class="modernLink featuresBlockLink" href="https://docs.btcpayserver.org/deployment/thirdpartyhosting">למדו עוד&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                    <div alt="Altcoin Support" class="choice_ stickRight" dir="rtl">
+                        <i class="n_iconography_ fas fa-coins"></i>
+                        <span>אפשרות לאינטגרצייה למספר אלטקויינס המתוחזקת ע"י הקהילות שלהם.</span>
+                        <div class="payloadDetail"></div>
+                        <div class="payloadItem_ PLI_noJS">
+                            <ul>
+                                <li class="nullTrans">ביטקור (BTX)</li>
+                                <li class="nullTrans">דאש (DASH)</li>
+                                <li class="nullTrans">דוג'קויין (DOGE)</li>
+                                <li class="nullTrans">פדרקויין (FTC)</li>
+                                <li class="nullTrans">גרוסטלקויין (GRS)</li>
+                                <li class="nullTrans">לייטקויין (LTC)</li>
+                                <li class="nullTrans">מונאקויין (MONA)</li>
+                                <li class="nullTrans">פוליס (POLIS)</li>
+                                <li class="nullTrans">וייהקויין (VIA)</li>
+                                <li>בי-גולד (BTG) (ידוע גם כביטקויין גולד) </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <span style="display:none;" onclick="carousel('r')" class="carouselControl c_right"><i class="fas fa-chevron-left"></i></span>
+        </div>
+
+        <div class="h-div h-divider_end_white_plain" style="z-index: 0;"></div>
+
+        <div class="pageItem ">
+            <div class="blockTrioMP" id="prominentTrioBlock">
+                <div class="trioMPBlockItem">
+                    <h3>דמו</h3>
+                    <div class="img_" style="background-image: url(/img/demo2-01.png);"></div>
+                    <p class="inParagraphLink">החלו להתנסות באמצעות שרת הדמו על ה<a alt="demo server on Mainnet" href="https://mainnet.demo.btcpayserver.org/" target="blank_">מיין-נט</a>  או ה <a alt="טסט-נט" href="https://testnet.demo.btcpayserver.org/" target="blank_">טסט-נט</a>
+                        <br>, בנוסף נסו את הדמו של ה <a alt="חנות" href="https://store.demo.btcpayserver.org/" target="blank_">חנות</a> <a alt="Point of Sale" href="https://mainnet.demo.btcpayserver.org/apps/3utBTfSKkW4gK7aQMd2hW5Bh9Fpa/pos" target="blank_">אפליקציית נקודת מכירה</a>  או  <a alt="כפתור תשלום" href="https://store.demo.btcpayserver.org/index.php/payment-button-demo/" target="blank_">כפתור תשלום</a></p>
+                    <a alt="נסו את זה" class="modernLink" href="https://mainnet.demo.btcpayserver.org/Account/Register" target="blank_">נסו את זה&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+                <div class="trioMPBlockItem">
+                    <h3>מסמכים</h3>
+                    <div class="img_" style="background-image: url(/img/docs2-01.png);"></div>
+                    <p>זקוקים לעזרה כדי להשתמש בביטיסיפיי? מסמכי ההדרכה המפורטים למשתמשים מכילים את כל המידע שאתם צריכים על מנת להתחיל ומידע שעוזר בפיתרון בעיות טכניות.</p>
+                    <a alt="קראו מסמכים" class="modernLink" href="http://docs.btcpayserver.org/" target="blank_">קראו מסמכים&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+                <div class="trioMPBlockItem">
+                    <h3 class="nullTrans">גיטהאב</h3>
+                    <div class="img_" style="background-image: url(/img/git-01.png);"></div>
+                    <p>יש לכם שאלה בנושא טכני ללא מענה במסמכי ההדרכה או שאתם מעוניינים לעזור לשפר את הקוד? עזרו לנו בגיטהאב.</p>
+                    <a alt="תרמו" class="modernLink" href="https://github.com/btcpayserver" target="blank_">תרמו&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="pageItemP" id="makeADonation">
+            <div class="pageItemInnerSpacer">
+                <h2>תמכו בפרוייקט ביטיסיפיי</h2>
+
+                <div class="donParent">
+                    <div class="closeDonationButton" style="display:none;" onclick="cDon(this);"><i class="fas fa-arrow-left"></i>&nbsp;cancel</div>
+                    <div class="promoteDonation modPar">
+
+                        <div class="jsInvoiceWorkspacePre">
+
+                            <div class="nonJavascriptMessage">
+                                <span>נא לאפשר ג'אווה סקריפט עבור חוויה מיטבית של מודול חשבונית עבור תרומות.</span>
+                                <form method="POST" action="https://mainnet.demo.btcpayserver.org/api/v1/invoices">
+                                    <input type="hidden" name="storeId" value="EErYwCthBNfJUpuU1etH1uhg3x1YVH1q1F2zez7u1AAX" />
+                                    <input type="hidden" name="price" value="5" />
+                                    <input type="hidden" name="currency" value="USD" />
+                                    <input type="image" src="/img/pay-2.png" name="submit" style="width:209px" alt="Pay with BtcPay, Self-Hosted Bitcoin Payment Processor">
+                                </form>
+                            </div>
+
+                            <div class="valueSelectorHolder oF_JS_Env" style="display:none;">
+                                <span class="valueControlBtn" onclick="adjV('minus', event, this)"><i class="fas fa-minus"></i></span>
+                                <input class="finalValue_" value="5" type="text" placeholder="5" onkeyup="adjV('verify', event, this)" />
+                                <select onchange="stC(this)">
+                                    <option value="USD">USD</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="BTC">BTC</option>
+                                </select>
+                                <span class="valueControlBtn" onclick="adjV('plus', event, this)"><i class="fas fa-plus"></i></span>
+                            </div>
+
+                            <img class="GenerateInvoiceButton oF_JS_Env" style="display:none;" class="oF_JS_Env" src="/img/pay-2-c.png" onclick="genInvoice_(this);" />
+
+                        </div>
+
+                        <div class="text-center statusButton" style="display:none;">
+                            <svg version="1.1" class="spinnerAnimated" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="283.46px" height="283.46px" viewBox="0 0 283.46 283.46" enable-background="new 0 0 283.46 283.46" xml:space="preserve">
+                                <circle fill="none" stroke="#329f65" stroke-width="30" stroke-linecap="round" stroke-miterlimit="10" cx="141.73" cy="141.73" r="106.762" />
+                            </svg><span class="genIn_">מייצרים את החשבונית שלך ...</span>
+                        </div>
+
+                        <div class="jsInvoiceWorkspace" style="display:none;" class=""></div>
+
+                    </div>
+
+                    <span class="demoBlockText" style="display:none;">
+        <!-- PLACEHOLDER FOR ANY FUTURE TEXT -->
+      </span>
+                </div>
+
+                <p>ראו את יכולות יצירת חשבונית ואישור תשלום באופן חי ע"י מתן תרומה לפרוייקט.</p>
+            </div>
+        </div>
+
+        <div class="pageItem background_texture_dots" id="communityCTA">
+            <div class="pageItemInnerSpacer">
+                <div class="pageItemTextContent floatContentLeft">
+                    <h2>הצטרפו לקהילה</h2>
+                    <p>שרת ביטיסיפיי הוא פרוייקט קוד פתוח והוא אינו חברה. אנחנו מסתמכים על רשת מגוונת של תורמים ומשתמשים בכדי לספק תמיכה במספר רב של שימושים. הצטרפו אלינו בשיפור, למידה ובנייה של ביטיסיפיי.</p>
+                    <div class="linkOrg-3">
+                        <a alt="Community on Mattermost" class="modernLink_Cluster" href="http://chat.btcpayserver.org/" target="blank_"><i class="svgPseudoIcon mattermost"></i>מטרמוסט</a>
+                        <a alt="Community on Github" class="modernLink_Cluster nullTrans" href="https://github.com/btcpayserver" target="blank_"><i class="fab fa-github"></i>גיטהאב</a>
+                        <a alt="טלגרם" class="modernLink_Cluster" href="https://t.me/btcpayserver" target="blank_"><i class="fab fa-telegram"></i>טלגרם</a>
+                    </div>
+                </div>
+                <img class="floatContentRight" src="/img/community4-01.png" />
+            </div>
+        </div>
+
+        <div class="h-div h-divider_start5"></div>
+        <div class="blockGreenFoot">
+            <div class="footerBlock">
+                <div>
+                    <h3 class="ftbTr_" id="fBTrig_-0">העקרונות הבסיסיים של ביטיסיפיי</h3>
+                    <ul class="ftb_" id="fBT_-0">
+                        <li><a alt="מבוא" href="https://docs.btcpayserver.org/">מבוא</a></li>
+                        <li><a alt="שימושים" href="https://docs.btcpayserver.org/btcpay-basics/usecase">שימושים</a></li>
+                        <li><a alt="צעד אחר צעד" href="https://docs.btcpayserver.org/btcpay-basics/walkthrough">צעד אחר צעד</a></li>
+                        <li><a alt="התחלה" href="https://docs.btcpayserver.org/btcpay-basics/gettingstarted">התחלה</a></li>
+                        <li><a alt=">ביטיסיפיי לעומת אחרים" href="https://docs.btcpayserver.org/btcpay-basics/btcpayvsothers">ביטיסיפיי לעומת אחרים</a></li>
+                        <li><a alt="רשת הברק" href="https://docs.btcpayserver.org/features/lightningnetwork">רשת הברק</a></li>
+                        <li><a alt="נסו" href="https://mainnet.demo.btcpayserver.org/">נסו</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="ftbTr_" id="fBTrig_-1">פריסה</h3>
+                    <ul class="ftb_" id="fBT_-1">
+                        <li><a alt="בחירת שיטת הפריסה" href="https://docs.btcpayserver.org/deployment/deployment">בחירת שיטת הפריסה</a></li>
+                        <li><a alt="פריסה בווב" href="https://docs.btcpayserver.org/deployment/lunanodewebdeployment">פריסה בווב</a></li>
+                        <li><a alt="פריסה באז'ור" href="https://docs.btcpayserver.org/deployment/azuredeployment">פריסה באז'ור</a></li>
+                        <li><a alt="פריסה עם דוקר" href="https://docs.btcpayserver.org/deployment/dockerdeployment">פריסה עם דוקר</a></li>
+                        <li><a alt="פריסה בענן גוגל" href="https://docs.btcpayserver.org/deployment/googleclouddeployment">פריסה בענן גוגל</a></li>
+                        <li><a alt="פריסה ידנית" href="https://docs.btcpayserver.org/deployment/manualdeployment">פריסה ידנית</a></li>
+                        <li><a alt="פריסה בחומרה" href="https://docs.btcpayserver.org/deployment/manualdeployment">פריסה בחומרה</a></li>
+                        <li><a alt="אירוח ע"י צד שלישי" href="https://docs.btcpayserver.org/deployment/thirdpartyhosting">אירוח ע"י צד שלישי</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="ftbTr_" id="fBTrig_-2">אינטגרציות ואפליקציות</h3>
+                    <ul class="ftb_" id="fBT_-2">
+                        <li><a alt="וו-קומרס" href="https://docs.btcpayserver.org/integrations/woocommerce">וו-קומרס</a></li>
+                        <li><a alt="דרופל" href="https://docs.btcpayserver.org/integrations/drupal">דרופל</a></li>
+                        <li><a alt="מג'נטו" href="https://docs.btcpayserver.org/integrations/drupal">מג'נטו</a></li>
+                        <li><a alt="פרסטה שופ" href="https://docs.btcpayserver.org/integrations/drupal">פרסטה שופ</a></li>
+                        <li><a alt="אינטגרצייה מותאמת אישית" href="https://docs.btcpayserver.org/integrations/drupal">אינטגרצייה מותאמת אישית</a></li>
+                        <li><a alt="דמו של חנות אלקטרונית" href="https://store.demo.btcpayserver.org/">דמו של חנות אלקטרונית</a></li>
+                        <li><a alt="דמו של נקודת מכירה" href="https://mainnet.demo.btcpayserver.org/apps/3utBTfSKkW4gK7aQMd2hW5Bh9Fpa/pos">דמו של נקודת מכירה</a></li>
+                        <li><a alt="דמו של כפתור תשלום" target="blank_" href="https://store.demo.btcpayserver.org/index.php/payment-button-demo/">דמו של כפתור תשלום</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="ftbTr_" id="fBTrig_-3">קהילה</h3>
+                    <ul class="ftb_" id="fBT_-3">
+                        <li class="nullTrans"><a class="nullTrans" alt="גיטהאב" href="https://github.com/btcpayserver/">גיטהאב</a></li>
+                        <li><a alt="מטרמוסט" href="http://chat.btcpayserver.org/">צ'אט במטרמוסט</a></li>
+                        <li><a alt="שאלות נפוצות" href="https://docs.btcpayserver.org/faq-and-common-issues/faq">שאלות נפוצות</a></li>
+                        <li><a alt="פתרון בעיות" href="https://docs.btcpayserver.org/support-and-community/troubleshooting">פתרון בעיות</a></li>
+                        <li><a alt="מסמכים למפתחים" href="https://docs.btcpayserver.org/development/">מסמכים למפתחים</a></li>
+                        <li><a alt="קהילה" href="https://docs.btcpayserver.org/support-and-community/community">קהילה</a></li>
+                        <li><a alt="תמיכה" href="https://docs.btcpayserver.org/support-and-community/support">תמיכה</a></li>
+                        <li><a alt="תרמו" href="https://docs.btcpayserver.org/support-and-community/contribute">תרמו</a></li>
+                    </ul>
+                </div>
+
+                <p class="copyright_"><a class="nullTrans" alt="Flat 18 Microsystems Development LLC << FLAT18.CO.UK >>" href="https://flat18.co.uk">האתר נבנה עם ⚡ ע"י  FLAT18.CO.UK</a>
+                    <br>
+                     תוכן מפורסם תחת רשיון MIT<br> האתר אינו משתמש בקוקיס ואינו אוסף מידע פרטי<br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="videoContainer" style="display:none;">
+        <span class="closeVideoWindow" onclick="endVideo();"><i class="fas fa-times"></i>&nbsp;סגירה</span>
+        <div id="videoContainer_video0"></div>
+    </div>
+    <div id="systemAlert" style="display:none;"></div>
+    <div id="curtainGen" style="display:none;">
+        <span class="closeVideoWindow" onclick="closeCurtain();"><i class="fas fa-times"></i>&nbsp;סגירה</span>
+        <div class="curtainWorkspace"></div>
+    </div>
+</body>
+<script src="/js/scripts.js"></script>
+
+</html>
