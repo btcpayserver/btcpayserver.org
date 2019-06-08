@@ -20,6 +20,7 @@
         window.cMod = "stickLeft";
         window.donationTitle = ("Entrer un montant ")[0] != "$" ? "Entrer un montant " : "Enter an amount to donate";
         window.noJSVideo = "Cliquez ici pour ouvrir la vidéo dans un nouvel onglet";
+        window.closeDonationL = "fermer";
     </script>
 </head>
 
@@ -42,7 +43,7 @@
                             <span class="nullTrans"><i class="fas fa-globe nullTrans"></i>&nbsp;fr&nbsp;<i class="fas fa-caret-down nullTrans"></i></span>
                             
                             <ul id="LanguagePicker">
-                                <li class="nullTrans"><a class="nullTrans" href="/ar/">العربية</a></li><li class="nullTrans"><a class="nullTrans" href="/bg/">български</a></li><li class="nullTrans"><a class="nullTrans" href="/bs_BA/">bosanski (BA)</a></li><li class="nullTrans"><a class="nullTrans" href="/ca_ES/">català (ES)</a></li><li class="nullTrans"><a class="nullTrans" href="/de_DE/">Deutsch (DE)</a></li><li class="nullTrans"><a class="nullTrans" href="/el_GR/">Ελληνικά (GR)</a></li><li class="nullTrans"><a class="nullTrans" href="/">English</a></li><li class="nullTrans"><a class="nullTrans" href="/es_ES/">español (ES)</a></li><li class="nullTrans"><a class="nullTrans" href="/fi_FI/">suomi (FI)</a></li><li class="nullTrans"><a class="nullTrans" href="/he/">עברית</a></li><li class="nullTrans"><a class="nullTrans" href="/hi/">हिन्दी</a></li><li class="nullTrans"><a class="nullTrans" href="/hr/">hrvatski</a></li><li class="nullTrans"><a class="nullTrans" href="/it_IT/">italiano (IT)</a></li><li class="nullTrans"><a class="nullTrans" href="/ja_JP/">日本語 (JP)</a></li><li class="nullTrans"><a class="nullTrans" href="/nl_NL/">Nederlands (NL)</a></li><li class="nullTrans"><a class="nullTrans" href="/pt_BR/">português (BR)</a></li><li class="nullTrans"><a class="nullTrans" href="/sk_SK/">slovenčina (SK)</a></li><li class="nullTrans"><a class="nullTrans" href="/sl_SI/">slovenščina (SI)</a></li><li class="nullTrans"><a class="nullTrans" href="/sr/">српски</a></li><li class="nullTrans"><a class="nullTrans" href="/tr/">Türkçe</a></li>
+                                <li class="nullTrans"><a class="nullTrans" href="/am_ET/">አማርኛ</a></li><li class="nullTrans"><a class="nullTrans" href="/ar/">العربية</a></li><li class="nullTrans"><a class="nullTrans" href="/bg/">български</a></li><li class="nullTrans"><a class="nullTrans" href="/bs_BA/">Bosanski</a></li><li class="nullTrans"><a class="nullTrans" href="/ca_ES/">Català</a></li><li class="nullTrans"><a class="nullTrans" href="/de_DE/">Deutsch</a></li><li class="nullTrans"><a class="nullTrans" href="/el_GR/">Ελληνικά</a></li><li class="nullTrans"><a class="nullTrans" href="/">English</a></li><li class="nullTrans"><a class="nullTrans" href="/es_ES/">Español</a></li><li class="nullTrans"><a class="nullTrans" href="/fi_FI/">Suomi</a></li><li class="nullTrans"><a class="nullTrans" href="/he/">עברית</a></li><li class="nullTrans"><a class="nullTrans" href="/hi/">हिन्दी</a></li><li class="nullTrans"><a class="nullTrans" href="/hr/">Hrvatski</a></li><li class="nullTrans"><a class="nullTrans" href="/it_IT/">Italiano</a></li><li class="nullTrans"><a class="nullTrans" href="/ja_JP/">日本語</a></li><li class="nullTrans"><a class="nullTrans" href="/nl_NL/">Nederlands</a></li><li class="nullTrans"><a class="nullTrans" href="/pt_PT/">Português</a></li><li class="nullTrans"><a class="nullTrans" href="/pt_BR/">Português (br)</a></li><li class="nullTrans"><a class="nullTrans" href="/ru_RU/">русский</a></li><li class="nullTrans"><a class="nullTrans" href="/sk_SK/">Slovenčina</a></li><li class="nullTrans"><a class="nullTrans" href="/sl_SI/">Slovenščina</a></li><li class="nullTrans"><a class="nullTrans" href="/sr/">српски</a></li><li class="nullTrans"><a class="nullTrans" href="/tr/">Türkçe</a></li><li class="nullTrans"><a class="nullTrans" href="/zh-Hans/">中文</a></li>
                             </ul>
 
                         </div>
@@ -57,7 +58,7 @@
                 <h1>Acceptez les paiements Bitcoin avec 0% de frais et sans intermédiaire.</h1>
                 <p>BTCPay Server est un processeur de paiement pour crypto-monnaies auto-hébergé et à code source ouvert. C'est sécurisé, anti-censure et gratuit.
                     <br><span id="infoButton01" style="display:none;"><i class="fas fa-info-circle"></i></span>
-                    <span id="furtherQuote"><br>Recevez vos paiements en Bitcoin et altcoin sans frais ou intervention d'un intermédiaire. Vous êtes votre propre processeur de paiement. Les fonds vont directement dans votre portefeuille; votre clé privée n'est jamais requis.</span>
+                    <span id="furtherQuote"><br>Recevez vos paiements en Bitcoin et altcoin sans frais ou intervention d'un intermédiaire. Vous êtes votre propre processeur de paiement. Les fonds vont directement dans votre portefeuille; votre clé privée n'est jamais requise.</span>
                 </p>
                 <br>
                 <div class="prpmpLinkOrg stickLeft" dir="ltr">
@@ -259,7 +260,7 @@
                 <h2>Soutenez le projet BTCPay</h2>
 
                 <div class="donParent">
-                    <div class="closeDonationButton" style="display:none;" onclick="cDon(this);"><i class="fas fa-arrow-left"></i>&nbsp;cancel</div>
+                    <div class="closeDonationButton" style="visibility:hidden;" onclick="cDon(this);"><i class="fas fa-arrow-left"></i></div>
                     <div class="promoteDonation modPar">
 
                         <div class="jsInvoiceWorkspacePre">

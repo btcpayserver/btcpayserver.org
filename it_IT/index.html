@@ -5,11 +5,11 @@
 <head>
     <meta charset=UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta name="description" content="BTCPay Server è un processore di pagamento self-hosted e completamente open-source. Sicuro, privato e resistente alla censura. ">
+    <meta name="description" content="BTCPay Server è un processore di pagamento self-hosted e completamente open-source. È sicuro, privato e resistente alla censura. ">
     <meta name="keywords" content="btcpay">
     <meta name="author" content="Ed Sinaswee">
     <meta property="og:title" content="BTCPay Server">
-    <meta property="og:description" content="BTCPay Server è un processore di pagamento self-hosted e completamente open-source. Sicuro, privato e resistente alla censura. ">
+    <meta property="og:description" content="BTCPay Server è un processore di pagamento self-hosted e completamente open-source. È sicuro, privato e resistente alla censura. ">
     <meta property="og:image" content="favicon.png">
     <link rel="icon" type="image/png" href="/favicon.png">
     <title>BTCPay Server</title>
@@ -20,6 +20,7 @@
         window.cMod = "stickLeft";
         window.donationTitle = ("Inserisci l'importo da donare ")[0] != "$" ? "Inserisci l'importo da donare " : "Enter an amount to donate";
         window.noJSVideo = "Clicca qui per aprire il video in una nuova scheda.";
+        window.closeDonationL = "chiudi";
     </script>
 </head>
 
@@ -42,7 +43,7 @@
                             <span class="nullTrans"><i class="fas fa-globe nullTrans"></i>&nbsp;it&nbsp;<i class="fas fa-caret-down nullTrans"></i></span>
                             
                             <ul id="LanguagePicker">
-                                <li class="nullTrans"><a class="nullTrans" href="/ar/">العربية</a></li><li class="nullTrans"><a class="nullTrans" href="/bg/">български</a></li><li class="nullTrans"><a class="nullTrans" href="/bs_BA/">bosanski (BA)</a></li><li class="nullTrans"><a class="nullTrans" href="/ca_ES/">català (ES)</a></li><li class="nullTrans"><a class="nullTrans" href="/de_DE/">Deutsch (DE)</a></li><li class="nullTrans"><a class="nullTrans" href="/el_GR/">Ελληνικά (GR)</a></li><li class="nullTrans"><a class="nullTrans" href="/">English</a></li><li class="nullTrans"><a class="nullTrans" href="/es_ES/">español (ES)</a></li><li class="nullTrans"><a class="nullTrans" href="/fi_FI/">suomi (FI)</a></li><li class="nullTrans"><a class="nullTrans" href="/fr_FR/">français (FR)</a></li><li class="nullTrans"><a class="nullTrans" href="/he/">עברית</a></li><li class="nullTrans"><a class="nullTrans" href="/hi/">हिन्दी</a></li><li class="nullTrans"><a class="nullTrans" href="/hr/">hrvatski</a></li><li class="nullTrans"><a class="nullTrans" href="/ja_JP/">日本語 (JP)</a></li><li class="nullTrans"><a class="nullTrans" href="/nl_NL/">Nederlands (NL)</a></li><li class="nullTrans"><a class="nullTrans" href="/pt_BR/">português (BR)</a></li><li class="nullTrans"><a class="nullTrans" href="/sk_SK/">slovenčina (SK)</a></li><li class="nullTrans"><a class="nullTrans" href="/sl_SI/">slovenščina (SI)</a></li><li class="nullTrans"><a class="nullTrans" href="/sr/">српски</a></li><li class="nullTrans"><a class="nullTrans" href="/tr/">Türkçe</a></li>
+                                <li class="nullTrans"><a class="nullTrans" href="/am_ET/">አማርኛ</a></li><li class="nullTrans"><a class="nullTrans" href="/ar/">العربية</a></li><li class="nullTrans"><a class="nullTrans" href="/bg/">български</a></li><li class="nullTrans"><a class="nullTrans" href="/bs_BA/">Bosanski</a></li><li class="nullTrans"><a class="nullTrans" href="/ca_ES/">Català</a></li><li class="nullTrans"><a class="nullTrans" href="/de_DE/">Deutsch</a></li><li class="nullTrans"><a class="nullTrans" href="/el_GR/">Ελληνικά</a></li><li class="nullTrans"><a class="nullTrans" href="/">English</a></li><li class="nullTrans"><a class="nullTrans" href="/es_ES/">Español</a></li><li class="nullTrans"><a class="nullTrans" href="/fi_FI/">Suomi</a></li><li class="nullTrans"><a class="nullTrans" href="/fr_FR/">Français</a></li><li class="nullTrans"><a class="nullTrans" href="/he/">עברית</a></li><li class="nullTrans"><a class="nullTrans" href="/hi/">हिन्दी</a></li><li class="nullTrans"><a class="nullTrans" href="/hr/">Hrvatski</a></li><li class="nullTrans"><a class="nullTrans" href="/ja_JP/">日本語</a></li><li class="nullTrans"><a class="nullTrans" href="/nl_NL/">Nederlands</a></li><li class="nullTrans"><a class="nullTrans" href="/pt_PT/">Português</a></li><li class="nullTrans"><a class="nullTrans" href="/pt_BR/">Português (br)</a></li><li class="nullTrans"><a class="nullTrans" href="/ru_RU/">русский</a></li><li class="nullTrans"><a class="nullTrans" href="/sk_SK/">Slovenčina</a></li><li class="nullTrans"><a class="nullTrans" href="/sl_SI/">Slovenščina</a></li><li class="nullTrans"><a class="nullTrans" href="/sr/">српски</a></li><li class="nullTrans"><a class="nullTrans" href="/tr/">Türkçe</a></li><li class="nullTrans"><a class="nullTrans" href="/zh-Hans/">中文</a></li>
                             </ul>
 
                         </div>
@@ -55,7 +56,7 @@
         <div class="promoArea" id="promoArea">
             <div class="promoDetails">
                 <h1>Inizia ad Accettare Pagamenti Bitcoin con 0% di Commissioni & Nessuna Terza parte. </h1>
-                <p>BTCPay Server è un processore di pagamento self-hosted e completamente open-source. Sicuro, privato e resistente alla censura. 
+                <p>BTCPay Server è un processore di pagamento self-hosted e completamente open-source. È sicuro, privato e resistente alla censura. 
                     <br><span id="infoButton01" style="display:none;"><i class="fas fa-info-circle"></i></span>
                     <span id="furtherQuote"><br>RIcevi i tuoi pagamenti bitcoin senza commissioni e terze parti. Sei tu il tuo processore di pagamento. I fondi arrivano direttamente nel tuo wallet; le tue chiavi private non sono mai richieste. </span>
                 </p>
@@ -178,7 +179,7 @@
                     </div>
                     <div alt="Point-Of-Sale" class="choice_ stickLeft" dir="ltr">
                         <i class="n_iconography_ fas fa-file-invoice-dollar"></i>
-                        <span>Vieni pagato di persona o online con la web app Pos (point of sale)</span>
+                        <span>Ricevi pagamenti di persona o online con la web app Pos (punto di vendita)</span>
                         <div class="payloadDetail"></div>
                         <div class="payloadItem_ PLI_noJS">
                             <div class="payloadVideo">
@@ -198,7 +199,7 @@
                     </div>
                     <div alt="Process payments for others" class="choice_ stickLeft" dir="ltr">
                         <i class="n_iconography_ fas fa-comments-dollar"></i>
-                        <span>Stack tecnologico completo per trasformarti tu stesso in un processore di pagemento. Per te o per gli altri.</span>
+                        <span>Stack tecnologico completo che ti permette di diventare un processore di pagamento per te o per gli altri.</span>
                         <div class="payloadDetail"></div>
                         <div class="payloadItem_ PLI_noJS">
                             <a alt="Scopri di più" class="modernLink featuresBlockLink" href="https://docs.btcpayserver.org/deployment/thirdpartyhosting">Scopri di più&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
@@ -236,8 +237,8 @@
                 <div class="trioMPBlockItem">
                     <h3>PROVA</h3>
                     <div class="img_" style="background-image: url(/img/demo2-01.png);"></div>
-                    <p class="inParagraphLink">Partecipa al demo server su <a alt="demo server on Mainnet" href="https://mainnet.demo.btcpayserver.org/" target="blank_">Mainnet</a>  o  <a alt="Testnet" href="https://testnet.demo.btcpayserver.org/" target="blank_">Testnet</a>
-                        <br>. Prova anche l'app demo e-commerce Store Point of Sale o un pulsante di pagamento <a alt="Negozio" href="https://store.demo.btcpayserver.org/" target="blank_">Negozio</a> <a alt="Point of Sale" href="https://mainnet.demo.btcpayserver.org/apps/3utBTfSKkW4gK7aQMd2hW5Bh9Fpa/pos" target="blank_">App Point of Sale (POS)</a>  <a alt="Pulsante di pagamento" href="https://store.demo.btcpayserver.org/index.php/payment-button-demo/" target="blank_">Pulsante di pagamento</a></p>
+                    <p class="inParagraphLink">Testa il server demo su <a alt="demo server on Mainnet" href="https://mainnet.demo.btcpayserver.org/" target="blank_">Mainnet</a>  o  <a alt="Testnet" href="https://testnet.demo.btcpayserver.org/" target="blank_">Testnet</a>
+                        <br>. Prova anche l'app demo e-commerce Store Point of Sale o un Pulsante di Pagamento <a alt="Negozio" href="https://store.demo.btcpayserver.org/" target="blank_">Negozio</a> <a alt="Point of Sale" href="https://mainnet.demo.btcpayserver.org/apps/3utBTfSKkW4gK7aQMd2hW5Bh9Fpa/pos" target="blank_">App Point of Sale (POS)</a>  <a alt="Pulsante di Pagamento" href="https://store.demo.btcpayserver.org/index.php/payment-button-demo/" target="blank_">Pulsante di Pagamento</a></p>
                     <a alt="PROVALO" class="modernLink" href="https://mainnet.demo.btcpayserver.org/Account/Register" target="blank_">PROVALO&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
                 </div>
                 <div class="trioMPBlockItem">
@@ -259,7 +260,7 @@
                 <h2>Supporta il progetto BTCPay. </h2>
 
                 <div class="donParent">
-                    <div class="closeDonationButton" style="display:none;" onclick="cDon(this);"><i class="fas fa-arrow-left"></i>&nbsp;cancel</div>
+                    <div class="closeDonationButton" style="visibility:hidden;" onclick="cDon(this);"><i class="fas fa-arrow-left"></i></div>
                     <div class="promoteDonation modPar">
 
                         <div class="jsInvoiceWorkspacePre">
@@ -293,7 +294,7 @@
                         <div class="text-center statusButton" style="display:none;">
                             <svg version="1.1" class="spinnerAnimated" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="283.46px" height="283.46px" viewBox="0 0 283.46 283.46" enable-background="new 0 0 283.46 283.46" xml:space="preserve">
                                 <circle fill="none" stroke="#329f65" stroke-width="30" stroke-linecap="round" stroke-miterlimit="10" cx="141.73" cy="141.73" r="106.762" />
-                            </svg><span class="genIn_">Stiamo generando la tua fattura...  </span>
+                            </svg><span class="genIn_">Generando la tua fattura...  </span>
                         </div>
 
                         <div class="jsInvoiceWorkspace" style="display:none;" class=""></div>
@@ -328,7 +329,7 @@
         <div class="blockGreenFoot">
             <div class="footerBlock">
                 <div>
-                    <h3 class="ftbTr_" id="fBTrig_-0">BTCPAY BASI</h3>
+                    <h3 class="ftbTr_" id="fBTrig_-0">BASI DI BTCPAY</h3>
                     <ul class="ftb_" id="fBT_-0">
                         <li><a alt="Introduzione" href="https://docs.btcpayserver.org/">Introduzione</a></li>
                         <li><a alt="Utilizzo" href="https://docs.btcpayserver.org/btcpay-basics/usecase">Utilizzo</a></li>
@@ -387,12 +388,12 @@
         </div>
     </div>
     <div id="videoContainer" style="display:none;">
-        <span class="closeVideoWindow" onclick="endVideo();"><i class="fas fa-times"></i>&nbsp;Chiudi</span>
+        <span class="closeVideoWindow" onclick="endVideo();"><i class="fas fa-times"></i>&nbsp;chiudi</span>
         <div id="videoContainer_video0"></div>
     </div>
     <div id="systemAlert" style="display:none;"></div>
     <div id="curtainGen" style="display:none;">
-        <span class="closeVideoWindow" onclick="closeCurtain();"><i class="fas fa-times"></i>&nbsp;Chiudi</span>
+        <span class="closeVideoWindow" onclick="closeCurtain();"><i class="fas fa-times"></i>&nbsp;chiudi</span>
         <div class="curtainWorkspace"></div>
     </div>
 </body>
