@@ -1,7 +1,11 @@
 <svg version="1.1" id="vidPH_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="599.925px" height="332.958px" viewBox="0 0 599.925 332.958" enable-background="new 0 0 599.925 332.958"
 	 xml:space="preserve">
-<rect x="0" y="0" fill="#608727" width="599.925" height="332.958"/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="299.9629" y1="332.9575" x2="299.9629" y2="4.882812e-04">
+	<stop  offset="0" style="stop-color:#608727"/>
+	<stop  offset="1" style="stop-color:#007000"/>
+</linearGradient>
+<rect fill="url(#SVGID_1_)" width="599.925" height="332.958"/>
 <path fill-rule="evenodd" clip-rule="evenodd" fill="#C99D38" d="M231.963,176.479c0,41.237,31.429,70,72.667,70
 	s74.666-31.43,74.666-72.667s-31.429-72-72.666-72S231.963,135.242,231.963,176.479z"/>
 <path fill="#C7C9B0" d="M334.625,179.521c-0.986-0.751-2.058-1.375-3.296-2.065c0.377-0.106,0.599-0.167,0.819-0.23
@@ -30,28 +34,4 @@
 	c-4.226-0.065-7.918-1.062-11.618-2.03c-0.505-0.133-0.312-0.424-0.243-0.698c0.653-2.629,1.314-5.256,1.971-7.884
 	c0.555-2.221,1.103-4.442,1.664-6.661c0.074-0.29,0.051-0.639,0.597-0.514c3.451,0.788,6.919,1.509,10.166,2.985
 	c1.22,0.555,2.382,1.209,3.417,2.068C325.617,160.37,326.52,162.835,325.722,165.843z"/>
-<g id="VidPH_controls_">
-	<path fill-rule="evenodd" clip-rule="evenodd" fill="#2B3B23" d="M94.629,293.479c0-1.657,1.343-3,3-3h490c1.657,0,3,1.343,3,3v30
-		c0,1.657-1.343,3-3,3h-490c-1.657,0-3-1.343-3-3V293.479z"/>
-	<path fill-rule="evenodd" clip-rule="evenodd" fill="#2B3B23" d="M84.629,321.479c0,2.762-2.239,5-5,5H16.963c-2.761,0-5-2.238-5-5
-		v-35.333c0-2.762,2.239-5,5-5h62.667c2.761,0,5,2.238,5,5V321.479z"/>
-	<path fill-rule="evenodd" clip-rule="evenodd" fill="#2B3B23" d="M591.295,134.812c0,2.761-2.238,5-5,5h-31.333
-		c-2.762,0-5-2.239-5-5v-31.333c0-2.761,2.238-5,5-5h31.333c2.762,0,5,2.239,5,5V134.812z"/>
-	<path fill-rule="evenodd" clip-rule="evenodd" fill="#2B3B23" d="M590.962,89.813c0,2.761-2.238,5-5,5h-31.333
-		c-2.762,0-5-2.239-5-5V58.479c0-2.761,2.238-5,5-5h31.333c2.762,0,5,2.239,5,5V89.813z"/>
-	<path fill-rule="evenodd" clip-rule="evenodd" fill="#2B3B23" d="M591.628,44.813c0,2.761-2.238,5-5,5h-31.333
-		c-2.762,0-5-2.239-5-5V13.479c0-2.761,2.238-5,5-5h31.333c2.762,0,5,2.239,5,5V44.813z"/>
-</g>
-<style>
-	#VidPH_controls_{
-	transform-origin:300px 165px;
-	transform: scale(0.98);
-	animation: glow_1 0.75s ease-in-out infinite forwards alternate;
-	}
-	@keyframes glow_1{
-	from{opacity: 0}
-		to{
-		opacity:1}
-	}
-</style>
 </svg>
