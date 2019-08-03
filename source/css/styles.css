@@ -124,7 +124,7 @@ body {
   font-size: var(--don-b-fs);
   line-height: var(--don-b-fs);
   font-family: "Open Sans", sans-serif;
-  max-width: 3rem;
+  max-width: 4rem;
   text-align: center;
   padding-left: calc(20px - .5rem);
   cursor: pointer;
