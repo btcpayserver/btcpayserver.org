@@ -209,7 +209,7 @@ function setJSEnvironment() {
     } catch (e) { }
     try {
 
-        var t = .85 * document.documentElement.clientWidth >= 550 ? .4 * document.documentElement.clientWidth >= 550 ? 550 : .4 * document.documentElement.clientWidth : .85 * document.documentElement.clientWidth;
+        var t = .85 * document.documentElement.clientWidth >= 500 ? .35 * document.documentElement.clientWidth >= 500 ? 500 : .35 * document.documentElement.clientWidth : .85 * document.documentElement.clientWidth;
         document.getElementById("unfetteredVideoFrame").style.width = t + "px", document.getElementById("unfetteredVideoFrame").style.height = (t - 0) / 1.78 + "px";
     } catch (e) { }
     try {
@@ -603,9 +603,10 @@ function historyMan(e) {
         n = String(window.location.href).replace("https://btcpayserver.org", "").replace("https://btcpayserver.flat18.co.uk", "").replace("/", "").replace(window.lurl, "").replace("/", "");
         switch (n) {
             case "#donate":
-                cDon();
-                mfC();
-                uPHis(n);
+                // cDon();
+                // mfC();
+                // uPHis(n);
+                window.location = "/donate";
                 break;
             case "#invoicing":
                 genInvoice_();
