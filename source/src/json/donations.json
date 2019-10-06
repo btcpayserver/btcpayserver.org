@@ -1,12 +1,37 @@
 [
-  ["NicolasDorier", "https://donate.nicolas-dorier.com"],
-  ["Kukks", "https://donate.kukks.org/"],
-  ["Ed", "https://flat18.co.uk/#donate"],
-  ["britttttk", "https://btcps0.com/"],
+  [
+    "NicolasDorier",
+    "https://donate.nicolas-dorier.com",
+    "https://avatars0.githubusercontent.com/u/3020646?s=460&v=4"
+  ],
+  [
+    "Kukks",
+    "https://donate.kukks.org/",
+    "https://avatars3.githubusercontent.com/u/1818366?s=460&v=4"
+  ],
+  [
+    "Ed",
+    "https://flat18.co.uk/#donate",
+    "https://avatars2.githubusercontent.com/u/2403100?s=460&v=4"
+  ],
+  [
+    "britttttk",
+    "https://btcps0.com/",
+    "https://avatars0.githubusercontent.com/u/39231115?s=460&v=4"
+  ],
   [
     "Zaxounette",
-    "https://btcpay.keyla.fr/apps/HYQ3CxKuTrMHeEyDVHoYYhc694W/pos"
+    "https://btcpay.keyla.fr/apps/HYQ3CxKuTrMHeEyDVHoYYhc694W/pos",
+    "https://avatars3.githubusercontent.com/u/51208677?s=460&v=4"
   ],
-  ["pavlenex", "https://pavlenex.com"],
-  ["esky", "https://btcpayjungle.com/apps/rNDJZatj44pN7YtpkT9p2EeCVy/pos"]
+  [
+    "pavlenex",
+    "https://pavlenex.com",
+    "https://avatars2.githubusercontent.com/u/36959754?s=460&v=4"
+  ],
+  [
+    "esky",
+    "https://btcpayjungle.com/apps/rNDJZatj44pN7YtpkT9p2EeCVy/pos",
+    "https://avatars0.githubusercontent.com/u/30862925?s=460&v=4"
+  ]
 ]
