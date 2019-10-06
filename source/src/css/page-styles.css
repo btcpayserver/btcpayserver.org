@@ -2543,7 +2543,7 @@ video#videoContainer_video0 {
     display: none;
     text-align: right;
     grid-row-gap: 30px;
-    background: #00ba00;
+    background: var(--light-grey);
     position: absolute;
     right: 0;
     top: 0;
@@ -2561,7 +2561,7 @@ video#videoContainer_video0 {
   }
 
   .menuLink {
-    color: rgba(255, 255, 255, 1);
+    color: var(--medium-grey);
   }
 
   @keyframes buildInMenuItemDropRight {
