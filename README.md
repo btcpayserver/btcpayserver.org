@@ -21,7 +21,9 @@ The files in the `source` are used in conjunction with the Transifex resources t
 
 Create pull requests affecting the css, js, images etc in the `source`-- and once merged, the changes will be used to roll out updates to the main directory.
 
-Please **do not** submit any changes to the language files.
+To fix spelling or grammatical errors, make updates to either the English string(s) in the relevant file of the `source` directory or any of the **non-English** translations via the Transifex website.
+
+Please **do not** submit any changes to the html files other than those within the `source` directory.
 
 ### Translating the website
 Translations help us make the software relevant for people who need it around the world. 
