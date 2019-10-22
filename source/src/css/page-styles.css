@@ -551,6 +551,10 @@ contents a {
   text-align: right;
 }
 
+#lnNom {
+  position: relative;
+}
+
 #lnNom:hover > #LanguagePicker {
   display: unset !important;
 }
@@ -570,6 +574,9 @@ contents a {
 #LanguagePicker {
   display: none;
   position: absolute;
+  right: 50%;
+  width: 300px;
+  columns: 2 140px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -2549,10 +2556,9 @@ video#videoContainer_video0 {
     top: 0;
     padding: 20px 20px 40px 20px;
     z-index: 1;
-    width: 70vw;
+    width: calc(100vw - 40px);
     max-width: 400px;
-    border-radius: 0 0 0 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
     animation: 0.25s buildInMenuItemDropRight ease forwards 1;
   }
 
