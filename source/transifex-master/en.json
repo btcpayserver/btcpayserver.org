@@ -96,11 +96,14 @@
   "BGold (BTG) (also known as Bitcoin Gold)",
   "Enter an amount to donate",
   "Directory",
-  "Help us translate BTCPay Server",
+  "Translate BTCPay",
   "BTCPay Server is proudly free and open-source, built and maintained by a world-wide community of passionate contributors.",
   "Corporate Donations",
   "Corporate entities wishing to help support the future of the project should visit the BTCPay Server Foundation to become an official supporter.",
   "BTCPay Server Foundation",
   "Individual Donations",
-  "If you're not a corporate entity, you can support individual contributors below. Donations go directly to contributors, on their self-hosted servers and are not part of the BTCPay Server Foundation."
+  "If you're not a corporate entity, you can support individual contributors below. Donations go directly to contributors, on their self-hosted servers and are not part of the BTCPay Server Foundation.",
+  "BTCPay Server - Cryptocurrency payment processor",
+  "BTCPay Contributor?",
+  "Add yourself to the list."
 ]
