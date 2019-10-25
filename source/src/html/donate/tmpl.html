@@ -7,11 +7,11 @@
   <meta name="description" content="$j[23]">
   <meta name="keywords" content="btcpay">
   <meta name="author" content="Ed Sinaswee | flat18.co.uk">
-  <meta property="og:title" content="$_donate | $j[104]">
+  <meta property="og:title" content="BTCPay Server">
   <meta property="og:description" content="$j[23]">
   <meta property="og:image" content="/img/favicon.png">
   <link rel="icon" type="image/png" href="/img/favicon.png">
-  <title>$_donate | $j[104]</title>
+  <title>$_donate | BTCPay Server</title>
   <link rel="stylesheet" type="text/css" href="/css/fa_.min.css">
   <link rel="stylesheet" type="text/css" href="/source/github-source/src/css/page-styles.css">
   <script>
@@ -25,47 +25,6 @@
     window.closeDonationL = "$j[22]";
     window.donWor = "$j[38]";
     window.language = "$__lang";
-
-  </script>
-  <!-- Schema.org JSON-LD Markup for Search Engine Optimization -->
-  <script type='application/ld+json'>
-    {
-      "@context": "https://schema.org/",
-      "@type": "SoftwareApplication",
-      "applicationCategory": "FinanceApplication",
-      "name": "BTCPay Server",
-      "image": "https://btcpayserver.org/img/favicon.png",
-      "availableOnDevice": "Desktop",
-      "author": {
-        "@type": "Organization",
-        "url": "https://foundation.btcpayserver.org/",
-        "name": "BTCPay Server Foundation",
-        "sameAs": [
-          "https://twitter.com/BtcpayServer",
-          "https://t.me/btcpayserver",
-          "http://chat.btcpayserver.org/"
-        ]
-      },
-      "downloadUrl": "https://github.com/btcpayserver/btcpayserver/releases",
-      "fileSize": "6MB",
-      "operatingSystem": [
-        "Windows",
-        "Linux"
-      ],
-      "releaseNotes": "https://blog.btcpayserver.org/changelog/",
-      "screenshot": "https://blog.btcpayserver.org/wp-content/uploads/2019/05/BTCPay-Invoices-1024x552.gif",
-      "softwareVersion": "1.0.3.133",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "ratingCount": "20"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "BTC"
-      }
-    }
 
   </script>
 </head>
@@ -200,6 +159,7 @@
           <div class="individual-grid" id="donGr">
             $donationsBlock
           </div>
+          <p>$j[105]&nbsp;<a href="https://github.com/btcpayserver/btcpayserver.github.io/blob/master/source/src/json/donations.json">$j[106]</a></p>
         </div>
 
       </contents>
@@ -313,6 +273,47 @@ top: 100vh;" xmlns="http://www.w3.org/2000/svg">
       '></div><span class="in-nom">' + users[i][0] + '</span></a>';
   }
   icons.innerHTML = rebuilt;
+
+</script>
+<!-- Schema.org JSON-LD Markup for Search Engine Optimization -->
+<script type='application/ld+json'>
+  {
+    "@context": "https://schema.org/",
+    "@type": "SoftwareApplication",
+    "applicationCategory": "FinanceApplication",
+    "name": "BTCPay Server",
+    "image": "https://btcpayserver.org/img/favicon.png",
+    "availableOnDevice": "Desktop",
+    "author": {
+      "@type": "Organization",
+      "url": "https://foundation.btcpayserver.org/",
+      "name": "BTCPay Server Foundation",
+      "sameAs": [
+        "https://twitter.com/BtcpayServer",
+        "https://t.me/btcpayserver",
+        "http://chat.btcpayserver.org/"
+      ]
+    },
+    "downloadUrl": "https://github.com/btcpayserver/btcpayserver/releases",
+    "fileSize": "6MB",
+    "operatingSystem": [
+      "Windows",
+      "Linux"
+    ],
+    "releaseNotes": "https://blog.btcpayserver.org/changelog/",
+    "screenshot": "https://blog.btcpayserver.org/wp-content/uploads/2019/05/BTCPay-Invoices-1024x552.gif",
+    "softwareVersion": "1.0.3.133",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "20"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "BTC"
+    }
+  }
 
 </script>
 
