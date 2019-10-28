@@ -306,7 +306,7 @@ a {
   background: transparent;
   color: var(--dark-green);
   font-size: 24px;
-  font-family: "Roboto Slab", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   display: inline-block;
   max-width: 6rem;
   text-align: center;
@@ -320,7 +320,7 @@ a {
   border: 0px;
   background: rgba(255, 255, 255, 0.7);
   color: var(--dark-green);
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 24px;
   border-radius: 20px;
   cursor: pointer;
@@ -726,6 +726,7 @@ a.nonJavascriptMessage {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 20, 60, 0.5);
+  -webkit-box-shadow: unset !important;
   height: calc(100% - 10px);
   background: url(/../img/vidph.svg);
   background-size: cover;
@@ -2912,7 +2913,7 @@ video#videoContainer_video0 {
 h1,
 h2,
 h3 {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .fli {
@@ -2983,16 +2984,6 @@ h3 {
   }
 }
 
-@font-face {
-  font-family: "Roboto Slab";
-  font-style: normal;
-  font-weight: 700;
-  src: local("Roboto Slab Bold"), local("RobotoSlab-Bold"),
-    url(/fonts/Roboto_Slab/RobotoSlab-Bold.ttf) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
 
 @font-face {
   font-family: "Open Sans";
