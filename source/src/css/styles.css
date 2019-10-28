@@ -740,7 +740,7 @@ a.nonJavascriptMessage {
 
 .payloadItem_ ul li,
 .payloadItem_ ul li a {
-  text-decoration: none;
+  text-decoration: none; 
   text-align: left;
   padding: 5px 0;
   font-size: 14px;
