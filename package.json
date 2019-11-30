@@ -11,7 +11,7 @@
     "clean": "rimraf dist transifex && mkdir dist transifex",
     "init": "node -r dotenv/config tasks/download_translations.js",
     "build": "npm-run-all clean init -p build:*",
-    "build:static": "cp -r source/src/fonts source/src/img dist"
+    "build:static": "cp -r source/src/fonts source/src/img source/src/video dist",
   },
   "keywords": [
     "BTCPayServer"
