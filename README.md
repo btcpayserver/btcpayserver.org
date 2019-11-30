@@ -6,16 +6,15 @@ The official website repository of [BTCPay Server project](https://github.com/bt
 
 Feel free to contribute ideas, code or content to improve the website.
 
-Prior to submitting a major pull-request, make sure to discuss the changes with the community on [#website channel on Mattermost](https://chat.btcpayserver.org/btcpayserver/channels/website) to avoid duplicating the work. 
+Prior to submitting a major pull-request, make sure to discuss the changes with the community on [#website channel on Mattermost](https://chat.btcpayserver.org/btcpayserver/channels/website) to avoid duplicating the work.
 
 If you're a developer looking to help, but you're not sure where to begin, check the `good first issue` label, which contains small pieces of work that have been specifically flagged as being friendly to new contributors.
 
-Please do not open issues not related to the website in this repository. If you have an issue with BTCPay Server software, open an issue in an [appropriate repository](https://github.com/btcpayserver/btcpayserver/issues). 
+Please do not open issues not related to the website in this repository. If you have an issue with BTCPay Server software, open an issue in an [appropriate repository](https://github.com/btcpayserver/btcpayserver/issues).
 
 ### Source files
 
 All changes to the website should be applied in the `source` folder.
-
 
 The files in the `source` are used in conjunction with the Transifex resources to make the btcpayserver.org website.
 
@@ -26,7 +25,8 @@ To fix spelling or grammatical errors, make updates to either the English string
 Please **do not** submit any changes to the html files other than those within the `source` directory.
 
 ### Translating the website
-Translations help us make the software relevant for people who need it around the world. 
+
+Translations help us make the software relevant for people who need it around the world.
 
 If you would like to help us translate btcpayserver.org, please [join the team on Transifex](https://www.transifex.com/btcpayserver/btcpayserver-website/dashboard/).
 
@@ -34,12 +34,20 @@ Translations are only handled through Transifex, please do not create a pull req
 
 For more information on contributing by translating, [check the translation guides](https://docs.btcpayserver.org/support-and-community/translate)
 
-
 ## How to build
 
-More details on this workflow and how to build the site locally to come. 
+More details on this workflow and how to build the site locally to come.
+
+```sh
+# Install the dependencies
+npm install
+
+# Run the build
+npm run build
+```
 
 ### transifex-master
+
 This directory contains the master `.json` file with english strings used as a transifex resource.
 Append the `.json` file, preserving the JSON format, to allow transifex to read it for updates automatically.
 Modifying existing strings may cause the already-translated strings to be lost (see: https://docs.transifex.com/projects/updating-content#section-using-the-api-or-command-line-client for more details).

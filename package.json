@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "btcpayserver-website",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "BTCPay Server Official Website",
+  "homepage": "https://btcpayserver.org/",
+  "repository": "btcpayserver/btcpayserver.github.io",
+  "bugs": "https://github.com/btcpayserver/btcpayserver.github.io/issues",
+  "scripts": {
+    "clean": "rimraf dist transifex && mkdir dist transifex",
+    "init": "node -r dotenv/config tasks/download_translations.js",
+    "build": "npm-run-all clean init -p build:*",
+    "build:static": "cp -r source/src/fonts source/src/img dist"
+  },
+  "keywords": [
+    "BTCPayServer"
+  ],
+  "devDependencies": {
+    "dotenv": "8.2.0",
+    "npm-run-all": "4.1.5",
+    "rimraf": "3.0.0",
+    "sync-request": "6.1.0"
+  }
+}
