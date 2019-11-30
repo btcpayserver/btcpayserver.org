@@ -8,10 +8,11 @@
   "repository": "btcpayserver/btcpayserver.github.io",
   "bugs": "https://github.com/btcpayserver/btcpayserver.github.io/issues",
   "scripts": {
-    "clean": "rimraf dist transifex && mkdir dist transifex",
+    "clean": "rimraf dist transifex",
     "init": "node -r dotenv/config tasks/download_translations.js",
-    "build": "npm-run-all clean init -p build:*",
-    "build:static": "cp -r source/src/fonts source/src/img source/src/video dist",
+    "build": "npm-run-all -p build:*",
+    "build:static": "mkdir -p dist && cp -r source/src/fonts source/src/img source/src/video dist",
+    "build:template": "node tasks/render_templates.js"
   },
   "keywords": [
     "BTCPayServer"

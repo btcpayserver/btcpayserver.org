@@ -1,4 +1,4 @@
-const { readFileSync, writeFileSync, mkdirSync } = require('fs')
+const { writeFileSync, mkdirSync } = require('fs')
 const { dirname, join, resolve } = require('path')
 const assert = require('assert')
 const request = require('sync-request')
@@ -10,13 +10,11 @@ assert('Please provide the TRANSIFEX_TOKEN in the .env file')
 const auth = Buffer.from(`api:${token}`).toString('base64')
 
 function saveTransifexJSON (resource, json) {
-  try {
-    const file = join(resolve(__dirname, '..'), 'transifex', `${resource}.json`)
-    const dir = dirname(file)
-    const content = JSON.stringify(json, null, 2)
+  const file = resolve(__dirname, `../transifex/${resource}.json`)
 
-    mkdirSync(dir, { recursive: true })
-    writeFileSync(file, content)
+  try {
+    mkdirSync(dirname(file), { recursive: true })
+    writeFileSync(file, JSON.stringify(json, null, 2))
   } catch (err) {
     console.error('Could not save file', file, ':', err)
   }
@@ -28,7 +26,8 @@ function downloadTransifexJSON (resource) {
     const headers = { Authorization: `Basic ${auth}` }
     const req = request('GET', url, { headers })
     const body = req.getBody('utf8')
-    const json = JSON.parse(body)
+    let json = JSON.parse(body)
+    if (json.content) json = JSON.parse(json.content)
 
     saveTransifexJSON(resource, json)
 

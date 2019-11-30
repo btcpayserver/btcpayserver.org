@@ -42,7 +42,10 @@ More details on this workflow and how to build the site locally to come.
 # Install the dependencies
 npm install
 
-# Run the build
+# Download the translations
+npm run init
+
+# Build the site
 npm run build
 ```
 
