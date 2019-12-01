@@ -36,7 +36,12 @@ For more information on contributing by translating, [check the translation guid
 
 ## How to build
 
-More details on this workflow and how to build the site locally to come.
+Prerequisites:
+
+- [Node.js](https://nodejs.org/en/) >= 10
+- Create a `.env` file containing the API token for Transifex (`TRANSIFEX_TOKEN="my_api_token"`)
+
+Setup:
 
 ```sh
 # Install the dependencies
@@ -44,7 +49,11 @@ npm install
 
 # Download the translations – this is mandatory for the rest to work
 npm run init
+```
 
+Build:
+
+```sh
 # Build the site locally and start dev server
 npm start
 
