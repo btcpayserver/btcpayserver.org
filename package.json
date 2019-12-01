@@ -17,7 +17,7 @@
     "start:vtt": "onchange -i -k 'source/src/vtt/**/*' -- npm run build:vtt",
     "start:serve": "browser-sync start --no-open --watch --server dist",
     "build": "npm-run-all clean -p build:*",
-    "build:static": "mkdir -p dist && cp -r source/src/fonts source/src/img source/src/video dist",
+    "build:static": "cp -r source/src/fonts source/src/img source/src/video dist && cp source/src/img/favicon.png dist",
     "build:styles": "cp -r source/src/css/ dist/css",
     "build:html": "node tasks/render_html.js",
     "build:vtt": "node tasks/render_vtt.js",
