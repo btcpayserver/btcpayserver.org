@@ -40,7 +40,7 @@ langs.forEach(lang => {
     align: isRtl ? 'stickRight' : 'stickLeft',
     L_rl: isRtl ? 'r' : 'l',
     R_rl: isRtl ? 'l' : 'r',
-    lnstr: lng,
+    lnstr: lang,
     sub: getLanguageName(lang),
     exp0: lng,
     enlngfb: lng === 'en' ? '' : '<track src="/vtt/en.vtt" label="English" kind="subtitles" srclang="en">',
