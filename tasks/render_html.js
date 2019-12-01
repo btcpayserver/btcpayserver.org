@@ -10,6 +10,7 @@ const {
 
 // Render html templates
 const langs = getLanguages('en-json')
+const vttLangs = getLanguages('video_en_json')
 const indexTmpl = getTemplate('html/tmpl.html')
 const donateTmpl = getTemplate('html/donate/tmpl.html')
 const footerTmpl = getTemplate('html/footer-tmpl.html')
@@ -20,21 +21,45 @@ const donationsBlock = JSON.parse(jsonDonations).map(([name, url, avatar]) => `
               <span class="in-nom">${name}</span>
             </a>`).join('')
 
+function getLanguageOptions (langs, lang, pagePath = '') {
+  return langs.reduce((res, code) => {
+    if (code === lang) return res
+    const [main, rgn] = code.split('_')
+    const isEn = main === 'en'
+    const name = getLanguageName(code)
+    const region = rgn && !isEn ? ` (${rgn.toLowerCase()})` : ''
+    const prefix = isEn ? '' : `/${code}`
+    const url = `${prefix}/${pagePath}`
+    return res.concat(`<li><a href="${url}">${name}${region}</a></li>`)
+  }, []).join('')
+}
+
 console.log(`HTML: Rendering ${langs.length} translations …`)
 
 langs.forEach(lang => {
   const [lng] = lang.split('_')
+  const isEn = lng === 'en'
   const isRtl = ['he', 'ar'].includes(lng)
   const directory = lng === 'en' ? '' : `${lang}/`
   const t = getTransifexJSON(`en-json/translation/${lang}`)
+  const hasVtt = vttLangs.includes(lang)
+  const vttTrack = isEn
+    ? ''
+    : `<track src="/vtt/${hasVtt ? lang : 'en_GB'}.vtt" label="${getLanguageName(hasVtt ? lang : 'en_GB')}" srclang="${hasVtt ? lang : 'en'}" kind="subtitles" defaults>`
 
   const footerParts = t[29].split('FLAT18.CO.UK')
+
+  const lngOpts = getLanguageOptions(langs, lang)
+  const lngOptsDonate = getLanguageOptions(langs, lang, 'donate/')
 
   const tmplVars = {
     jsonDonations,
     donationsBlock,
-    __lang: lng === 'en' ? 'en' : lang,
-    directoryPrefix: lng === 'en' ? '' : `/${lang}`,
+    vttTrack,
+    lngOptsDonate,
+    lngOpts,
+    __lang: isEn ? 'en' : lang,
+    directoryPrefix: isEn ? '' : `/${lang}`,
     to: isRtl ? 'rtl' : 'ltr',
     rl: isRtl ? 'left' : 'right',
     align: isRtl ? 'stickRight' : 'stickLeft',
@@ -43,7 +68,6 @@ langs.forEach(lang => {
     lnstr: lang,
     sub: getLanguageName(lang),
     exp0: lng,
-    enlngfb: lng === 'en' ? '' : '<track src="/vtt/en.vtt" label="English" kind="subtitles" srclang="en">',
     _donate: titleCase(t[38]),
     _blog: titleCase(t[2]),
     exp5624: t[24] && t[56] ? t[24].split(t[56])[0] : '',
@@ -53,10 +77,7 @@ langs.forEach(lang => {
     exp229: footerParts.length > 1 ? footerParts[1].replace('.', '<br>') : '',
     exp29: footerParts[0],
     exp71: t[11],
-    j: t,
-    // TODO:
-    // lngOpts:
-    // lDngOptsDonate:
+    j: t
   }
 
   // render footer and add the result to the vars

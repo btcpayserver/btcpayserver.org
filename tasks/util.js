@@ -11,6 +11,8 @@ const LANGUAGE_NAMES = {
   da_DK: 'Dansk',
   de_DE: 'Deutsch',
   el_GR: 'Ελληνικά',
+  en_GB: 'English',
+  en: 'English',
   es_ES: 'Español',
   fa: 'فارسی',
   fi_FI: 'Suomi',
@@ -23,6 +25,7 @@ const LANGUAGE_NAMES = {
   ko: '한국어',
   nl_NL: 'Nederlands',
   pt_BR: 'Português',
+  pt_PT: 'Portuguese',
   ru_RU: 'русский',
   sk_SK: 'Slovenčina',
   sl_SI: 'Slovenščina',
@@ -65,7 +68,7 @@ function getLanguages (resource, completenessThreshold = 85) {
     if (completeness >= completenessThreshold) res.push(lang)
 
     return res
-  }, [])
+  }, []).sort()
 }
 
 function getLanguageName (code) {
