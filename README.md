@@ -42,11 +42,15 @@ More details on this workflow and how to build the site locally to come.
 # Install the dependencies
 npm install
 
-# Download the translations
+# Download the translations – this is mandatory for the rest to work
 npm run init
 
-# Build the site
+# Build the site locally and start dev server
+npm start
+
+# Build the site for production
 npm run build
+npm run optimize
 ```
 
 ### transifex-master
