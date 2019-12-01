@@ -1,6 +1,38 @@
 const { readFileSync, writeFileSync, mkdirSync } = require('fs')
 const { dirname, resolve } = require('path')
 
+const LANGUAGE_NAMES = {
+  am_ET: 'አማርኛ',
+  ar: 'العربية',
+  bg: 'български',
+  bs_BA: 'Bosanski',
+  ca_ES: 'Català',
+  cs_CZ: 'čeština',
+  da_DK: 'Dansk',
+  de_DE: 'Deutsch',
+  el_GR: 'Ελληνικά',
+  es_ES: 'Español',
+  fa: 'فارسی',
+  fi_FI: 'Suomi',
+  fr_FR: 'Français',
+  he: 'עברית',
+  hi: 'हिन्दी',
+  hr: 'Hrvatski',
+  it_IT: 'Italiano',
+  ja_JP: '日本語',
+  ko: '한국어',
+  nl_NL: 'Nederlands',
+  pt_BR: 'Português',
+  ru_RU: 'русский',
+  sk_SK: 'Slovenčina',
+  sl_SI: 'Slovenščina',
+  sr: 'српски',
+  sv: 'Svenska',
+  tr: 'Türkçe',
+  uk: 'українська',
+  'zh-Hans': '中文',
+}
+
 function getTemplate (name) {
   const file = resolve(__dirname, `../source/src/${name}`)
 
@@ -36,6 +68,27 @@ function getLanguages (resource, completenessThreshold = 85) {
   }, [])
 }
 
+function getLanguageName (code) {
+  return LANGUAGE_NAMES[code]
+}
+
+function replaceTemplateVars(tmpl, vars) {
+  return Object.keys(vars).reduce((rendered, varName) => {
+    const value = vars[varName]
+
+    return value instanceof Array
+      ? rendered.replace(new RegExp(`\\$${varName}\\[(\\d+)\\]`, 'g'), (_, i) => value[i])
+      : rendered.replace(new RegExp(`\\$${varName}`, 'g'), value)
+  }, tmpl)
+}
+
+function titleCase (str) {
+  return str.toLowerCase()
+    .split(' ')
+    .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+    .join(' ')
+}
+
 function saveFile (filePath, content) {
   const file = resolve(__dirname, `../dist/${filePath}`)
 
@@ -50,6 +103,9 @@ function saveFile (filePath, content) {
 module.exports = {
   getTemplate,
   getLanguages,
+  getLanguageName,
   getTransifexJSON,
-  saveFile
+  replaceTemplateVars,
+  saveFile,
+  titleCase
 }

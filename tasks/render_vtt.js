@@ -1,4 +1,4 @@
-const { getTemplate, getTransifexJSON, getLanguages, saveFile } = require('./util')
+const { getTemplate, getTransifexJSON, getLanguages, replaceTemplateVars, saveFile } = require('./util')
 
 // Render video templates
 const template = getTemplate('vtt/video_tmpl.vtt')
@@ -24,7 +24,7 @@ langs.forEach(lang => {
     return res
   }, [])
 
-  const rendered = template.replace(/\$p\[(\d+)\]/g, (_, p) => parts[p])
+  const rendered = replaceTemplateVars(template, { p: parts })
 
   saveFile(`vtt/${lang}.vtt`, rendered)
 })
