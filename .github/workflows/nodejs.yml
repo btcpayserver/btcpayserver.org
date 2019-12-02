@@ -23,8 +23,7 @@ jobs:
       run: |
         npm ci
         npm run init
-        npm run build
-        npm run optimize
+        npm run prod
         # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
         touch dist/.nojekyll
         # https://help.github.com/en/articles/managing-a-custom-domain-for-your-github-pages-site

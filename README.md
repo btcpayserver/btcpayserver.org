@@ -58,8 +58,7 @@ Build:
 npm start
 
 # Build the site for production
-npm run build
-npm run optimize
+npm run prod
 ```
 
 ### transifex-master
