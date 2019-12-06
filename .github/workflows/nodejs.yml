@@ -1,43 +1,44 @@
-name: Node CI
+# name: Node CI
 
-on:
-  push:
-    branches:
-      - master
+# on:
+#   push:
+#     branches:
+#       - master
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [12]
+#     strategy:
+#       matrix:
+#         node-version: [12]
 
-    steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: Install and build
-      run: |
-        npm ci
-        npm run init
-        npm run prod
-        # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
-        touch docs/.nojekyll
-        # https://help.github.com/en/articles/managing-a-custom-domain-for-your-github-pages-site
-        echo btcpayserver.org > docs/CNAME
-      env:
-        CI: true
-        TRANSIFEX_TOKEN: ${{ secrets.TRANSIFEX_TOKEN }}
-    - name: GitHub Pages Deploy
-      if: success()
-      uses: crazy-max/ghaction-github-pages@v1
-      with:
-        target_branch: master
-        keep_history: true
-        build_dir: docs
-        fqdn: btcpayserver.org
-      env:
-        GITHUB_PAT: ${{ secrets.GH_PAT }}
+#     steps:
+#     - name: Checkout
+#       uses: actions/checkout@v1
+#     - name: Use Node.js ${{ matrix.node-version }}
+#       uses: actions/setup-node@v1
+#       with:
+#         node-version: ${{ matrix.node-version }}
+#     - name: Install and build
+#       run: |
+#         npm ci
+#         npm run init
+#         npm run prod
+#         # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
+#         touch docs/.nojekyll
+#         # https://help.github.com/en/articles/managing-a-custom-domain-for-your-github-pages-site
+#         echo btcpayserver.org > docs/CNAME
+#       env:
+#         CI: true
+#         TRANSIFEX_TOKEN: ${{ secrets.TRANSIFEX_TOKEN }}
+#     - name: Deploy
+#       if: success()
+#       uses: crazy-max/ghaction-github-pages@v1
+#       with:
+#         target_branch: master
+#         keep_history: true
+#         build_dir: docs
+#         fqdn: btcpayserver.org
+#       env:
+#         GITHUB_PAT: ${{ secrets.GH_PAT }}
