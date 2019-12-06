@@ -93,7 +93,7 @@ function titleCase (str) {
 }
 
 function saveFile (filePath, content) {
-  const file = resolve(__dirname, `../dist/${filePath}`)
+  const file = resolve(__dirname, `../docs/${filePath}`)
 
   try {
     mkdirSync(dirname(file), { recursive: true })

@@ -25,14 +25,19 @@ jobs:
         npm run init
         npm run prod
         # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
-        touch dist/.nojekyll
+        touch docs/.nojekyll
         # https://help.github.com/en/articles/managing-a-custom-domain-for-your-github-pages-site
-        echo btcpayserver.org > dist/CNAME
+        echo btcpayserver.org > docs/CNAME
       env:
         CI: true
         TRANSIFEX_TOKEN: ${{ secrets.TRANSIFEX_TOKEN }}
     - name: GitHub Pages Deploy
-      uses: maxheld83/ghpages@v0.2.1
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v1
+      with:
+        target_branch: master
+        keep_history: true
+        build_dir: docs
+        fqdn: btcpayserver.org
       env:
-        BUILD_DIR: dist/
-        GH_PAT: ${{ secrets.GH_PAT }}
+        GITHUB_PAT: ${{ secrets.GH_PAT }}
