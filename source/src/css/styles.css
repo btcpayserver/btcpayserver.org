@@ -638,6 +638,7 @@ a.nonJavascriptMessage {
   cursor: col-resize;
   opacity: 0.6;
   height: 80px;
+  visibility: hidden;
 }
 
 .choice_ span {
