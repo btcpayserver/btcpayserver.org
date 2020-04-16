@@ -1893,6 +1893,7 @@ figure {
   .hero-artwork {
     display: flex;
     flex-flow: column;
+    width: 90vw;
   }
   .desktop-only,
   .i-a {
@@ -1909,7 +1910,6 @@ figure {
   #pageContainer {
     display: flex;
     flex-flow: column;
-    width: 90vw;
   }
   #LanguagePicker {
     right: 0;
