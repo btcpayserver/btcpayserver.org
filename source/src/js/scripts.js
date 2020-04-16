@@ -81,3 +81,25 @@ if (document.querySelectorAll(".selector-no-js").length > 0 && screen.width < 70
         })
     }
 }
+
+var ww;
+ww = screen.width;
+function alignSVGTEXT() {
+    if (document.querySelectorAll("svg.mobile-only").length > 0 && ww <= 700) {
+        var svg = document.querySelectorAll("svg.mobile-only")[0];
+        ww = screen.width;
+        for (i = 0; i < svg.querySelectorAll("text").length; i++) {
+            var t = svg.querySelectorAll("text")[i];
+            var w = t.getBoundingClientRect().width;
+            var r = (ww * .8) / 340;
+            var nx = ((ww * .8) - w) * .5;
+            nx = nx / r;
+            t.setAttribute("x", nx + "px");
+        }
+    }
+}
+
+alignSVGTEXT();
+window.onresize = function () {
+    alignSVGTEXT();
+};
