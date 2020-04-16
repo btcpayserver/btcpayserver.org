@@ -11,8 +11,8 @@ const LANGUAGE_NAMES = {
   da_DK: 'Dansk',
   de_DE: 'Deutsch',
   el_GR: 'Ελληνικά',
-  en_GB: 'English',
   en: 'English',
+  en_GB: 'English',
   es_ES: 'Español',
   fa: 'فارسی',
   fi_FI: 'Suomi',
@@ -20,12 +20,15 @@ const LANGUAGE_NAMES = {
   he: 'עברית',
   hi: 'हिन्दी',
   hr: 'Hrvatski',
+  hu_HU: 'Magyar',
   it_IT: 'Italiano',
   ja_JP: '日本語',
   ko: '한국어',
   nl_NL: 'Nederlands',
+  pl: 'Polski',
   pt_BR: 'Português',
-  pt_PT: 'Portuguese',
+  pt_PT: 'Português',
+  ro: 'Română',
   ru_RU: 'русский',
   sk_SK: 'Slovenčina',
   sl_SI: 'Slovenščina',
@@ -33,10 +36,10 @@ const LANGUAGE_NAMES = {
   sv: 'Svenska',
   tr: 'Türkçe',
   uk: 'українська',
-  'zh-Hans': '中文',
+  'zh-Hans': '中文'
 }
 
-function getTemplate (name) {
+function getTemplate(name) {
   const file = resolve(__dirname, `../source/src/${name}`)
 
   try {
@@ -46,7 +49,8 @@ function getTemplate (name) {
   }
 }
 
-function getTransifexJSON (resource) {
+function getTransifexJSON(resource) {
+  // console.log("debug:",resource, "path:", `../transifex/${resource}.json`); return false;
   try {
     const file = resolve(__dirname, `../transifex/${resource}.json`)
     const content = readFileSync(file, 'utf8')
@@ -59,8 +63,8 @@ function getTransifexJSON (resource) {
 
 // returns an array of available languages.
 // here we can also filter based on completeness.
-function getLanguages (resource, completenessThreshold = 85) {
-  const stats = getTransifexJSON(`${resource}/stats`)
+function getLanguages (resource, completenessThreshold = 10) {
+  const stats = getTransifexJSON(`${resource}/stats/`)
 
   return Object.keys(stats).reduce((res, lang) => {
     const { completed } = stats[lang]

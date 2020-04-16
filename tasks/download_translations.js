@@ -20,7 +20,7 @@ function saveTransifexJSON (resource, json) {
   }
 }
 
-function downloadTransifexJSON (resource) {
+function downloadTransifexJSON(resource) {
   try {
     const url = `https://www.transifex.com/api/2/project/btcpayserver-website/resource/${resource}`
     const headers = { Authorization: `Basic ${auth}` }
@@ -39,7 +39,7 @@ function downloadTransifexJSON (resource) {
 
 // Get available languages for website and videos
 ['en-json', 'video_en_json'].forEach(type => {
-  const stats = downloadTransifexJSON(`${type}/stats`)
+  const stats = downloadTransifexJSON(`${type}/stats/`)
   const langs = Object.keys(stats)
 
   console.log(`${type}: Fetching ${langs.length} translations …`)

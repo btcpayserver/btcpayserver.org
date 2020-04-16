@@ -13,6 +13,7 @@ const langs = getLanguages('en-json')
 const vttLangs = getLanguages('video_en_json')
 const indexTmpl = getTemplate('html/tmpl.html')
 const donateTmpl = getTemplate('html/donate/tmpl.html')
+const menuTmpl = getTemplate('html/menu-tmpl.html')
 const footerTmpl = getTemplate('html/footer-tmpl.html')
 const jsonDonations = getTemplate('json/donations.json')
 const donationsBlock = JSON.parse(jsonDonations).map(([name, url, avatar]) => `
@@ -40,7 +41,7 @@ langs.forEach(lang => {
   const [lng] = lang.split('_')
   const isEn = lng === 'en'
   const isRtl = ['he', 'ar'].includes(lng)
-  const directory = lng === 'en' ? '' : `${lang}/`
+  const directory = lng === 'en' ? '' : lng === 'en_GB' ? '' : `${lang}/`
   const t = getTransifexJSON(`en-json/translation/${lang}`)
   const hasVtt = vttLangs.includes(lang)
   const vttTrack = isEn
@@ -51,8 +52,10 @@ langs.forEach(lang => {
 
   const lngOpts = getLanguageOptions(langs, lang)
   const lngOptsDonate = getLanguageOptions(langs, lang, 'donate/')
+  var lngst = directory === 'en' ? '' : '/' + directory;
 
   const tmplVars = {
+    thisPage:'',
     jsonDonations,
     donationsBlock,
     vttTrack,
@@ -66,6 +69,7 @@ langs.forEach(lang => {
     L_rl: isRtl ? 'r' : 'l',
     R_rl: isRtl ? 'l' : 'r',
     lnstr: lang,
+    lngst:lngst,
     sub: getLanguageName(lang),
     exp0: lng,
     _donate: titleCase(t[38]),
@@ -83,9 +87,36 @@ langs.forEach(lang => {
   // render footer and add the result to the vars
   tmplVars.ftblk = replaceTemplateVars(footerTmpl, tmplVars)
 
+   // iterate over menu and add the result to the vars
+   tmplVars.menTemp = replaceTemplateVars(menuTmpl, tmplVars)
+
   // files
   saveFile(`${directory}index.html`, replaceTemplateVars(indexTmpl, tmplVars))
-  saveFile(`${directory}/donate/index.html`, replaceTemplateVars(donateTmpl, tmplVars))
+
+  let pages = ["donate"];
+  let themes = ["light", "dark"];
+
+  pages.forEach(page => {
+    tmplVars.thisPage = "/"+page;
+    tmplVars.menTemp = replaceTemplateVars(menuTmpl, tmplVars)
+    saveFile(`${directory}/${page}/index.html`, replaceTemplateVars(donateTmpl, tmplVars))
+    tmplVars.thisPage = '';
+  })
+
+  themes.forEach(theme => {
+    tmplVars._thrFor = theme;
+    tmplVars.menTemp = replaceTemplateVars(menuTmpl, tmplVars)
+    saveFile(`${directory}/${theme}/index.html`, replaceTemplateVars(indexTmpl, tmplVars))
+    // saveFile(`${directory}/${type}/donate/index.html`, replaceTemplateVars(donateTmpl, tmplVars))
+    pages.forEach(page => {
+      tmplVars.thisPage = "/"+page;
+      tmplVars.menTemp = replaceTemplateVars(menuTmpl, tmplVars)
+      saveFile(`${directory}/${theme}/${page}/index.html`, replaceTemplateVars(donateTmpl, tmplVars))
+      tmplVars.thisPage = '';
+    })
+    tmplVars._thrFor = '';
+  })
+
 })
 
 console.log(`HTML: Rendering done …`)

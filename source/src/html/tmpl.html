@@ -2,651 +2,872 @@
 <html dir="$to">
 
 <head>
-    <meta charset=UTF-8>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta name="description" content="$j[23]">
-    <meta name="keywords" content="btcpay">
-    <meta name="author" content="Ed Sinaswee | flat18.co.uk">
-    <meta property="og:title" content="BTCPay Server">
-    <meta property="og:description" content="$j[23]">
-    <meta property="og:image" content="/img/favicon.png">
-    <link rel="icon" type="image/png" href="/img/favicon.png">
-    <title>BTCPay Server</title>
-    <link rel="stylesheet" type="text/css" href="/css/fa_.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/styles.css">
-    <script>
-        window.jsEnviron = true;
-        window.cMod = "$align";
-        window.rl = "$rl";
-        window.donationTitle = ("$j[95]")[0] != "$" ?
-            "$j[95]" :
-            "Enter an amount to donate";
-        window.noJSVideo = "$j[40]";
-        window.closeDonationL = "$j[22]";
-        window.donWor = "$j[38]";
-        window.language = "$__lang";
-
-    </script>
-    <!-- Schema.org JSON-LD Markup for Search Engine Optimization -->
-<script type='application/ld+json'>
-    {
-        "@context": "https://schema.org/",
-        "@type": "SoftwareApplication",
-        "applicationCategory": "FinanceApplication",
-        "name": "BTCPay Server",
-        "image": "https://btcpayserver.org/img/favicon.png",
-        "availableOnDevice": "Desktop",
-        "author": {
-            "@type": "Organization",
-            "url": "https://foundation.btcpayserver.org/",
-            "name": "BTCPay Server Foundation",
-            "sameAs": [
-                "https://twitter.com/BtcpayServer",
-                "https://t.me/btcpayserver",
-                "http://chat.btcpayserver.org/"
-            ]
-        },
-        "downloadUrl": "https://github.com/btcpayserver/btcpayserver/releases",
-        "fileSize": "6MB",
-        "operatingSystem": [
-            "Windows",
-            "Linux"
-        ],
-        "releaseNotes": "https://blog.btcpayserver.org/changelog/",
-        "screenshot": "https://blog.btcpayserver.org/wp-content/uploads/2019/05/BTCPay-Invoices-1024x552.gif",
-        "softwareVersion": "1.0.3.133",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "ratingCount": "20"
-        },
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "BTC"
-        }
-    }
-
-</script>
+	<meta charset=UTF-8>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1">
+	<meta name="description" content="$j[23]">
+	<meta name="keywords" content="btcpay">
+	<meta name="author" content="Ed Sinaswee | flat18.co.uk">
+	<meta property="og:title" content="BTCPay Server">
+	<meta property="og:description" content="$j[23]">
+	<meta property="og:image" content="/img/favicon.png">
+	<link rel="icon" type="image/png" href="/img/favicon.png">
+	<title>BTCPay Server</title>
+	<link rel="stylesheet" type="text/css" href="/css/fa_.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+	<script>
+		window.jsEnviron = true;
+		window.theme = "$_thrFor";
+	</script>
+	<!-- Schema.org JSON-LD Markup for Search Engine Optimization -->
+	<script type='application/ld+json'>
+            {
+                "@context": "https://schema.org/",
+                "@type": "SoftwareApplication",
+                "applicationCategory": "FinanceApplication",
+                "name": "BTCPay Server",
+                "image": "https://btcpayserver.orgimg/favicon.png",
+                "availableOnDevice": "Desktop",
+                "author": {
+                    "@type": "Organization",
+                    "url": "https://foundation.btcpayserver.org/",
+                    "name": "BTCPay Server Foundation",
+                    "sameAs": ["https://twitter.com/BtcpayServer", "https://t.me/btcpayserver", "http://chat.btcpayserver.org/"]
+                },
+                "downloadUrl": "https://github.com/btcpayserver/btcpayserver/releases",
+                "fileSize": "6MB",
+                "operatingSystem": [
+                    "Windows", "Linux"
+                ],
+                "releaseNotes": "https://blog.btcpayserver.org/changelog/",
+                "screenshot": "https://blog.btcpayserver.org/wp-content/uploads/2019/05/BTCPay-Invoices-1024x552.gif",
+                "softwareVersion": "1.0.3.133",
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "5",
+                    "ratingCount": "20"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "BTC"
+                }
+            }
+        </script>
 </head>
 
 <body>
-    <div id="p-nm-co-ho">
-        <div class="pageContainerTopBackground __fal-$rl">
-            <div class="">
-                <div class="menuBar" id="topMarker" dir='ltr'>
-                    <svg class="_Logo" onclick="window.location=\'/\'" version="1.1" id="_Logo_1"
-                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        width="200px" height="100px" viewBox="0 0 200 100" enable-background="new 0 0 200 100"
-                        xml:space="preserve">
-                        <g>
-                            <path fill="#CEDC21" d="M9.206,91.433c-2.684,0-4.859-2.177-4.859-4.861V13.431c0-2.685,2.176-4.861,4.859-4.861
-                            s4.86,2.177,4.86,4.861v73.141C14.066,89.256,11.89,91.433,9.206,91.433" />
-                            <path fill="#51B13E"
-                                d="M9.209,91.433c-1.818,0-3.561-1.025-4.394-2.777c-1.151-2.424-0.118-5.322,2.308-6.476L36.43,68.274
-                            L6.323,46.093c-2.16-1.593-2.621-4.635-1.029-6.796s4.636-2.622,6.795-1.03l36.647,26.999c1.377,1.016,2.12,2.678,1.956,4.381
-                            c-0.164,1.7-1.209,3.19-2.755,3.925L11.289,90.964C10.618,91.281,9.907,91.433,9.209,91.433" />
-                            <path fill="#CEDC21"
-                                d="M9.211,62.684c-1.493,0-2.965-0.685-3.917-1.979c-1.592-2.159-1.131-5.204,1.03-6.795L36.43,31.73
-                            L7.123,17.821c-2.426-1.151-3.459-4.05-2.309-6.475c1.152-2.426,4.051-3.459,6.475-2.309l36.648,17.394
-                            c1.546,0.733,2.591,2.225,2.755,3.926c0.164,1.702-0.579,3.364-1.956,4.379l-36.647,27C11.22,62.375,10.211,62.684,9.211,62.684" />
-                            <polygon fill="#1E7A44" points="14.066,39.725 14.066,60.278 28.01,50.006 	" />
-                            <rect x="4.347" y="31.106" fill="#FFFFFF" width="9.72" height="23.692" />
-                            <path fill="#CEDC21"
-                                d="M14.066,13.431c0-2.685-2.177-4.861-4.86-4.861s-4.859,2.177-4.859,4.861v61.165h9.72V13.431z" />
-                            <g class="icon-text">
-                                <path d="M78.355,49.412c3.114,0.884,4.84,3.704,4.84,7.238c0,5.513-3.368,8.082-7.955,8.082H64.761V35.271h9.259
-                            c4.504,0,7.997,2.146,7.997,7.743C82.017,45.835,80.838,48.444,78.355,49.412 M74.062,48.696c3.324,0,6.018-1.179,6.018-5.724
-                            c0-4.586-2.776-5.808-6.145-5.808h-7.197v11.531H74.062z M75.114,62.795c3.366,0,6.06-1.768,6.06-6.145
-                            c0-4.713-3.072-6.144-6.901-6.144h-7.534v12.288H75.114z" />
-                                <polygon points="102.893,35.271 102.893,37.081 94.771,37.081 94.771,64.732 92.792,64.732 92.792,37.081
-                            84.669,37.081 84.669,35.271 	" />
-                                <path
-                                    d="M116.738,34.85c5.01,0,9.554,2.524,10.987,8.543h-1.895c-1.348-4.923-5.303-6.732-9.134-6.732
-                            c-6.944,0-10.605,5.681-10.605,13.341c0,8.08,3.661,13.256,10.646,13.256c4.125,0,7.828-1.85,9.26-7.279h1.895
-                            c-1.264,6.271-6.229,9.174-11.154,9.174c-7.87,0-12.583-5.808-12.583-15.15C104.155,41.037,109.124,34.85,116.738,34.85" />
-                                <path
-                                    d="M142.709,35.271c5.091,0,8.795,3.326,8.795,9.764c0,6.06-3.704,9.722-8.795,9.722h-7.746v9.976h-1.935
-                            V35.271H142.709z M142.709,52.82c3.745,0,6.816-2.397,6.816-7.827c0-5.429-2.947-7.869-6.816-7.869h-7.746V52.82H142.709z" />
-                                <path d="M151.841,64.732v-0.255l11.741-29.29h0.885l11.615,29.29v0.255h-2.062l-3.322-8.501H157.27l-3.324,8.501
-                            H151.841z M164.005,38.68l-6.059,15.697h12.078L164.005,38.68z" />
-                                <polygon
-                                    points="193.551,35.271 195.655,35.271 195.655,35.564 186.479,52.484 186.479,64.732 184.459,64.732
-                            184.459,52.484 175.243,35.523 175.243,35.271 177.39,35.271 181.387,42.763 185.43,50.549 185.47,50.549 189.551,42.763 	" />
-                            </g>
-                        </g>
-                    </svg>
-                    <input type="checkbox" id="menuTrigger" name="menuTrigger" class="menuTrigger" />
-                    <div class="mobileMenuShortcut">
-                        <i class="fas fa-bars"></i>
-                    </div>
+	<div id="p-nm-co-ho" class="theme $_thrFor">
+		<div class="pageContainerTopBackground __fal-$rl">
+			<div class="">
+				$menTemp
+			</div>
 
-                    <div class="menuContents menuContentsMobile" id="menuContents">
-                        <div class="menuLinkParent">
-                            <a class="tomCL menuLink mobileOnly mobileCloseOpenNOJS nullTrans">
-                                <i class="fas fa-times nullTrans"></i>
-                            </a>
-                        </div>
-                        <div class="menuLinkParent">
-                            <a alt="$j[0]" class="menuLink" href="#modularInformationBlock">
-                                <span>$j[0]</span></a>
-                        </div>
-                        <div class="menuLinkParent">
-                            <a alt="$j[1]" class="menuLink" target="blank_" href="http://docs.btcpayserver.org/">
-                                <span>$j[1]</span></a>
-                        </div>
-                        <div class="menuLinkParent">
-                            <a alt="$j[2]" class="menuLink" target="blank_" href="http://blog.btcpayserver.org/">
-                                <span>$j[2]</span></a>
-                        </div>
-                        <div class="menuLinkParent">
-                            <a alt="$j[3]" class="menuLink nullTrans" target="blank_"
-                                href="https://github.com/btcpayserver">
-                                <span class="nullTrans">$j[3]</span></a>
-                        </div>
-                        <div class="menuLinkParent">
-                            <a alt="$_donate" class="menuLink" href="donate">
-                                <span>$_donate</span></a>
-                        </div>
-                        <div class="menuLinkParent">
-                            <a alt="$j[5]" class="menuLink" href="#communityCTA">
-                                <span>$j[5]</span></a>
-                        </div>
+			<div class="promoArea" id="promoArea">
+				<div class="promoDetails __fal-$rl">
+					<h1 alt="$j[30]" former_="$j[30]">$j[30]</h1>
+					<p>$j[23]
+					</p>
+					<div class="prpmpLinkOrg $align" dir="$to">
 
-                        <div class="menuLinkParent lnNomPar">
-                            <div id="lnNom" alt="Language" class="menuLink nullTrans"
-                                onclick="toggle_('#LanguagePicker')">
-                                <span class="nullTrans">
-                                    <i class="fas fa-globe nullTrans"></i>&nbsp;$exp0&nbsp;<i
-                                        class="fas fa-caret-down nullTrans"></i>
-                                </span>
+						<a alt="$j[37]" class="button-pri button" href="#watchVideo" target="blank_">$j[55]&nbsp;&nbsp;<i
+								class="fas fa-play-circle"></i>
+						</a>
 
-                                <ul id="LanguagePicker">
-                                    $lngOpts
-                                </ul>
+						<a href="donate" class="button-sec button">$j[38]&nbsp;&nbsp;<i class="fas fa-arrow-$rl"></i>
+						</a>
 
-                            </div>
-                        </div>
+					</div>
+				</div>
+				<div class="pos-rel">
+					<div class="dotted-back dots1"></div>
 
-                    </div>
-                </div>
-            </div>
+					<div class="hero-artwork">
+						<img src="/img/server-$_thrFor.png" class="i-a" />
+						<img src="/img/invoice-$_thrFor.svg" class="i-b" />
 
-            <svg class="top-men-bn-o" enable-background="new 0 0 100 7" height="7" viewBox="0 0 100 7" width="100"
-                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="50.1831" x2="49.8171" y1="8.7402"
-                    y2="-1.7397">
-                    <stop offset="0" stop-color="#0c0068" stop-opacity="0"></stop>
-                    <stop stop-color="#0c0068" stop-opacity="0" offset=".5"></stop>
-                    <stop offset="1" stop-color="#0c0068" stop-opacity=".2"></stop>
-                </linearGradient>
-                <path d="m0 0h100v7h-100z" fill="url(#a)" />
-                <path d="m100 .916v-.916h-100v4c11.385-2 80.846-5.162 100-3.084z" fill="#fff" />
-            </svg>
+					</div>
+				</div>
+			</div>
 
-            <div class="promoArea" id="promoArea">
-                <div class="promoDetails __fal-$rl">
-                    <h1>$j[30]</h1>
-                    <p>$j[23]
-                        <br>
-                        <span id="infoButton01" style="display:none;">
-                            <i class="fas fa-info-circle"></i>
-                        </span>
-                        <span id="furtherQuote"><br>$j[6]</span>
-                    </p>
-                    <div class="prpmpLinkOrg $align" dir="$to">
+		</div>
 
-                        <a alt="$j[37]" class="promoButton p-1" href="https://mainnet.demo.btcpayserver.org"
-                            target="blank_">
-                            <span>$j[37]</span><input class="cu_" /></a>
+		<div class="pageContainer" id="pageContainer">
 
-                        <a href="donate" class="con-do-ct-h __fal-$rl donationButton-non-button">&nbsp;$j[38]&nbsp;<i
-                                class="fas fa-chevron-circle-$rl"></i>
-                        </a>
+			<div class="pageItem">
+				<div class="blockTrioMP">
+					<div class="trioMPBlockItem">
+						<p class="inParagraphLink">$j[120]
+						</p>
+					</div>
 
-                    </div>
-                </div>
-                <div class="modinvOuter" id="don_Par_sPa">
-                    <a href="https://btcpayserver.org/video/602.mp4" target="blank_"
-                        class="nonJavascriptMessage">$j[40]</a>
+					<div class="trioMPBlockItem">
+						<p>$j[121]</p>
+					</div>
 
-                    <video poster="/img/vidph.svg" class="unfetteredVideoFrame" id="unfetteredVideoFrame" playsinline
-                        controls>
-                        $vttTrack
-                        <source src="https://btcpayserver.org/video/602.webm" type="video/webm">
-                        <source src="https://btcpayserver.org/video/602.m4v" type="video/m4v">
-                        <source src="https://btcpayserver.org/video/602.mp4" type="video/mp4">
-                    </video>
+					<div class="trioMPBlockItem">
+						<p>$j[122]</p>
+					</div>
+				</div>
+			</div>
 
-                </div>
+			<div class="features-section-parent">
+				<div class="features-section __fal-$rl">
 
-            </div>
+					<ul>
+						<li>
+							<input class="selector-no-js" name="z" type="radio" checked />
+							<div class="preview-selector-">
+								<h3>$j[109]</h3>
+							</div>
 
-        </div>
-        <div class="pageContainer" id="pageContainer">
+							<div class="payload-no-js">
+								<div class="payload-inner-aligner">
+									<p>$j[110]</p>
+									<p>$j[111]</p>
+									<a alt="$j[55]" class="modernLink featuresBlockLink"
+										href="https://docs.btcpayserver.org/features/apps" target="blank_">$j[55]&nbsp;&nbsp;<i
+											class="fas fa-long-arrow-alt-$rl"></i>
+									</a>
 
-            <div class="pageItemInfo whiteToGrey" id="modularInformationBlock" dir='ltr'>
-                <span style="display:none;" onclick="carousel('$L_rl')" class="carouselControl c_left">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <div class="choices_holder" id="choices_holder" style="display:unset;">
-                    <div id="choices_" class="noJSChoices tiledPayloads"
-                        style="display: flex;width: 80vw;max-width: 1200px;padding: 50px 0;margin: auto;flex-flow: row;flex-wrap: nowrap;flex-wrap: wrap;">
+								</div>
+							</div>
 
-                        <div alt="No fees" class="choice_ $align" dir="$to">
-                            <i class="n_iconography_ fab fa-creative-commons-zero"></i>
-                            <span>$j[7]</span>
-                            <div class="payloadDetail"></div>
-                            <div class="payloadItem_ PLI_noJS">
-                                <a alt="$j[39]" class="modernLink featuresBlockLink"
-                                    href="https://mainnet.demo.btcpayserver.org/Account/Register">$j[39]&nbsp;&nbsp;<i
-                                        class="fas fa-long-arrow-alt-$rl"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div alt="No middleman" class="choice_ $align" dir="$to">
-                            <i class="n_iconography_ fas fa-handshake"></i>
-                            <span>$j[8]</span>
-                            <div class="payloadDetail"></div>
-                            <div class="payloadItem_ PLI_noJS"></div>
-                        </div>
-                        <div alt="Deploy a Server" class="choice_ $align" dir="$to">
-                            <i class="n_iconography_ fas fa-server"></i>
-                            <span>$j[9]</span>
-                            <div class="payloadDetail"></div>
-                            <div class="payloadItem_ PLI_noJS">
-                                <div class="payloadVideo">
-                                    <a alt="$j[40]" href="https://www.youtube-nocookie.com/embed/NjslXYvp8bk"
-                                        target="blank" class="ft-yt-vid-mod">$j[40]</a>
-                                </div>
-                                <ul>
-                                    <li>
-                                        <a alt="$j[41]" href="https://docs.btcpayserver.org/deployment/deployment"
-                                            target="blank_">$j[41]</a>
-                                    </li>
-                                    <li>
-                                        <a alt="$j[42]"
-                                            href="https://docs.btcpayserver.org/deployment/lunanodewebdeployment"
-                                            target="blank_">$j[42]</a>
-                                    </li>
-                                    <li>
-                                        <a alt="$j[43]" href="https://docs.btcpayserver.org/deployment/azuredeployment"
-                                            target="blank_">$j[43]</a>
-                                    </li>
-                                    <li>
-                                        <a alt="$j[44]" href="https://docs.btcpayserver.org/deployment/dockerdeployment"
-                                            target="blank_">$j[44]</a>
-                                    </li>
-                                    <li>
-                                        <a alt="$j[45]"
-                                            href="https://docs.btcpayserver.org/deployment/googleclouddeployment"
-                                            target="blank_">$j[45]</a>
-                                    </li>
-                                    <li>
-                                        <a alt="$j[46]" href="https://docs.btcpayserver.org/deployment/manualdeployment"
-                                            target="blank_">$j[46]</a>
-                                    </li>
-                                    <li>
-                                        <a alt="$j[47]"
-                                            href="https://docs.btcpayserver.org/deployment/hardwaredeployment"
-                                            target="blank_">$j[47]</a>
-                                    </li>
-                                    <li>
-                                        <a alt="$j[48]"
-                                            href="https://docs.btcpayserver.org/deployment/thirdpartyhosting"
-                                            target="blank_">$j[48]</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div alt="Not your keys" class="choice_ $align" dir="$to">
-                            <i class="n_iconography_ fas fa-key"></i>
-                            <span>$j[10]</span>
-                            <div class="payloadDetail"></div>
-                            <div class="payloadItem_ PLI_noJS"></div>
-                        </div>
-                        <div alt="$j[71]" class="choice_ $align" dir="$to">
-                            <i class="n_iconography_ fas fa-bolt"></i>
-                            <span class="inParagraphLink">
-                                $exp71
-                            </span>
-                            <div class="payloadDetail"></div>
-                            <div class="payloadItem_ PLI_noJS">
-                                <a alt="$j[55]" class="modernLink featuresBlockLink"
-                                    href="https://docs.btcpayserver.org/features/lightningnetwork"
-                                    target="blank_">$j[55]&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-$rl"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div alt="e-Commerce integrations" class="choice_ $align" dir="$to">
-                            <i class="n_iconography_ fas fa-shopping-cart"></i>
-                            <span>$j[12]</span>
-                            <div class="payloadDetail"></div>
-                            <div class="payloadItem_ PLI_noJS">
-                                <ul>
-                                    <li>
-                                        <a alt="$j[50]" href="https://docs.btcpayserver.org/integrations/woocommerce"
-                                            target="black_">$j[50]</a>
-                                    </li>
-                                    <li>
-                                        <a alt="$j[51]" href="https://docs.btcpayserver.org/integrations/drupal"
-                                            target="black_">$j[51]</a>
-                                    </li>
-                                    <li>
-                                        <a alt="$j[52]" href="https://docs.btcpayserver.org/integrations/magento"
-                                            target="black_">$j[52]</a>
-                                    </li>
-                                    <li>
-                                        <a alt="$j[53]" href="https://docs.btcpayserver.org/integrations/prestashop"
-                                            target="black_">$j[53]</a>
-                                    </li>
-                                    <li>
-                                        <a alt="$j[54]"
-                                            href="https://docs.btcpayserver.org/integrations/customintegration"
-                                            target="black_">$j[54]</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div alt="Enhanced Privacy & Security" class="choice_ $align" dir="$to">
-                            <i class="n_iconography_ fas fa-mask"></i>
-                            <span>$j[13]</span>
-                            <div class="payloadDetail"></div>
-                            <div class="payloadItem_ PLI_noJS"></div>
-                        </div>
-                        <div alt="Payment Buttons" class="choice_ $align" dir="$to">
-                            <i class="n_iconography_ fas fa-vector-square"></i>
-                            <span>$j[14]</span>
-                            <div class="payloadDetail"></div>
-                            <div class="payloadItem_ PLI_noJS">
-                                <div class="payloadVideo">
-                                    <a alt="$j[40]" href="https://www.youtube-nocookie.com/embed/MIWGvl6_WzI"
-                                        target="blank" class="ft-yt-vid-mod">$j[40]</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div alt="Point-Of-Sale" class="choice_ $align" dir="$to">
-                            <i class="n_iconography_ fas fa-file-invoice-dollar"></i>
-                            <span>$j[15]</span>
-                            <div class="payloadDetail"></div>
-                            <div class="payloadItem_ PLI_noJS">
-                                <div class="payloadVideo">
-                                    <a alt="$j[40]" href="https://www.youtube-nocookie.com/embed/Mz4uajz0z9Y"
-                                        target="blank" class="ft-yt-vid-mod">$j[40]</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div alt="Accounting" class="choice_ $align" dir="$to">
-                            <i class="n_iconography_ fas fa-money-check"></i>
-                            <span>$j[16]</span>
-                            <div class="payloadDetail"></div>
-                            <div class="payloadItem_ PLI_noJS">
-                                <div class="payloadVideo">
-                                    <a alt="$j[40]" href="https://www.youtube-nocookie.com/embed/srgwL9ozg6c"
-                                        target="blank" class="ft-yt-vid-mod">$j[40]</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div alt="Process payments for others" class="choice_ $align" dir="$to">
-                            <i class="n_iconography_ fas fa-comments-dollar"></i>
-                            <span>$j[17]</span>
-                            <div class="payloadDetail"></div>
-                            <div class="payloadItem_ PLI_noJS">
-                                <a alt="$j[55]" class="modernLink featuresBlockLink"
-                                    href="https://docs.btcpayserver.org/deployment/thirdpartyhosting">$j[55]&nbsp;&nbsp;<i
-                                        class="fas fa-long-arrow-alt-$rl"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div alt="Altcoin Support" class="choice_ $align" dir="$to">
-                            <i class="n_iconography_ fas fa-coins"></i>
-                            <span>$j[18]</span>
-                            <div class="payloadDetail"></div>
-                            <div class="payloadItem_ PLI_noJS">
-                                <ul>
-                                    <li class="nullTrans">$j[85]</li>
-                                    <li class="nullTrans">$j[86]</li>
-                                    <li class="nullTrans">$j[87]</li>
-                                    <li class="nullTrans">$j[88]</li>
-                                    <li class="nullTrans">$j[89]</li>
-                                    <li class="nullTrans">$j[90]</li>
-                                    <li class="nullTrans">$j[91]</li>
-                                    <li class="nullTrans">$j[92]</li>
-                                    <li class="nullTrans">$j[93]</li>
-                                    <li>$j[94]</li>
-                                </ul>
-                            </div>
-                        </div>
+						</li>
 
-                    </div>
-                </div>
-                <span style="display:none;" onclick="carousel('$R_rl')" class="carouselControl c_right">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-            </div>
+						<li>
+							<input class="selector-no-js" name="z" type="radio" />
+							<div class="preview-selector-">
+								<h3>$j[112]</h3>
+							</div>
 
-            <svg version="1.1" class="h-div h-divider_end_white_plain" style="z-index: 0;"
-                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="1000px" height="150px" viewBox="0 0 1000 150" enable-background="new 0 0 1000 150"
-                xml:space="preserve">
-                <g id="Layer_3">
-                    <g>
+							<div class="payload-no-js">
+								<div class="payload-inner-aligner">
+									<p>$j[113]</p>
+									<p>$j[114]</p>
+									<a alt="$j[55]" class="modernLink featuresBlockLink"
+										href="https://docs.btcpayserver.org/features/invoices" target="blank_">$j[55]&nbsp;&nbsp;<i
+											class="fas fa-long-arrow-alt-$rl"></i>
+									</a>
+								</div>
+							</div>
 
-                        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-1353.5024" y1="638.6807"
-                            x2="-1353.5024" y2="637.9941" gradientTransform="matrix(1 0 0 1 1848 -551)">
-                            <stop offset="0" style="stop-color:#FFFFFF" />
-                            <stop offset="0.9463" style="stop-color:#F2F2F2" />
-                        </linearGradient>
-                        <path fill="url(#SVGID_1_)"
-                            d="M494.5,87.332C491.975,88.533,497.016,86.152,494.5,87.332L494.5,87.332z" />
+						</li>
 
-                        <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-1338.8154" y1="692.4453"
-                            x2="-1341.4965" y2="538.8505" gradientTransform="matrix(1 0 0 1 1848 -551)">
-                            <stop offset="0" style="stop-color:#FFFFFF" />
-                            <stop offset="0.97" style="stop-color:#F2F2F2" />
-                        </linearGradient>
-                        <path fill="url(#SVGID_2_)" d="M1061.25-2.519H-45.25v152.205c0,0,16.31-1.021,45.5-6.332v3.041
-			c100.009-1.416,295.25,18.959,502.25-58.041c239.038-88.916,411.059-76.864,510.75-75.998v13.125c30.959-4.625,48-4.625,48-4.625
-			V-2.519z" />
-                    </g>
-                </g>
-            </svg>
+						<!-- condensed -->
 
-            <div class="pageItem tr-y-150">
-                <div class="blockTrioMP" id="prominentTrioBlock">
-                    <div class="trioMPBlockItem">
-                        <h3>$j[4]</h3>
-                        <a alt="$j[61]" href="https://mainnet.demo.btcpayserver.org/Account/Register" target="blank_">
-                            <div class="img_" style="background-image: url(/img/demo2-01.png);"></div>
-                        </a>
-                        <p class="inParagraphLink">$exp5624<a alt="demo server on Mainnet"
-                                href="https://mainnet.demo.btcpayserver.org/" target="blank_">$j[56]</a> $exp5756 <a
-                                alt="$j[57]" href="https://testnet.demo.btcpayserver.org/" target="blank_">$j[57]</a>
-                            <br>$exp5857 <a alt="$j[58]" href="https://store.btcpayserver.org/"
-                                target="blank_">$j[58]</a>&nbsp;
-                            <a alt="Point of Sale"
-                                href="https://mainnet.demo.btcpayserver.org/apps/3utBTfSKkW4gK7aQMd2hW5Bh9Fpa/pos"
-                                target="blank_">$j[59]</a> $exp5069 <a alt="$j[60]"
-                                href="https://store.btcpayserver.org/btcpay-server-payment-button-demo/"
-                                target="blank_">$j[60]</a>
-                        </p>
-                        <a alt="$j[61]" class="modernLink" href="https://mainnet.demo.btcpayserver.org/Account/Register"
-                            target="blank_">$j[61]&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-$rl"></i>
-                        </a>
-                    </div>
-                    <div class="trioMPBlockItem">
-                        <h3>$j[1]</h3>
-                        <a alt="$j[62]" href="http://docs.btcpayserver.org/" target="blank_">
-                            <div class="img_" style="background-image: url(/img/docs2-01.png);"></div>
-                        </a>
-                        <p>$j[25]</p>
-                        <a alt="$j[62]" class="modernLink" href="http://docs.btcpayserver.org/"
-                            target="blank_">$j[62]&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-$rl"></i>
-                        </a>
-                    </div>
-                    <div class="trioMPBlockItem">
-                        <h3 class="nullTrans">$j[3]</h3>
-                        <a alt="$j[63]" href="https://github.com/btcpayserver" target="blank_">
-                            <div class="img_" style="background-image: url(/img/git-01.png);"></div>
-                        </a>
-                        <p>$j[26]</p>
-                        <a alt="$j[63]" class="modernLink" href="https://github.com/btcpayserver"
-                            target="blank_">$j[83]&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-$rl"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="pageItem" id="communityCTA">
-                <div class="pageItemInnerSpacer">
-                    <div class="pageItemTextContent floatContentLeft">
-                        <h2>$j[32]</h2>
-                        <p>$j[28]</p>
-                        <div class="linkOrg-3">
-                            <a alt="Community on Mattermost" class="modernLink_Cluster"
-                                href="http://chat.btcpayserver.org/" target="blank_">
+						<li>
+							<input class="selector-no-js" name="z" type="radio" />
+							<div class="preview-selector-">
+								<h3>$j[115]</h3>
+							</div>
 
-                                <svg class="svgPseudoIcon mattermost" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="500px"
-                                    height="500px" viewBox="0 0 500 500" enable-background="new 0 0 500 500"
-                                    xml:space="preserve">
-                                    <g>
-                                        <g>
-                                            <path fill-rule="evenodd" clip-rule="evenodd" fill="var(--sunkist-lime)" d="M254.59,68.828c-8.209,9.706-15.952,18.956-23.855,28.066
-			c-0.814,0.938-2.55,1.194-3.915,1.521c-51.904,12.428-87.262,43.134-100.633,95.36c-11.756,45.912,0.954,86.653,32.874,121.143
-			c23.98,25.91,54.313,40.037,89.327,43.218c66.303,6.02,128.843-35.817,142.263-103.028c8.302-41.577-2.922-78.463-29.818-110.825
-			c-1.644-1.977-2.428-3.856-2.512-6.442c-0.355-10.868-0.962-21.729-1.467-32.593c-0.021-0.442,0.068-0.891,0.115-1.426
-			c53.834,36.244,94.89,120.225,63.807,207.512c-31.639,88.844-127.862,138.764-218.979,113.458
-			c-92.786-25.77-148.086-117.626-129.842-209.586C91.945,114.449,181.703,65.178,254.59,68.828z" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd" fill="var(--sunkist-lime)"
-                                                d="M311.691,223.965c-0.112,22.851-15.915,42.348-35.916,48.356
-			c-24.229,7.278-60.492-6.271-66.571-38.327c-3.294-17.378,1.588-31.912,12.108-46.557c33.578-46.746,78.271-97.092,78.271-97.092
-			c1.398-1.552,3.789-3.53,5.997-2.794c2.294,0.766,3.163,2.134,3.375,5.999C308.955,93.551,312.074,145.791,311.691,223.965z" />
-                                        </g>
-                                    </g>
-                                </svg>
+							<div class="payload-no-js">
+								<div class="payload-inner-aligner">
+									<p>$j[116]</p>
+								</div>
+							</div>
+
+						</li>
+						<!-- condensed -->
+
+						<li>
+							<input class="selector-no-js" name="z" type="radio" />
+							<div class="preview-selector-">
+								<h3>$j[117]</h3>
+							</div>
+
+							<div class="payload-no-js">
+								<div class="payload-inner-aligner">
+									<p>$j[118]</p>
+									<p>$j[119]</p>
+								</div>
+							</div>
+
+						</li>
+
+					</ul>
+
+				</div>
+			</div>
+
+			<div class="page-item-free -bg-grey" id="po0">
+				<div class="pageItemInnerSpacer -ta-c">
+					<h2>$j[133]</h2>
+
+					<svg class="page-c-svg-in" width="100%" height="100%" viewBox="0 0 800 500" version="1.1"
+						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+						xmlns:serif="http://www.serif.com/"
+						style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+						<g>
+							<use id="backgroundBubbles" xlink:href="#_IM0_1" x="0" y="0" width="632px" height="363px"
+								transform="matrix(0.99911,0,0,0.997332,58.6557,76.3428)" />
+							<g id="backgroundBubbles1" serif:id="backgroundBubbles">
+								<g id="backgroundBubbles_1_">
+									<circle cx="328.571" cy="234.854" r="11.594" style="fill:var(--white);" />
+									<circle cx="677.038" cy="189.89" r="8.696" style="fill:var(--white);" />
+									<circle cx="473.765" cy="339.448" r="12.802" style="fill:var(--white);" />
+									<circle cx="604.44" cy="302.489" r="10.145" style="fill:var(--white);" />
+									<circle cx="250.922" cy="84.173" r="7.488" style="fill:var(--white);" />
+									<path
+										d="M63.015,254.408c0,2.736 2.219,4.956 4.957,4.956c2.738,0 4.957,-2.22 4.957,-4.956c0,-2.741 -2.219,-4.962 -4.957,-4.962c-2.738,0 -4.957,2.221 -4.957,4.962Z"
+										style="fill:var(--white);fill-rule:nonzero;" />
+									<circle cx="243.434" cy="291.199" r="4.589" style="fill:var(--white);" />
+									<circle cx="187.686" cy="423.441" r="5.556" style="fill:var(--white);" />
+									<circle cx="372.532" cy="417.884" r="10.145" style="fill:var(--white);" />
+								</g>
+							</g>
+						</g>
+						<g>
+							<g>
+								<g id="btcs">
+									<g>
+										<use id="_LM_i_3_" serif:id="_LM_i_3" xlink:href="#_IM0_2" x="0" y="0" width="86px" height="85px"
+											transform="matrix(0.878509,0,0,0.878509,382.495,214.81)" />
+										<circle cx="420.27" cy="249.163" r="28.017" style="fill:var(--white);" />
+										<circle cx="420.27" cy="249.163" r="28.017" style="fill:var(--white);" />
+										<g>
+											<path
+												d="M432.626,245.171c0.558,-3.728 -2.28,-5.732 -6.161,-7.069l1.259,-5.05l-3.074,-0.766l-1.226,4.917c-0.808,-0.201 -1.638,-0.391 -2.462,-0.579l1.234,-4.95l-3.072,-0.766l-1.26,5.048c-0.669,-0.152 -1.325,-0.303 -1.963,-0.461l0.004,-0.016l-4.239,-1.058l-0.818,3.283c0,0 2.281,0.523 2.232,0.555c1.245,0.311 1.47,1.135 1.433,1.788l-1.434,5.752c0.085,0.022 0.197,0.054 0.319,0.103c-0.102,-0.025 -0.212,-0.054 -0.325,-0.081l-2.01,8.059c-0.152,0.378 -0.538,0.946 -1.408,0.73c0.03,0.045 -2.235,-0.557 -2.235,-0.557l-1.526,3.518l4.001,0.997c0.744,0.187 1.473,0.382 2.191,0.566l-1.272,5.108l3.07,0.766l1.26,-5.054c0.839,0.228 1.653,0.438 2.45,0.636l-1.256,5.03l3.074,0.766l1.272,-5.098c5.242,0.992 9.183,0.591 10.842,-4.149c1.337,-3.817 -0.067,-6.019 -2.824,-7.455c2.008,-0.463 3.521,-1.784 3.924,-4.513Zm-7.023,9.848c-0.95,3.817 -7.376,1.754 -9.46,1.236l1.688,-6.766c2.083,0.52 8.765,1.549 7.772,5.53Zm0.951,-9.903c-0.867,3.472 -6.216,1.708 -7.951,1.275l1.53,-6.137c1.736,0.433 7.324,1.24 6.421,4.862Z"
+												style="fill:#f7931a;fill-rule:nonzero;" />
+										</g>
+									</g>
+									<g>
+										<use id="_LM_i_3_1" serif:id="_LM_i_3" xlink:href="#_IM0_3" x="0" y="0" width="62px" height="61px"
+											transform="matrix(0.992735,0,0,0.997276,128.237,315.029)" />
+										<circle cx="159.012" cy="343.015" r="22.824" style="fill:var(--white);" />
+										<circle cx="159.012" cy="343.015" r="22.824" style="fill:var(--white);" />
+										<g>
+											<path
+												d="M163.436,332.658c-1.94,-2.38 -4.704,-1.77 -7.638,-0.166l-2.351,-3.528l-2.147,1.432l2.289,3.435c-0.565,0.376 -1.134,0.772 -1.7,1.165l-2.304,-3.458l-2.146,1.43l2.349,3.528c-0.458,0.319 -0.909,0.632 -1.354,0.929l-0.008,-0.01l-2.963,1.972l1.529,2.294c0,0 1.566,-1.087 1.559,-1.04c0.87,-0.58 1.49,-0.264 1.863,0.117l2.678,4.02c0.061,-0.04 0.141,-0.09 0.237,-0.137c-0.071,0.048 -0.148,0.099 -0.226,0.152l3.751,5.631c0.145,0.299 0.275,0.843 -0.333,1.249c0.044,0.006 -1.561,1.04 -1.561,1.04l1.282,2.849l2.795,-1.863c0.521,-0.346 1.038,-0.678 1.543,-1.009l2.379,3.567l2.145,-1.429l-2.353,-3.53c0.597,-0.381 1.171,-0.756 1.727,-1.127l2.341,3.515l2.147,-1.432l-2.373,-3.562c3.473,-2.613 5.394,-5.207 3.448,-8.806c-1.566,-2.899 -3.662,-3.262 -6.039,-2.388c0.822,-1.464 0.856,-3.1 -0.566,-4.84Zm2.08,9.632c1.778,2.666 -2.99,5.406 -4.445,6.377l-3.15,-4.728c1.456,-0.97 5.741,-4.43 7.595,-1.649Zm-5.444,-6.004c1.616,2.426 -2.381,4.681 -3.593,5.489l-2.857,-4.288c1.212,-0.808 4.763,-3.732 6.45,-1.201Z"
+												style="fill:#f7931a;fill-rule:nonzero;" />
+										</g>
+									</g>
+									<g>
+										<use id="_LM_i_3_2" serif:id="_LM_i_3" xlink:href="#_IM0_4" x="0" y="0" width="37px" height="36px"
+											transform="matrix(0.993621,0,0,1.00935,490.452,389.533)" />
+										<circle cx="508.834" cy="406.249" r="13.633" style="fill:var(--white);" />
+										<circle cx="508.834" cy="406.249" r="13.633" style="fill:var(--white);" />
+										<g>
+											<path
+												d="M514.529,403.375c0.003,-1.834 -1.506,-2.596 -3.469,-2.963l0.246,-2.521l-1.534,-0.149l-0.24,2.454c-0.403,-0.04 -0.816,-0.072 -1.227,-0.104l0.242,-2.47l-1.534,-0.15l-0.246,2.52c-0.333,-0.026 -0.66,-0.052 -0.978,-0.083l0,-0.007l-2.115,-0.208l-0.16,1.639c0,0 1.135,0.089 1.114,0.108c0.621,0.061 0.788,0.441 0.817,0.758l-0.281,2.872c0.043,0.004 0.099,0.011 0.162,0.026c-0.052,-0.005 -0.106,-0.01 -0.162,-0.015l-0.394,4.022c-0.046,0.193 -0.192,0.494 -0.626,0.452c0.018,0.019 -1.115,-0.109 -1.115,-0.109l-0.484,1.802l1.997,0.195c0.371,0.037 0.736,0.079 1.095,0.116l-0.249,2.549l1.533,0.15l0.246,-2.522c0.42,0.05 0.827,0.093 1.225,0.132l-0.246,2.51l1.534,0.15l0.249,-2.545c2.594,0.104 4.462,-0.369 4.923,-2.769c0.372,-1.933 -0.461,-2.893 -1.89,-3.388c0.933,-0.366 1.567,-1.109 1.567,-2.452Zm-2.679,5.241c-0.185,1.905 -3.426,1.37 -4.466,1.269l0.331,-3.377c1.04,0.102 4.33,0.121 4.135,2.108Zm-0.248,-4.835c-0.169,1.734 -2.87,1.266 -3.736,1.181l0.299,-3.063c0.866,0.084 3.614,0.075 3.437,1.882Z"
+												style="fill:#f7931a;fill-rule:nonzero;" />
+										</g>
+									</g>
+								</g>
+								<a class="svg-link"
+									href="https://docs.btcpayserver.org/faq-and-common-issues/faq-deployment#how-do-i-activate-tor-on-my-btcpay-server">
+									<g>
+										<g id="tor"><text x="387.714px" y="456.553px"
+												style="font-family:'OpenSans-SemiBold', 'Open Sans', sans-serif;font-weight:600;font-size:14px;">$j[132]</text>
+											<use id="_LM_i_2_" serif:id="_LM_i_2" xlink:href="#_IM0_5" x="0" y="0" width="83px" height="82px"
+												transform="matrix(0.952652,0,0,0.952652,363.08,375.105)" />
+											<circle cx="402.614" cy="410.901" r="28.82" style="fill:var(--white);" />
+											<circle cx="402.614" cy="410.901" r="28.82" style="fill:var(--white);" />
+											<g>
+												<g id="layer5">
+													<path id="path2554"
+														d="M404.941,389.393l-1.285,5.105c1.82,-3.606 4.712,-6.319 8.032,-8.711c-2.427,2.82 -4.641,5.641 -5.997,8.461c2.285,-3.213 5.355,-4.998 8.818,-6.176c-4.606,4.105 -8.261,8.511 -11.046,12.938l-2.213,-0.964c0.392,-3.535 1.727,-7.155 3.691,-10.653Z"
+														style="fill:#abcd03;fill-rule:nonzero;" />
+													<path id="path2534"
+														d="M399.03,399.107l4.213,1.748c0,1.071 -0.087,4.338 0.583,5.302c7.006,9.023 5.827,27.111 -1.419,27.575c-11.036,0 -15.244,-7.497 -15.244,-14.387c0,-6.283 7.532,-10.46 12.03,-14.173c1.143,-1 0.944,-3.209 -0.163,-6.065Z"
+														style="fill:#fffcdb;fill-rule:nonzero;" />
+													<path id="path2536"
+														d="M403.244,400.792l1.519,0.775c-0.143,0.999 0.071,3.213 1.07,3.784c4.427,2.748 8.604,5.747 10.246,8.746c5.855,10.567 -4.105,20.349 -12.709,19.421c4.677,-3.463 6.033,-10.567 4.284,-18.315c-0.714,-3.034 -1.821,-5.783 -3.784,-8.889c-0.851,-1.525 -0.554,-3.415 -0.626,-5.522Z"
+														style="fill:#7d4698;fill-rule:nonzero;" />
+												</g>
+												<g id="layer4">
+													<path id="path2538"
+														d="M402.513,400.531l3.142,0.429c-0.928,3.07 1.821,5.212 2.713,5.712c1.999,1.106 3.927,2.249 5.462,3.641c2.892,2.642 4.534,6.355 4.534,10.282c0,3.891 -1.785,7.639 -4.783,10.138c-2.821,2.356 -6.712,3.356 -10.496,3.356c-2.356,0 -4.463,-0.107 -6.747,-0.857c-5.212,-1.749 -9.104,-6.211 -9.425,-11.567c-0.286,-4.177 0.642,-7.354 3.891,-10.674c1.678,-1.749 5.07,-3.748 7.39,-5.355c1.143,-0.786 2.357,-2.999 0.036,-7.176l0.464,-0.357l3.439,2.304l-2.903,-1.197c0.25,0.357 0.928,1.964 1.071,2.428c0.321,1.32 0.179,2.606 -0.107,3.177c-1.464,2.642 -3.963,3.356 -5.783,4.855c-3.213,2.642 -6.712,4.748 -6.319,11.995c0.178,3.57 2.963,7.926 7.139,9.961c2.357,1.142 5.07,1.606 7.819,1.749c2.463,0.107 7.176,-1.357 9.746,-3.499c2.749,-2.284 4.284,-5.747 4.284,-9.281c0,-3.571 -1.428,-6.962 -4.106,-9.354c-1.535,-1.392 -4.069,-3.07 -5.64,-3.963c-1.571,-0.892 -3.534,-3.391 -2.892,-5.783l-1.929,-0.964Z"
+														style="fill-rule:nonzero;" />
+													<path id="path2540"
+														d="M401.55,405.815c-0.322,1.642 -0.679,4.605 -2.107,5.712c-0.607,0.428 -1.214,0.857 -1.856,1.285c-2.57,1.749 -5.141,3.391 -6.319,7.604c-0.25,0.893 -0.035,1.856 0.179,2.749c0.642,2.57 2.463,5.355 3.891,6.997c0,0.072 0.286,0.25 0.286,0.322c1.178,1.392 1.535,1.785 5.997,2.784l-0.107,0.5c-2.677,-0.714 -4.891,-1.356 -6.283,-2.963c0,-0.036 -0.25,-0.286 -0.25,-0.286c-1.499,-1.714 -3.32,-4.569 -3.998,-7.247c-0.25,-1.071 -0.464,-1.892 -0.179,-2.999c1.214,-4.355 3.856,-6.069 6.533,-7.89c0.607,-0.392 1.321,-0.749 1.892,-1.213c1.107,-0.821 1.713,-3.32 2.321,-5.355Z"
+														style="fill-rule:nonzero;" />
+													<path id="path2542"
+														d="M402.691,412.598c0.036,1.856 -0.145,2.787 0.319,4.108c0.285,0.786 1.25,1.857 1.536,2.892c0.392,1.393 0.82,2.928 0.784,3.856c0,1.071 -0.067,3.069 -0.531,5.211c-0.354,1.77 -1.169,3.289 -2.541,4.15c-1.404,-0.289 -3.053,-0.783 -4.027,-1.617c-1.892,-1.642 -3.568,-4.388 -3.782,-6.78c-0.178,-1.964 1.64,-4.859 4.174,-6.323c2.142,-1.249 2.64,-2.673 3.104,-4.958c-0.642,1.999 -1.246,3.675 -3.316,4.746c-2.999,1.57 -4.538,4.207 -4.395,6.706c0.214,3.213 1.501,5.39 4.035,7.14c1.071,0.749 3.072,1.542 4.322,1.756l0,-0.163c0.947,-0.178 2.174,-1.734 2.785,-3.84c0.536,-1.892 0.747,-4.313 0.711,-5.849c-0.036,-0.892 -0.43,-2.825 -1.144,-4.574c-0.392,-0.964 -0.995,-1.928 -1.388,-2.606c-0.428,-0.679 -0.431,-2.142 -0.646,-3.855Z"
+														style="fill-rule:nonzero;" />
+													<path id="path2544"
+														d="M402.479,419.598c0.035,1.25 0.537,2.851 0.751,4.493c0.179,1.214 0.102,2.433 0.066,3.504c-0.036,1.24 -0.449,3.462 -1.013,4.542c-0.533,-0.244 -0.741,-0.523 -1.087,-0.972c-0.428,-0.607 -0.719,-1.214 -1.004,-1.928c-0.214,-0.535 -0.465,-1.148 -0.572,-1.862c-0.143,-1.071 -0.103,-2.747 1.111,-4.46c0.928,-1.357 1.141,-1.46 1.462,-3.031c-0.429,1.392 -0.748,1.534 -1.748,2.712c-1.107,1.285 -1.291,3.178 -1.291,4.713c0,0.643 0.257,1.356 0.507,2.034c0.285,0.715 0.53,1.426 0.923,1.961c0.59,0.868 1.345,1.362 1.715,1.454c0.003,0 0.006,-0.001 0.008,0c0.008,0.002 0.017,0.007 0.025,0.008l0,-0.041c0.693,-0.772 1.109,-1.539 1.25,-2.312c0.178,-0.928 0.219,-1.858 0.326,-2.965c0.107,-0.928 0.03,-2.178 -0.22,-3.463c-0.357,-1.607 -0.959,-3.245 -1.209,-4.387Z"
+														style="fill-rule:nonzero;" />
+													<path id="path2550"
+														d="M402.585,404.315c0.036,1.857 0.178,5.32 0.678,6.676c0.143,0.464 1.464,2.499 2.392,4.962c0.642,1.714 0.785,3.285 0.892,3.749c0.429,2.035 -0.107,5.462 -0.821,8.711c-0.357,1.749 -1.571,3.927 -2.963,4.784l-0.285,0.499c0.785,-0.035 2.713,-1.927 3.391,-4.284c1.143,-3.998 1.607,-5.854 1.071,-10.281c-0.071,-0.429 -0.25,-1.892 -0.928,-3.463c-1,-2.392 -2.428,-4.677 -2.606,-5.141c-0.321,-0.75 -0.75,-3.998 -0.821,-6.212Z"
+														style="fill-rule:nonzero;" />
+													<path id="path2552"
+														d="M403.255,401.777c-0.106,1.907 -0.135,2.61 0.222,4.002c0.393,1.535 2.392,3.748 3.213,6.283c1.571,4.855 1.178,11.21 0.036,16.172c-0.428,1.749 -2.464,4.284 -4.498,5.105l1.499,0.357c0.821,-0.036 2.927,-1.999 3.749,-4.248c1.32,-3.534 1.57,-7.747 1.035,-12.174c-0.036,-0.428 -0.75,-4.248 -1.428,-5.855c-0.964,-2.391 -2.678,-4.534 -2.856,-4.997c-0.321,-0.786 -1.027,-2.417 -0.972,-4.645Z"
+														style="fill-rule:nonzero;" />
+													<rect id="rect2556" x="402.12" y="400.434" width="0.144" height="32.941" />
+												</g>
+											</g>
+										</g>
+									</g>
+								</a>
+								<a class="svg-link" href="https://docs.btcpayserver.org/integrations/customintegration">
+									<g>
+										<g id="custom">
+											<use id="_LM_i_4_" serif:id="_LM_i_4" xlink:href="#_IM0_6" x="0" y="0" width="122px"
+												height="122px" transform="matrix(1.32409,0,0,1.32385,347.777,30.8286)" />
+											<path
+												d="M428.529,41.784c36.449,0 65.973,29.524 65.973,65.943c0,36.419 -29.524,65.941 -65.973,65.941c-36.419,0 -65.941,-29.522 -65.941,-65.941c0,-36.419 29.523,-65.943 65.941,-65.943Z"
+												style="fill:var(--white);fill-rule:nonzero;" />
+											<path
+												d="M428.529,41.784c36.449,0 65.973,29.524 65.973,65.943c0,36.419 -29.524,65.941 -65.973,65.941c-36.419,0 -65.941,-29.522 -65.941,-65.941c0,-36.419 29.523,-65.943 65.941,-65.943Z"
+												style="fill:var(--white);fill-rule:nonzero;" /><text x="337.337px" y="193.683px"
+												style="font-family:'OpenSans-SemiBold', 'Open Sans', sans-serif;font-weight:600;font-size:18.644px;">$j[54]</text>
+											<g>
+												<path
+													d="M431.892,144.722l-25.216,-39.532c-2.766,-4.339 -8.534,-5.613 -12.872,-2.847c-4.338,2.767 -5.612,8.535 -2.846,12.872l25.217,39.534c2.767,4.337 8.534,5.613 12.872,2.845c4.337,-2.765 5.613,-8.533 2.845,-12.872Z"
+													style="fill:url(#_Linear7);" />
+												<path
+													d="M396.632,119.265l59.456,14.332c5.002,1.206 10.042,-1.876 11.247,-6.878c1.205,-5 -1.876,-10.041 -6.878,-11.246l-59.456,-14.333c-5,-1.206 -10.041,1.877 -11.246,6.877c-1.206,5.002 1.877,10.042 6.877,11.248Z"
+													style="fill:url(#_Linear8);" />
+												<path
+													d="M466.665,120.478c0,0 -0.683,0.193 -15.729,-54.389c-2.615,-9.479 -14.488,-20.082 -26.436,-13.929c-13.46,6.928 -8.411,21.719 -5.791,27.351c33.401,52.025 31.172,49.082 31.172,49.082c2.24,4.632 7.818,6.575 12.45,4.335c4.631,-2.24 6.574,-7.819 4.334,-12.45Z"
+													style="fill:url(#_Linear9);" />
+											</g>
+										</g>
+									</g>
+								</a>
+								
+								<a class="svg-link"
+									href="https://docs.btcpayserver.org/faq-and-common-issues/faq-apps#how-to-integrate-woocommerce-store-into-a-btcpay-crowdfund-app">
+									<g>
+										<g id="wordpress">
+											<use id="_LM_i_12_" serif:id="_LM_i_12" xlink:href="#_IM0_14" x="0" y="0" width="131px"
+												height="131px" transform="matrix(0.999326,0,0,0.999326,624.637,210.763)" />
+											<circle cx="690.093" cy="273.322" r="54.348" style="fill:var(--white);" />
+											<circle cx="690.093" cy="273.322" r="54.348" style="fill:var(--white);" /><text id="_--j-138--"
+												serif:id="($j[138])" x="646.049px" y="345.304px"
+												style="font-family:'OpenSans-SemiBold', 'Open Sans', sans-serif;font-weight:600;font-size:14px;">$j[131]</text>
+											<g>
+												<g>
+													<path
+														d="M663.808,274.834c0,11.107 6.457,20.711 15.818,25.262l-13.389,-36.688c-1.557,3.492 -2.429,7.355 -2.429,11.426Z"
+														style="fill:#21759b;fill-rule:nonzero;" />
+													<path
+														d="M710.827,273.416c0,-3.471 -1.246,-5.871 -2.314,-7.742c-1.424,-2.312 -2.758,-4.27 -2.758,-6.582c0,-2.578 1.957,-4.98 4.714,-4.98c0.124,0 0.243,0.018 0.364,0.021c-4.994,-4.574 -11.647,-7.367 -18.955,-7.367c-9.807,0 -18.435,5.029 -23.453,12.65c0.658,0.021 1.279,0.033 1.807,0.033c2.938,0 7.48,-0.355 7.48,-0.355c1.514,-0.09 1.69,2.135 0.181,2.312c0,0 -1.521,0.18 -3.213,0.27l10.222,30.4l6.143,-18.422l-4.373,-11.98c-1.512,-0.088 -2.942,-0.27 -2.942,-0.27c-1.513,-0.088 -1.336,-2.398 0.179,-2.311c0,0 4.635,0.355 7.393,0.355c2.936,0 7.48,-0.355 7.48,-0.355c1.516,-0.09 1.692,2.133 0.18,2.311c0,0 -1.523,0.182 -3.211,0.27l10.143,30.174l2.801,-9.355c1.208,-3.886 2.132,-6.675 2.132,-9.077Z"
+														style="fill:#21759b;fill-rule:nonzero;" />
+													<path
+														d="M692.37,277.289l-8.422,24.473c2.516,0.738 5.174,1.143 7.93,1.143c3.269,0 6.402,-0.562 9.32,-1.59c-0.074,-0.121 -0.144,-0.248 -0.199,-0.387l-8.629,-23.639Z"
+														style="fill:#21759b;fill-rule:nonzero;" />
+													<path
+														d="M716.507,261.367c0.119,0.895 0.188,1.854 0.188,2.885c0,2.85 -0.531,6.053 -2.134,10.057l-8.574,24.789c8.345,-4.867 13.958,-13.908 13.958,-24.264c0.002,-4.881 -1.245,-9.471 -3.438,-13.467Z"
+														style="fill:#21759b;fill-rule:nonzero;" />
+													<path
+														d="M691.876,242.113c-18.041,0 -32.721,14.68 -32.721,32.721c0,18.043 14.68,32.721 32.721,32.721c18.041,0 32.723,-14.678 32.723,-32.721c-0.001,-18.043 -14.682,-32.721 -32.723,-32.721Zm0,63.94c-17.215,0 -31.219,-14.006 -31.219,-31.223c0,-17.213 14.004,-31.219 31.219,-31.219c17.213,0 31.22,14.006 31.22,31.219c0,17.217 -14.007,31.223 -31.22,31.223Z"
+														style="fill:#21759b;fill-rule:nonzero;" />
+												</g>
+											</g>
+										</g>
+									</g>
+								</a>
+								<a class="svg-link" href="https://docs.btcpayserver.org/integrations/woocommerce">
+									<g>
+										<g id="woo">
+											<use id="_LM_i_8_" serif:id="_LM_i_8" xlink:href="#_IM0_10" x="0" y="0" width="141px"
+												height="144px" transform="matrix(0.997235,0,0,0.997611,509.315,122.838)" />
+											<ellipse cx="579.62" cy="191.769" rx="59.191" ry="60.715" style="fill:var(--white);" />
+											<ellipse cx="579.62" cy="191.769" rx="59.191" ry="60.715" style="fill:var(--white);" />
+											<g>
+												<path
+													d="M618.835,203.87c0,-0.898 0.001,-1.797 0.001,-2.695c0,-0.903 0,-1.807 -0.001,-2.71c0.001,-0.898 0.001,-1.797 0.001,-2.695c0,-0.903 0,-1.807 -0.001,-2.71c0.001,-0.898 0.001,-1.797 0.001,-2.694c0,-0.903 0,-1.807 -0.001,-2.709c0.001,-0.898 0.001,-1.797 0.001,-2.696c0,-0.902 0,-1.806 -0.001,-2.709c0.001,-0.899 0.001,-1.797 0.001,-2.696c0.025,-0.913 -0.158,-1.798 -0.326,-2.686c-0.684,-1.949 -1.903,-3.435 -3.65,-4.471c-0.935,-0.39 -1.881,-0.755 -2.901,-0.802c-0.788,-0.036 -1.578,-0.029 -2.367,-0.041c-8.693,0.008 -17.387,0.02 -26.079,0.024c-12.162,0.003 -24.324,-0.003 -36.486,0.003c-1.683,0 -3.168,0.594 -4.496,1.653c-1.222,0.976 -1.95,2.284 -2.505,3.724c-0.127,0.862 -0.297,1.718 -0.273,2.595l0,24.314c-0.033,0.916 0.156,1.809 0.289,2.707c0.697,1.976 1.928,3.5 3.705,4.553c0.738,0.248 1.475,0.497 2.213,0.745c0.132,0.013 0.264,0.025 0.396,0.039c0.882,-0.02 1.767,-0.108 2.646,0.053l2.628,0c0.882,-0.131 1.761,-0.131 2.643,0l2.628,0c0.883,-0.131 1.762,-0.131 2.643,0l2.628,0c0.882,-0.131 1.76,-0.131 2.643,0l2.628,0c0.882,-0.131 1.761,-0.131 2.643,0l2.63,0c0.88,-0.131 1.76,-0.131 2.642,0c0.67,-0.005 1.339,-0.01 2.01,-0.019c0.249,-0.003 0.47,0.061 0.645,0.249c0.908,0.439 1.785,0.933 2.621,1.5c0.601,0.271 1.188,0.573 1.713,0.983c0.35,0.096 0.644,0.289 0.915,0.521c1.793,0.927 3.524,1.97 5.264,3.003c0.919,0.519 1.837,1.038 2.754,1.557c0.305,-0.199 0.048,-0.405 -0.018,-0.574c-0.553,-1.456 -1.125,-2.906 -1.694,-4.356c-0.358,-0.863 -0.715,-1.729 -1.081,-2.59c-0.1,-0.231 -0.044,-0.358 0.199,-0.349c0.827,0.032 1.656,-0.106 2.477,0.074l2.632,0c0.882,-0.131 1.76,-0.131 2.643,0l2.627,0c0.883,-0.131 1.762,-0.131 2.642,0l2.629,0c0.883,-0.131 1.762,-0.131 2.644,0l2.628,0c0.879,-0.16 1.763,-0.075 2.645,-0.054c0.175,-0.018 0.353,-0.036 0.527,-0.052c0.692,-0.244 1.387,-0.49 2.08,-0.735c1.777,-1.052 3.007,-2.574 3.694,-4.558c0.149,-0.889 0.308,-1.78 0.281,-2.696Zm-44.109,-18.567c-0.832,3.361 -1.361,6.777 -1.767,10.217c-0.325,2.75 -0.555,5.504 -0.505,8.278c0.013,0.671 0.127,1.333 0.013,2.017c-0.35,2.08 -2.172,2.901 -3.83,1.649c-1.344,-1.016 -2.302,-2.405 -3.22,-3.811c-2.034,-3.116 -3.357,-6.565 -4.42,-10.13c-0.055,-0.188 -0.12,-0.373 -0.186,-0.582c-0.291,0.198 -0.354,0.5 -0.479,0.752c-1.639,3.31 -3.24,6.641 -4.917,9.932c-0.698,1.374 -1.521,2.693 -2.716,3.701c-1.254,1.059 -2.266,0.912 -3.102,-0.52c-0.901,-1.541 -1.311,-3.284 -1.767,-4.996c-1.371,-5.145 -2.317,-10.38 -3.189,-15.633c-0.294,-1.772 -0.566,-3.548 -0.862,-5.319c-0.183,-1.103 0.023,-2.095 0.902,-2.797c0.919,-0.731 1.989,-0.822 3.057,-0.393c1.021,0.41 1.242,1.375 1.384,2.359c0.808,5.583 1.769,11.136 3.045,16.628c0.041,0.171 0.099,0.341 0.189,0.652c1.258,-2.461 2.441,-4.771 3.623,-7.08c1.077,-2.113 2.157,-4.227 3.239,-6.339c0.235,-0.458 0.476,-0.914 0.816,-1.303c1.427,-1.624 3.43,-1.222 4.122,0.844c0.385,1.151 0.508,2.368 0.771,3.551c0.591,2.632 1.273,5.235 2.203,7.765c0.07,0.201 0.157,0.397 0.356,0.579c0.117,-0.969 0.222,-1.939 0.351,-2.907c0.572,-4.352 1.307,-8.667 2.902,-12.773c0.275,-0.709 0.601,-1.402 0.955,-2.075c0.744,-1.415 2.233,-1.909 3.579,-1.223c1.431,0.732 1.994,2.292 1.275,3.767c-0.804,1.659 -1.382,3.4 -1.822,5.19Zm16.81,15.269c-1.952,2.808 -4.558,4.249 -7.974,3.771c-3.654,-0.51 -5.834,-2.842 -6.726,-6.347c-1.412,-5.56 -0.301,-10.68 3.182,-15.171c3.471,-4.473 8.773,-3.67 11.435,-1.341c1.884,1.646 2.735,3.855 3.127,6.293c0.132,0.825 0.152,1.656 0.15,2.491c0,3.782 -1.053,7.226 -3.194,10.304Zm19.057,1.277c-2.941,3.235 -7.89,3.482 -11.058,0.619c-1.741,-1.572 -2.618,-3.669 -2.939,-5.966c-0.677,-4.819 0.305,-9.268 3.155,-13.207c2.526,-3.49 6.33,-4.581 10.093,-2.917c2.451,1.086 3.723,3.19 4.488,5.683c0.405,1.315 0.562,2.679 0.54,4.064c-0.079,4.424 -1.293,8.442 -4.279,11.724Z"
+													style="fill:#9b5d90;fill-rule:nonzero;" />
+												<path
+													d="M609.488,190.619c-0.1,2.357 -0.596,4.58 -2.098,6.462c-0.394,0.493 -0.856,0.9 -1.384,1.232c-1.295,0.815 -2.48,0.531 -3.252,-0.808c-0.52,-0.901 -0.813,-1.893 -0.931,-2.928c-0.336,-2.972 0.501,-5.598 2.288,-7.928c0.162,-0.211 0.346,-0.407 0.536,-0.592c1.484,-1.438 3.102,-1.157 4.006,0.711c0.586,1.207 0.887,2.488 0.835,3.851Z"
+													style="fill:#9b5d90;fill-rule:nonzero;" />
+												<path
+													d="M589.332,191.23c-0.072,1.709 -0.58,3.86 -1.98,5.72c-0.435,0.578 -0.968,1.041 -1.574,1.413c-1.203,0.737 -2.301,0.482 -3.073,-0.712c-0.584,-0.899 -0.895,-1.917 -1.016,-2.967c-0.349,-3.059 0.477,-5.786 2.382,-8.162c0.248,-0.31 0.547,-0.59 0.863,-0.823c1.262,-0.93 2.546,-0.66 3.369,0.686c0.666,1.077 1.029,2.586 1.029,4.845Z"
+													style="fill:#9b5d90;fill-rule:nonzero;" />
+											</g><text x="543.568px" y="270.123px"
+												style="font-family:'OpenSans-SemiBold', 'Open Sans', sans-serif;font-weight:600;font-size:14px;">$j[50]</text>
+										</g>
+									</g>
+								</a>
+								<a class="svg-link" href="https://docs.btcpayserver.org/integrations/drupal">
+									<g>
+										<g id="drupal">
+											<use id="_LM_i_9_" serif:id="_LM_i_9" xlink:href="#_IM0_11" x="0" y="0" width="169px"
+												height="169px" transform="matrix(0.933222,0,0,0.933222,132.208,94.4812)" />
+											<circle cx="211.064" cy="170.63" r="68.466" style="fill:var(--white);" />
+											<circle cx="211.064" cy="170.63" r="68.466" style="fill:var(--white);" />
+											<g>
+												<path
+													d="M208.739,120.384c5.729,6.629 12.223,12.47 19.064,18.304c-17.168,-2.141 -30.404,16.558 -20.26,32.738c-10.345,1.795 -17.988,7.248 -21.95,17.027c-3.93,9.7 -2.317,18.885 3.723,27.411c-1.965,-0.968 -3.652,-2.272 -5.273,-3.655c-8.165,-6.976 -13.113,-15.768 -14.838,-26.374c-0.059,-0.364 0.112,-0.836 -0.374,-1.059l0,-9.674c0.524,-0.27 0.331,-0.798 0.397,-1.205c2.005,-12.382 8.553,-21.442 19.715,-27.199c3.613,-1.864 7.297,-3.598 10.744,-5.775c4.489,-2.835 7.597,-6.654 8.659,-11.972c0.567,-2.84 0.383,-5.706 0.393,-8.567Z"
+													style="fill:#29a9df;fill-rule:nonzero;" />
+												<path
+													d="M227.443,220.71c3.136,-2.648 5.966,-5.574 7.765,-9.312c5.201,-10.803 4.057,-20.937 -3.357,-30.361c-0.308,-0.393 -0.633,-0.773 -0.99,-1.207c11.086,-4.37 16.044,-12.448 14.834,-24.431c1.305,1.054 2.237,2.285 3.199,3.476c4.15,5.143 7.525,10.679 8.853,17.28c1.533,7.633 0.079,14.824 -3.315,21.66c-5.528,11.13 -14.408,18.536 -25.955,22.873c-0.278,0.106 -0.587,0.126 -0.882,0.186c-0.051,-0.055 -0.101,-0.11 -0.152,-0.164Z"
+													style="fill:#29a9df;fill-rule:nonzero;" />
+												<path
+													d="M226.917,198.673c0.034,8.809 -7.055,15.978 -15.858,16.034c-8.867,0.058 -16.083,-7.087 -16.114,-15.953c-0.031,-8.768 7.128,-16.005 15.879,-16.051c8.86,-0.046 16.057,7.096 16.093,15.97Z"
+													style="fill:#29a9df;fill-rule:nonzero;" />
+												<path
+													d="M237.157,159.688c-0.013,6.736 -5.451,12.102 -12.254,12.089c-6.803,-0.014 -12.225,-5.508 -12.192,-12.353c0.032,-6.693 5.531,-12.099 12.299,-12.091c6.826,0.005 12.158,5.431 12.147,12.355Z"
+													style="fill:#29a9df;fill-rule:nonzero;" />
+											</g><text x="179.236px" y="258.561px"
+												style="font-family:'OpenSans-SemiBold', 'Open Sans', sans-serif;font-weight:600;font-size:13.092px;">$j[51]</text>
+										</g>
+									</g>
+								</a>
+								<a class="svg-link" href="https://github.com/btcpayserver">
+									<g>
+										<g id="git">
+											<use id="_LM_i_10_" serif:id="_LM_i_10" xlink:href="#_IM0_12" x="0" y="0" width="104px"
+												height="104px" transform="matrix(0.999378,0,0,0.999415,237.955,306.578)" />
+											<path
+												d="M249.063,355.654c0,22.564 18.293,40.859 40.86,40.859c22.564,0 40.86,-18.293 40.86,-40.859c0,-22.572 -18.294,-40.865 -40.86,-40.865c-22.567,0 -40.86,18.293 -40.86,40.865Z"
+												style="fill:var(--white);fill-rule:nonzero;" />
+											<path
+												d="M249.063,355.654c0,22.564 18.293,40.859 40.86,40.859c22.564,0 40.86,-18.293 40.86,-40.859c0,-22.572 -18.294,-40.865 -40.86,-40.865c-22.567,0 -40.86,18.293 -40.86,40.865Z"
+												style="fill:var(--white);fill-rule:nonzero;" /><text x="261.861px" y="414.147px"
+												style="font-family:'OpenSans-SemiBold', 'Open Sans', sans-serif;font-weight:600;font-size:14px;">$j[3]</text>
+											<g>
+												<path
+													d="M314.85,353.419l-21.908,-21.91c-1.259,-1.262 -3.306,-1.262 -4.565,0l-4.55,4.55l5.77,5.772c1.341,-0.453 2.878,-0.15 3.947,0.921c1.077,1.079 1.377,2.628 0.911,3.978l5.564,5.56c1.347,-0.464 2.898,-0.164 3.972,0.912c1.502,1.502 1.502,3.933 0,5.438c-1.501,1.501 -3.935,1.501 -5.438,0c-1.129,-1.133 -1.409,-2.792 -0.833,-4.184l-5.189,-5.187l0,13.648c0.366,0.181 0.713,0.423 1.017,0.726c1.501,1.502 1.501,3.934 0,5.439c-1.502,1.502 -3.935,1.502 -5.437,0c-1.502,-1.507 -1.502,-3.938 0,-5.439c0.373,-0.37 0.801,-0.65 1.259,-0.838l0,-13.776c-0.458,-0.188 -0.886,-0.466 -1.259,-0.839c-1.139,-1.138 -1.412,-2.806 -0.827,-4.202l-5.688,-5.694l-15.02,15.025c-1.26,1.263 -1.26,3.309 0,4.57l21.908,21.905c1.259,1.26 3.304,1.26 4.566,0l21.807,-21.806c1.255,-1.26 1.255,-3.307 -0.007,-4.569Z"
+													style="fill:#f05133;fill-rule:nonzero;" />
+											</g>
+										</g>
+									</g>
+								</a>
+								<a class="svg-link" href="https://docs.btcpayserver.org/integrations/magento">
+									<g>
+										<g id="mag">
+											<use id="_LM_i_11_" serif:id="_LM_i_11" xlink:href="#_IM0_13" x="0" y="0" width="108px"
+												height="108px" transform="matrix(0.993295,0,0,0.993295,483.357,291.254)" />
+											<circle cx="536.994" cy="341.996" r="42.512" style="fill:var(--white);" />
+											<circle cx="536.994" cy="341.996" r="42.512" style="fill:var(--white);" />
+											<g>
+												<path
+													d="M560.318,354.205c-1.552,0.894 -3.103,1.788 -4.651,2.682c-0.412,0.238 -0.826,0.477 -1.238,0.715c-0.15,0.088 -0.154,0.086 -0.154,-0.081c-0.002,-0.231 -0.001,-0.468 -0.001,-0.701c0,-7.785 0,-15.571 0.002,-23.357c0,-0.118 -0.025,-0.188 -0.139,-0.253c-2.507,-1.441 -5.009,-2.89 -7.513,-4.333c-2.438,-1.408 -4.875,-2.813 -7.312,-4.228c-0.109,-0.062 -0.188,-0.064 -0.299,-0.003c-1.584,0.92 -3.169,1.836 -4.755,2.75c-2.43,1.401 -4.86,2.801 -7.289,4.202c-0.932,0.538 -1.86,1.08 -2.792,1.616c-0.089,0.052 -0.127,0.104 -0.127,0.213c0.006,2.457 0.007,4.913 0.009,7.369c0.001,0.567 0.003,1.14 0.006,1.709c0.004,1.495 0.013,2.99 0.016,4.484c0.004,2.791 0.005,5.584 0.009,8.377c0.001,0.712 0.004,1.424 0.007,2.136l0,0.198c-2.029,-1.175 -4.038,-2.335 -6.046,-3.495l0,-24.415c0.254,-0.148 0.509,-0.296 0.763,-0.442c1.66,-0.957 3.321,-1.914 4.981,-2.872c1.276,-0.736 2.554,-1.478 3.832,-2.216c1.875,-1.082 3.751,-2.162 5.625,-3.244c1.604,-0.926 3.204,-1.853 4.806,-2.778c0.373,-0.216 0.741,-0.437 1.112,-0.653l0.092,0c-0.002,0.031 0.026,0.039 0.047,0.052c0.745,0.433 1.49,0.862 2.237,1.294c1.717,0.991 3.436,1.98 5.15,2.973c1.606,0.929 3.211,1.861 4.817,2.788c2.203,1.274 4.409,2.545 6.614,3.815c0.729,0.42 1.46,0.837 2.188,1.255c0.003,8.145 0.003,16.294 0.003,24.443Z"
+													style="fill:#f16322;fill-rule:nonzero;" />
+												<path
+													d="M539.137,366.413c-0.239,-0.188 -0.516,-0.316 -0.775,-0.47c-2.158,-1.25 -4.318,-2.498 -6.479,-3.747c-0.545,-0.312 -1.087,-0.633 -1.635,-0.939c-0.109,-0.062 -0.14,-0.133 -0.14,-0.251c0.003,-7.258 0.002,-14.518 0.002,-21.773c0,-0.771 0.001,-1.546 -0.004,-2.317c-0.002,-0.104 0.028,-0.164 0.12,-0.219c1.847,-1.062 3.689,-2.131 5.535,-3.195c0.12,-0.069 0.243,-0.139 0.37,-0.207c0.032,0.077 0.018,0.143 0.018,0.207c0.001,8.006 0.001,16.011 -0.002,24.017c0,0.127 0.032,0.197 0.146,0.262c0.932,0.527 1.857,1.062 2.787,1.597c0.072,0.043 0.13,0.045 0.205,0.001c0.939,-0.552 1.884,-1.101 2.826,-1.646c0.058,-0.033 0.084,-0.064 0.078,-0.131c-0.004,-0.041 -0.001,-0.082 -0.001,-0.122l0,-24.183c0.187,0.065 0.332,0.173 0.487,0.263c1.823,1.051 3.645,2.104 5.47,3.153c0.102,0.058 0.109,0.127 0.109,0.224c-0.001,5.244 -0.001,10.487 -0.001,15.731c0,2.78 -0.002,5.562 0.004,8.347c0,0.131 -0.046,0.194 -0.155,0.257c-1.779,1.024 -3.56,2.053 -5.339,3.081c-1.146,0.662 -2.292,1.322 -3.438,1.984c-0.036,0.021 -0.094,0.023 -0.101,0.083c-0.026,-0.007 -0.056,-0.007 -0.087,-0.007Z"
+													style="fill:#f16322;fill-rule:nonzero;" />
+											</g><text x="507.495px" y="402.716px"
+												style="font-family:'OpenSans-SemiBold', 'Open Sans', sans-serif;font-weight:600;font-size:14px;">$j[52]</text>
+										</g>
+									</g>
+								</a>
+
+								<a class="svg-link" href="https://docs.btcpayserver.org/integrations/prestashop">
+									<g>
+										<g id="presta">
+											<use id="_LM_i_13_" serif:id="_LM_i_13" xlink:href="#_IM0_15" x="0" y="0" width="132px"
+												height="132px" transform="matrix(0.998418,0,0,0.998418,46.1288,257.359)" />
+											<circle cx="112.024" cy="320.358" r="54.785" style="fill:var(--white);" />
+											<circle cx="112.024" cy="320.358" r="54.785" style="fill:var(--white);" />
+											<g>
+												<path id="XMLID_125_"
+													d="M100.037,339.707c0.542,-0.248 1.084,-0.451 1.648,-0.678c0.632,-0.226 1.264,-0.451 1.896,-0.654c0.79,-0.248 1.603,-0.452 2.416,-0.632c1.106,-0.227 2.212,-0.406 3.318,-0.52c-0.632,1.965 -1.31,3.929 -2.077,5.87c0.022,0.384 0.045,0.745 0.067,1.13c1.513,-0.295 3.07,-0.453 4.674,-0.453c1.603,0 3.161,0.158 4.674,0.453c0,-0.385 0.022,-0.77 0.067,-1.13c-0.745,-1.941 -1.445,-3.905 -2.078,-5.87c1.107,0.112 2.236,0.271 3.32,0.52c0.812,0.181 1.603,0.384 2.416,0.632c0.632,0.204 1.264,0.406 1.896,0.654c0.564,0.205 1.106,0.429 1.648,0.678c3.839,1.717 7.338,4.246 10.207,7.542c7.203,-6.21 11.764,-15.4 11.764,-25.674c0,-18.719 -15.173,-33.915 -33.915,-33.915c-18.719,0 -33.915,15.174 -33.915,33.915c0,10.252 4.561,19.441 11.764,25.674c2.872,-3.296 6.371,-5.826 10.21,-7.542Z"
+													style="fill:#a0dbe8;fill-rule:nonzero;" />
+												<path id="XMLID_124_"
+													d="M102.273,345.849c1.58,-0.7 3.274,-1.242 5.013,-1.58c0,-0.384 -0.023,-0.769 -0.067,-1.13c0.745,-1.941 1.445,-3.905 2.078,-5.869c-1.106,0.111 -2.235,0.27 -3.319,0.519c-0.813,0.181 -1.604,0.384 -2.416,0.632c-0.632,0.204 -1.265,0.407 -1.896,0.655l2.461,0.609l-1.854,6.164Z"
+													style="fill:#525353;fill-rule:nonzero;" />
+												<path id="XMLID_123_"
+													d="M96.447,349.485c0.067,-0.632 0.09,-1.265 0.09,-1.92c0,-0.384 0.316,-0.7 0.7,-0.7l0.61,0l2.167,-7.18c-3.838,1.716 -7.338,4.245 -10.206,7.542c1.58,1.376 3.297,2.596 5.103,3.657c0.52,-0.473 1.017,-0.948 1.536,-1.399Z"
+													style="fill:#525353;fill-rule:nonzero;" />
+												<path id="XMLID_122_"
+													d="M123.904,339.707l2.168,7.182l0.609,0c0.384,0 0.7,0.315 0.7,0.7c0,0.654 0.045,1.286 0.09,1.918c0.52,0.452 1.039,0.903 1.513,1.4c1.829,-1.06 3.523,-2.28 5.104,-3.658c-2.845,-3.296 -6.346,-5.826 -10.184,-7.542Z"
+													style="fill:#525353;fill-rule:nonzero;" />
+												<path id="XMLID_121_"
+													d="M119.772,339.639l2.461,-0.61c-0.632,-0.226 -1.265,-0.451 -1.896,-0.654c-0.791,-0.248 -1.604,-0.452 -2.416,-0.632c-1.106,-0.227 -2.213,-0.406 -3.32,-0.52c0.632,1.965 1.31,3.929 2.078,5.87c-0.022,0.384 -0.045,0.745 -0.067,1.13c1.761,0.337 3.432,0.88 5.013,1.58l-1.853,-6.164Z"
+													style="fill:#525353;fill-rule:nonzero;" />
+												<path id="XMLID_120_"
+													d="M107.174,346.888l9.573,0c-0.09,-0.881 -0.136,-1.762 -0.113,-2.619c-1.513,-0.294 -3.07,-0.452 -4.674,-0.452c-1.604,0 -3.161,0.158 -4.674,0.452c0.022,0.88 -0.023,1.738 -0.112,2.619Z"
+													style="fill-rule:nonzero;" />
+												<path id="XMLID_119_"
+													d="M94.934,350.884c0.384,0.226 0.791,0.452 1.197,0.678c0.136,-0.678 0.249,-1.377 0.316,-2.077c-0.519,0.451 -1.016,0.926 -1.513,1.399Z"
+													style="fill-rule:nonzero;" />
+												<path id="XMLID_118_"
+													d="M101.956,346.888l5.239,0c0.09,-0.881 0.136,-1.762 0.113,-2.619c-1.761,0.338 -3.432,0.88 -5.012,1.58l-0.34,1.039Z"
+													style="fill-rule:nonzero;" />
+												<path id="XMLID_117_"
+													d="M127.495,349.485c0.067,0.699 0.18,1.399 0.316,2.077c0.406,-0.204 0.791,-0.43 1.197,-0.678c-0.497,-0.473 -0.994,-0.948 -1.513,-1.399Z"
+													style="fill-rule:nonzero;" />
+												<path id="XMLID_116_"
+													d="M121.985,346.888l-0.316,-1.039c-1.58,-0.7 -3.273,-1.242 -5.012,-1.58c-0.023,0.88 0.022,1.738 0.113,2.619l5.215,0Z"
+													style="fill-rule:nonzero;" />
+												<path id="XMLID_115_"
+													d="M101.956,346.888l0.316,-1.039l1.875,-6.21l-2.462,-0.61c-0.564,0.205 -1.106,0.429 -1.648,0.678l-2.167,7.182l4.086,0l0,-0.001Z"
+													style="fill:#aa9678;fill-rule:nonzero;" />
+												<path id="XMLID_114_"
+													d="M121.668,345.849l0.316,1.039l4.087,0l-2.167,-7.182c-0.542,-0.248 -1.084,-0.451 -1.648,-0.678l-2.461,0.61l1.873,6.211Z"
+													style="fill:#aa9678;fill-rule:nonzero;" />
+												<path id="XMLID_113_"
+													d="M97.937,348.333c0.023,-0.023 0.045,-0.023 0.068,-0.046l-0.068,0l0,0.046Z"
+													style="fill:#c0b098;fill-rule:nonzero;" />
+												<path id="XMLID_112_"
+													d="M111.96,348.289l-13.955,0c-0.023,0.021 -0.046,0.021 -0.068,0.046c-0.046,1.331 -0.226,2.618 -0.52,3.882c4.403,2.101 9.325,3.274 14.542,3.274l0.001,-7.202Z"
+													style="fill:#c0b098;fill-rule:nonzero;" />
+												<path id="XMLID_111_"
+													d="M126.004,348.289l-0.067,0c0.022,0.021 0.045,0.021 0.067,0.046l0,-0.046Z"
+													style="fill:#aa9678;fill-rule:nonzero;" />
+												<path id="XMLID_110_"
+													d="M125.936,348.289l-13.977,0l0,7.202c5.193,0 10.138,-1.174 14.541,-3.274c-0.293,-1.264 -0.474,-2.574 -0.52,-3.882c0.002,-0.025 -0.021,-0.046 -0.044,-0.046Z"
+													style="fill:#aa9678;fill-rule:nonzero;" />
+												<path id="XMLID_109_" d="M111.96,347.588l0,0.7l0,-0.7Z" style="fill:#786453;" />
+												<path id="XMLID_108_"
+													d="M127.495,349.485c-0.068,-0.632 -0.09,-1.265 -0.09,-1.92c0,-0.384 -0.316,-0.7 -0.7,-0.7l-29.492,0c-0.384,0 -0.7,0.316 -0.7,0.7c0,0.655 -0.045,1.288 -0.09,1.92c-0.067,0.699 -0.181,1.399 -0.316,2.077c0.429,0.226 0.858,0.451 1.288,0.654c0.293,-1.265 0.474,-2.575 0.52,-3.883l0,-0.046l28.066,0l0,0.046c0.045,1.332 0.226,2.618 0.52,3.883c0.429,-0.203 0.858,-0.429 1.287,-0.654c-0.136,-0.678 -0.226,-1.378 -0.293,-2.077Z"
+													style="fill:#8b7460;fill-rule:nonzero;" />
+												<g>
+													<path id="XMLID_107_"
+														d="M123.385,316.427c0.429,1.219 0.903,2.461 1.151,3.726c0,0.091 -0.022,0.181 -0.022,0.271c-0.022,0.136 -0.046,0.247 -0.067,0.36c0.045,-0.157 0.067,-0.36 0.112,-0.586c-0.248,-1.287 -0.745,-2.529 -1.174,-3.771Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_106_"
+														d="M133.253,324.104c-0.023,0 -0.046,0.023 -0.067,0.023c0.021,-0.023 0.044,-0.023 0.067,-0.023Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_105_"
+														d="M133.478,323.924c-0.022,0.022 -0.046,0.045 -0.067,0.068c0.022,-0.023 0.045,-0.045 0.067,-0.068Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_104_"
+														d="M122.369,315.547c-0.791,-0.654 -1.603,-1.265 -2.461,-1.784c0.858,0.52 1.67,1.106 2.461,1.784Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_102_"
+														d="M131.649,325.459c0.023,0.022 0.045,0.068 0.068,0.09c0,-0.045 -0.045,-0.067 -0.068,-0.09Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_101_"
+														d="M124.424,320.853c-0.023,0.112 -0.046,0.204 -0.067,0.271c0.021,-0.09 0.044,-0.18 0.067,-0.271Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_100_"
+														d="M121.104,333.227c-0.52,0.858 -0.857,1.692 -1.039,2.461c0.182,-0.79 0.519,-1.603 1.039,-2.461c0.181,-0.295 0.339,-0.564 0.497,-0.836c-0.158,0.249 -0.316,0.542 -0.497,0.836c0,-0.022 0,-0.022 0,0Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_99_"
+														d="M123.385,316.427c0.023,-0.067 0.067,-0.112 0.09,-0.181c-0.045,0.068 -0.067,0.114 -0.09,0.181c0.203,0.181 0.407,0.362 0.61,0.542c-0.204,-0.18 -0.407,-0.361 -0.61,-0.542Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_96_"
+														d="M118.688,313.063c-0.045,-0.022 -0.09,-0.046 -0.113,-0.068c0.045,0.023 0.069,0.045 0.113,0.068Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_95_"
+														d="M118.869,313.154c-0.045,-0.023 -0.09,-0.069 -0.136,-0.091c0.023,0.045 0.091,0.067 0.136,0.091Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_94_" d="M119.976,315.885l0,0.248l0,-0.248Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_92_"
+														d="M133.049,327.243c0.045,0.047 0.09,0.113 0.136,0.158c-0.045,-0.045 -0.091,-0.112 -0.136,-0.158Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_91_"
+														d="M119.976,316.947c0,0.361 -0.023,0.722 -0.045,1.061c0.022,-0.339 0.045,-0.7 0.045,-1.061Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_89_"
+														d="M119.84,313.718c-0.112,-0.068 -0.451,-0.249 -0.745,-0.429c0.294,0.158 0.61,0.338 0.745,0.429Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_88_"
+														d="M119.072,313.266c-0.068,-0.045 -0.135,-0.091 -0.204,-0.112c0.068,0.045 0.136,0.09 0.204,0.112Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_86_" d="M134.178,321.982l0,-0.135l0,0.09c0,-0.022 0,0.022 0,0.045Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_85_"
+														d="M128.623,321.779c0.023,0.046 0.067,0.067 0.09,0.112c0.001,-0.021 -0.044,-0.066 -0.09,-0.112Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_84_"
+														d="M123.995,316.969c0.451,0.406 0.902,0.836 1.332,1.265c-0.452,-0.429 -0.88,-0.859 -1.332,-1.265Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_83_"
+														d="M132.823,319.543c0.09,0 0.158,0.021 0.248,0.045c-0.089,-0.022 -0.18,-0.045 -0.248,-0.045Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_82_"
+														d="M131.514,321.237c0,0.046 -0.023,0.068 -0.023,0.112c0,-0.044 0.023,-0.067 0.023,-0.112Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_81_"
+														d="M133.14,319.611c0.046,0.022 0.113,0.045 0.158,0.091c-0.045,-0.023 -0.113,-0.069 -0.158,-0.091Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_80_"
+														d="M133.66,320.063c0.022,0.021 0.045,0.046 0.045,0.067c-0.024,-0.022 -0.024,-0.046 -0.045,-0.067Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_79_" d="M134.155,321.395l0,-0.046l0,0.046Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_78_" d="M134.155,322.388l0,0.022c0,0.002 0,0.002 0,-0.022Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_77_"
+														d="M131.921,320.13c0.022,-0.021 0.044,-0.046 0.044,-0.067c0,0.021 -0.022,0.045 -0.044,0.067Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_76_"
+														d="M132.575,319.588c0.067,-0.022 0.158,-0.045 0.249,-0.045c-0.091,0 -0.181,0.023 -0.249,0.045Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_75_"
+														d="M126.546,319.498c-0.203,-0.227 -0.429,-0.429 -0.632,-0.654c0.226,0.202 0.429,0.428 0.632,0.654Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_74_"
+														d="M132.823,312.137l0,3.14l-1.197,5.532l0,0.045l0,-0.023l1.197,-5.532l0,-3.162Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_73_"
+														d="M127.675,320.695c-0.113,-0.112 -0.225,-0.248 -0.338,-0.361c0.135,0.135 0.225,0.247 0.338,0.361Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_72_"
+														d="M134.02,320.831c0.022,0.046 0.022,0.09 0.045,0.136c0,-0.069 -0.022,-0.092 -0.045,-0.136Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_71_" d="M131.446,321.87l0,-0.068c0.023,0.044 0,0.044 0,0.068Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_70_"
+														d="M132.349,319.702c0.046,-0.047 0.113,-0.068 0.158,-0.091c-0.068,0.022 -0.113,0.068 -0.158,0.091Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_69_"
+														d="M132.101,319.905c0.045,-0.068 0.113,-0.112 0.18,-0.158c-0.068,0.044 -0.135,0.113 -0.18,0.158Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_68_"
+														d="M134.065,322.818c-0.022,0.112 -0.067,0.227 -0.113,0.338c0.046,-0.09 0.091,-0.202 0.113,-0.338Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_67_"
+														d="M92.744,320.831c0.044,-0.067 0.112,-0.158 0.158,-0.226c-0.045,0.09 -0.113,0.158 -0.158,0.226Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_66_"
+														d="M133.365,319.747c0.067,0.046 0.113,0.113 0.181,0.158c-0.068,-0.045 -0.113,-0.114 -0.181,-0.158Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_65_"
+														d="M93.715,319.431c0.023,-0.022 0.045,-0.068 0.067,-0.091c-0.022,0.023 -0.044,0.045 -0.067,0.091Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_64_" d="M116.815,321.87l0,-0.022c0,-0.002 0,-0.002 0,0.022Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_63_"
+														d="M91.276,323.54c-0.068,0.113 -0.113,0.249 -0.181,0.362c0.068,-0.113 0.113,-0.227 0.181,-0.362Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_62_"
+														d="M90.531,325.279c0,0.022 -0.023,0.046 -0.023,0.068c0,-0.023 0.023,-0.046 0.023,-0.068Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_59_"
+														d="M95.905,316.857c0.067,-0.068 0.136,-0.137 0.204,-0.205c-0.069,0.069 -0.136,0.137 -0.204,0.205Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_58_"
+														d="M94.708,318.166c0.067,-0.091 0.136,-0.159 0.204,-0.249c-0.068,0.09 -0.136,0.159 -0.204,0.249Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_57_" d="M134.02,320.831l-1.197,-5.533l1.197,5.533Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_56_"
+														d="M112.976,325.007c-0.023,0 -0.045,-0.022 -0.067,-0.022c0.021,0.022 0.044,0.022 0.067,0.022Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_55_"
+														d="M113.292,325.052c-0.023,0 -0.045,0 -0.067,-0.021c0.022,0.021 0.044,0.021 0.067,0.021Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_54_"
+														d="M92.022,322.073c-0.068,0.136 -0.158,0.271 -0.226,0.428c0.067,-0.135 0.135,-0.271 0.226,-0.428Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_52_"
+														d="M112.659,324.917c-0.022,0 -0.022,0 -0.045,-0.022c0.023,0.022 0.023,0.022 0.045,0.022Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_49_"
+														d="M110.514,321.147c0,0.022 -0.023,0.046 -0.023,0.068c0.023,-0.023 0.023,-0.046 0.023,-0.068Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_46_"
+														d="M110.605,320.853c0,0.022 -0.023,0.022 -0.023,0.046c0,-0.001 0.023,-0.024 0.023,-0.046Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_45_" d="M110.718,320.581c0,0 0,0.022 -0.023,0.022l0.023,-0.022Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_41_" d="M113.021,318.753c0,0 -0.023,0 0,0c-0.023,0 0,0 0,0Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_39_" d="M113.653,311.595l0,-0.136l0,0.136Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_38_" d="M113.653,311.392l0,-0.091l0,0.091Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_36_" d="M113.653,312.025l0,-0.318l0,0.318Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_35_"
+														d="M133.748,323.585c-0.044,0.045 -0.067,0.112 -0.112,0.158c0.045,-0.044 0.091,-0.113 0.112,-0.158Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_34_"
+														d="M110.469,321.485c0,0.023 0,0.046 -0.022,0.068c0,-0.023 0,-0.045 0.022,-0.068Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_32_"
+														d="M133.93,323.247c-0.023,0.067 -0.067,0.158 -0.113,0.226c0.045,-0.068 0.068,-0.136 0.113,-0.226Z"
+														style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_31_"
+														d="M121.668,342.033c-0.112,-0.111 -0.203,-0.248 -0.316,-0.384c0.113,0.158 0.226,0.271 0.316,0.384Z"
+														style="fill:#525353;fill-rule:nonzero;" />
+													<path id="XMLID_30_"
+														d="M122.459,342.824c0,0 -0.338,-0.271 -0.791,-0.768c0.453,0.496 0.791,0.768 0.791,0.768Z"
+														style="fill:#aa9678;fill-rule:nonzero;" />
+													<path id="XMLID_27_"
+														d="M134.539,314.035c0,0 0,-0.024 0,0c-0.293,-0.406 -0.587,-0.769 -0.88,-1.085c-0.136,-0.158 -0.271,-0.293 -0.407,-0.428c-0.045,-0.047 -0.113,-0.091 -0.158,-0.137c-0.09,-0.09 -0.181,-0.158 -0.271,-0.226l0,3.161l1.197,5.532c0.022,0.046 0.022,0.091 0.045,0.137l0.836,0.948l0.882,0l0,-0.248c0,-2.62 -0.429,-5.127 -1.197,-7.476c-0.024,-0.09 -0.024,-0.133 -0.047,-0.178Z"
+														style="fill:#bbbcbd;fill-rule:nonzero;" />
+													<path id="XMLID_25_"
+														d="M134.155,321.373l0,0.043c0.023,0.136 0.023,0.271 0.023,0.407l0,0.135c0,0.135 0,0.271 -0.023,0.384l0,0.043c-0.022,0.136 -0.045,0.271 -0.067,0.407l0.835,-0.927l-0.835,-0.948c0.022,0.162 0.045,0.297 0.067,0.456Z"
+														style="fill:#676a6a;fill-rule:nonzero;" />
+													<path
+														d="M134.133,322.433l0,-0.045c0.022,-0.136 0.022,-0.271 0.022,-0.383l0,-0.181c0,-0.136 0,-0.271 -0.022,-0.407l0,-0.045c-0.022,-0.137 -0.045,-0.271 -0.068,-0.407c-0.022,-0.046 -0.022,-0.09 -0.045,-0.136c-0.09,-0.27 -0.181,-0.496 -0.316,-0.7c-0.022,-0.021 -0.045,-0.045 -0.045,-0.067c-0.045,-0.045 -0.067,-0.091 -0.113,-0.136c-0.045,-0.067 -0.113,-0.112 -0.18,-0.157c-0.022,-0.023 -0.045,-0.023 -0.067,-0.046c-0.045,-0.046 -0.113,-0.068 -0.158,-0.09c-0.023,0 -0.046,-0.023 -0.067,-0.023c-0.068,-0.022 -0.158,-0.046 -0.249,-0.046c-0.091,0 -0.158,0.023 -0.249,0.046c-0.023,0 -0.046,0.023 -0.067,0.023c-0.046,0.021 -0.113,0.045 -0.158,0.09c-0.023,0.021 -0.045,0.021 -0.067,0.046c-0.067,0.045 -0.113,0.111 -0.181,0.157c-0.045,0.045 -0.067,0.091 -0.113,0.136c-0.022,0.022 -0.045,0.046 -0.045,0.067c-0.136,0.204 -0.249,0.43 -0.316,0.7l0,0.022c-0.045,0.113 -0.067,0.248 -0.09,0.384c0,0.046 -0.022,0.069 -0.022,0.113c-0.022,0.158 -0.022,0.294 -0.045,0.451l0,0.068c0,1.287 0.61,2.349 1.354,2.349c0.136,0 0.249,-0.046 0.384,-0.09c0.023,0 0.046,-0.023 0.067,-0.023c0.046,-0.021 0.09,-0.067 0.136,-0.09c0.022,-0.021 0.045,-0.045 0.067,-0.067c0.067,-0.045 0.113,-0.112 0.181,-0.181c0.045,-0.045 0.067,-0.09 0.112,-0.158c0.022,-0.045 0.045,-0.068 0.067,-0.112c0.045,-0.067 0.067,-0.136 0.113,-0.226c0.023,-0.022 0.023,-0.047 0.046,-0.091c0.045,-0.112 0.067,-0.226 0.113,-0.339c-0.002,-0.134 0.021,-0.27 0.021,-0.406Zm-1.264,-0.857c-0.294,0 -0.52,-0.384 -0.52,-0.881c0,-0.475 0.226,-0.88 0.52,-0.88c0.293,0 0.52,0.384 0.52,0.88c-0.001,0.497 -0.249,0.881 -0.52,0.881Z"
+														style="fill-rule:nonzero;" />
+													<ellipse id="XMLID_22_" cx="132.869" cy="320.695" rx="0.52" ry="0.881"
+														style="fill:var(--white);" />
+													<path id="XMLID_21_"
+														d="M131.604,320.831c0.09,-0.271 0.18,-0.496 0.316,-0.7c0.022,-0.021 0.044,-0.046 0.044,-0.067c0.045,-0.046 0.068,-0.091 0.113,-0.136c0.045,-0.067 0.113,-0.112 0.18,-0.158c0.023,-0.022 0.046,-0.022 0.067,-0.045c0.046,-0.046 0.113,-0.069 0.158,-0.091c0.023,0 0.045,-0.022 0.067,-0.022c0.067,-0.022 0.158,-0.045 0.249,-0.045c0.091,0 0.158,0.021 0.249,0.045c0.022,0 0.045,0.022 0.067,0.022c0.045,0.021 0.113,0.046 0.158,0.091c0.023,0.021 0.045,0.021 0.068,0.045c0.067,0.046 0.113,0.112 0.18,0.158c0.045,0.045 0.067,0.09 0.113,0.136c0.023,0.021 0.045,0.046 0.045,0.067c0.136,0.204 0.249,0.43 0.316,0.7l-1.197,-5.532l-1.193,5.532Z"
+														style="fill:#909393;fill-rule:nonzero;" />
+													<path
+														d="M116.815,321.846c0,-0.112 0,-0.227 -0.023,-0.338c-0.022,-0.113 -0.022,-0.204 -0.045,-0.316c-0.022,-0.113 -0.045,-0.204 -0.09,-0.294c-0.023,-0.09 -0.068,-0.204 -0.113,-0.294c-0.045,-0.09 -0.09,-0.18 -0.136,-0.271c-0.158,-0.271 -0.338,-0.52 -0.564,-0.723c-0.293,-0.271 -0.632,-0.496 -0.994,-0.655c-0.181,-0.067 -0.384,-0.135 -0.564,-0.18l-0.023,0c-0.204,-0.045 -0.407,-0.068 -0.61,-0.068c-0.204,0 -0.407,0.023 -0.61,0.068l-0.023,0c-0.203,0.046 -0.384,0.091 -0.564,0.158l-0.023,0c-0.18,0.067 -0.361,0.157 -0.519,0.271c-0.158,0.113 -0.316,0.227 -0.452,0.361l-0.022,0c-0.226,0.227 -0.429,0.474 -0.587,0.745c-0.045,0.09 -0.09,0.181 -0.135,0.271c0,0 0,0.022 -0.023,0.022c-0.045,0.09 -0.067,0.158 -0.09,0.248c0,0.022 -0.023,0.022 -0.023,0.046c-0.022,0.09 -0.045,0.158 -0.067,0.248c0,0.022 -0.022,0.046 -0.022,0.068c-0.023,0.09 -0.023,0.158 -0.046,0.248c0,0.021 0,0.046 -0.023,0.067c0,0.113 -0.022,0.227 -0.022,0.339c0,0.204 0.022,0.406 0.067,0.609l0,0.022c0.046,0.204 0.09,0.384 0.181,0.588c0.158,0.36 0.384,0.7 0.655,0.993c0.225,0.226 0.474,0.429 0.745,0.587c0.09,0.045 0.181,0.09 0.271,0.136l0.023,0c0.09,0.046 0.18,0.067 0.249,0.09c0.022,0 0.022,0 0.045,0.023c0.09,0.021 0.158,0.044 0.248,0.067c0.023,0 0.046,0.021 0.067,0.021c0.09,0.022 0.158,0.022 0.249,0.046c0.022,0 0.045,0 0.067,0.022c0.113,0 0.226,0.021 0.339,0.021c0.451,0 0.857,-0.09 1.241,-0.247c0.181,-0.091 0.361,-0.181 0.542,-0.294c0.338,-0.227 0.632,-0.52 0.858,-0.858c0.113,-0.181 0.203,-0.361 0.293,-0.542c0.158,-0.384 0.249,-0.812 0.249,-1.241l0,-0.023l0.024,-0.041Zm-3.185,-0.383c-0.654,0 -1.197,-0.543 -1.197,-1.197c0,-0.654 0.542,-1.196 1.197,-1.196c0.655,0 1.197,0.542 1.197,1.196c0,0.654 -0.541,1.197 -1.197,1.197Z"
+														style="fill-rule:nonzero;" />
+													<circle id="XMLID_18_" cx="113.63" cy="320.266" r="1.197" style="fill:var(--white);" />
+													<path id="XMLID_17_"
+														d="M111.417,319.566l2.212,-6.75l0,-1.581c-1.219,-0.248 -2.483,-0.384 -3.771,-0.384c-0.428,0 -0.858,0.022 -1.288,0.045c-0.067,0 -0.113,0 -0.18,0.022c-2.213,0.158 -4.381,0.744 -6.39,1.671c-1.716,0.79 -3.342,1.829 -4.765,3.049c-0.384,0.338 -0.768,0.678 -1.128,1.038c-0.068,0.067 -0.136,0.136 -0.204,0.204c-0.338,0.338 -0.677,0.7 -0.994,1.061c-0.068,0.091 -0.136,0.158 -0.203,0.248c-0.316,0.384 -0.632,0.768 -0.926,1.152c-0.022,0.022 -0.045,0.068 -0.067,0.09c-0.271,0.384 -0.542,0.769 -0.813,1.175c-0.045,0.068 -0.113,0.157 -0.158,0.226c-0.204,0.339 -0.407,0.678 -0.587,1.017l10.026,0l9.236,-2.283Z"
+														style="fill:#bbbcbd;fill-rule:nonzero;" />
+													<path id="XMLID_16_"
+														d="M119.884,318.821c0.023,-0.271 0.046,-0.521 0.046,-0.79c0.022,-0.362 0.022,-0.7 0.045,-1.062l0,-1.084c0,-0.722 -0.045,-1.422 -0.067,-2.146c0,0 -0.023,0 -0.023,-0.021c0,0 -0.022,0 -0.022,-0.022c-0.135,-0.067 -0.452,-0.248 -0.745,-0.429l-0.022,0c-0.068,-0.046 -0.136,-0.091 -0.204,-0.112c-0.045,-0.022 -0.09,-0.068 -0.135,-0.09l-0.023,-0.023c-0.045,-0.022 -0.09,-0.045 -0.112,-0.067c-0.452,-0.248 -0.926,-0.452 -1.4,-0.655c-1.129,-0.474 -2.665,-0.901 -3.545,-1.106l0,1.582l2.19,6.729c0.226,0.204 0.428,0.451 0.564,0.723c0.045,0.091 0.09,0.181 0.135,0.271c0.046,0.089 0.09,0.179 0.113,0.293c0.023,0.091 0.067,0.203 0.09,0.294c0.022,0.113 0.045,0.204 0.045,0.315c0.022,0.113 0.022,0.227 0.022,0.339l0,0.023l2.665,0c0.181,-0.975 0.316,-1.968 0.383,-2.962c0,0.046 0,0.022 0,0Z"
+														style="fill:#e2dddb;fill-rule:nonzero;" />
+													<path id="XMLID_14_"
+														d="M116.836,331.465c0.61,-0.609 1.173,-1.174 1.716,-1.738c0.316,-0.339 0.632,-0.678 0.948,-0.993c2.235,-2.417 3.861,-4.697 4.854,-7.609c0.022,-0.068 0.045,-0.159 0.067,-0.271l0,-0.045c0.023,-0.113 0.045,-0.227 0.067,-0.362c0,-0.091 0.023,-0.18 0.023,-0.271c-0.249,-1.265 -0.723,-2.506 -1.151,-3.726l0,0.023l-0.022,-0.023c-0.09,-0.067 -0.158,-0.157 -0.249,-0.226c-0.249,-0.227 -0.497,-0.452 -0.768,-0.678c-0.79,-0.654 -1.603,-1.265 -2.461,-1.784c0.045,0.723 0.067,1.423 0.067,2.145l0,1.085c0,0.36 -0.023,0.722 -0.046,1.061c-0.023,0.271 -0.023,0.52 -0.045,0.79l0,0.09c-0.09,0.994 -0.203,1.987 -0.384,2.958l-0.316,1.49c-0.655,2.665 -1.987,5.058 -3.071,7.542c-0.293,0.654 -0.565,1.332 -0.813,2.009c-0.022,0.068 -0.045,0.136 -0.067,0.204c0.339,-0.362 0.654,-0.679 0.88,-0.903c0.297,-0.293 0.523,-0.541 0.771,-0.768Z"
+														style="fill:#fbb040;fill-rule:nonzero;" />
+													<path id="XMLID_13_"
+														d="M111.44,319.566c0.135,-0.135 0.293,-0.248 0.452,-0.361c0.158,-0.113 0.339,-0.203 0.52,-0.271l0.022,0c0.18,-0.067 0.361,-0.136 0.565,-0.158l0.023,0c0.203,-0.045 0.407,-0.068 0.609,-0.068c0.204,0 0.407,0.023 0.61,0.068l0.022,0c0.203,0.046 0.384,0.091 0.564,0.18c0.361,0.159 0.7,0.362 0.994,0.655l-2.19,-6.729l-2.191,6.684Z"
+														style="fill:#909393;fill-rule:nonzero;" />
+													<path id="XMLID_12_"
+														d="M110.672,323.088c-0.067,-0.181 -0.135,-0.384 -0.18,-0.587l0,-0.022c-0.045,-0.203 -0.068,-0.406 -0.068,-0.609c0,-0.112 0,-0.227 0.023,-0.339c0,-0.022 0,-0.046 0.022,-0.067c0,-0.09 0.023,-0.157 0.046,-0.248c0,-0.022 0.023,-0.046 0.023,-0.068c0.022,-0.09 0.045,-0.157 0.067,-0.248c0,-0.022 0.022,-0.022 0.022,-0.046c0.023,-0.09 0.068,-0.18 0.09,-0.248c0,0 0,-0.022 0.022,-0.022c0.046,-0.09 0.09,-0.181 0.135,-0.271c0.158,-0.271 0.362,-0.52 0.587,-0.745l-9.258,2.281l-0.022,0l9.167,2.234c-0.292,-0.272 -0.518,-0.611 -0.676,-0.995Z"
+														style="fill:#676a6a;fill-rule:nonzero;" />
+													<path id="XMLID_11_"
+														d="M131.491,321.349c0,-0.044 0.023,-0.089 0.023,-0.112c0.022,-0.136 0.045,-0.271 0.09,-0.384l0,-0.045l1.197,-5.532l0,-3.161c-0.994,-0.813 -2.032,-1.265 -3.139,-1.265c-1.4,0 -2.687,0.768 -3.658,1.716c-1.061,1.039 -1.874,2.349 -2.551,3.658c-0.023,0.068 -0.067,0.112 -0.09,0.18c0.203,0.181 0.407,0.362 0.609,0.543c0.452,0.405 0.903,0.835 1.333,1.265c0.204,0.203 0.406,0.405 0.609,0.609c0.203,0.226 0.429,0.429 0.632,0.654c0.271,0.294 0.542,0.563 0.791,0.858c0.113,0.112 0.225,0.248 0.338,0.361c0.316,0.362 0.632,0.7 0.948,1.062c0.046,0.045 0.09,0.09 0.113,0.112l2.732,0l0,-0.068c0.001,-0.135 0.001,-0.292 0.023,-0.451Z"
+														style="fill:#e2dddb;fill-rule:nonzero;" />
+													<path id="XMLID_9_"
+														d="M90.508,325.347c0,-0.022 0.023,-0.046 0.023,-0.068c0.18,-0.451 0.362,-0.902 0.564,-1.354c0.046,-0.136 0.113,-0.249 0.181,-0.361c0.158,-0.361 0.338,-0.7 0.52,-1.039c0.067,-0.136 0.135,-0.27 0.226,-0.43c0.045,-0.067 0.09,-0.156 0.136,-0.225c0.203,-0.339 0.384,-0.678 0.587,-1.017c0.045,-0.068 0.112,-0.158 0.158,-0.226c0.249,-0.407 0.52,-0.791 0.813,-1.175c0.023,-0.021 0.046,-0.067 0.067,-0.09c0.294,-0.407 0.61,-0.791 0.926,-1.151c0.067,-0.09 0.136,-0.158 0.204,-0.249c0.316,-0.362 0.654,-0.722 0.994,-1.061c0.067,-0.068 0.135,-0.136 0.203,-0.204c0.362,-0.361 0.723,-0.7 1.129,-1.038c1.513,-5.104 6.187,-8.829 11.696,-8.829c2.212,0 4.425,0.633 6.322,1.807c1.942,1.196 3.523,2.936 4.539,4.945c0,0 0,0.022 0.022,0.022c0.023,0.045 0.046,0.09 0.09,0.158c0.858,0.52 1.671,1.129 2.461,1.784c0.271,0.226 0.52,0.451 0.768,0.678c0.09,0.067 0.158,0.158 0.249,0.226c0.023,-0.067 0.045,-0.112 0.09,-0.181c0.768,-4.899 2.936,-8.445 5.487,-8.445c1.919,0 3.635,2.01 4.674,5.104l0,0.022c0.294,0.316 0.586,0.679 0.881,1.062c0,0 0,0.022 0.023,0.022c0.023,0.046 0.023,0.089 0.045,0.135l-0.045,-0.157c-3.184,-9.394 -12.058,-16.168 -22.535,-16.168c-13.142,0 -23.777,10.637 -23.777,23.777c0,2.598 0.407,5.08 1.174,7.407l0,-0.022c0.158,-0.701 0.339,-1.4 0.542,-2.078c0.179,-0.543 0.36,-1.062 0.563,-1.581Z"
+														style="fill:#525353;fill-rule:nonzero;" />
+													<path id="XMLID_8_"
+														d="M134.901,321.892l-0.836,0.926c-0.022,0.112 -0.067,0.227 -0.113,0.338c0,0.022 -0.023,0.046 -0.046,0.091c-0.022,0.067 -0.067,0.158 -0.113,0.226c-0.022,0.046 -0.045,0.067 -0.067,0.113c-0.045,0.045 -0.067,0.112 -0.112,0.158c-0.045,0.067 -0.113,0.136 -0.181,0.18c-0.022,0.022 -0.045,0.046 -0.067,0.068c-0.045,0.045 -0.09,0.067 -0.136,0.09c-0.023,0 -0.045,0.022 -0.067,0.022c-0.113,0.067 -0.248,0.09 -0.384,0.09c-0.745,0 -1.355,-1.038 -1.355,-2.348l-2.732,0c0.52,0.586 1.016,1.174 1.49,1.783l0.022,0.023c0.474,0.586 0.948,1.174 1.422,1.76c0.022,0.023 0.045,0.069 0.067,0.091c0.451,0.564 0.881,1.129 1.31,1.693c0.045,0.045 0.09,0.111 0.135,0.157c0.452,0.61 0.903,1.219 1.354,1.807l0,0.022c0.791,-2.325 1.219,-4.787 1.242,-7.36l-0.833,0.07Z"
+														style="fill:var(--white);fill-rule:nonzero;" />
+													<path id="XMLID_7_"
+														d="M108.393,310.895c0.067,0 0.112,0 0.18,-0.022c0.429,-0.021 0.858,-0.045 1.288,-0.045c1.287,0 2.551,0.136 3.771,0.384l0,0.61l0,-0.609c0.858,0.204 2.394,0.632 3.545,1.106c0.474,0.204 0.948,0.429 1.4,0.655c0.023,0 0.068,0.021 0.113,0.067c0,0 0.022,0 0.022,0.022c0.046,0.021 0.09,0.045 0.136,0.091c0.068,0.045 0.136,0.067 0.203,0.111l0.022,0c0.294,0.158 0.61,0.362 0.745,0.429c0.023,0 0.023,0.022 0.023,0.022l0.023,0.022c-0.023,-0.045 -0.046,-0.091 -0.09,-0.158c0,0 0,-0.022 -0.023,-0.022c-1.017,-2.032 -2.619,-3.771 -4.539,-4.945c-1.896,-1.151 -4.109,-1.806 -6.322,-1.806c-5.509,0 -10.184,3.726 -11.696,8.829c1.445,-1.243 3.049,-2.281 4.765,-3.049c2.053,-0.946 4.243,-1.511 6.434,-1.692Z"
+														style="fill-rule:nonzero;" />
+													<path id="XMLID_6_" d="M113.653,311.843l0,0.136" style="fill:none;fill-rule:nonzero;" />
+													<path id="XMLID_5_"
+														d="M126.027,312.589c0.971,-0.948 2.258,-1.718 3.658,-1.718c1.106,0 2.167,0.453 3.139,1.265c0.09,0.069 0.181,0.158 0.271,0.227c0.045,0.045 0.113,0.09 0.158,0.136c0.136,0.136 0.271,0.271 0.407,0.428l0,-0.021c-1.062,-3.093 -2.755,-5.104 -4.674,-5.104c-2.552,0 -4.719,3.523 -5.487,8.445c0.631,-1.31 1.466,-2.62 2.528,-3.658Z"
+														style="fill-rule:nonzero;" />
+													<path id="XMLID_4_"
+														d="M103.492,343.817c0.225,0.09 0.428,0.158 0.654,0.226c2.461,0.858 5.103,1.332 7.858,1.332c3.138,0 6.142,-0.608 8.874,-1.716c0.136,-0.068 0.293,-0.113 0.428,-0.181c0.226,-0.09 0.474,-0.203 0.7,-0.316c0.204,-0.09 0.406,-0.18 0.61,-0.293c-0.045,0 -0.09,0.022 -0.136,0.022c-0.857,0.09 -1.693,0.112 -2.529,-0.022c-4.899,-0.7 -5.983,-3.071 -5.826,-5.51c-0.362,-0.204 -0.7,-0.429 -1.084,-0.7c-3.771,-2.733 -6.006,-5.645 -6.006,-5.645c0,0 2.913,2.234 7.248,3.929c0.09,0.045 0.181,0.068 0.271,0.113c0.203,-0.701 0.452,-1.378 0.654,-1.965c0.023,-0.068 0.046,-0.136 0.067,-0.204c0.249,-0.677 0.52,-1.354 0.813,-2.01c1.084,-2.483 2.416,-4.899 3.071,-7.54l0.316,-1.491l-2.664,0l0,0.022c0,0.452 -0.09,0.858 -0.249,1.242c-0.09,0.181 -0.181,0.384 -0.293,0.542c-0.226,0.339 -0.519,0.633 -0.858,0.858c-0.181,0.112 -0.362,0.203 -0.542,0.293c-0.384,0.158 -0.813,0.248 -1.242,0.248c-0.113,0 -0.226,0 -0.339,-0.021c-0.023,0 -0.045,0 -0.068,-0.022c-0.09,0 -0.158,-0.022 -0.248,-0.046c-0.023,0 -0.045,-0.021 -0.068,-0.021c-0.09,-0.023 -0.157,-0.046 -0.249,-0.069c-0.022,0 -0.022,0 -0.045,-0.021c-0.09,-0.022 -0.181,-0.067 -0.248,-0.09l-0.023,0c-0.09,-0.046 -0.181,-0.091 -0.271,-0.136c-0.271,-0.158 -0.52,-0.339 -0.746,-0.587l-9.167,-2.235l-10.001,0c-0.045,0.068 -0.09,0.158 -0.136,0.226c-0.067,0.137 -0.158,0.271 -0.226,0.429c-0.181,0.339 -0.361,0.7 -0.52,1.039c-0.068,0.112 -0.113,0.249 -0.181,0.361c-0.204,0.452 -0.384,0.903 -0.564,1.354c0,0.022 -0.023,0.047 -0.023,0.068c-0.203,0.52 -0.383,1.062 -0.542,1.603c-0.203,0.678 -0.383,1.377 -0.542,2.078c1.58,4.809 4.63,8.941 8.648,11.832c0.112,0.09 0.248,0.157 0.361,0.248c0.677,0.474 1.377,0.926 2.101,1.31c0.953,0.586 1.945,1.059 2.962,1.466Z"
+														style="fill:var(--white);fill-rule:nonzero;" />
+													<path id="XMLID_3_"
+														d="M119.907,336.411c-0.045,0.249 -0.067,0.497 -0.067,0.745c-0.023,0.429 0.023,0.857 0.09,1.242c0.045,0.271 0.09,0.52 0.158,0.769c0.113,0.361 0.225,0.699 0.384,1.016c0.158,0.315 0.316,0.61 0.474,0.858c0.045,0.09 0.113,0.181 0.158,0.248c0.091,0.112 0.158,0.226 0.249,0.338c0.113,0.136 0.226,0.271 0.316,0.385c0.429,0.496 0.791,0.768 0.791,0.768l0,0.023c0,0.021 0,0.045 0.023,0.067c0.045,0 0.09,-0.022 0.136,-0.022c1.061,-0.136 2.122,-0.43 3.184,-0.791c0.542,-0.203 1.084,-0.406 1.604,-0.632c0.158,-0.067 0.316,-0.158 0.474,-0.227c5.442,-2.642 10.003,-7.293 10.003,-7.293c-6.822,3.364 -13.528,3.228 -17.977,2.506Z"
+														style="fill:#9f2255;fill-rule:nonzero;" />
+													<path id="XMLID_2_"
+														d="M133.049,327.243c-0.429,-0.563 -0.881,-1.128 -1.31,-1.692c-0.022,-0.022 -0.045,-0.067 -0.067,-0.09c-0.474,-0.588 -0.948,-1.175 -1.422,-1.761l-0.023,-0.022c-0.497,-0.61 -0.993,-1.197 -1.49,-1.785c-0.022,-0.045 -0.067,-0.067 -0.09,-0.111c-0.317,-0.362 -0.632,-0.701 -0.948,-1.062c-0.113,-0.113 -0.226,-0.248 -0.338,-0.361c-0.271,-0.295 -0.52,-0.564 -0.791,-0.859c-0.204,-0.226 -0.429,-0.428 -0.632,-0.653c-0.204,-0.204 -0.407,-0.407 -0.609,-0.61c-0.43,-0.429 -0.881,-0.858 -1.333,-1.265c-0.203,-0.181 -0.406,-0.361 -0.609,-0.542c0.428,1.242 0.925,2.483 1.173,3.771c0.067,0.338 0.113,0.654 0.158,0.971c0.61,4.447 -0.836,7.36 -3.094,11.199c-0.158,0.271 -0.339,0.564 -0.497,0.836c-0.52,0.858 -0.858,1.693 -1.039,2.461c-0.067,0.249 -0.113,0.497 -0.158,0.744c4.448,0.724 11.132,0.859 17.973,-2.506c0,0 -1.332,-1.964 -3.364,-4.674c-0.451,-0.61 -0.902,-1.219 -1.354,-1.807c-0.045,-0.069 -0.091,-0.136 -0.136,-0.182Z"
+														style="fill:#e2066f;fill-rule:nonzero;" />
+													<path id="XMLID_1_"
+														d="M122.459,342.824c0,0 -0.338,-0.271 -0.791,-0.768c-0.112,-0.113 -0.203,-0.249 -0.316,-0.385c-0.09,-0.112 -0.158,-0.226 -0.249,-0.339c-0.045,-0.09 -0.113,-0.157 -0.158,-0.248c-0.158,-0.271 -0.316,-0.542 -0.474,-0.857c-0.136,-0.316 -0.271,-0.655 -0.384,-1.017c-0.067,-0.248 -0.136,-0.497 -0.158,-0.768c-0.067,-0.384 -0.09,-0.813 -0.09,-1.243c0,-0.247 0.023,-0.495 0.067,-0.744c0.045,-0.248 0.09,-0.496 0.158,-0.745c0.203,-0.768 0.52,-1.58 1.039,-2.461c0.158,-0.293 0.339,-0.563 0.497,-0.836c2.258,-3.839 3.703,-6.729 3.093,-11.199c-0.046,-0.316 -0.09,-0.654 -0.158,-0.971c-0.023,0.226 -0.068,0.429 -0.113,0.586l0,0.046c-0.022,0.112 -0.045,0.203 -0.067,0.271c-0.994,2.912 -2.619,5.193 -4.854,7.608c-0.294,0.338 -0.61,0.654 -0.948,0.994c-0.543,0.564 -1.13,1.151 -1.716,1.739c-0.249,0.248 -0.497,0.474 -0.745,0.722c-0.226,0.227 -0.542,0.542 -0.881,0.902c-0.204,0.588 -0.451,1.265 -0.654,1.965c-0.091,-0.045 -0.181,-0.067 -0.271,-0.112c-4.335,-1.671 -7.248,-3.93 -7.248,-3.93c0,0 2.235,2.914 6.006,5.646c0.361,0.271 0.722,0.497 1.084,0.699c-0.158,2.461 0.925,4.811 5.826,5.511c0.836,0.112 1.671,0.112 2.529,0.021c-0.001,-0.042 -0.024,-0.065 -0.024,-0.087Z"
+														style="fill-rule:nonzero;" />
+												</g>
+											</g><text x="75.972px" y="399.773px"
+												style="font-family:'OpenSans-SemiBold', 'Open Sans', sans-serif;font-weight:600;font-size:14px;">$j[53]</text>
+										</g>
+									</g>
+								</a>
+							</g>
+						</g>
+						<defs>
+							<image id="_IM0_1" width="632px" height="363px"
+								xlink:href="data:image/png;base64,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" />
+							<image id="_IM0_2" width="86px" height="85px"
+								xlink:href="data:image/png;base64,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" />
+							<image id="_IM0_3" width="62px" height="61px"
+								xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAA9CAYAAAD1VdrqAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAEVElEQVRogd1a2XLcMAyjd/v/fxy7L1FCYwGQ8pFNixmPZJ2ESFGHvcT9WA7W2y6VAvDnhjaR6FHiiEsH4iqhWDtLke+wiTh7P4QriCuCS5HPwAirQTg1AGeIK5I5/SHKMDCiK+RXg9HGUeJIGomrNNYGM2UkqdJyncMEZss7wkt8a5sNRA5Ri0hyjVfypwdgxqsz0opwDtkAMSgtL58hG4BcN1LZEl3iTFuKqCJ+ROOZOA5Anv+R6rbId4ijoEjokZ6FxB3pLDCGg9zjM1xMuQ3KlOQr4o70iD/Dk1caRzAymXSOr6nsiOMAWfKOeEU6P4r8VXM8k8r1Vwjb5LtzXJF+ingmPupHaNID2ZOP90zCbYaQvIUizjSUST+jJt41cex3+2yLOTcl18CaykYYrTPiam1W5p1DZ+LYPgKXpBFukMfaqPb2L+S7Xj2b7zP2ZJ+QP8yabVerfljamvLW+B5ghuwQp7x6V9vMoVWaxj6Y0FhmEBkhevRcF53jAvk7rVem7jx5Z147oqpfFBbxIOXYpidr/sXUn6Rz5b3Zk+f2GdIMrp1yg1Iha5x1VJn7GQ/eAXrnjEfKYzs4Nc22XJl1hoTVe5D41VD9dOSjg4AbC+XcXINXmXYF7GdWvl2oNM4a7ZK/GxXp1urCiGMHyqyZw7kbrE9l/lYp6NycmYwGWdmfBpte+YAy0pmc0rlhB3SOGEHuhuufOUEKRVyZ9rs1jahkk3I+VEaqyELMfweULM4yv8qixp1pdxp8Fzoy7+TuXhD8T5Dr+EuhfxQt56Y2/KcOAm+G5cSOeKoi+271W6Bkk3wemCDefzPpAfVZKdi7m+PsU03VwU/CKUTJ/gVFnH2xWEn6b0AlI5W1c42jLvqdP7gT6q5NyUi1n4krc1khdINyNypyTFZW35q6a/jd83vAyWblZMSZKa2NONa9GqjtrkxUrnzLqva31SGfnY2v3vF1TPwjhU4pWwQnnt/dRQSGdx1m3Aqzxp7sR0qz5q7u1XMctdq5YWVWMAtmqsykM3nliF/aZMRVWN2zzeRVcEvWGnuy48E863uQ+BByPFv4QXBkzzg6Zt5IDB80c/xGvpNHEcc4ps1oc6as07TSNg4A28y8oCLu0ivTPqJx5r0j9lr8IGFnfu/AiGfhc8jS1CCxDqslqbMbQ5Nm5k2XL0SHOIsrYq6zKs8RV6bNNK362MERj5gzezXSbD11BJl2UbNK06wfiupXkOHVsYH8493AKLeleqNcxH57jAOX28+/cDGnxgZpijQToCqHmxX1MZH9LND1C8waPkJbBvPgpanPbCyq9Vx9rXyQOgwoOGqyq+HWajK7o1LrOf7Mx7TtSA9UTi5IHNf+aSJH6rjdnDNzNcdnHGIuj/EpErOo1nd1kKmgyAYJMd7G2aOjW+tdqOCWRCyD8SmcJa7amX1HArPv07iKuGvvivO4SzuEq4l32600jriMsBLgJzBzsLkNfwF/n3MLRk2MoAAAAABJRU5ErkJggg==" />
+							<image id="_IM0_4" width="37px" height="36px"
+								xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAkCAYAAAAOwvOmAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACJElEQVRYhcWX7W7DIAxF3SR7/wdePvZjdXV7eg2kzTRLFlUD+GCMMbf4TG6Nb8dfTNoac5PflRzSngIchVIIKuchjKp+L2U5CTOhJZyD2dESvjTaA5qgs4EjVEJs99+qTa9VUPk/QVIVrOWpBNpEFc6Cue1TIAVYpE1QbiG3br4bX6X/JjZ2GdeEItAiqt7K7dOF6Mp1+7jVq/TfA0IoDegE+jJQE/pTjvAhoP3XKE6lg9IYopcWrFrHEegovmcfd0Ij7oYIlN6glxhLOYYGmb/cYVCwiE5M5WDdJgWqDDhhn5wr4tczeQh29k1PaSzN0fbQ2aupijlu3cNbk3RkkKu33oFxcAwRu1hCVfln5ALuASmYKuP0Ccqt6AqgCqzcAXeSHMinQA6stOkyckSxgoulSid2+/5dEop1zulq8Q1xdo6EYlZ1FeNVgK25H+2EAZrImNQ+BeOina2IeI2p7MAq8WpPVZVoRDzffW7AFs9pg9XBGRjOWy6cVUIr87YqgxGgbLf4raVSt0B8zZigV3a4ZFpduClagaYqVNNTNEqPnPVOtrpl6p1su1Bu8pEK0x1xBrN657sCGoFSgGxdotXfDOg1XmNIn1svUO41oyvNl4cGampVibKAYyx10031xMqOPBkuVfSgFGwo//WCtyrGRh+jCkCYMiGfeQAQsHqpVM+n4Str9JjzBPYSqTsA+m3Y2Fm43ngaH74/R1PCO/L2Jf4D1t4sW55t3QcAAAAASUVORK5CYII=" />
+							<image id="_IM0_5" width="83px" height="82px"
+								xlink:href="data:image/png;base64,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" />
+							<image id="_IM0_6" width="122px" height="122px"
+								xlink:href="data:image/png;base64,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" />
+							<linearGradient id="_Linear7" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse"
+								gradientTransform="matrix(-31.4037,-43.6768,43.6768,-31.4037,428.545,154.188)">
+								<stop offset="0" style="stop-color:#58e800;stop-opacity:1" />
+								<stop offset="1" style="stop-color:#008eff;stop-opacity:1" />
+							</linearGradient>
+							<linearGradient id="_Linear8" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse"
+								gradientTransform="matrix(67.9826,17.7612,-17.7612,67.9826,393.586,107.727)">
+								<stop offset="0" style="stop-color:#9600ff;stop-opacity:0.5" />
+								<stop offset="1" style="stop-color:#8b0060;stop-opacity:1" />
+							</linearGradient>
+							<linearGradient id="_Linear9" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse"
+								gradientTransform="matrix(32.8783,68.3914,-68.3914,32.8783,428.545,61.5772)">
+								<stop offset="0" style="stop-color:#ffde00;stop-opacity:1" />
+								<stop offset="1" style="stop-color:#ff002e;stop-opacity:0.5" />
+							</linearGradient>
+							<image id="_IM0_10" width="141px" height="144px"
+								xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI0AAACQCAYAAAA1FujgAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAMTUlEQVR4nO2d7XbsqA5ElWTe/5H73B8znEsUVakE+KtDrZVljDFga1sS7qTzYVtmZh+Ftn8Om8VDVLlZT9aZ1/n2UL0rNNXrOtLTvB1E7wKNch2zbRTjr2pzaz0ZGjZ3dGzknF7M4OjYyDm31hOhUYHI9rN6JhWQbD+rv6WeAs0IKKiM+hv1NAwMVEZ9sfrb6O7QKLBE5awO9V3NaRAIESwqTFn95borNJlBGRRoi+rQeEgjoKAtK7O6S3VHaJSQU9kyeKLxFGVG/2M6OBlI0f6luhM0VViyuhEPpKjqUTKQHgfPHaBhoUgBI9v35ahfNpcmNSwxYLL9qN/bhax/rhzcsNEQLNE+q7eg7MddFZ4yWFDdn//m0LfJxvywC8G5ytNkoagCSwZQVEbjZqrmMgyU6Me39f34caP9w3WFp1G8ywgoKjx+Dmd6GhWcNq8IEF9/utc5GxoGTAWSz+S478ePjXKairKltgrPixxD414KzpnQMKOpniOD5Qwv07TK2zSDM3gyiNq1nALOGdCMepdPUGZ1vi8/HptPRc3Y/T7aMoB6UCJ4XuI8enD68Q/RzJM20v9ICPJwVEKTn4MSlqJjyqpGTYyVEPUC9VkCrc55Skd6mgiYDJrIu2QeB0ETbaN5ZfX9scgQ7Unv23y4batnIaoHxILzmNc5Nc85CpoKMAyU1cBE+zPXhdpE4LStAk4r93VmOkB+Lkt1BDQqMAosKESpwETzyeor8rlENMYoOAa2L/v3fnh4vLfzc1im1dCg/KGVUX4SbVUv48fw84j2VwnlP1F9bzwGT9/Hq9v3WwSPn4sfe1oroZkBBpUZML7/KigrPQ3qNwIog8d7mwieBkyr7+FB+dcycI5OhBkwHpTZkGRgP6ufke8zMlRf7x8sZMRP++ldULn3Mg0kD+5SrYLG34x+H+UuM9BEY2bzOkPIWMz7KKGqtfM5TF/uvc6rO8f3MQ3R12wHxsMSAyb7iUKZB8YDavYTrquE5oGuw8S2JuxXjpU162kYMCx/UTxN1btcDQlTlGe0p97Pu4Wm6ss7n+dE3m2Jx5nxNBkw3susAsY/vXfwKqrY3JFHYcfYdbN+snOpVkCDPEw1HFWW2BbsP0kKPFE5A0Ede0qj0EQXE0HTjP9lHKLonEo8f6rQdUUPIjrH16P3RMr4kkagYWEJvaTLvIuHxffdj/cuwDQhKFhYHoECrebK93MGGpbHVMIR8yxLYvBDpICD6mbHK6kKTRaWPAxflsMSeRjVJb+bmFfNwpJX9rmY0keoCjSI9myV1H6+LAYrAgaN+xvErj/zQOoyGr2hljQCjZrHIC8TrZL6/qIxf5sUcNB+L5THqOeHUqFRwxLzMigs9X36MX6zWHhiD1jmbdhx6Z5X3whHE0U/2fsX38dWLg9G229vgts9tq5dZJu+j9aP/IZY8TTMyyghKcpl0GrJl7fi+8HuEQJAhSK9/xVoouSXrZT8vvc0GxhdLBlG7czyz6v6umWJcOZlWP6SvZOJ+t/CUsGJhLwMqqf9frKDoJMsj2HHWZ9bubJV1KxdJDswT1P1Ml+gnIWlDUxN7OGL6tBv/rE61K+ZaZ5G9TKMagvKW/NC97biZcreBkGDXF80KTYxf67ve8MzJnY/V9nJ9/1XmaepxM2ZnGarrpU5Tck2anhCVCr0ypPZGha6zwpAUTuqCBp0kgdhe5nrNettLNhmY1BPE8XNzMUpXmYDs1bK/R6xGbSTktOMDi67u62lyryJajsoDw1zUcqAaNDtZY4V8zYjDz3q38y0JXcWN7O6rfOl2ibLN0P7ZTlNNIiB+nJs3DpEai6KjpvFMP3VqjfCqL1Sv7VG6n1X0guqHhrmJRCdbBIbkmulJLx+mzFgZjynqSZQESQ7AT5X7H5X7QgffPVXI9Ck1NC0da2QnYYeavU9jRqezAihW6dLXcz449R+DRrVyGgC/ng0qa1zxPKSfh/lMGnf7OVetGpC5Q3GM8SiAltFfbMv+sCSdbTzmWdKiQqtTFONSiI8PMjWpRp1AlAjn3JHA6L2W9dKedD7Y5INq59y087A+Vvna8RGcrRY8Z5mg/EszTqCb3+E7ztm+75ug/MMZTaT7B599pQNuAF5L1Xf0UmJsELk1jPFkuFSIjwTdjZM99SMHafe02SDb2Ceq3IiPHzyQPut6zRjq/RjhK3319TDvqHZKmtDs1WWh6b671wO+Re+W4co+54a9dyyp2GDbYCeq5LtImhmjL/BuadmPMuPc5mn6f+r2ewktu6pocjhv6iYnYz+Ld7Ws6Xa92/9J2hU+f5ZNtDWvVT90sawzWgi3G83MM9S9M9UpxNhP4AvVwbYQF2jERvJjiBLhH0nzL3tcHU/Ve0l2bASntAgHqoNzL0U2acEiRd6T6MQuuF4tpR/Eh86gexjhIzQ6D/Vb91Tka0UD/Rj/xM0YnXM08wmzlvzUkNPllLAOiWnQXlL9MMmsXW+RuyW2q6y5O73JTe2dRsttSOCRiU0y2l2iDpXWepQsSP0Otmn3AoIUba9Q9T1QrbIvIyvo6snZOQRQlE/W8cpu+8zEeNb/8ob4X5fTapYP1vHqhqazGLbQbuxnMYP5ieA2u0Qdb3UaIBsS6OG+jvCswnUToiPFbq/lZAkhSYz/T1NZQJR263zhO79bE76V+qve46C4/uTJrVVknK/qzajD3vlF8vRJF6FSW2t1Ug4iuwV9YXGKH2M4DvY3uY+GvUyqD0V+mfu2Zf6oR9/XOlra0wVL/MC5QyiUNmS208ITS4LUazvrTmNwhNFBclWyNOY5d83q3gbX0b7WzWt9DK+v+Hw1IRCjq/LANlf9LhOal75snpYQuN8kwoNOpblNNV8Z4uLeYSRsKQC9E0VaLLvn1U9ke97g6OJrXYq3qbf9/1GY/1QBo0Z/27ZygopClM7vxkX8ygZLEoSDKVAY4a/JlTJedDxqJ9ojC09j4kSXyU0obFCVaFpZeXdjT8frb7QGFv/KgLG70egHPYaRIXGDHubVodAUfMe3/cGBye+UXIbgaIAhMaDGoGmlTOPk51fqfuNUhPfHoqXYVBeFkNR8jJmNWjMciMqniRbgUXj/CZ40NOPEl60rK7mM8sT4abMC7CVkm+n9sXavJsiYDw0LARFXoatmoZUhcZMX16P9BWd+1vCFQpHbcsS3gyczLMclgj3yt639HXKyor1y+rfQVk4amUGjLL8tqDfaPxUo9CY5V4lC0/Vtu8IjpK/oMQ38zrLl9pNK6DxZdRGOaaA8A7wMFjaFnkNtlryxyJgpvIZszlozGqJsdqX0s8ocFeLLXkrwChL7AyYYXhmoTHjiXF//AijPgWeUVgq0KCleDSH01dPkdTktmLQ2bZ3gEeFpW0ZLAyaLBwtA8bsGGiyN7sjxvywnxdbeYN8JkDIKGhJ7Y0cvWOpeJaX63+5VkFjdtybXXROdkOqSfio2DxYeBjxMMy7oN+TWeplzNZCYzb3sm70gqLzrlxhKSujtlVyGATKJcCYrYfGTH9DnHmQVS726HyH5S19WYEFAaPAcgowZsdAY1b7aEExoHrRCmhHeJ0V3gUBocByGjBmx0FjNveZ1MzFz3qqaI5ZH5lnadtRYBAopwNjdiw0Zmue6upNQAZUIUJeI2uPDKj8IDiUX21A13UIMGbHQ2PGk9KRC/M3yx+L9pkxq2NExzNIIuNnvyw16l2i/aU6a1WRvSVmn4j3P5+FthaU/Vxmrj8LSTPepuJZTgXG7Py3pizPqQDE4PF9mCtHY7J5Mm/jjyNY/P4ILNGYEbiH65+zBvpPf+z/BlEusrX3P6geAWSgzpcr1+HLlXBVgeQW3qXXVZ/PKC/8Mg8y6mkQMNWlvwJONUxF7di40f7hugoaNL4Ssvx+BZYZYJoYOKPwoHbRNhr7VF0NjZnuddpWASlqy7ZsPmaxgTLjquBEbf2YtwHG7B7QNM3AE9VVgJn1NBVw2HHUP9q/RHeCxix/8lUQGDSsrErJbdpWAYv1yeou0d2gaVLh6csVj8K8Wib09Fc9UNTfrWFpuis0TUrOkUGhhqPq6imqUwCK+nkELE13h6YJzVMBSDnGxuilQlM9ptTfRk+BponNt+qVlD6RFM9Q9R63h6XpadD0qgKUnZMdz4w64jkeA0qvJ0PTawaG1RqF6zF6F2h6Va9pVXha2f7WekdoIt3J0zxevwUapJnrf3s4kP4H25MgUcoRcFoAAAAASUVORK5CYII=" />
+							<image id="_IM0_11" width="169px" height="169px"
+								xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKkAAACpCAYAAABQ1R0vAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAOsUlEQVR4nO2dbZOjMA6ENbv3/3/yzH24Yo/Vqlst2xBe1FUpjAHbgSctmTCTL2uN6mvgmJ/lo3iBRk70W/SJc9MQB2pI/6eR83CWk74e3LdCqrxv9dwo+6mgKfu9Dto3QcreK9qWnZ/K+cvgQtvZca8A9umQVsCM9h2Fl6kCo697JbBPhFQFM4OU7av05aXAmUHJ9lX6uqWeBKkC0qpy1mekzClXlbM+b6cnQJrBk5X9Mqtj/WZSnJHVjQJ7a1jvDKkKp69DcCrQon5RfTXEIyijpQq4Mp5L646QMjgRpAzEEWjRODIhJ61AqWyL9mPjuLTuBKkCpwqhrx91VTQur0qYzyBEwKrAs3FdUv/59AAEzcBZXVfaRmNStRLQ7fXltqn9fwV1l9PVnRS5VuaYaF2B1bcX9ReNTZGSRyJQo3W2jbXn+43WL6OrQprds8zgjID8BfbL2kRjGJUyacqcdKv7BtsyWNkE63KwXjHcK+6pgJm9/PFR29GYEKBR/czsvhrmM1DROL7cPn7947oSpNXQvuplQTlaonGibT+G963M8rMwX30xbdsvlateJdyr7qm8fon7WVCOlmx8I2LhdRWs3+J+LGdF4z1dV3BSNkFhod3DqMKpQsrKaPxIPpzu679A2S8rkG4h28O65bB+/BGIP8n20/RJJ511z1+gjOp8mxaUo7Gp4T1TlhuyspqjRg76nWy/vKt+ClIGqOKcSnmFe0brR6iaAiiuiuDMoI36YGM9XJ+ANAO04pxHA8rGvUJVd10B6oyzKuNerrNzUiX/VMFcAagvs7ojFPXzQ7Zt+eG29OUoN/125X2d2d/AZvpInnompBVAFTgjWEfcM1rPxr9K0YX2/fwEdft9PTgMVAPLb/vfeYxg3X8Qov4O11mQIkC3Mpv4/LK6i/r2q6Fd2b5CEZBsHwRsBuv+2O9guW3fw5oB6/s9TGdAygBlIZ7BGd1+itplY2Dj/JQyaL929VE02EO51XnwLFj6ug1Of9y+79NAPRrSCqARiDMhHvWPxndFeRf19T+gvAd2DxqC1DvqtkR56qmgHgnpKKBZOQvxqG80trtoD2NUx9IAFvp9m1t5c+CPg3oUpDOAsnWWJqB+0fpdFblrButePoTvYd23aXYRUI+AVAUUhXe0HoHq+/D9R+tPkndXDytKAfwkaS+0jsL/4aD+XtmYxYBUAfWvKNxnjorG81Sh827Bku0T7cfaUMczpSMhZSAhx9xevy12UiUHNYuBfbrYh5RBhmCN9vuIVkIaAbqVfcjOHBQdw4D1/b5V7JxE6ZcF21jbXugbsmXXYRWkLA9F3x4pgHowfftoDC3dVZVzy9pm12HJNVkBKQO0mn9GwGYnsd0TK3PLzHGztpVt09dmJaQRoFU4vfOil++7xcU+1JnjruhzSrOQRm8+glSFU5kkRX23clVgXG0EU23MQKrkoZmL/rY6oB3ex1WZLPn92L3P/b7RN2KoD0krIM3y0Jkwv2/fl1vjUkFl9SN9DWkU0izMe/j8fc8G9PNSQFXyU/aQNutT1gik6M2h+5roRj0L86if1lpVQN2X1a89I4DL13IGUjUPrbrovm1fbq3XSI7qhfJQ9XiqKqRqmFdddL/ctxn11zpO6JwzWDM3VSdaqUYhZS6KwGQ36r2Tlt9Ia1rKuUf1DEjFZakqkDIXjSD1cGa3myxYts4Vy0cVVR7Rk9seeZ4UwYomQ8q3SaVBt07Rl+G/pfrl6n5cvX+OdavbtytLddLMRathfg9r1H7rc6rkp14IPlQvXWv/icjkwUKv7Pt3NNAG9BqKTMmvj173iAEqxUnV8B456L4cvQkLlq1rSMlP93XRH/ON9POPKk6KwEKfJDY5ajDvJXTtRq69bydVBin69GRWX73F1LBeU+x6jTDg24na/keqk0aDZbkHc1AljLSuo+h6MUdVeYjaDsUgRYOLBqa4KGu7dQ8xYEdTPtT2HylOqth8u+iz9VE3rYR7ZUAVF21A7yV03SocZG4aCkGKDp510QbzORpxUzPOQVivzO6ZI1ZsPR1M6/JibrotK2FeMq/ou3vVRbNB+e2t5ynKLVUe2Felf22rzO59J9m90M5Fn6lRN0UzfX/8P8qegspyimkrb91e/rrvn3ZS2NkEv0qt3swfyT0sWG89QyPzFAuWVB5SdpAygMw5G9Zn6FROULhnDSqfhg7375G/vujHKCJeIj7+CfszT0FVPyEN67PErrMS7mUe1K9FldxieBCtRwiZmIF6OdLuIUV2HA0G7a8c33qe2DVX00O0P/1aVA3tPWF6r1ZOoCBDI3/jFC2VQbfeoxE3hVKfzEf5xX5b56MtNS+N9oUaeZ40Wir7tp4pZS7DuJEnTqMdyTO01iuV3RHy+/ryl1nspJVbCaiTViviYyhVrN7MR51HA2m9U5l5ldNA9VE9lvwqA2u9QyonpdxUfTKfDYR10rC+Q8q1Z9xMz+7ZQFqtUS0J96zhvifaUqXM7Kn2/wrcN4zWh+51tV6pKjchi9EDJqijBrG1UhlXf+qz2X3aQKtVEOOpNLtnAGZwNrwtszlO0pv5M5A1oK29lrFUnd2vHEjrPZriZOT/ky4dQOvxmmZn1klbrcPVkLYuLxVS9Wf5Wi2vaXbaSVtnaMrIop/fG+28HbW11wwP6b9+nLHnBrVlNsdJ6d/s/JDGGsbWiBhP0r9+zIBsMFsrlXH1p/4X2Emx485HW5kiRqrp5E/1FpRvhNp0q2UxI6XoPHoLqsFsjWiImwzS/acALdkAGuZ3SLn2jCPKSTa7VzpgA2q9SxUw/f7TP+yAGo46akDfLc/AVD5qhm/meyvuGX1rVigyR7z9Jfa1KPsERJ00tK29IjaQ4fn18GtRFbAs2a3eF2vdX2qUZYDSttXZPZrlZ5+W1rvEomzGD1T1Pmk2q2+1Ik1xgyBd/YlomJ8pdr2XReDsUT2WW1Ty0tazdQQzf+rUp6A6L21lOiQfNRv77j4agOKeDe2zpFxnxorMg/LQc+aWkXt2yH+PUKhWOUkdFd3MV/KKDvmtTRUelNz0r22jf9LMXDYaQNniW5cWup6jXFCh37v3jXyJA0Au2v+K57lSXXM44o48qqd06o9H7bbup+y6jrDC2i39SfPop8RcXesZWuGgqN2/pOSkCnyVPIQNsHVtMbBGTEsyL+UBk2gwaGDfwsBa91cGnucgy0GHctIqnO2mzxe6hqMsyLD+JoNCvxma/Xhp9EJt96z/flJy0W+3ZPnoVLgfzT+Y1fu2203vIXS9Ktc/y0EhC8xJzbTfdlLc1LflHbYd9bpSwKy6aAbsX6pOnKoDVdy0dQ99xEXNcic1y3+VGbkpK6P11rVUcdFvUEYuKqsC6VZGsClAZr9j2qBeR35yw+DMAJ2KpAqkZjU3VfNTlq+2Pis2+x5N84ZhrUK6lVmoVp3WH9u3pa4nNNlR3DT6Yse3K0mF1Ez70SgGK6vv/PQ6UidI+xeDk4V9CdYKpGb1SZSvY7mpb7dBPV9qHpo56Udy0k3VSRRzzM5PryUlD41cM4MT9SGrCqkZzx1ZeEepAMtPUZuttYoARZOhCEwU/k/PSTepsCk5aYP6eTFA0cxdhbKcf0YagdQM56T7dTU1YO01qMdKBVRx0ezWU9SnpBWQsrDPJknRvll9g7pOCqD77+HRC6UFUZgf0iikZvm9Ub+PPza6uY/6aFDXquKgWf6ZwTkd8mcgNcvD/L6uMuOP+mhQ12g2B832Nddm1G9Js5Caaa45206WErRyoRk2g46F+ez2E+u7pJWQ+rKvU4BS9m1Q64qgmclDlXujS/JRszWQmvH8dL+9MpFi5Wxb6/9C4X1bKreY2EQJhfqoPKRVkJrVIKq4Kju+XRUrC+9bGYGHAEVO6tuOxjCkoyD1zvljNaBGUgSl3beoEt5nAP0mfS7TSkjN6qG6OqlidQ0rd89tyeBkt5gU91zuombrITXTc0UVVKW92dTi7mKzaeSi6BE7BujhX4FGOgJSs/qkZvU+ivM+QREMinuiEO8hZTnoKYCaHQep2dzsO3vTK9OEO0qFc1tWHDQqfwxQs2MhNauBOgPe6DF3AhYBoMKpOqgS3k8D1Ox4SM04qNGsHwmdhK9kOxqLUn8FzcC5rbMnlxT3/HZt+3EdBqjZOZCa1Sc/m1hYY5oBNtt2tNjYIzDQLJuF+AqcEZinAWp2HqRm9aek9mIniUndb1UqMqJsjAgIBU4GJgrr7FYTG89hOhNSsxqo2bYKsGyflZOr/XGjF1CZFG3lav6p1F0KULPzITWrg6pof0LZPorOviOgpDSV0B7lnQqklwTU7DOQmuUX3Z8E5FDoYirtqk58Rn7K3scooFlOitajPthYD9enIDWb+2YoAxU5a5bfofaYlHGzNlRAsxd6jE4J6Yp7Zu/jMH0SUjPtO/3oxEQTKwSlAi1zKzQGZVvl2MwhfX32fCerV8C8BKBmn4d006qQimDM9lNgzWBnzoT2ZX2o0I3ud2n33OtKN7EzV/WP/616WVCOlmicrB5dYASC+iFZ8WL9ZuM/VVeC1IzPrBFQs2AqgGZfRii3ylBdBkwW9kfAzOBEdR/R1SDdxNwrgsyvK1AqTorgnDlvEaBbecRJ2TaUqqAxROsf11UhNdNddVtmDqnAWXXSFXckKqF+X85A9XWoPzTGy+jKkG5SXdUvEaQmbGPLaEwVjYZ6A+XMLW/pnnvdAdJNCqxbWXHKzI2jZTYOJAaF6qRRXVZGfaH1S+pOkJrlkxaWu/o6ZZvSfkUjIX9bVraxMqu7pO4G6SZlho0gG4FyxD2RkJuNQovaiNZR3aV1V0g3ofEr7jfrnLNO6tcrkKpl1vdtdHdI96q462yZ1SFlrjZTVtq/rZ4E6SbFXaM6FeisH6YKqNk2VMfqb6knQrqJvTcV5ArwqlSwRgB8FJybngzpXtn7HAFa3W6WwzMD3iPB3OstkO6lvOfR87I/bhQe5bjHg7nXGyH1GjkHR4T71cc8Rg1prE+el1cDGakhrWvFOWsQC/ovTwvbdGyfurYAAAAASUVORK5CYII=" />
+							<image id="_IM0_12" width="104px" height="104px"
+								xlink:href="data:image/png;base64,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" />
+							<image id="_IM0_13" width="108px" height="108px"
+								xlink:href="data:image/png;base64,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" />
+							<image id="_IM0_14" width="131px" height="131px"
+								xlink:href="data:image/png;base64,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" />
+							<image id="_IM0_15" width="132px" height="132px"
+								xlink:href="data:image/png;base64,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" />
+						</defs>
+					</svg>
+
+					<!-- <p>$j[12]</p> -->
+				</div>
+			</div>
+
+			<div class="page-item  video-holder-watch-video -bg-grey-l" id="watchVideo">
+
+				<figure>
+					<video poster="/img/gradient.svg" class="unfetteredVideoFrame" id="unfetteredVideoFrame" playsinline controls>
+						<track src="/vtt/$lnstr.vtt" label="$sub" kind="subtitles" srclang="$lnstr" default>
+						$enlngfb
+						<source src="https://btcpayserver.org/video/602.webm" type="video/webm">
+						<source src="https://btcpayserver.org/video/602.m4v" type="video/m4v">
+						<source src="https://btcpayserver.org/video/602.mp4" type="video/mp4">
+					</video>
+
+				</figure>
+			</div>
+
+			<div class="page-item-free -bg-grey" id="po0">
+				<div class="pageItemInnerSpacer">
+					<div class="pageItemTextContent floatContentLeft">
+						<h2>$j[1]</h2>
+						<p>$j[25]</p>
+						<a alt="$j[62]" class="modernLink" href="http://docs.btcpayserver.org/" target="blank_">$j[62]&nbsp;&nbsp;<i
+								class="fas fa-long-arrow-alt-$rl"></i>
+						</a>
+
+						<p>$j[26]</p>
+						<a alt="$j[63]" class="modernLink" href="https://github.com/btcpayserver"
+							target="blank_">$j[83]&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-$rl"></i>
+						</a>
+					</div>
+
+					<img class="floatContentRight standalone" src="/img/docs.png" alt="Screenshot - docs.png">
+				</div>
+			</div>
+
+			<div class="pageItem" id="communityCTA">
+				<div class="pageItemInnerSpacer -ta-c">
+					<div class="pageItemTextContent floatContentLeft">
+						<h2>$j[32]</h2>
+						<p>$j[28]</p>
+						<div class="linkOrg-3 -ta-c">
+							<a alt="Community on Mattermost" class="modernLink_Cluster" href="http://chat.btcpayserver.org/"
+								target="blank_">
+
+								<svg class="svgPseudoIcon mattermost" enable-background="new 0 0 500 500" height="500"
+									viewBox="0 0 500 500" width="500" xmlns="http://www.w3.org/2000/svg">
+									<path fill="var(--dark-grey)"
+										d="m256.258 2.758c-11.193 13.246-21.75 25.869-32.526 38.301-1.11 1.28-3.477 1.629-5.339 2.076-70.773 16.96-118.985 58.864-137.218 130.136-16.03 62.655 1.301 118.252 44.825 165.322 32.698 35.359 74.059 54.639 121.803 58.979 90.408 8.216 175.685-48.88 193.982-140.602 11.32-56.738-3.984-107.076-40.658-151.239-2.241-2.698-3.311-5.263-3.426-8.792-.484-14.831-1.311-29.653-2.001-44.479-.028-.603.094-1.216.157-1.946 73.405 49.462 129.388 164.069 87.006 283.188-43.143 121.244-174.348 189.369-298.59 154.835-126.519-35.168-201.923-160.523-177.046-286.019 27.257-137.502 149.647-204.741 249.031-199.76z" />
+									<path fill="var(--dark-grey)"
+										d="m334.119 214.47c-.152 31.185-21.701 57.792-48.973 65.99-33.039 9.935-82.484-8.558-90.773-52.303-4.492-23.715 2.165-43.55 16.509-63.536 45.787-63.793 106.727-132.5 106.727-132.5 1.905-2.118 5.166-4.817 8.177-3.813 3.128 1.046 4.313 2.913 4.603 8.187 0 .002 4.253 71.293 3.73 177.975z" />
+								</svg>
 
 
 
 
 
 
-                                $j[64]</a>
-                            <a alt="Community on Github" class="modernLink_Cluster nullTrans"
-                                href="https://github.com/btcpayserver" target="blank_">
-                                <i class="fab fa-github"></i>$j[3]</a>
-                            <a alt="$j[65]" class="modernLink_Cluster" href="https://t.me/btcpayserver" target="blank_">
-                                <i class="fab fa-telegram"></i>$j[65]</a>
-                        </div>
-                    </div>
-                    <img class="floatContentRight" src="/img/community5.png" />
-                </div>
-            </div>
+								$j[64]</a>
+							<a alt="Community on Github" class="modernLink_Cluster nullTrans" href="https://github.com/btcpayserver"
+								target="blank_">
+								<i class="fab fa-github"></i>$j[3]</a>
+							<a alt="$j[65]" class="modernLink_Cluster" href="https://t.me/btcpayserver" target="blank_">
+								<i class="fab fa-telegram"></i>$j[65]</a>
 
-            <svg version="1.1" class="h-div h-divider_start5" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1000px" height="127.5px"
-                viewBox="0 0 1000 127.5" enable-background="new 0 0 1000 127.5" xml:space="preserve">
-                <g>
+							<a alt="Twitter" class="modernLink_Cluster" href="https://twitter.com/BtcpayServer" target="blank_">
+								<i class="fab fa-twitter"></i>Twitter</a>
 
-                    <linearGradient id="SVG5454ID_1_" gradientUnits="userSpaceOnUse" x1="-1513.5029" y1="599.4219"
-                        x2="-1513.5029" y2="598.7344" gradientTransform="matrix(-1 0 0 -1 -1008 635.2422)">
-                        <stop offset="0" style="stop-color:#0CA626" />
-                        <stop offset="0.2647" style="stop-color:#0CB526" />
-                    </linearGradient>
-                    <path fill="url(#SVG5454ID_1_)"
-                        d="M505.5,36.17C508.025,34.969,502.984,37.348,505.5,36.17L505.5,36.17z" />
-                    <path class="d-g"
-                        d="M0,127.5h1000V0C842.5,48.25,666.5-35.678,484.5,26.25C164.5,134.879,65.75,91.25,0,79.553V127.5z" />
-                </g>
-                <path opacity="0.15" fill="#005D00" enable-background="new    " d="M912.364,70.256c-0.933-6.506,60.244-44.572,63.965-42.789
-		c3.722,1.783,4.384,83.381,0,85.582C971.946,115.25,913.297,76.762,912.364,70.256z" />
-                <path id="smtri2" fill="#F2F2F2" d="M40.75,53.764C40.5,58.75,20,72.27,15.25,69.26s-2.75-26.695,0-29.853S41,48.777,40.75,53.764z
-		" />
-                <path id="smtri4" opacity="0.15" fill="#1AB81A" enable-background="new    " d="M921.113,43.107
-		c-0.113-3.857,23.594-17.424,25.74-15.641s2.854,29.277,0,31.28S921.227,46.965,921.113,43.107z" />
-                <path id="smtri4_1_" opacity="0.15" fill="#1A001A" enable-background="new    " d="M884.113,98.107
-		c-0.113-3.857,23.594-17.424,25.74-15.641s2.854,29.277,0,31.28S884.227,101.965,884.113,98.107z" />
-                </g>
-            </svg>
+							<a alt="Youtube" class="modernLink_Cluster"
+								href="https://www.youtube.com/channel/UCpG9WL6TJuoNfFVkaDMp9ug" target="blank_">
+								<i class="fab fa-youtube"></i>YouTube</a>
+						</div>
+					</div>
+				</div>
+			</div>
 
-            <div class="blockGreenFoot">
-$ftblk
-            </div>
-        </div>
+			$ftblk
 
-    </div>
-    <!-- END OF p-nm-co-ho -->
-    <div id="videoContainer" style="display:none;">
-        <span class="closeVideoWindow" onclick="endVideo();">
-            <i class="fas fa-times"></i>&nbsp;$j[22]</span>
-        <div id="videoContainer_video0"></div>
-    </div>
-    <!-- END OF videoContainer -->
-    <div id="systemAlert" style="display:none;"></div>
-    <!-- END OF alert -->
-    <div id="curtainGen" style="display:none;">
-        <span class="closeVideoWindow" onclick="closeCurtain();">
-            <i class="fas fa-times"></i>&nbsp;$j[22]</span>
-        <div class="closeDonationButton" style="visibility:hidden;" onclick="uPHis('/#donate');cDon(this);">
-            <i class="fas fa-arrow-left"></i>
-        </div>
-        <div class="curtainWorkspace">
+		</div>
 
-            <div class="donParent" id="donParent">
-
-                <div class="promoteDonation modPar">
-
-                    <div class="jsInvoiceWorkspacePre">
-
-                        <div class="nonJavascriptMessage">
-                            <span>$j[19]</span>
-                            <form method="POST" action="https://mainnet.demo.btcpayserver.org/api/v1/invoices">
-                                <input type="hidden" name="storeId"
-                                    value="EErYwCthBNfJUpuU1etH1uhg3x1YVH1q1F2zez7u1AAX" />
-                                <input type="hidden" name="price" value="5" />
-                                <input class="cur-val-fu" type="hidden" name="currency" value="USD" />
-                                <input type="image" src="/img/pay-2.png" name="submit" style="width:209px"
-                                    alt="Pay with BtcPay, Self-Hosted Bitcoin Payment Processor">
-                            </form>
-                        </div>
-                        <div class="currencyOpts">
-                            <span class="vci-in-m" onclick="setVisCur('btc');foTO(0);" alt="Bitcoin">btc<span
-                                    class="cur_name"></span></span>
-                            <span class="vci-in-m focused" onclick="setVisCur('usd');foTO(1);"
-                                alt="Dollar (US)">usd<span class="cur_name">usd</span></span>
-                            <span class="vci-in-m" onclick="setVisCur('cad');foTO(2);" alt="Dollar (CA)">cad<span
-                                    class="cur_name"></span></span>
-                            <span class="vci-in-m" onclick="setVisCur('eur');foTO(3);" alt="Euro">eur<span
-                                    class="cur_name"></span></span>
-                            <span class="vci-in-m" onclick="setVisCur('gbp');foTO(4);"
-                                alt="Pound Sterling (GB)">gbp<span class="cur_name"></span></span>
-                        </div>
-                        <div class="jsR_don GenerateInvoiceButton oF_JS_Env"></div>
-                    </div>
-
-                    <div class="text-center statusButton" style="display:none;">
-                        <svg version="1.1" class="spinnerAnimated" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="283.46px"
-                            height="283.46px" viewBox="0 0 283.46 283.46" enable-background="new 0 0 283.46 283.46"
-                            xml:space="preserve">
-                            <circle fill="none" stroke="#329f65" stroke-width="30" stroke-linecap="round"
-                                stroke-miterlimit="10" cx="141.73" cy="141.73" r="106.762" />
-                        </svg>
-                        <span class="genIn_">$j[20]<b class="genVal_"></b>
-                        </span>
-                    </div>
-
-                    <div class="jsInvoiceWorkspace" style="display:none;" class=""></div>
-
-                </div>
-
-                <span class="demoBlockText" style="display:none;">
-                    <!-- PLACEHOLDER FOR ANY FUTURE TEXT -->
-                </span>
-            </div>
-
-        </div>
-    </div>
-    <!-- END OF curtain -->
+	</div>
+	<!-- END OF p-nm-co-ho -->
 </body>
 <script src="/js/scripts.js"></script>
+
 </html>
