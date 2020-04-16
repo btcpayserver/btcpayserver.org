@@ -1909,6 +1909,7 @@ figure {
   #pageContainer {
     display: flex;
     flex-flow: column;
+    width: 90vw;
   }
   #LanguagePicker {
     right: 0;
