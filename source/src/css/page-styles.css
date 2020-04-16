@@ -1,21 +1,21 @@
-
-
 contents {
-  /* min-height: 100vh; */
   display: block;
   text-align: center;
   max-width: 900px;
   margin: 40px auto 100px auto;
   width: 95vw;
 }
-
 contents h2,
 contents h3 {
   font-weight: 600;
   color: var(--black);
   text-align: left;
 }
-contents h1{color: var(--black);font-weight: 600;text-align: left;}
+contents h1 {
+  color: var(--black);
+  font-weight: 600;
+  text-align: left;
+}
 contents h2 {
   position: absolute;
   margin: 0;
@@ -23,12 +23,10 @@ contents h2 {
   background: var(--white);
   padding: 0 10px;
   border-radius: 100px;
-  /* border: 2px solid var(--light-grey); */
   font-weight: 600;
   font-size: 16px;
   text-transform: uppercase;
 }
-
 contents p {
   font-size: 18px;
   color: var(--grey);
@@ -36,55 +34,41 @@ contents p {
   font-weight: 200;
   text-align: left;
 }
-
 contents a {
   display: inline-block;
   text-decoration: none;
   color: var(--lime);
 }
-
 .donation-type {
   margin: 50px auto 100px auto;
   display: grid;
   grid-auto-flow: row;
-  box-shadow: 0px 0px 0px 1px var(--grey), 2px 2px 10px -2px var(--shadow-20), -2px -2px 10px -2px var(--white);
+  box-shadow: 0 0 0 1px var(--grey), 2px 2px 10px -2px var(--shadow-20),
+    -2px -2px 10px -2px var(--white);
   padding: 0 20px;
   border-radius: 10px;
 }
-
 .foundation-donation {
   display: grid;
   grid-auto-flow: row;
 }
-
 .foundation-donation svg {
   margin: auto;
 }
-/* .individual-grid {
-  display: grid;
-  grid-auto-flow: row;
-  grid-template-columns: 1fr 1fr 1fr;
-} */
-
 .individual-grid {
   display: flex;
   flex-flow: row;
   flex-wrap: nowrap;
   flex-wrap: wrap;
-  /* max-width: 600px; */
   margin: auto auto 30px auto;
   min-width: 300px;
-  /* border-width: 0px 2px 2px 2px; */
-  /* border-style: solid; */
-  /* border-radius: 20px; */
   border-color: var(--lighter-grey);
 }
-
 .ind-icon .in-img {
   background-color: var(--lime-green);
   height: 80px;
   width: 80px;
-  margin: 10px auto 0px auto;
+  margin: 10px auto 0 auto;
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -93,28 +77,9 @@ contents a {
   background-image: url(/img/person-01.png);
   border-radius: 300px;
 }
-
-/* .ind-icon:nth-child(1n) .in-img {
-  -webkit-clip-path: url(#c2_);
-  clip-path: url(#c2_);
-}
-.ind-icon:nth-child(2n) .in-img {
-  -webkit-clip-path: url(#c3_);
-  clip-path: url(#c3_);
-}
-.ind-icon:nth-child(3n) .in-img {
-  -webkit-clip-path: url(#c4_);
-  clip-path: url(#c4_);
-}
-.ind-icon:nth-child(4n) .in-img {
-  -webkit-clip-path: url(#c5_);
-  clip-path: url(#c5_);
-} */
-
 .in-img:hover {
   transform: scale(1.1);
 }
-
 .ind-icon {
   margin: 10px auto 20px auto;
   text-align: center;
@@ -122,7 +87,6 @@ contents a {
   align-items: center;
   padding: 0 30px;
 }
-
 .in-nom {
   font-size: 12px;
   opacity: 0.6;
@@ -133,52 +97,28 @@ contents a {
   text-overflow: ellipsis;
   color: var(--dark-grey);
 }
-
-/* .cta-foundation-donation {
-  display: inline-block;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 15px;
-  color: var(--medium-grey);
-  background: var(--lighter-grey);
-  border-radius: 100px;
-  margin: 20px auto 0px auto;
-  padding: 5px 15px;
-} */
-
-
-
 .cta-foundation-donation i {
   transition: 0.2s ease;
 }
-
 .cta-foundation-donation:hover > i {
   transform: translateX(4px);
 }
-
 .d-g {
   fill: var(--darkest-green);
 }
-
-
 .don-iss {
   color: var(--error) !important;
 }
-
 .genVal_ {
   text-transform: lowercase !important;
 }
-
 .f-in-cap {
   text-transform: capitalize !important;
 }
-
-
 .no-scroll {
   overflow: hidden;
   position: fixed;
 }
-
 .js-i-ws-to-sc {
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
