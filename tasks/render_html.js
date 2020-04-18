@@ -74,13 +74,6 @@ langs.forEach(lang => {
     exp0: lng,
     _donate: titleCase(t[38]),
     _blog: titleCase(t[2]),
-    exp5624: t[24] && t[56] ? t[24].split(t[56])[0] : '',
-    exp5756: t[24] && t[56] && t[57] && t[24].split(t[56])[1] ? t[24].split(t[56])[1].split(t[57])[0] : '',
-    exp5857: t[24] && t[57] && t[58] && t[24].split(t[57])[1] ? t[24].split(t[57])[1].split(t[58])[0] : '',
-    exp5069: t[24] && t[59] && t[60] && t[24].split(t[59])[1] ? t[24].split(t[59])[1].split(t[60])[0] : '',
-    exp229: footerParts.length > 1 ? footerParts[1].replace('.', '<br>') : '',
-    exp29: footerParts[0],
-    exp71: t[11],
     j: t
   }
 
