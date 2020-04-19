@@ -24,7 +24,9 @@ const LANGUAGE_NAMES = {
   it_IT: 'Italiano',
   ja_JP: '日本語',
   ko: '한국어',
+  lt: 'Lithuanian',
   nl_NL: 'Nederlands',
+  no: 'Norwegian',
   pl: 'Polski',
   pt_BR: 'Português',
   pt_PT: 'Português',
@@ -34,9 +36,11 @@ const LANGUAGE_NAMES = {
   sl_SI: 'Slovenščina',
   sr: 'српски',
   sv: 'Svenska',
+  th_TH: 'Thai',
   tr: 'Türkçe',
   uk: 'українська',
-  'zh-Hans': '中文'
+  'zh-Hans': '中文',
+  zu: 'Zulu'
 }
 
 function getTemplate(name) {
