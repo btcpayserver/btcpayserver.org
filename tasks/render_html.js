@@ -78,7 +78,7 @@ langs.forEach(lang => {
     lngst: lngst,
     sub,
     exp0: lng,
-    _donate: titleCase(t[38]),
+    _donate: titleCase(t[13]),
     _blog: titleCase(t[2]),
     j: t
   }
