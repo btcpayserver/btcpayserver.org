@@ -42,13 +42,13 @@ langs.forEach(lang => {
   const isEn = lng === 'en'
   const isRtl = ['he', 'ar'].includes(lng)
   const directory = lng === 'en' ? '' : lng === 'en_GB' ? '' : `${lang}/`
-  const t = getTransifexJSON(`en-json/translation/${lang}`)
+  const trans = getTransifexJSON(`en-json/translation/${lang}`)
+  const t = trans instanceof Array ? trans : Object.values(trans)
+
   const hasVtt = vttLangs.includes(lang)
   const vttTrack = isEn
     ? ''
     : `<track src="/vtt/${hasVtt ? lang : 'en_GB'}.vtt" label="${getLanguageName(hasVtt ? lang : 'en_GB')}" srclang="${hasVtt ? lang : 'en'}" kind="subtitles" defaults>`
-
-  const footerParts = t[29].split('FLAT18.CO.UK')
 
   const lngName = getLanguageName(lang)
   if (!lngName) {
