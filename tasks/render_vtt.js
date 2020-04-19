@@ -4,7 +4,7 @@ const { getTemplate, getTransifexJSON, getLanguages, replaceTemplateVars, saveFi
 const template = getTemplate('vtt/video_tmpl.vtt')
 const langs = getLanguages('video_en_json')
 
-console.log(`Video: Rendering ${langs.length} translations …`)
+console.log(`ℹ️  Video: Rendering ${langs.length} translations …`)
 
 const sentenceChunks = [4, 2, 1, 3, 1, 1, 1, 3, 1, 2, 1]
 
@@ -29,4 +29,4 @@ langs.forEach(lang => {
   saveFile(`vtt/${lang}.vtt`, rendered)
 })
 
-console.log(`Video: Rendering done …`)
+console.log('✅  Video: Rendering done …')

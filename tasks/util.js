@@ -24,7 +24,9 @@ const LANGUAGE_NAMES = {
   it_IT: 'Italiano',
   ja_JP: '日本語',
   ko: '한국어',
+  lt: 'Lithuanian',
   nl_NL: 'Nederlands',
+  no: 'Norwegian',
   pl: 'Polski',
   pt_BR: 'Português',
   pt_PT: 'Português',
@@ -34,9 +36,11 @@ const LANGUAGE_NAMES = {
   sl_SI: 'Slovenščina',
   sr: 'српски',
   sv: 'Svenska',
+  th_TH: 'Thai',
   tr: 'Türkçe',
   uk: 'українська',
-  'zh-Hans': '中文'
+  'zh-Hans': '中文',
+  zu: 'Zulu'
 }
 
 function getTemplate(name) {
@@ -45,19 +49,18 @@ function getTemplate(name) {
   try {
     return readFileSync(file, 'utf8')
   } catch (err) {
-    console.error('Could not get template', name, ':', err)
+    console.error('🚨  Could not get template', name, ':', err)
   }
 }
 
 function getTransifexJSON(resource) {
-  // console.log("debug:",resource, "path:", `../transifex/${resource}.json`); return false;
   try {
     const file = resolve(__dirname, `../transifex/${resource}.json`)
     const content = readFileSync(file, 'utf8')
 
     return JSON.parse(content)
   } catch (err) {
-    console.error('Could not read file', file, ':', err)
+    console.error('🚨  Could not read file', file, ':', err)
   }
 }
 
@@ -103,7 +106,7 @@ function saveFile (filePath, content) {
     mkdirSync(dirname(file), { recursive: true })
     writeFileSync(file, content)
   } catch (err) {
-    console.error('Could not save file', file, ':', err)
+    console.error('🚨  Could not save file', file, ':', err)
   }
 }
 
