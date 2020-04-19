@@ -27,7 +27,7 @@ function getLanguageOptions (langs, lang, pagePath = '') {
     if (code === lang) return res
     const [main, rgn] = code.split('_')
     const isEn = main === 'en'
-    const name = getLanguageName(code)
+    const name = getLanguageName(code) || code
     const region = rgn && !isEn ? ` (${rgn.toLowerCase()})` : ''
     const prefix = isEn ? '' : `/${code}`
     const url = `${prefix}/${pagePath}`
@@ -35,7 +35,7 @@ function getLanguageOptions (langs, lang, pagePath = '') {
   }, []).join('')
 }
 
-console.log(`HTML: Rendering ${langs.length} translations …`)
+console.log(`ℹ️  HTML: Rendering ${langs.length} translations …`)
 
 langs.forEach(lang => {
   const [lng] = lang.split('_')
@@ -50,6 +50,12 @@ langs.forEach(lang => {
 
   const footerParts = t[29].split('FLAT18.CO.UK')
 
+  const lngName = getLanguageName(lang)
+  if (!lngName) {
+    console.warn(`🛑  Missing language name for "${lang}" – please add it to the LANGUAGE_NAMES in tasks/util.js`)
+  }
+
+  const sub = lngName || lang
   const lngOpts = getLanguageOptions(langs, lang)
   const lngOptsDonate = getLanguageOptions(langs, lang, 'donate/')
   var lngst = directory === 'en' ? '' : '/' + directory;
@@ -69,8 +75,8 @@ langs.forEach(lang => {
     L_rl: isRtl ? 'r' : 'l',
     R_rl: isRtl ? 'l' : 'r',
     lnstr: lang,
-    lngst:lngst,
-    sub: getLanguageName(lang),
+    lngst: lngst,
+    sub,
     exp0: lng,
     _donate: titleCase(t[38]),
     _blog: titleCase(t[2]),
@@ -109,7 +115,6 @@ langs.forEach(lang => {
     })
     tmplVars._thrFor = '';
   })
-
 })
 
-console.log(`HTML: Rendering done …`)
+console.log('✅  HTML: Rendering done …')

@@ -16,7 +16,7 @@ function saveTransifexJSON (resource, json) {
     mkdirSync(dirname(file), { recursive: true })
     writeFileSync(file, JSON.stringify(json, null, 2))
   } catch (err) {
-    console.error('Could not save file', file, ':', err)
+    console.error('🚨  Could not save file', file, ':', err)
   }
 }
 
@@ -33,7 +33,7 @@ function downloadTransifexJSON(resource) {
 
     return json
   } catch (err) {
-    console.error('Could not load', resource, 'from Transifex:', err)
+    console.error('🚨  Could not load', resource, 'from Transifex:', err)
   }
 }
 
@@ -42,7 +42,7 @@ function downloadTransifexJSON(resource) {
   const stats = downloadTransifexJSON(`${type}/stats/`)
   const langs = Object.keys(stats)
 
-  console.log(`${type}: Fetching ${langs.length} translations …`)
+  console.log(`ℹ  ${type}: Fetching ${langs.length} translations …`)
 
   langs.forEach(lang => downloadTransifexJSON(`${type}/translation/${lang}`))
 })

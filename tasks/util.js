@@ -45,19 +45,18 @@ function getTemplate(name) {
   try {
     return readFileSync(file, 'utf8')
   } catch (err) {
-    console.error('Could not get template', name, ':', err)
+    console.error('🚨  Could not get template', name, ':', err)
   }
 }
 
 function getTransifexJSON(resource) {
-  // console.log("debug:",resource, "path:", `../transifex/${resource}.json`); return false;
   try {
     const file = resolve(__dirname, `../transifex/${resource}.json`)
     const content = readFileSync(file, 'utf8')
 
     return JSON.parse(content)
   } catch (err) {
-    console.error('Could not read file', file, ':', err)
+    console.error('🚨  Could not read file', file, ':', err)
   }
 }
 
@@ -103,7 +102,7 @@ function saveFile (filePath, content) {
     mkdirSync(dirname(file), { recursive: true })
     writeFileSync(file, content)
   } catch (err) {
-    console.error('Could not save file', file, ':', err)
+    console.error('🚨  Could not save file', file, ':', err)
   }
 }
 
