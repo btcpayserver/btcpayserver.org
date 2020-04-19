@@ -54,8 +54,9 @@ function getTemplate(name) {
 }
 
 function getTransifexJSON(resource) {
+  const file = resolve(__dirname, `../transifex/${resource}.json`)
+
   try {
-    const file = resolve(__dirname, `../transifex/${resource}.json`)
     const content = readFileSync(file, 'utf8')
 
     return JSON.parse(content)
