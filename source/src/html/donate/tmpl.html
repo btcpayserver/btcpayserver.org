@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html dir="$to">
+<html dir="{{_to}}">
 
   <head>
     <meta charset=UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta name="description" content="$j[4]">
+    <meta name="description" content="{{btcpay-server-is-proudly-free}}">
     <meta name="keywords" content="btcpay">
     <meta name="author" content="Ed Sinaswee | flat18.co.uk">
     <meta property="og:title" content="BTCPay Server">
-    <meta property="og:description" content="$j[4]">
+    <meta property="og:description" content="{{btcpay-server-is-proudly-free}}">
     <meta property="og:image" content="/img/favicon.png">
     <link rel="icon" type="image/png" href="/img/favicon.png">
-    <title>$_donate | BTCPay Server</title>
+    <title>{{donate}} | BTCPay Server</title>
     <link rel="stylesheet" type="text/css" href="/css/fa_.min.css">
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <link rel="stylesheet" type="text/css" href="/css/page-styles.css">
@@ -22,35 +22,35 @@
 
   <body>
     <div id="p-nm-co-ho" class="theme $_thrFor">
-      <div class="pageContainerTopBackground sh-pg __fal-$rl">
+      <div class="pageContainerTopBackground sh-pg __fal-{{_rl}}">
         <div class="">
-                    $menTemp
+                    {{_menTemp}}
                 </div>
 
         <!-- START PAGE CONTENTS -->
 
         <contents>
-          <h1>$j[10]</h1>
-          <p>$j[30]</p>
+          <h1>{{support-the-btcpay}}</h1>
+          <p>{{btcpay-server-is-a-self-hosted}}</p>
 
           <div class="donation-type">
-            <h2>$j[31]</h2>
+            <h2>{{corporate-donations}}</h2>
 
-            <p>$j[32]<br>
-              <a class="cta-foundation-donation button-pri button" href="https://foundation.btcpayserver.org">$j[33]&nbsp;&nbsp;<i
-                class="fas fa-chevron-$rl"></i>
+            <p>{{corporate-entities-wishing}}<br>
+              <a class="cta-foundation-donation button-pri button" href="https://foundation.btcpayserver.org">{{btcpay-server-foundation}}&nbsp;&nbsp;<i
+                class="fas fa-chevron-{{_rl}}"></i>
               </a>
             </p>
 
           </div>
 
           <div class="donation-type">
-            <h2>$j[34]</h2>
-            <p>$j[35]</p>
+            <h2>{{individual-donations}}</h2>
+            <p>{{if-you-re-not}}</p>
             <div class="individual-grid" id="donGr">
-            $donationsBlock
+            {{_donationsBlock}}
           </div>
-            <p>$j[36]&nbsp;<a href="https://github.com/btcpayserver/btcpayserver.github.io/blob/master/source/src/json/donations.json">$j[37]</a>
+            <p>{{btcpay-contributor-}}&nbsp;<a href="https://github.com/btcpayserver/btcpayserver.github.io/blob/master/source/src/json/donations.json">{{add-yourself-to}}</a>
             </p>
           </div>
 
@@ -59,7 +59,7 @@
         <!-- END PAGE CONTENTS -->
 
         <div class="blockGreenFoot">
-$ftblk
+{{_ftblk}}
       </div>
       </div>
 
@@ -69,7 +69,7 @@ $ftblk
   </body>
   <script>
     var icons = document.getElementById("donGr");
-    var users = $jsonDonations;
+    var users = {{_jsonDonations}};
 
     function shuffle(array) {
       var currentIndex = array.length,

@@ -86,18 +86,12 @@ function getLanguageName (code) {
 function replaceTemplateVars(tmpl, vars) {
   return Object.keys(vars).reduce((rendered, varName) => {
     const value = vars[varName]
+    const regex = new RegExp(`\\{\\{\s?${varName}\s?\\}\\}`, 'g')
 
     return value instanceof Array
-      ? rendered.replace(new RegExp(`\\$${varName}\\[(\\d+)\\]`, 'g'), (_, i) => value[i])
-      : rendered.replace(new RegExp(`\\$${varName}`, 'g'), value)
+      ? rendered.replace(regex, (_, i) => value[i])
+      : rendered.replace(regex, value)
   }, tmpl)
-}
-
-function titleCase (str) {
-  return str.toLowerCase()
-    .split(' ')
-    .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-    .join(' ')
 }
 
 function saveFile (filePath, content) {
@@ -117,6 +111,5 @@ module.exports = {
   getLanguageName,
   getTransifexJSON,
   replaceTemplateVars,
-  saveFile,
-  titleCase
+  saveFile
 }
