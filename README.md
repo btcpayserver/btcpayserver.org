@@ -34,6 +34,10 @@ Translations are only handled through Transifex, please do not create a pull req
 
 For more information on contributing by translating, [check the translation guides](https://docs.btcpayserver.org/support-and-community/translate)
 
+Translators can opt-in to be notified when new strings require translating for a language they're subscribed to.
+
+We used a 90% minimum threshold for translations.
+
 ## How to build
 
 Prerequisites:

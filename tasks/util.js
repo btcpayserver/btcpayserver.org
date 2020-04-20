@@ -67,7 +67,7 @@ function getTransifexJSON(resource) {
 
 // returns an array of available languages.
 // here we can also filter based on completeness.
-function getLanguages (resource, completenessThreshold = 100) {
+function getLanguages (resource, completenessThreshold = 90) {
   const stats = getTransifexJSON(`${resource}/stats/`)
 
   return Object.keys(stats).reduce((res, lang) => {
