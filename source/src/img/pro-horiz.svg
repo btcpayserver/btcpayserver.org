@@ -1,5 +1,5 @@
-<svg version="1.1" 
-	xmlns="http://www.w3.org/2000/svg" 
+<svg version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="800px" height="500px" viewBox="-150 0 800 500" enable-background="new -150 0 800 500" xml:space="preserve">
 	<g id="backgroundBubbles">
 		<g id="backgroundBubbles_1_">
@@ -19,7 +19,7 @@
 	<path fill="var(--white)" d="M222.532,251.547c27.371,0,49.541,22.17,49.541,49.518s-22.17,49.517-49.541,49.517
 	c-27.348,0-49.517-22.169-49.517-49.517S195.185,251.547,222.532,251.547z"/>
 	<circle fill="var(--white)" cx="336.566" cy="260.573" r="31.884"/>
-	<a class="svg-link" alt="$j[50]" href="https://docs.btcpayserver.org/integrations/woocommerce" target="black_">
+	<a class="svg-link" alt="{{50}}" href="https://docs.btcpayserver.org/integrations/woocommerce" target="black_">
 		<g id="woo">
 			<ellipse fill="var(--white)" cx="420.933" cy="175.752" rx="59.191" ry="60.715"/>
 			<g>
@@ -66,11 +66,11 @@
 			c-1.203,0.737-2.301,0.482-3.073-0.712c-0.584-0.899-0.895-1.917-1.016-2.967c-0.349-3.059,0.477-5.786,2.382-8.162
 			c0.248-0.31,0.547-0.59,0.863-0.823c1.262-0.93,2.546-0.66,3.369,0.686C430.282,171.445,430.645,172.954,430.645,175.213z"/>
 			</g>
-			<text transform="matrix(1 0 0 1 379.2344 253.2598)" font-family="'Open Sans'" class="alt-tooktip" font-size="12">$j[50]</text>
+			<text transform="matrix(1 0 0 1 379.2344 253.2598)" font-family="'Open Sans'" class="alt-tooktip" font-size="12">{{50}}</text>
 		</g>
 
 	</a>
-	<a class="svg-link" alt="$j[51]" href="https://docs.btcpayserver.org/integrations/drupal" target="black_">
+	<a class="svg-link" alt="{{51}}" href="https://docs.btcpayserver.org/integrations/drupal" target="black_">
 		<g id="drupal">
 			<circle fill="var(--white)" cx="40.639" cy="176.979" r="73.216"/>
 			<g>
@@ -88,7 +88,7 @@
 				<path fill="#29A9DF" d="M68.542,165.278c-0.014,7.204-5.829,12.942-13.104,12.928c-7.275-0.015-13.073-5.89-13.038-13.21
 			c0.034-7.157,5.915-12.938,13.152-12.93C62.852,152.071,68.554,157.874,68.542,165.278z"/>
 			</g>
-			<text transform="matrix(1 0 0 1 22.5425 272.0908)" font-family="'Open Sans'" class="alt-tooktip" font-size="12">$j[51]</text>
+			<text transform="matrix(1 0 0 1 22.5425 272.0908)" font-family="'Open Sans'" class="alt-tooktip" font-size="12">{{51}}</text>
 
 		</g>
 	</a>
@@ -105,7 +105,7 @@
 			c1.259,1.26,3.304,1.26,4.566,0l21.807-21.806C165.019,403.938,165.019,401.891,163.757,400.629z"/>
 		</g>
 	</g>
-	<a class="svg-link" alt="$j[52]" href="https://docs.btcpayserver.org/integrations/magento" target="black_">
+	<a class="svg-link" alt="{{52}}" href="https://docs.btcpayserver.org/integrations/magento" target="black_">
 		<g id="mag">
 			<circle fill="var(--white)" cx="416.3" cy="387.81" r="42.512"/>
 			<g>
@@ -132,7 +132,7 @@
 			c0,0.131-0.046,0.194-0.155,0.257c-1.779,1.024-3.56,2.053-5.339,3.081c-1.146,0.662-2.292,1.322-3.438,1.984
 			c-0.036,0.021-0.094,0.023-0.101,0.083C418.504,412.227,418.474,412.227,418.443,412.227z"/>
 			</g>
-			<text transform="matrix(1 0 0 1 391.291 460.3223)" font-family="'Open Sans'" class="alt-tooktip" font-size="12">$j[52]</text>
+			<text transform="matrix(1 0 0 1 391.291 460.3223)" font-family="'Open Sans'" class="alt-tooktip" font-size="12">{{52}}</text>
 
 		</g>
 	</a>
@@ -160,7 +160,7 @@
 			</g>
 		</g>
 	</g>
-	<a class="svg-link" alt="$j[53]" href="https://docs.btcpayserver.org/integrations/prestashop" target="black_">
+	<a class="svg-link" alt="{{53}}" href="https://docs.btcpayserver.org/integrations/prestashop" target="black_">
 		<g id="presta">
 			<circle fill="var(--white)" cx="-17.099" cy="336.089" r="54.785"/>
 			<g>
@@ -520,7 +520,7 @@
 				C-6.641,358.6-6.664,358.577-6.664,358.555L-6.664,358.555z"/>
 				</g>
 			</g>
-			<text transform="matrix(1 0 0 1 -45.0356 415.6689)" font-family="'Open Sans'" class="alt-tooktip" font-size="12">$j[53]</text>
+			<text transform="matrix(1 0 0 1 -45.0356 415.6689)" font-family="'Open Sans'" class="alt-tooktip" font-size="12">{{53}}</text>
 		</g>
 	</a>
 	<g id="btc">

@@ -24,7 +24,8 @@ langs.forEach(lang => {
     return res
   }, [])
 
-  const rendered = replaceTemplateVars(template, { p: parts })
+  const vars = Object.assign({}, parts) // convert array to object
+  const rendered = replaceTemplateVars(template, vars)
 
   saveFile(`vtt/${lang}.vtt`, rendered)
 })
