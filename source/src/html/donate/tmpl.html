@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html dir="{{_to}}">
-
+<html dir="{{_to}}" data-theme="light">
   <head>
     <meta charset=UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -15,17 +14,13 @@
     <link rel="stylesheet" type="text/css" href="/css/fa_.min.css">
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <link rel="stylesheet" type="text/css" href="/css/page-styles.css">
-    <script>
-      window.jsEnviron = true;
-    </script>
   </head>
-
   <body>
-    <div id="p-nm-co-ho" class="theme {{_thrFor}}">
+    <div id="p-nm-co-ho">
       <div class="pageContainerTopBackground sh-pg __fal-{{_rl}}">
-        <div class="">
-                    {{_menTemp}}
-                </div>
+        <div>
+          {{_menTemp}}
+        </div>
 
         <!-- START PAGE CONTENTS -->
 
@@ -59,13 +54,11 @@
         <!-- END PAGE CONTENTS -->
 
         <div class="blockGreenFoot">
-{{_ftblk}}
+          {{_ftblk}}
+        </div>
       </div>
-      </div>
-
     </div>
     <!-- END OF p-nm-co-ho -->
-
   </body>
   <script>
     var icons = document.getElementById("donGr");
@@ -129,5 +122,5 @@
       }
     }
   </script>
-
+  <script src="/js/scripts.js"></script>
 </html>

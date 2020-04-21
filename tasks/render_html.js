@@ -70,26 +70,7 @@ langs.forEach(lang => {
 
   // files
   saveFile(`${directory}index.html`, replaceTemplateVars(indexTmpl, tmplVars))
-
-  let pages = ["donate"];
-  let themes = ["light", "dark"];
-
-  pages.forEach(page => {
-    tmplVars._menTemp = replaceTemplateVars(menuTmpl, tmplVars)
-    saveFile(`${directory}/${page}/index.html`, replaceTemplateVars(donateTmpl, tmplVars))
-  })
-
-  themes.forEach(theme => {
-    tmplVars._thrFor = theme;
-    tmplVars._menTemp = replaceTemplateVars(menuTmpl, tmplVars)
-    saveFile(`${directory}/${theme}/index.html`, replaceTemplateVars(indexTmpl, tmplVars))
-
-    pages.forEach(page => {
-      tmplVars._menTemp = replaceTemplateVars(menuTmpl, tmplVars)
-      saveFile(`${directory}/${theme}/${page}/index.html`, replaceTemplateVars(donateTmpl, tmplVars))
-    })
-    tmplVars._thrFor = '';
-  })
+  saveFile(`${directory}/donate/index.html`, replaceTemplateVars(donateTmpl, tmplVars))
 })
 
 console.log('✅  HTML: Rendering done …')

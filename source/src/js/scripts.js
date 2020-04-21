@@ -35,10 +35,38 @@ if (document.querySelectorAll(".selector-no-js").length > 0) {
     document.querySelectorAll(".selector-no-js")[0].checked = true;
 }
 
+// Theme Switch
+const COLOR_MODES = ["light", "dark"];
+const systemColorMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+const userColorMode = window.localStorage.getItem('colorMode');
+const initialColorMode = COLOR_MODES.includes(userColorMode) ? userColorMode : systemColorMode;
 
+function setColorMode (mode) {
+  if (COLOR_MODES.includes(mode)) {
+    window.localStorage.setItem("colorMode", mode);
+    document.documentElement.setAttribute("data-theme", mode);
+
+    const serverImage = document.getElementById("server-image");
+    const invoiceImage = document.getElementById("invoice-image");
+    if (serverImage) serverImage.setAttribute("src", "/img/server-" + mode + ".png");
+    if (invoiceImage) invoiceImage.setAttribute("src", "/img/invoice-" + mode + ".svg");
+  }
+}
+
+setColorMode(initialColorMode);
+
+document.querySelectorAll("[data-theme-switch]").forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const mode = link.getAttribute("data-theme-switch");
+    setColorMode(mode);
+  })
+})
+
+// Integrations and plugins
 document.querySelectorAll("a").forEach(function (e) {
     try {
-        "#" == e.getAttribute("href").substr(0, 1) && "#_" != e.getAttribute("href").substr(0, 2) && e.addEventListener("click", function (t) {
+        "#" == e.getAttribute("href").substr(0, 1) && e.getAttribute("href").length > 1 && "#_" != e.getAttribute("href").substr(0, 2) && e.addEventListener("click", function (t) {
             return t.preventDefault(), scrollTo(document.getElementById(e.getAttribute("href").replace("#", "")), 50), !1
         })
     } catch (e) { }
@@ -98,7 +126,7 @@ if (document.getElementById("backgroundBubbles")) {
     var t;
     t = "#_IM0_1_" + window.theme;
     if (window.theme && window.theme !== "light" && window.theme !== "dark") {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) { 
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             t = "#_IM0_1_dark";
         } else {
             t = "#_IM0_1_light";
