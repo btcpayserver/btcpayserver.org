@@ -21,6 +21,7 @@ const LANGUAGE_NAMES = {
   hi: 'हिन्दी',
   hr: 'Hrvatski',
   hu_HU: 'Magyar',
+  id: 'Indonesian',
   it_IT: 'Italiano',
   ja_JP: '日本語',
   ko: '한국어',
