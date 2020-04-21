@@ -75,22 +75,18 @@ langs.forEach(lang => {
   let themes = ["light", "dark"];
 
   pages.forEach(page => {
-    tmplVars.thisPage = "/"+page;
-    tmplVars.menTemp = replaceTemplateVars(menuTmpl, tmplVars)
+    tmplVars._menTemp = replaceTemplateVars(menuTmpl, tmplVars)
     saveFile(`${directory}/${page}/index.html`, replaceTemplateVars(donateTmpl, tmplVars))
-    tmplVars.thisPage = '';
   })
 
   themes.forEach(theme => {
     tmplVars._thrFor = theme;
-    tmplVars.menTemp = replaceTemplateVars(menuTmpl, tmplVars)
+    tmplVars._menTemp = replaceTemplateVars(menuTmpl, tmplVars)
     saveFile(`${directory}/${theme}/index.html`, replaceTemplateVars(indexTmpl, tmplVars))
 
     pages.forEach(page => {
-      tmplVars.thisPage = "/"+page;
-      tmplVars.menTemp = replaceTemplateVars(menuTmpl, tmplVars)
+      tmplVars._menTemp = replaceTemplateVars(menuTmpl, tmplVars)
       saveFile(`${directory}/${theme}/${page}/index.html`, replaceTemplateVars(donateTmpl, tmplVars))
-      tmplVars.thisPage = '';
     })
     tmplVars._thrFor = '';
   })
