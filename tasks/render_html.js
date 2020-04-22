@@ -37,7 +37,7 @@ console.log(`ℹ️  HTML: Rendering ${langs.length} translations …`)
 
 langs.forEach(lang => {
   const [lng] = lang.split('_')
-  const isRtl = ['he', 'ar'].includes(lng)
+  const isRtl = ['ar', 'fa', 'he'].includes(lng)
   const directory = lng === 'en' ? '' : lng === 'en_GB' ? '' : `${lang}/`
   const translations   = getTransifexJSON(`en-json/translation/${lang}`)
   const lngName = getLanguageName(lang)
