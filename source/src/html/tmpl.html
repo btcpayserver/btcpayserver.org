@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="{{_to}}">
+<html dir="{{_to}}" data-theme="light">
 
 <head>
 	<meta charset=UTF-8>
@@ -14,10 +14,6 @@
 	<title>BTCPay Server</title>
 	<link rel="stylesheet" type="text/css" href="/css/fa_.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/styles.css">
-	<script>
-		window.jsEnviron = true;
-		window.theme = "{{_thrFor}}";
-	</script>
 	<!-- Schema.org JSON-LD Markup for Search Engine Optimization -->
 	<script type='application/ld+json'>
             {
@@ -56,35 +52,32 @@
 </head>
 
 <body>
-	<div id="p-nm-co-ho" class="theme {{_thrFor}}">
+	<div id="p-nm-co-ho">
 		<div class="pageContainerTopBackground __fal-{{_rl}}">
-			<div class="">
+			<div>
 				{{_menTemp}}
 			</div>
 
 			<div class="promoArea" id="promoArea">
 				<div class="promoDetails __fal-{{_rl}}">
 					<h1 alt="{{start-accepting-bitcoin}}" former_="{{start-accepting-bitcoin}}">{{start-accepting-bitcoin}}</h1>
-					<p>{{btcpay-server-is-proudly-free}}
-					</p>
-					<div class="prpmpLinkOrg {{_align}}" dir="{{_to}}">
+          <p>{{btcpay-server-is-proudly-free}}</p>
 
+					<div class="prpmpLinkOrg {{_align}}" dir="{{_to}}">
 						<a alt="{{live-demo}}" class="button-pri button" href="#watchVideo" target="blank_">{{learn-more}}&nbsp;&nbsp;<i
 								class="fas fa-play-circle"></i>
-						</a>
+            </a>
 
 						<a href="{{_lngst}}donate" class="button-sec button">{{donate}}&nbsp;&nbsp;<i class="fas fa-arrow-{{_rl}}"></i>
 						</a>
-
 					</div>
 				</div>
 				<div class="pos-rel">
 					<div class="dotted-back dots1"></div>
 
 					<div class="hero-artwork">
-						<img src="/img/server-{{_thrFor}}.png" class="i-a" />
-						<img src="/img/invoice-{{_thrFor}}.svg" class="i-b" />
-
+						<img id="server-image" src="/img/server-light.png" class="i-a" />
+						<img id="invoice-image" src="/img/invoice-light.svg" class="i-b" />
 					</div>
 				</div>
 			</div>
@@ -92,7 +85,6 @@
 		</div>
 
 		<div class="pageContainer" id="pageContainer">
-
 			<div class="pageItem">
 				<div class="blockTrioMP">
 					<div class="trioMPBlockItem">
@@ -112,7 +104,6 @@
 
 			<div class="features-section-parent">
 				<div class="features-section __fal-{{_rl}}">
-
 					<ul>
 						<li>
 							<input class="selector-no-js" name="z" type="radio" checked />
@@ -128,10 +119,8 @@
 										href="https://docs.btcpayserver.org/features/apps" target="blank_">{{learn-more}}&nbsp;&nbsp;<i
 											class="fas fa-long-arrow-alt-{{_rl}}"></i>
 									</a>
-
 								</div>
 							</div>
-
 						</li>
 
 						<li>
@@ -150,11 +139,9 @@
 									</a>
 								</div>
 							</div>
-
 						</li>
 
 						<!-- condensed -->
-
 						<li>
 							<input class="selector-no-js" name="z" type="radio" />
 							<div class="preview-selector-">
@@ -166,7 +153,6 @@
 									<p>{{manage-your-incoming}}</p>
 								</div>
 							</div>
-
 						</li>
 						<!-- condensed -->
 
@@ -182,11 +168,8 @@
 									<p>{{by-sharing-your}}</p>
 								</div>
 							</div>
-
 						</li>
-
 					</ul>
-
 				</div>
 			</div>
 
@@ -1358,5 +1341,4 @@
 	<!-- END OF THEME CONTAINER -->
 </body>
 <script src="/js/scripts.js"></script>
-
 </html>

@@ -1,12 +1,3 @@
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Open Sans", Arial, Tahoma, Lato, sans-serif;
-  width: 100vw;
-  overflow-x: hidden;
-  font-weight: 200;
-}
-.theme,
 :root {
   --lime: #00c000;
   --sunkist-lime: #1ba000;
@@ -36,96 +27,37 @@ body {
   --persistent-shadow: rgba(0, 0, 0, 0.3);
   --persistent-shadow-light: rgba(0, 0, 0, 0.1);
 }
-@media (prefers-color-scheme: dark) {
-  .theme,
-  :root {
-    --lime: #00c000;
-    --sunkist-lime: #1ba000;
-    --primary-green: #51b13e;
-    --secondary-green: #cedc21;
-    --tertiary-green: #077d38;
-    --light-grey: #444;
-    --grey: #b0b0b0;
-    --dark-grey: #d9d9d9;
-    --dark-green: #003822;
-    --light-grey-greenish: #333;
-    --white: #292929;
-    --black: #eee;
-    --rust: #e85442;
-    --don-b-fs: 20px;
-    --error: rgb(223, 0, 45);
-    --shadow-1: rgba(255, 255, 255, 0.01);
-    --shadow-10: rgba(255, 255, 255, 0.1);
-    --shadow-20: rgba(255, 255, 255, 0.2);
-    --shadow-30: rgba(255, 255, 255, 0.3);
-    --shadow-40: rgba(255, 255, 255, 0.4);
-    --shadow-50: rgba(255, 255, 255, 0.5);
-    --theme-display-dark: none;
-    --theme-display-light: grid;
-    --persistent-white: #fff;
-    --persistent-black: #000;
-    --persistent-shadow: rgba(0, 0, 0, 0.3);
-    --persistent-shadow-light: rgba(0, 0, 0, 0.1);
-  }
-}
-.theme.dark {
-  --lime: #00c000 !important;
-  --sunkist-lime: #1ba000 !important;
-  --primary-green: #51b13e !important;
-  --secondary-green: #cedc21 !important;
-  --tertiary-green: #077d38 !important;
-  --light-grey: #444 !important;
-  --grey: #b0b0b0 !important;
-  --dark-grey: #d9d9d9 !important;
-  --dark-green: #003822 !important;
-  --light-grey-greenish: #333 !important;
-  --white: #292929 !important;
-  --black: #eee !important;
-  --rust: #e85442 !important;
-  --don-b-fs: 20px !important;
-  --error: rgb(223, 0, 45) !important;
-  --shadow-1: rgba(255, 255, 255, 0.01) !important;
-  --shadow-10: rgba(255, 255, 255, 0.1) !important;
-  --shadow-20: rgba(255, 255, 255, 0.2) !important;
-  --shadow-30: rgba(255, 255, 255, 0.3) !important;
-  --shadow-40: rgba(255, 255, 255, 0.4) !important;
-  --shadow-50: rgba(255, 255, 255, 0.5) !important;
+
+:root[data-theme="dark"] {
+  --tertiary-green: #077d38;
+  --light-grey: #444;
+  --grey: #b0b0b0;
+  --dark-grey: #d9d9d9;
+  --dark-green: #003822;
+  --light-grey-greenish: #333;
+  --white: #292929;
+  --black: #eee;
+  --shadow-1: rgba(255, 255, 255, 0.01);
+  --shadow-10: rgba(255, 255, 255, 0.1);
+  --shadow-20: rgba(255, 255, 255, 0.2);
+  --shadow-30: rgba(255, 255, 255, 0.3);
+  --shadow-40: rgba(255, 255, 255, 0.4);
+  --shadow-50: rgba(255, 255, 255, 0.5);
   --theme-display-dark: none;
   --theme-display-light: grid;
-  --persistent-white: #fff;
-  --persistent-black: #000;
-  --persistent-shadow: rgba(0, 0, 0, 0.3);
-  --persistent-shadow-light: rgba(0, 0, 0, 0.1);
 }
-.theme.light {
-  --lime: #00c000 !important;
-  --sunkist-lime: #1ba000 !important;
-  --primary-green: #51b13e !important;
-  --secondary-green: #cedc21 !important;
-  --tertiary-green: #077d38 !important;
-  --light-grey: #f8f9fa !important;
-  --grey: #8d8d8f !important;
-  --dark-grey: #333 !important;
-  --dark-green: #003822 !important;
-  --light-grey-greenish: #e6f5e9 !important;
-  --white: #fff !important;
-  --black: #292929 !important;
-  --rust: #e85442 !important;
-  --don-b-fs: 20px !important;
-  --error: rgb(223, 0, 45) !important;
-  --shadow-1: rgba(0, 0, 0, 0.01) !important;
-  --shadow-10: rgba(0, 0, 0, 0.1) !important;
-  --shadow-20: rgba(0, 0, 0, 0.2) !important;
-  --shadow-30: rgba(0, 0, 0, 0.3) !important;
-  --shadow-40: rgba(0, 0, 0, 0.4) !important;
-  --shadow-50: rgba(0, 0, 0, 0.5) !important;
-  --theme-display-dark: grid;
-  --theme-display-light: none;
-  --persistent-white: #fff;
-  --persistent-black: #000;
-  --persistent-shadow: rgba(0, 0, 0, 0.3);
-  --persistent-shadow-light: rgba(0, 0, 0, 0.1);
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", Arial, Tahoma, Lato, sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+  font-weight: 200;
+  color: var(--black);
+  background: var(--white);
 }
+
 .integrations-grid {
   display: grid;
   width: 100%;
@@ -333,10 +265,6 @@ text {
 }
 .go_light {
   display: var(--theme-display-light);
-}
-.theme {
-  color: var(--black);
-  background: var(--white);
 }
 .icon-text path,
 .icon-text polygon {
