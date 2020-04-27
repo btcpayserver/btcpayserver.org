@@ -395,7 +395,7 @@ a {
 .hero-artwork {
   max-height: 600px;
   height: 60vh;
-  min-height: 500px;
+  min-height: calc(280px*1.856 + 20px);
   position: relative;
   max-width: 860px;
   display: grid;
@@ -1869,6 +1869,10 @@ figure {
   .features-section > ul {
     width: 100vw;
   }
+  .svg-link::before {
+    border: 18px solid var(--white);
+    box-shadow: 0 12px 18px var(--persistent-shadow-light);
+}
 }
 @media (max-width: 700px) {
   .integrations-grid {
@@ -1884,6 +1888,7 @@ figure {
     margin: 0 auto 40px auto;
   }
   .svg-link::before {
+    border: 20px solid transparent;
     height: 15vw !important;
     width: 15vw !important;
   }
