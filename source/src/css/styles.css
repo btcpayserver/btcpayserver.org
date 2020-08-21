@@ -815,6 +815,7 @@ img.n_imagery {
 }
 .menuTrigger {
   display: none;
+  cursor: pointer;
 }
 .prpmpLinkOrg {
   display: inline-flex;
@@ -1121,12 +1122,6 @@ a.nonJavascriptMessage {
   height: 50px;
   width: 100px;
 }
-.menuContents {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
 .menuLinkParent {
   display: inline-grid;
   cursor: pointer;
@@ -1135,8 +1130,12 @@ a.nonJavascriptMessage {
   color: var(--black);
   font-weight: 300;
   font-size: 14px;
-  padding: 0.5rem 1em;
+  padding: 1rem;
   transition: 0.5s ease;
+  min-height: 50px;
+}
+.menuLinkParent.mobileOnly:last-child {
+  margin-top: 20px;
 }
 .menuLink:hover {
   box-shadow: 0 2px;
@@ -2076,7 +2075,7 @@ figure {
   .menuContentsMobile a:not(.mobileCloseOpenNOJS),
   .menuLink:not(.mobileCloseOpenNOJS) {
     font-size: 1.5rem;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
   }
   .button-light {
     padding: 0.5rem 1rem !important;
@@ -2087,15 +2086,13 @@ figure {
     min-width: 21px;
   }
   .menuContentsMobile {
-    display: grid;
-    grid-auto-flow: row;
     justify-content: right;
     text-align: right;
     background: var(--light-grey);
     position: fixed;
     right: 0;
     top: 0;
-    padding: 20px 20px 20vh 20px;
+    padding: 20px;
     z-index: 2;
     width: calc(100vw - 40px);
     max-width: 400px;
@@ -2108,6 +2105,10 @@ figure {
     overflow-x: hidden;
     overflow-y: scroll;
     box-shadow: -10px 0 40px 0 var(--persistent-shadow);
+  }
+  .menuContentsGrid {
+    display: grid;
+    grid-auto-flow: row;
   }
   #menuTrigger:checked ~ #menuContents {
     opacity: 1;
