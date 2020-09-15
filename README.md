@@ -32,7 +32,7 @@ If you would like to help us translate btcpayserver.org, please [join the team o
 
 Translations are only handled through Transifex, please do not create a pull request for translations.
 
-For more information on contributing by translating, [check the translation guides](https://docs.btcpayserver.org/support-and-community/translate)
+For more information on contributing by translating, [check the translation guides](https://docs.btcpayserver.org/Contribute/ContributeTranslate/)
 
 Translators can opt-in to be notified when new strings require translating for a language they're subscribed to.
 
