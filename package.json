@@ -26,7 +26,8 @@
     "optimize": "npm-run-all -p optimize:*",
     "optimize:styles": "csso dist/css/styles.css --output dist/css/styles.css",
     "optimize:page-styles": "csso dist/css/page-styles.css --output dist/css/page-styles.css",
-    "prod": "NODE_ENV=production npm-run-all build optimize"
+    "prod": "NODE_ENV=production npm-run-all build optimize",
+    "netlify": "npm run init && npm run prod"
   },
   "keywords": [
     "BTCPayServer"
