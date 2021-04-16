@@ -1,5 +1,6 @@
 {
   "docs": "Docs",
+  "api": "API",
   "blog": "Blog",
   "github": "GitHub",
   "community": "Community",
@@ -28,7 +29,6 @@
   "getting-started": "Getting Started",
   "faq": "FAQ",
   "support": "Support",
-  "___ignore_this": "IGNORE THIS: This item is just here so that we can upgrade in a backwards compatible manner. Remove after template switch to object based translation structure.",
   "directory": "Directory",
   "btcpay-server-is-a-self-hosted": "BTCPay Server is a self-hosted, open-source cryptocurrency payment processor. It's secure, private, censorship-resistant and free.",
   "corporate-donations": "Corporate Donations",
