@@ -1,7 +1,11 @@
 name: Build
 
 on:
+  # Run the build for pushes and pull requests targeting master
   push:
+    branches:
+      - master
+  pull_request:
     branches:
       - master
 
@@ -34,7 +38,7 @@ jobs:
         CI: true
         TRANSIFEX_TOKEN: ${{ secrets.TRANSIFEX_TOKEN }}
     - name: Deploy
-      if: success()
+      if: success() && github.ref == 'refs/heads/master'
       uses: maxheld83/ghpages@v0.2.1
       env:
         BUILD_DIR: dist/
