@@ -50,7 +50,7 @@
   "use-a-shared": "Use a shared server if you're not tech savvy, or deploy your  own instance on cloud servers or hardware devices.",
   "by-sharing-your": "By sharing your server you can support friends or your local community.",
   "automation-via-api": "Automation via the API",
-  "automation-via-api-text": "Our API offers programmatic access to your instance. Manage your BTCPay Server (e.g. stores, invoices, users) and automate your workflows.",
+  "automation-via-api-text": "Manage your BTCPay Server (e.g. stores, invoices, users), automate your workflows and control access with our API.",
   "launch-a-server": "Launch a server in a cloud, your own hardware device or use an existing host.",
   "connect-your-e-commerce": "Connect your e-commerce store or use one of  many apps to get paid.",
   "funds-arrive-directly": "Funds arrive directly to your connected wallet.",
