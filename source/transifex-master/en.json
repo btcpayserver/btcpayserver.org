@@ -65,7 +65,6 @@
   "wordpress": "WordPress",
   "tor": "Tor",
   "integrations-and-plugins": "Integrations and plugins",
-  "integrations-and-plugins-api-text": "And there is also our API, which offers full programmatic access to your BTCPay Server instance.",
   "content-released-under": "Content Released under MIT license.",
   "this-website-does": "This website does not use cookies nor collect personal data."
 }
