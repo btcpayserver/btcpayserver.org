@@ -1,11 +1,7 @@
 name: Build
 
 on:
-  # Run the build for pushes and pull requests targeting master
   push:
-    branches:
-      - master
-  pull_request:
     branches:
       - master
 
@@ -27,7 +23,6 @@ jobs:
       run: npm ci
     - name: Build
       run: |
-        TRANSIFEX_TOKEN="${{ secrets.TRANSIFEX_TOKEN }}" node tasks/download_translations.js
         npm run init
         npm run prod
         # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
