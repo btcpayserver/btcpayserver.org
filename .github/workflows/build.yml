@@ -27,7 +27,7 @@ jobs:
       run: npm ci
     - name: Build
       run: |
-        echo TRANSIFEX_TOKEN="$TRANSIFEX_TOKEN" > .env
+        TRANSIFEX_TOKEN="${{ secrets.TRANSIFEX_TOKEN }}" node tasks/download_translations.js
         npm run init
         npm run prod
         # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
