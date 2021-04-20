@@ -1,5 +1,6 @@
 {
   "docs": "Docs",
+  "api": "API",
   "blog": "Blog",
   "github": "GitHub",
   "community": "Community",
@@ -28,7 +29,6 @@
   "getting-started": "Getting Started",
   "faq": "FAQ",
   "support": "Support",
-  "___ignore_this": "IGNORE THIS: This item is just here so that we can upgrade in a backwards compatible manner. Remove after template switch to object based translation structure.",
   "directory": "Directory",
   "btcpay-server-is-a-self-hosted": "BTCPay Server is a self-hosted, open-source cryptocurrency payment processor. It's secure, private, censorship-resistant and free.",
   "corporate-donations": "Corporate Donations",
@@ -49,6 +49,8 @@
   "self-host-or-use": "Self-host or use a shared server",
   "use-a-shared": "Use a shared server if you're not tech savvy, or deploy your  own instance on cloud servers or hardware devices.",
   "by-sharing-your": "By sharing your server you can support friends or your local community.",
+  "automation-via-api": "Automation via the API",
+  "automation-via-api-text": "Manage your BTCPay Server (e.g. stores, invoices, users), automate your workflows and control access with our API.",
   "launch-a-server": "Launch a server in a cloud, your own hardware device or use an existing host.",
   "connect-your-e-commerce": "Connect your e-commerce store or use one of  many apps to get paid.",
   "funds-arrive-directly": "Funds arrive directly to your connected wallet.",
