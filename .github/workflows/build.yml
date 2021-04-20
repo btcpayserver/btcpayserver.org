@@ -1,18 +1,13 @@
 name: Build
 
 on:
-  # Run the build for pushes and pull requests targeting master
   push:
-    branches:
-      - master
-  pull_request:
     branches:
       - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [14]
