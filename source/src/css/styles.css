@@ -1192,9 +1192,6 @@ a.nonJavascriptMessage {
   display: var(--grid, grid);
   background: linear-gradient(var(--light-grey), var(--white));
 }
-.pageContainerTopBackground.sh-pg {
-  background: linear-gradient(var(--shadow-10) 0%, var(--white) 10%);
-}
 .flu_bgH {
   display: block;
   position: absolute;
