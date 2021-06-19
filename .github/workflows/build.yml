@@ -25,10 +25,6 @@ jobs:
       run: |
         npm run init
         npm run prod
-        # https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
-        touch dist/.nojekyll
-        # https://help.github.com/en/articles/managing-a-custom-domain-for-your-github-pages-site
-        echo btcpayserver.org > dist/CNAME
       env:
         CI: true
         TRANSIFEX_TOKEN: ${{ secrets.TRANSIFEX_TOKEN }}
@@ -37,4 +33,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         publish_dir: ./dist
-        github_token: ${{ secrets.GH_PAT }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        cname: btcpayserver.org
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
