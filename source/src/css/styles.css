@@ -374,15 +374,20 @@ a {
   display: none;
 }
 .video-holder-watch-video {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   background: linear-gradient(
     var(--light-grey-greenish),
     var(--light-grey-greenish)
   );
-  margin: -50px auto -50px auto !important;
+  margin: -50px 0 !important;
   width: 100%;
-  padding: 50px 0;
+  padding: 50px 20px;
+}
+.video-holder-watch-video h3 {
+  margin-top: 0
+}
+.video-holder-watch-video + .video-holder-watch-video {
+  margin-top: 0 !important;
 }
 .check-list {
   margin-left: 2rem;
@@ -2038,7 +2043,7 @@ figure {
     width: 100vw;
   }
   .unfetteredVideoFrame {
-    --w0: 100vw;
+    --w0: 80vw;
     height: calc(var(--w0) / 1.77);
     width: var(--w0);
   }
