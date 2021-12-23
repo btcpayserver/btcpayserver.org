@@ -146,7 +146,7 @@ body {
   width: 100px;
 }
 .api {
-  grid-column: 4/8;
+  grid-column: 3/8;
   grid-row: 1/4;
 }
 .svg-link.wp::before {
@@ -165,8 +165,8 @@ body {
   background-size: 70px;
 }
 .woo {
-  grid-column: 7/10;
-  grid-row: 2/5;
+  grid-column: 8/10;
+  grid-row: 1/5;
 }
 .svg-link.drupal::before {
   background-image: url(/img/drupal.svg);
@@ -194,6 +194,15 @@ body {
 .mag {
   grid-column: 7/8;
   grid-row: 5/8;
+}
+.svg-link.zapier::before {
+  background-image: url(/img/zapier.svg);
+  height: 70px;
+  width: 70px;
+}
+.zapier {
+  grid-column: 5/10;
+  grid-row: 5/2;
 }
 .svg-link.presta::before {
   background-image: url(/img/presta.svg);

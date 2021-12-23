@@ -19,8 +19,8 @@
     "start:serve": "browser-sync start --no-open --watch --server dist",
     "build": "npm-run-all clean -p build:*",
     "build:static": "cp -r source/src/static/* dist",
-    "build:scripts": "cp -r source/src/js/ dist/js",
-    "build:styles": "cp -r source/src/css/ dist/css",
+    "build:scripts": "cp -r source/src/js dist",
+    "build:styles": "cp -r source/src/css dist",
     "build:html": "node tasks/render_html.js",
     "build:vtt": "node tasks/render_vtt.js",
     "optimize": "npm-run-all -p optimize:*",
@@ -33,7 +33,7 @@
     "BTCPayServer"
   ],
   "devDependencies": {
-    "browser-sync": "2.27.5",
+    "browser-sync": "2.27.7",
     "csso-cli": "3.0.0",
     "dotenv": "10.0.0",
     "npm-run-all": "4.1.5",
