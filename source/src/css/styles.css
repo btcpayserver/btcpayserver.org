@@ -195,6 +195,15 @@ body {
   grid-column: 7/8;
   grid-row: 5/8;
 }
+.svg-link.zapier::before {
+  background-image: url(/img/zapier.svg);
+  height: 70px;
+  width: 70px;
+}
+.zapier {
+  grid-column: 4/10;
+  grid-row: 7/2;
+}
 .svg-link.presta::before {
   background-image: url(/img/presta.svg);
   height: 70px;
