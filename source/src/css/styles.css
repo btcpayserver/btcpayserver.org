@@ -943,7 +943,7 @@ a.nonJavascriptMessage {
   position: absolute;
 }
 .unfetteredVideoFrame {
-  border-radius: 0;
+  border: 0;
   overflow: hidden;
   box-shadow: 0 10px 40px var(--shadow-50);
   -webkit-box-shadow: unset !important;
