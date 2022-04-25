@@ -67,6 +67,10 @@ npm run prod
 
 ### transifex-master
 
-This directory contains the master `.json` file with english strings used as a transifex resource.
-Append the `.json` file, preserving the JSON format, to allow transifex to read it for updates automatically.
+This directory contains the [master `.json` file](source/transifex-master/en.json) with english strings used as a transifex resource.
+
+If you want to add new strings, append the `.json` file, preserving the JSON format.
+
 Modifying existing strings may cause the already-translated strings to be lost (see: https://docs.transifex.com/projects/updating-content#section-using-the-api-or-command-line-client for more details).
+
+Afterwards the new master file needs to be added to Transifex again. ([Link](https://www.transifex.com/btcpayserver/btcpayserver-website/en-json/) > Update source file)
