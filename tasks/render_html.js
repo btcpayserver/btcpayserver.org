@@ -8,7 +8,7 @@ const {
 } = require('./util')
 
 // Render html templates
-const langs = getLanguages('en-json')
+const langs = getLanguages('website')
 const indexTmpl = getTemplate('html/tmpl.html')
 const donateTmpl = getTemplate('html/donate/tmpl.html')
 const menuTmpl = getTemplate('html/menu-tmpl.html')
@@ -39,10 +39,10 @@ langs.forEach(lang => {
   const [lng] = lang.split('_')
   const isRtl = ['ar', 'fa', 'he'].includes(lng)
   const directory = lng === 'en' ? '' : lng === 'en_GB' ? '' : `${lang}/`
-  const translations   = getTransifexJSON(`en-json/translation/${lang}`)
+  const translations   = getTransifexJSON(`website/translation/${lang}`)
   const lngName = getLanguageName(lang)
   if (!lngName) {
-    console.warn(`🛑  Missing language name for "${lang}" – please add it to the LANGUAGE_NAMES in tasks/util.js`)
+    console.warn(`🛑 Missing language name for "${lang}" – please add it to the LANGUAGE_NAMES in tasks/util.js`)
   }
 
   const _sub = lngName || lang
@@ -73,4 +73,4 @@ langs.forEach(lang => {
   saveFile(`${directory}/donate/index.html`, replaceTemplateVars(donateTmpl, tmplVars))
 })
 
-console.log('✅  HTML: Rendering done …')
+console.log('✅ HTML: Rendering done …')

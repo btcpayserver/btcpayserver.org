@@ -45,7 +45,7 @@ const LANGUAGE_NAMES = {
 }
 
 function getTemplate(name) {
-  const file = resolve(__dirname, `../source/src/${name}`)
+  const file = resolve(__dirname, `../src/${name}`)
 
   try {
     return readFileSync(file, 'utf8')
@@ -55,7 +55,7 @@ function getTemplate(name) {
 }
 
 function getTransifexJSON(resource) {
-  const file = resolve(__dirname, `../transifex/${resource}.json`)
+  const file = resolve(__dirname, `../transifex/download/${resource}.json`)
 
   try {
     const content = readFileSync(file, 'utf8')
@@ -69,7 +69,7 @@ function getTransifexJSON(resource) {
 // returns an array of available languages.
 // here we can also filter based on completeness.
 function getLanguages (resource, completenessThreshold = 90) {
-  const stats = getTransifexJSON(`${resource}/stats/`)
+  const stats = getTransifexJSON(`${resource}/stats`)
 
   return Object.keys(stats).reduce((res, lang) => {
     const { completed } = stats[lang]

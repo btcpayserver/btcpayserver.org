@@ -2,11 +2,11 @@ git:
   filters:
     - filter_type: file
       file_format: KEYVALUEJSON
-      source_file: source/transifex-master/en.json
+      source_file: transifex/resources/website.json
       source_language: en
-      translation_files_expression: 'transifex/en-json/translation/<lang>.json'
+      translation_files_expression: 'transifex/translations/website/<lang>.json'
     - filter_type: file
       file_format: KEYVALUEJSON
-      source_file: source/transifex-master/video_en.json
+      source_file: transifex/resources/video.json
       source_language: en
-      translation_files_expression: 'transifex/video_en-json/translation/<lang>.json'
+      translation_files_expression: 'transifex/translations/video/<lang>.json'

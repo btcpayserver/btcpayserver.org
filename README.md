@@ -14,15 +14,17 @@ Please do not open issues not related to the website in this repository. If you 
 
 ### Source files
 
-All changes to the website should be applied in the `source` folder.
+All changes to the website should be applied in the `src` folder.
 
-The files in the `source` are used in conjunction with the Transifex resources to make the btcpayserver.org website.
+The files in the `src` are used in conjunction with the `transifex/resources` to make the btcpayserver.org website.
 
-Create pull requests affecting the css, js, images etc in the `source`-- and once merged, the changes will be used to roll out updates to the main directory.
+Create pull requests affecting the CSS, JS, images etc in the `src`-- and once merged, the changes will be used to roll out updates to the main directory.
 
-To fix spelling or grammatical errors, make updates to either the English string(s) in the relevant file of the `source` directory or any of the **non-English** translations via the Transifex website.
+Please **do not** submit any changes to the html files other than those within the `src` directory.
 
-Please **do not** submit any changes to the html files other than those within the `source` directory.
+To fix spelling or grammatical errors, make updates to either the English string(s) in the relevant file of the `transifex/resources` directory or any of the **non-english** translations via the Transifex website. If you want to add new strings, append the `.json` file, preserving the JSON format.
+
+Modifying existing strings may cause the already-translated strings to be lost ([more details](https://docs.transifex.com/projects/updating-content#section-using-the-api-or-command-line-client)).
 
 ### Translating the website
 
@@ -64,13 +66,3 @@ npm start
 # Build the site for production
 npm run prod
 ```
-
-### transifex-master
-
-This directory contains the [master `.json` file](source/transifex-master/en.json) with english strings used as a transifex resource.
-
-If you want to add new strings, append the `.json` file, preserving the JSON format.
-
-Modifying existing strings may cause the already-translated strings to be lost (see: https://docs.transifex.com/projects/updating-content#section-using-the-api-or-command-line-client for more details).
-
-Afterwards the new master file needs to be added to Transifex again. ([Link](https://www.transifex.com/btcpayserver/btcpayserver-website/en-json/) > Update source file)
