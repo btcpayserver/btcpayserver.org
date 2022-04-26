@@ -155,8 +155,17 @@ body {
   width: 90px;
 }
 .wp {
-  grid-column: 9/11;
-  grid-row: 4/7;
+  grid-column: 8/11;
+  grid-row: 5/9;
+}
+.svg-link.shopify::before {
+  background-image: url(/img/shopify.svg);
+  height: 70px;
+  width: 70px;
+}
+.shopify {
+  grid-column: 12/10;
+  grid-row: 1/7;
 }
 .svg-link.woo::before {
   background-image: url(/img/woo.svg);
