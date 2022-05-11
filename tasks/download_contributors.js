@@ -18,8 +18,8 @@ function fetchContributorList() {
         let users = {};
 
         for (const jsonElement of json) {
-            if (jsonElement.fork) {
-                console.info("Skipping loading contributors for ", jsonElement.full_name, "as it is a fork")
+            if (jsonElement.fork || jsonElement.archived || jsonElement.disabled) {
+                console.info("Skipping loading contributors for ", jsonElement.full_name, "as it is a fork/archived/disabled")
                 continue;
             }
             console.info("Loading contributors for ", jsonElement.full_name)
