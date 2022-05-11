@@ -20,6 +20,7 @@ function fetchContributorList() {
         for (const jsonElement of json) {
             if (jsonElement.fork) {
                 console.info("Skipping loading contributors for ", jsonElement.full_name, "as it is a fork")
+                continue;
             }
             console.info("Loading contributors for ", jsonElement.full_name)
             const contributors = getData(jsonElement.contributors_url)
@@ -41,7 +42,7 @@ function fetchContributorList() {
                 }
             }
         }
-        users = Object.values(users).sort(a => a.contributions);
+        users = Object.values(users).sort((a,b) => b["contributions"] - a["contributions"]);
         saveContributorjson(users);
     } catch (err) {
         console.error('🚨  Could not load contributors from Github:', err)
