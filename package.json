@@ -9,7 +9,10 @@
   "bugs": "https://github.com/btcpayserver/btcpayserver.github.io/issues",
   "scripts": {
     "clean": "rimraf dist && mkdir -p dist",
-    "init": "node -r dotenv/config tasks/download_translations.js",
+    "init": "npm-run-all d",
+    "d": "npm-run-all clean -p d:*",
+    "d:translators": "node -r dotenv/config tasks/download_translations.js ",
+    "d:contributors": "node -r dotenv/config tasks/download_contributors.js.js ",
     "start": "npm-run-all clean -p start:*",
     "start:static": "onchange -i -k 'src/static/**/*' -- npm run build:static",
     "start:scripts": "onchange -i -k 'src/js/**/*' -- npm run build:scripts",
