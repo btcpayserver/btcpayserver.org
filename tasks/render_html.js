@@ -1,6 +1,7 @@
 const {
   getTemplate,
   getTransifexJSON,
+  getContributorJSON,
   getLanguages,
   getLanguageName,
   replaceTemplateVars,
@@ -19,6 +20,13 @@ const _donationsBlock = JSON.parse(_jsonDonations).map(([name, url, avatar]) => 
               <div class="in-img" style="background-image:url(${avatar})"></div>
               <span class="in-nom">${name}</span>
             </a>`).join('')
+const contributors = getContributorJSON()
+const _contributorsBlock = contributors.map((item) => `
+            <a href="${item.html_url}" class="ind-icon">
+              <div class="in-img" style="background-image:url(${item.avatar_url})"></div>
+              <span class="in-nom">${item.login}</span>
+            </a>`).join('')
+
 
 function getLanguageOptions (langs, lang, pagePath = '') {
   return langs.reduce((res, code) => {
@@ -52,6 +60,7 @@ langs.forEach(lang => {
   const tmplVars = Object.assign({}, translations, {
     _jsonDonations,
     _donationsBlock,
+    _contributorsBlock,
     _lngOpts,
     _to: isRtl ? 'rtl' : 'ltr',
     _rl: isRtl ? 'left' : 'right',

@@ -17,6 +17,7 @@
 	<title>BTCPay Server</title>
 	<link rel="stylesheet" type="text/css" href="/css/fa_.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="/css/page-styles.css">
 	<!-- Schema.org JSON-LD Markup for Search Engine Optimization -->
 	<script type='application/ld+json'>
             {
@@ -309,6 +310,12 @@
 							<a title="Youtube" class="modernLink_Cluster"
 								href="https://www.youtube.com/channel/UCpG9WL6TJuoNfFVkaDMp9ug" target="blank_">
 								<i class="fab fa-youtube"></i>YouTube</a>
+						</div>
+						<div class="donation-type">
+							<h2>Contributors</h2>
+							<div class="individual-grid" id="donGr" style="    max-height: 50vh;overflow: auto; margin:0 auto auto">
+								{{_contributorsBlock}}
+							</div>
 						</div>
 					</div>
 				</div>
