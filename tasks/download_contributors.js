@@ -18,7 +18,9 @@ function fetchContributorList() {
         let users = {};
 
         for (const jsonElement of json) {
-
+            if (jsonElement.fork) {
+                console.info("Skipping loading contributors for ", jsonElement.full_name, "as it is a fork")
+            }
             console.info("Loading contributors for ", jsonElement.full_name)
             const contributors = getData(jsonElement.contributors_url)
             for (const contributor of contributors) {
