@@ -12,7 +12,7 @@
     "init": "npm-run-all d",
     "d": "npm-run-all clean -p d:*",
     "d:translators": "node -r dotenv/config tasks/download_translations.js ",
-    "d:contributors": "node -r dotenv/config tasks/download_contributors.js.js ",
+    "d:contributors": "node -r dotenv/config tasks/download_contributors.js ",
     "start": "npm-run-all clean -p start:*",
     "start:static": "onchange -i -k 'src/static/**/*' -- npm run build:static",
     "start:scripts": "onchange -i -k 'src/js/**/*' -- npm run build:scripts",
