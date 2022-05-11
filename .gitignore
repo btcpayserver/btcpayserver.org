@@ -1,4 +1,6 @@
 /dist
 /node_modules
 /transifex/download
+/github
 .env
+.idea

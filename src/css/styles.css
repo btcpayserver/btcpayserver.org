@@ -391,6 +391,7 @@ a {
 .mobile-only {
   display: none;
 }
+#contributors,
 .video-holder-watch-video {
   text-align: center;
   background: linear-gradient(
@@ -2348,9 +2349,17 @@ figure {
     grid-row: 2/3;
     padding: 18px 20px;
   }
+  #contributors,
+  #contributors .pageItemTextContent {
+    padding: 0;
+  }
 }
 h1,
 h2,
 h3 {
   font-family: "Open Sans", sans-serif;
+}
+
+#communityCTA {
+  margin: -50px auto 100px;
 }

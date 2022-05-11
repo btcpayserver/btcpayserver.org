@@ -66,6 +66,18 @@ function getTransifexJSON(resource) {
   }
 }
 
+function getContributorJSON(resource) {
+  const file = resolve(__dirname, `../github/contributors.json`)
+
+  try {
+    const content = readFileSync(file, 'utf8')
+
+    return JSON.parse(content)
+  } catch (err) {
+    console.error('🚨  Could not read file', file, ':', err)
+  }
+}
+
 // returns an array of available languages.
 // here we can also filter based on completeness.
 function getLanguages (resource, completenessThreshold = 90) {
@@ -112,5 +124,6 @@ module.exports = {
   getLanguageName,
   getTransifexJSON,
   replaceTemplateVars,
-  saveFile
+  saveFile,
+  getContributorJSON
 }

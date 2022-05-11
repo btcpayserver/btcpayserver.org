@@ -40,11 +40,9 @@ contents a {
   color: var(--lime);
 }
 .donation-type {
-  margin: 50px auto 100px auto;
+  margin: 0px auto 50px auto;
   display: grid;
   grid-auto-flow: row;
-  box-shadow: 0 0 0 1px var(--grey), 2px 2px 10px -2px var(--shadow-20),
-    -2px -2px 10px -2px var(--white);
   padding: 0 20px;
   border-radius: 10px;
 }
