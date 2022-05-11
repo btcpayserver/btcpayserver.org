@@ -16,15 +16,19 @@ function fetchContributorList() {
         const url = "https://api.github.com/orgs/btcpayserver/repos";
         let json = getData(url)
         let users = {};
-
+        const blacklistRepos = ["btcpayserver/whmcs-plugin"];
+        const blacklistUsers = [];
         for (const jsonElement of json) {
-            if (jsonElement.fork || jsonElement.archived || jsonElement.disabled) {
+            if (jsonElement.fork || jsonElement.archived || jsonElement.disabled || blacklistRepos.indexOf(jsonElement.full_name) >= 0) {
                 console.info("Skipping loading contributors for ", jsonElement.full_name, "as it is a fork/archived/disabled")
                 continue;
             }
             console.info("Loading contributors for ", jsonElement.full_name)
             const contributors = getData(jsonElement.contributors_url)
             for (const contributor of contributors) {
+                if (blacklistUsers.indexOf(contributor.login) >= 0) {
+                    continue
+                }
                 if (contributor.login in users) {
                     users[contributor.login] = {
                         login: contributor.login,
@@ -42,7 +46,7 @@ function fetchContributorList() {
                 }
             }
         }
-        users = Object.values(users).sort((a,b) => b["contributions"] - a["contributions"]);
+        users = Object.values(users).sort((a, b) => b["contributions"] - a["contributions"]);
         saveContributorjson(users);
     } catch (err) {
         console.error('🚨  Could not load contributors from Github:', err)
