@@ -14,12 +14,6 @@ const indexTmpl = getTemplate('html/tmpl.html')
 const donateTmpl = getTemplate('html/donate/tmpl.html')
 const menuTmpl = getTemplate('html/menu-tmpl.html')
 const footerTmpl = getTemplate('html/footer-tmpl.html')
-const _jsonDonations = getTemplate('json/donations.json')
-const _donationsBlock = JSON.parse(_jsonDonations).map(([name, url, avatar]) => `
-            <a href="${url}" class="ind-icon">
-              <div class="in-img" style="background-image:url(${avatar})"></div>
-              <span class="in-nom">${name}</span>
-            </a>`).join('')
 const contributors = getContributorJSON()
 const _contributorsBlock = contributors.map((item) => `
             <a href="${item.html_url}" class="ind-icon">
@@ -58,8 +52,6 @@ langs.forEach(lang => {
   const _lngst = directory === 'en' ? '' : '/' + directory;
 
   const tmplVars = Object.assign({}, translations, {
-    _jsonDonations,
-    _donationsBlock,
     _contributorsBlock,
     _lngOpts,
     _to: isRtl ? 'rtl' : 'ltr',

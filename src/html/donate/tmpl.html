@@ -31,24 +31,23 @@
           <h1>{{support-the-btcpay}}</h1>
           <p>{{btcpay-server-is-a-self-hosted}}</p>
 
-          <div class="donation-type">
+          <div>
             <h2>{{corporate-donations}}</h2>
 
             <p>{{corporate-entities-wishing}}<br>
-              <a class="cta-foundation-donation button-pri button" href="https://foundation.btcpayserver.org">{{btcpay-server-foundation}}&nbsp;&nbsp;<i
+              <a class="cta-foundation-donation button-pri button" href="https://foundation.btcpayserver.org" target="_blank" rel="noreferrer noopener">{{btcpay-server-foundation}}&nbsp;&nbsp;<i
                 class="fas fa-chevron-{{_rl}}"></i>
               </a>
             </p>
 
           </div>
 
-          <div class="donation-type">
+          <div>
             <h2>{{individual-donations}}</h2>
-            <p>{{if-you-re-not}}</p>
-            <div class="individual-grid" id="donGr">
-            {{_donationsBlock}}
-          </div>
-            <p>{{btcpay-contributor-}}&nbsp;<a href="https://github.com/btcpayserver/btcpayserver.github.io/blob/master/src/json/donations.json">{{add-yourself-to}}</a>
+            <p>{{if-you-re-not}}<br>
+              <a class="cta-foundation-donation button-pri button" href="https://opensats.org/projects/btcpayserver" target="_blank" rel="noreferrer noopener">{{donate}} via OpenSats&nbsp;&nbsp;<i
+                  class="fas fa-chevron-{{_rl}}"></i>
+              </a>
             </p>
           </div>
 
@@ -63,33 +62,6 @@
     </div>
     <!-- END OF p-nm-co-ho -->
   </body>
-  <script>
-    var icons = document.getElementById("donGr");
-    var users = {{_jsonDonations}};
-
-    function shuffle(array) {
-      var currentIndex = array.length,
-        temporaryValue,
-        randomIndex;
-      while (0 !== currentIndex) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-      }
-      return array;
-    }
-    users = shuffle(users);
-    var rebuilt = "";
-    for (i = 0; i < users.length; i++) {
-      var bgi = users[i][2]
-        ? "style=\"background-image:url(" + users[i][2] + ")\""
-        : "";
-      rebuilt += '<a href="' + users[i][1] + '" class="ind-icon"><div class="in-img" ' + bgi + '></div><span class="in-nom">' + users[i][0] + '</span></a>';
-    }
-    icons.innerHTML = rebuilt;
-  </script>
   <!-- Schema.org JSON-LD Markup for Search Engine Optimization -->
   <script type='application/ld+json'>
     {
