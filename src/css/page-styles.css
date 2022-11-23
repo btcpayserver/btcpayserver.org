@@ -21,7 +21,6 @@ contents h2 {
   margin: 0;
   transform: translateY(-12px);
   background: var(--white);
-  padding: 0 10px;
   border-radius: 100px;
   font-weight: 600;
   font-size: 16px;
