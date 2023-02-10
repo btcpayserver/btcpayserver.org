@@ -11,32 +11,31 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16]
-
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
-    - name: Setup (Node.js ${{ matrix.node-version }})
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: Install
-      run: npm ci
-    - name: Build
-      run: |
-        npm run init
-        npm run prod
-      env:
-        CI: true
-        TRANSIFEX_TOKEN: ${{ secrets.TRANSIFEX_TOKEN }}
-    - name: Deploy
-      if: success() && github.ref == 'refs/heads/master'
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        publish_dir: ./dist
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        cname: btcpayserver.org
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
+      # Checkout and setup
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      # Install and build
+      - name: Install
+        run: npm ci
+      - name: Build
+        run: |
+          npm run init
+          npm run prod
+        env:
+          CI: true
+          TRANSIFEX_TOKEN: ${{ secrets.TRANSIFEX_TOKEN }}
+      # Deploy, limited to the main branch
+      - name: Deploy
+        if: success() && github.ref == 'refs/heads/master'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          cname: btcpayserver.org
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
