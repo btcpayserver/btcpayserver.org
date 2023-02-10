@@ -21,7 +21,7 @@
     "start:vtt": "onchange -i -k 'src/vtt/**/*' 'tasks/{render_vtt,util}.js' -- npm run build:vtt",
     "start:serve": "browser-sync start --no-open --watch --server dist",
     "build": "npm-run-all clean -p build:*",
-    "build:static": "cp -r src/static/* dist",
+    "build:static": "cp -rT src/static dist",
     "build:scripts": "cp -r src/js dist",
     "build:styles": "cp -r src/css dist",
     "build:html": "node tasks/render_html.js",
@@ -36,12 +36,12 @@
     "BTCPayServer"
   ],
   "devDependencies": {
-    "browser-sync": "2.27.10",
+    "browser-sync": "2.27.11",
     "csso-cli": "4.0.1",
     "dotenv": "16.0.3",
     "npm-run-all": "4.1.5",
     "onchange": "7.1.0",
-    "rimraf": "3.0.2",
+    "rimraf": "4.1.2",
     "sync-request": "6.1.0"
   }
 }
