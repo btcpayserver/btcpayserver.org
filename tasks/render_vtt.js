@@ -9,7 +9,7 @@ console.log(`ℹ️  Video: Rendering ${langs.length} translations …`)
 const sentenceChunks = [4, 2, 1, 3, 1, 1, 1, 3, 1, 2, 1]
 
 langs.forEach(lang => {
-  const translations = getTransifexJSON(`video/translation/${lang}`)
+  const translations = getTransifexJSON(`video/${lang}`)
 
   const parts = translations.reduce((res, sentence, index) => {
     const chunks = sentenceChunks[index]

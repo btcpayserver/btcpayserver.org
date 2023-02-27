@@ -41,7 +41,7 @@ langs.forEach(lang => {
   const [lng] = lang.split('_')
   const isRtl = ['ar', 'fa', 'he'].includes(lng)
   const directory = lng === 'en' ? '' : lng === 'en_GB' ? '' : `${lang}/`
-  const translations   = getTransifexJSON(`website/translation/${lang}`)
+  const translations  = getTransifexJSON(`website/${lang}`)
   const lngName = getLanguageName(lang)
   if (!lngName) {
     console.warn(`🛑 Missing language name for "${lang}" – please add it to the LANGUAGE_NAMES in tasks/util.js`)
