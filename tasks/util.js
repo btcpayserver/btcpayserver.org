@@ -14,6 +14,7 @@ const LANGUAGE_NAMES = {
   en: 'English',
   en_GB: 'English',
   es_ES: 'Español',
+  es_419: 'Spanish',
   fa: 'فارسی',
   fi_FI: 'Suomi',
   fr_FR: 'Français',
