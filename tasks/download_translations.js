@@ -1,48 +1,63 @@
 const { writeFileSync, mkdirSync } = require('fs')
-const { dirname, join, resolve } = require('path')
+const { dirname, resolve } = require('path')
 const assert = require('assert')
-const request = require('sync-request')
+const { transifexApi }  = require('@transifex/api')
 
-const { TRANSIFEX_TOKEN: token } = process.env
+const { TRANSIFEX_TOKEN: auth } = process.env
 
 assert('Please provide the TRANSIFEX_TOKEN in the .env file')
 
-const auth = Buffer.from(`api:${token}`).toString('base64')
+transifexApi.setup({ auth });
 
-function saveTransifexJSON (resource, data, json) {
-  const file = resolve(__dirname, `../transifex/download/${resource}/${data}.json`)
+(async function () {
+  // get associations
+  const organization = await transifexApi.Organization.get({ slug: 'btcpayserver' })
+  const projects = await organization.fetch('projects')
+  const project = await projects.get({ slug: 'btcpayserver-website' })
+  const languages = await project.fetch('languages')
+  const resources = await project.fetch('resources')
+  await languages.fetch();
 
+  // resources
+  ['Video', 'Website'].forEach(async (name) => {
+    const resourceId = name.toLowerCase()
+    const resource = await resources.get({ name })
+
+    // stats
+    const stats = await transifexApi.ResourceLanguageStats
+      .filter({ project, resource })
+    await stats.fetch()
+    const result = stats.data.reduce((res, stat) => {
+      const key = stat.id.split(':').reverse()[0]
+      const data = stat.attributes
+      return Object.assign(res, { [key]: data })
+    }, {})
+    saveJSON(resourceId, result)
+
+    // translations
+    languages.data.forEach(async (language) => {
+      const languageCode = language.get('code')
+      const translations = await transifexApi.ResourceTranslation
+        .filter({ resource, language })
+        .include('resource_string')
+      await translations.fetch()
+      const result = translations.data.reduce((res, translation) => {
+        const key = translation.get('resource_string').get('key')
+        const strings = translation.get('strings')
+        return Object.assign(res, { [key]: strings ? strings.other : null })
+      }, {})
+      const data = name === 'Video' ? Object.values(result) : result
+      saveJSON(`${resourceId}/${languageCode}`, data)
+    })
+  })
+})()
+
+function saveJSON (file, data) {
+  const filePath = resolve(__dirname, `../transifex/download/${file}.json`)
   try {
-    mkdirSync(dirname(file), { recursive: true })
-    writeFileSync(file, JSON.stringify(json, null, 2))
+    mkdirSync(dirname(filePath), { recursive: true })
+    writeFileSync(filePath, JSON.stringify(data, null, 2))
   } catch (err) {
-    console.error('🚨  Could not save file', file, ':', err)
+    console.error('🚨  Could not save file', filePath, ':', err)
   }
 }
-
-function downloadTransifexJSON(resource, data) {
-  try {
-    const url = `https://www.transifex.com/api/2/project/btcpayserver-website/resource/transifex-resources-${resource}-json--master/${data}`;
-    const headers = { Authorization: `Basic ${auth}` }
-    const req = request('GET', url, { headers })
-    const body = req.getBody('utf8')
-    let json = JSON.parse(body)
-    if (json.content) json = JSON.parse(json.content)
-
-    saveTransifexJSON(resource, data, json)
-
-    return json
-  } catch (err) {
-    console.error('🚨  Could not load', resource, 'from Transifex:', err)
-  }
-}
-
-// Get available languages for website and videos
-['website', 'video'].forEach(type => {
-  const stats = downloadTransifexJSON(type, 'stats')
-  const langs = Object.keys(stats)
-
-  console.log(`ℹ  ${type}: Fetching ${langs.length} translations …`)
-
-  langs.forEach(lang => downloadTransifexJSON(type, `translation/${lang}`))
-})

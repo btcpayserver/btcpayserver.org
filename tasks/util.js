@@ -14,6 +14,7 @@ const LANGUAGE_NAMES = {
   en: 'English',
   en_GB: 'English',
   es_ES: 'Español',
+  es_419: 'Spanish',
   fa: 'فارسی',
   fi_FI: 'Suomi',
   fr_FR: 'Français',
@@ -56,10 +57,8 @@ function getTemplate(name) {
 
 function getTransifexJSON(resource) {
   const file = resolve(__dirname, `../transifex/download/${resource}.json`)
-
   try {
     const content = readFileSync(file, 'utf8')
-
     return JSON.parse(content)
   } catch (err) {
     console.error('🚨  Could not read file', file, ':', err)
@@ -81,11 +80,11 @@ function getContributorJSON(resource) {
 // returns an array of available languages.
 // here we can also filter based on completeness.
 function getLanguages (resource, completenessThreshold = 90) {
-  const stats = getTransifexJSON(`${resource}/stats`)
+  const stats = getTransifexJSON(resource)
 
   return Object.keys(stats).reduce((res, lang) => {
-    const { completed } = stats[lang]
-    const completeness = parseInt(completed)
+    const { total_words, translated_words } = stats[lang]
+    const completeness = (translated_words / total_words) * 100
     if (completeness >= completenessThreshold) res.push(lang)
 
     return res
