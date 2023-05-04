@@ -36,15 +36,15 @@
     "BTCPayServer"
   ],
   "devDependencies": {
-    "browser-sync": "2.27.12",
-    "csso-cli": "4.0.1",
+    "browser-sync": "2.29.1",
+    "csso-cli": "4.0.2",
     "dotenv": "16.0.3",
     "npm-run-all": "4.1.5",
     "onchange": "7.1.0",
-    "rimraf": "4.1.2",
+    "rimraf": "5.0.0",
     "sync-request": "6.1.0"
   },
   "dependencies": {
-    "@transifex/api": "^5.1.0"
+    "@transifex/api": "^5.2.0"
   }
 }
