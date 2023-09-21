@@ -9,8 +9,7 @@
   "bugs": "https://github.com/btcpayserver/btcpayserver.github.io/issues",
   "scripts": {
     "clean": "rimraf dist && mkdir -p dist",
-    "init": "npm-run-all d",
-    "d": "npm-run-all clean -p d:*",
+    "init": "npm-run-all clean -p d:*",
     "d:translations": "node -r dotenv/config tasks/download_translations.js && cp transifex/resources/video.json transifex/download/video/en_GB.json && cp transifex/resources/website.json transifex/download/website/en_GB.json",
     "d:contributors": "node -r dotenv/config tasks/download_contributors.js",
     "start": "npm-run-all clean -p start:*",
@@ -38,13 +37,13 @@
   "devDependencies": {
     "browser-sync": "2.29.3",
     "csso-cli": "4.0.2",
-    "dotenv": "16.0.3",
+    "dotenv": "16.3.1",
     "npm-run-all": "4.1.5",
     "onchange": "7.1.0",
     "rimraf": "5.0.1",
     "sync-request": "6.1.0"
   },
   "dependencies": {
-    "@transifex/api": "^5.2.0"
+    "@transifex/api": "5.4.0"
   }
 }
