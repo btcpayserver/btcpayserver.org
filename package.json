@@ -37,13 +37,13 @@
   "devDependencies": {
     "browser-sync": "3.0.2",
     "csso-cli": "4.0.2",
-    "dotenv": "16.3.2",
+    "dotenv": "16.4.1",
     "npm-run-all": "4.1.5",
     "onchange": "7.1.0",
     "rimraf": "5.0.5",
     "sync-request": "6.1.0"
   },
   "dependencies": {
-    "@transifex/api": "6.0.2"
+    "@transifex/api": "7.1.0"
   }
 }
