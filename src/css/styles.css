@@ -401,6 +401,7 @@ a {
   display: none;
 }
 #contributors,
+#caseStudies,
 .video-holder-watch-video {
   text-align: center;
   background: linear-gradient(
@@ -416,6 +417,65 @@ a {
 }
 .video-holder-watch-video + .video-holder-watch-video {
   margin-top: 0 !important;
+}
+#caseStudies h2 {
+  margin: 0 0 3rem;
+}
+#caseStudies ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1320px;
+  gap: 2rem;
+  justify-content: center;
+  margin: 0 auto 3rem;
+  padding: 0;
+}
+#caseStudies ul li {
+  flex: 0 1 410px;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  border-radius: 10px;
+  border: 1px solid var(--shadow-20);
+  overflow: hidden;
+  background: var(--light-grey);
+}
+#caseStudies ul li img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  object-position: top;
+}
+#caseStudies ul li h3 {
+  margin: 0;
+}
+#caseStudies ul li p {
+  margin: 0 1.5rem auto;
+}
+#caseStudies ul li .buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .75rem;
+  justify-content: space-between;
+  margin: 1rem 1.5rem 1.5rem;
+}
+#caseStudies ul li .buttons a {
+  margin: 0;
+  flex: 1 0 9rem;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 5px;
+  border: 1px solid var(--shadow-20);
+  color: var(--black);
+  font-weight: 600;
+  padding: .75rem 1rem;
+  transition: 0.2s ease;
+}
+#caseStudies ul li .buttons a:hover {
+  color: var(--sunkist-lime);
+  border-color: var(--sunkist-lime);
 }
 .check-list {
   margin-left: 2rem;
