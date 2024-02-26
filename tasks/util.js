@@ -79,7 +79,7 @@ function getContributorJSON(resource) {
 
 // returns an array of available languages.
 // here we can also filter based on completeness.
-function getLanguages (resource, completenessThreshold = 90) {
+function getLanguages (resource, completenessThreshold = 80) {
   const stats = getTransifexJSON(resource)
 
   return Object.keys(stats).reduce((res, lang) => {

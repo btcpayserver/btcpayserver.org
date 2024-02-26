@@ -10,6 +10,7 @@ const {
 
 // Render html templates
 const langs = getLanguages('website')
+const master = require('../transifex/resources/website.json')
 const indexTmpl = getTemplate('html/tmpl.html')
 const donateTmpl = getTemplate('html/donate/tmpl.html')
 const menuTmpl = getTemplate('html/menu-tmpl.html')
@@ -20,7 +21,6 @@ const _contributorsBlock = contributors.map((item) => `
               <div class="in-img" style="background-image:url(${item.avatar_url})"></div>
               <span class="in-nom">${item.login}</span>
             </a>`).join('')
-
 
 function getLanguageOptions (langs, lang, pagePath = '') {
   return langs.reduce((res, code) => {
@@ -44,14 +44,13 @@ langs.forEach(lang => {
   const translations  = getTransifexJSON(`website/${lang}`)
   const lngName = getLanguageName(lang)
   if (!lngName) {
-    console.warn(`🛑 Missing language name for "${lang}" – please add it to the LANGUAGE_NAMES in tasks/util.js`)
+    console.warn(`🛑 Missing language name for "${lang}" – please add it to the LANGUAGE_NAMES in tasks/util.js`)
   }
 
   const _sub = lngName || lang
   const _lngOpts = getLanguageOptions(langs, lang)
   const _lngst = directory === 'en' ? '' : '/' + directory;
-
-  const tmplVars = Object.assign({}, translations, {
+  const tmplVars = Object.assign({}, master, translations, {
     _contributorsBlock,
     _lngOpts,
     _to: isRtl ? 'rtl' : 'ltr',

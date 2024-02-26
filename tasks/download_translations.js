@@ -44,7 +44,7 @@ transifexApi.setup({ auth });
       const result = translations.data.reduce((res, translation) => {
         const key = translation.get('resource_string').get('key')
         const strings = translation.get('strings')
-        return Object.assign(res, { [key]: strings ? strings.other : null })
+        return strings ? Object.assign(res, { [key]: strings ? strings.other : null }) : res
       }, {})
       const data = name === 'Video' ? Object.values(result) : result
       saveJSON(`${resourceId}/${languageCode}`, data)
