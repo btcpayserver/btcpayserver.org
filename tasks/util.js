@@ -51,7 +51,7 @@ function getTemplate(name) {
   try {
     return readFileSync(file, 'utf8')
   } catch (err) {
-    console.error('🚨  Could not get template', name, ':', err)
+    console.error('🚨  Could not get template', name, ':', err.message)
   }
 }
 
@@ -61,7 +61,7 @@ function getTransifexJSON(resource) {
     const content = readFileSync(file, 'utf8')
     return JSON.parse(content)
   } catch (err) {
-    console.error('🚨  Could not read file', file, ':', err)
+    console.error('🚨  Could not read file', file, ':', err.message)
   }
 }
 
@@ -73,22 +73,27 @@ function getContributorJSON(resource) {
 
     return JSON.parse(content)
   } catch (err) {
-    console.error('🚨  Could not read file', file, ':', err)
+    console.error('🚨  Could not read file', file, ':', err.message)
   }
 }
 
 // returns an array of available languages.
 // here we can also filter based on completeness.
 function getLanguages (resource, completenessThreshold = 80) {
-  const stats = getTransifexJSON(resource)
+  try {
+    const stats = getTransifexJSON(resource)
 
-  return Object.keys(stats).reduce((res, lang) => {
-    const { total_words, translated_words } = stats[lang]
-    const completeness = (translated_words / total_words) * 100
-    if (completeness >= completenessThreshold) res.push(lang)
+    return Object.keys(stats).reduce((res, lang) => {
+      const { total_words, translated_words } = stats[lang]
+      const completeness = (translated_words / total_words) * 100
+      if (completeness >= completenessThreshold) res.push(lang)
 
-    return res
-  }, []).sort()
+      return res
+    }, []).sort()
+  } catch(err) {
+    console.error(err.message)
+    return ['en_GB']
+  }
 }
 
 function getLanguageName (code) {
