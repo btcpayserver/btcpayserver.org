@@ -142,12 +142,12 @@ body {
   grid-column: 3/8;
   grid-row: 1/4;
 }
-.svg-link.wp::before {
-  background-image: url(/img/wp.svg);
+.svg-link.xenforo::before {
+  background-image: url(/img/xenforo.svg);
   height: 90px;
   width: 90px;
 }
-.wp {
+.xenforo {
   grid-column: 8/11;
   grid-row: 6/9;
 }
