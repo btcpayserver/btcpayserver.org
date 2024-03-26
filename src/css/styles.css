@@ -460,7 +460,7 @@ a {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  max-width: 1760px;
+  max-width: 990px;
   gap: 2rem;
   justify-content: center;
   margin: 0 auto 3rem;
