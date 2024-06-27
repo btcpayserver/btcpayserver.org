@@ -164,7 +164,7 @@ body {
   background-image: url(/img/opencart.svg);
 }
 .opencart {
-  grid-column: 6/7;
+  grid-column: 7/7;
   grid-row: 3/7;
 }
 .svg-link.joomla::before {
@@ -202,7 +202,7 @@ body {
   width: 70px;
 }
 .whmcs {
-  grid-column: 4/5;
+  grid-column: 3/5;
   grid-row: 2/8;
 }
 .svg-link.custom::before {
@@ -221,7 +221,7 @@ body {
 }
 .mag {
   grid-column: 7/8;
-  grid-row: 5/8;
+  grid-row: 6/8;
 }
 .svg-link.zapier::before {
   background-image: url(/img/zapier.svg);
@@ -230,7 +230,7 @@ body {
 }
 .zapier {
   grid-column: 5/10;
-  grid-row: 5/2;
+  grid-row: 4/2;
 }
 .svg-link.presta::before {
   background-image: url(/img/presta.svg);
@@ -256,6 +256,15 @@ body {
 .grandnode {
   grid-column: 3/8;
   grid-row: 6/12;
+}
+.svg-link.invoiceninja::before {
+  background-image: url(/img/invoiceninja.svg);
+  height: 70px;
+  width: 70px;
+}
+.invoiceninja {
+  grid-column: 5/7;
+  grid-row: 2/8;
 }
 .svg-link.smartstore::before {
   background-image: url(/img/smartstore.svg);
