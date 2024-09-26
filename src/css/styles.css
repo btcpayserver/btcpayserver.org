@@ -149,7 +149,7 @@ body {
 }
 .custom {
   grid-column: 4/5;
-  grid-row: 8/12;
+  grid-row: 7/12;
 }
 .svg-link.drupal::before {
   background-image: url(/img/drupal.svg);
@@ -164,7 +164,7 @@ body {
   background-image: url(/img/grandnode.svg);
 }
 .grandnode {
-  grid-column: 4/8;
+  grid-column: 5/8;
   grid-row: 4/12;
 }
 .svg-link.invoiceninja::before {
@@ -208,6 +208,13 @@ body {
 .opencart {
   grid-column: 1/7;
   grid-row: 5/7;
+}
+.svg-link.odoo::before {
+  background-image: url(/img/odoo.svg);
+}
+.odoo {
+  grid-column: 6/7;
+  grid-row: 3/7;
 }
 .svg-link.presta::before {
   background-image: url(/img/presta.svg);
