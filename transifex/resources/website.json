@@ -23,6 +23,7 @@
   "magento": "Magento",
   "prestashop": "PrestaShop",
   "opencart": "OpenCart",
+  "odoo": "Odoo",
   "xenforo": "Xenforo",
   "joomla": "Joomla VirtueMart",
   "custom-integration": "Custom Integration",
