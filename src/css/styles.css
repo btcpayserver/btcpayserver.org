@@ -158,14 +158,14 @@ body {
 }
 .drupal {
   grid-column: 2/5;
-  grid-row: 1/5;
+  grid-row: 1/4;
 }
 .svg-link.grandnode::before {
   background-image: url(/img/grandnode.svg);
 }
 .grandnode {
-  grid-column: 7/9;
-  grid-row: 5/12;
+  grid-column: 5/8;
+  grid-row: 5/10;
 }
 .svg-link.invoiceninja::before {
   background-image: url(/img/invoiceninja.svg);
@@ -200,7 +200,7 @@ body {
 }
 .nopcommerce {
   grid-column: 1/3;
-  grid-row: 6/10;
+  grid-row: 7/10;
 }
 .svg-link.opencart::before {
   background-image: url(/img/opencart.svg);
@@ -213,22 +213,29 @@ body {
   background-image: url(/img/odoo.svg);
 }
 .odoo {
-  grid-column: 7/8;
+  grid-column: 6/8;
   grid-row: 2/6;
 }
 .svg-link.wix::before {
   background-image: url(/img/wix.svg);
 }
 .wix {
-  grid-column: 5/7;
-  grid-row: 6/9;
+  grid-column: 4/7;
+  grid-row: 3/8;
+}
+.svg-link.pretix::before {
+  background-image: url(/img/pretix.svg);
+}
+.pretix {
+  grid-column: 7/9;
+  grid-row: 4/7;
 }
 .svg-link.bigcommerce::before {
   background-image: url(/img/bigcommerce.svg);
 }
 .bigcommerce {
-  grid-column: 9/10;
-  grid-row: 5/7;
+  grid-column: 8/10;
+  grid-row: 6/8;
 }
 .svg-link.presta::before {
   background-image: url(/img/presta.svg);
@@ -237,7 +244,7 @@ body {
 }
 .presta {
   grid-column: 1/3;
-  grid-row: 3/7;
+  grid-row: 2/6;
 }
 .svg-link.shopify::before {
   background-image: url(/img/shopify.svg);
@@ -263,8 +270,8 @@ body {
   width: 70px;
 }
 .whmcs {
-  grid-column: 4/6;
-  grid-row: 2/7;
+  grid-column: 1/3;
+  grid-row: 5/7;
 }
 .svg-link.woo::before {
   background-image: url(/img/woo.svg);
@@ -280,8 +287,8 @@ body {
   background-image: url(/img/phocacart.svg);
 }
 .phocacart {
-  grid-column: 5/9;
-  grid-row: 4/7;
+  grid-column: 3/6;
+  grid-row: 2/6;
 }
 .svg-link.xenforo::before {
   background-image: url(/img/xenforo.svg);
@@ -290,7 +297,7 @@ body {
 }
 .xenforo {
   grid-column: 8/12;
-  grid-row: 9/12;
+  grid-row: 8/11;
 }
 .svg-link.zapier::before {
   background-image: url(/img/zapier.svg);
