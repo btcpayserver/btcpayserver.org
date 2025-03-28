@@ -164,7 +164,7 @@ body {
   background-image: url(/img/grandnode.svg);
 }
 .grandnode {
-  grid-column: 5/8;
+  grid-column: 4/8;
   grid-row: 5/10;
 }
 .svg-link.invoiceninja::before {
@@ -181,13 +181,11 @@ body {
   background-size: 70px;
 }
 .joomla {
-  grid-column: 9/10;
-  grid-row: 1/7;
+  grid-column: 1/3;
+  grid-row: 5/7;
 }
 .svg-link.mag::before {
   background-image: url(/img/mag.svg);
-  height: 70px;
-  width: 70px;
 }
 .mag {
   grid-column: 10/12;
@@ -206,14 +204,14 @@ body {
   background-image: url(/img/opencart.svg);
 }
 .opencart {
-  grid-column: 3/5;
+  grid-column: 2/5;
   grid-row: 5/8;
 }
 .svg-link.odoo::before {
   background-image: url(/img/odoo.svg);
 }
 .odoo {
-  grid-column: 6/8;
+  grid-column: 4/8;
   grid-row: 2/6;
 }
 .svg-link.wix::before {
@@ -227,8 +225,8 @@ body {
   background-image: url(/img/pretix.svg);
 }
 .pretix {
-  grid-column: 7/9;
-  grid-row: 4/7;
+  grid-column: 6/9;
+  grid-row: 5/7;
 }
 .svg-link.bigcommerce::before {
   background-image: url(/img/bigcommerce.svg);
@@ -248,8 +246,8 @@ body {
 }
 .svg-link.shopify::before {
   background-image: url(/img/shopify.svg);
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
 }
 .shopify {
   grid-column: 12/12;
@@ -257,21 +255,31 @@ body {
 }
 .svg-link.smartstore::before {
   background-image: url(/img/smartstore.svg);
-  height: 60px;
-  width: 60px;
 }
 .smartstore {
+  grid-column: 9/12;
+  grid-row: 2/10;
+}
+.svg-link.ecwid::before {
+  background-image: url(/img/ecwid.svg);
+}
+.ecwid {
   grid-column: 12/12;
   grid-row: 2/10;
 }
+.svg-link.ghost::before {
+  background-image: url(/img/ghost.svg);
+}
+.ghost {
+  grid-column: 5/10;
+  grid-row: 2/6;
+}
 .svg-link.whmcs::before {
   background-image: url(/img/whmcs.svg);
-  height: 70px;
-  width: 70px;
 }
 .whmcs {
-  grid-column: 1/3;
-  grid-row: 5/7;
+  grid-column: 9/10;
+  grid-row: 1/7;
 }
 .svg-link.woo::before {
   background-image: url(/img/woo.svg);
@@ -280,14 +288,14 @@ body {
   background-size: 70px;
 }
 .woo {
-  grid-column: 5/10;
+  grid-column: 6/10;
   grid-row: 1/3;
 }
 .svg-link.phocacart::before {
   background-image: url(/img/phocacart.svg);
 }
 .phocacart {
-  grid-column: 3/6;
+  grid-column: 2/6;
   grid-row: 2/6;
 }
 .svg-link.xenforo::before {
