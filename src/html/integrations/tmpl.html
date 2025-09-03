@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{_lnstr}}" dir="{{_to}}" data-theme="light">
+  <head>
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=1">
+    <meta name="description" content="{{integrations-and-plugins}}">
+    <meta property="og:title" content="BTCPay Server – Integrations">
+    <meta property="og:description" content="{{integrations-and-plugins}}">
+    <meta property="og:image" content="/card.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BTCPay Server – Integrations">
+    <meta name="twitter:description" content="{{integrations-and-plugins}}">
+    <meta name="twitter:image" content="/card.png">
+    <link rel="canonical" href="{{_canonical}}">
+    {{_hreflangLinks}}
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+    <title>{{integrations-and-plugins}} | BTCPay Server</title>
+    <link rel="stylesheet" type="text/css" href="/css/design-tokens.css">
+    <link rel="stylesheet" type="text/css" href="/css/fa_.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/page-styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#pageContainer">Skip to content</a>
+    <div id="p-nm-co-ho">
+      <div class="pageContainerTopBackground __fal-{{_rl}}">
+        <div>{{_menTemp}}</div>
+      </div>
+      <div class="pageContainer __fal-{{_rl}}" id="pageContainer">
+        <div class="pageItem">
+          <h1>{{integrations-and-plugins}}</h1>
+          <div id="integrationsFilters" class="int-filters">
+            <input id="intSearch" type="search" placeholder="Search integrations…" aria-label="Search integrations">
+            <div id="intQuickFilters" class="int-quick">{{_integrationsFilters}}</div>
+          </div>
+          <ul id="integrationsGrid" class="int-grid">{{_integrationsGrid}}</ul>
+        </div>
+        {{_ftblk}}
+      </div>
+    </div>
+    <script src="/js/scripts.js"></script>
+  </body>
+  </html>
+

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "shopify",
+    "name": "Shopify",
+    "logo": "/img/shopify.svg",
+    "link": "https://docs.btcpayserver.org/ShopifyV2/",
+    "type": "plugin",
+    "tags": ["Hosted", "Ecommerce"],
+    "descriptionKey": "shopify-desc"
+  },
+  {
+    "id": "woocommerce",
+    "name": "WooCommerce",
+    "logo": "/img/woo.svg",
+    "link": "https://wordpress.org/plugins/btcpay-greenfield-for-woocommerce/",
+    "type": "plugin",
+    "tags": ["Self-hosted", "Ecommerce"],
+    "descriptionKey": "woocommerce-desc"
+  },
+  {
+    "id": "drupal",
+    "name": "Drupal",
+    "logo": "/img/drupal.svg",
+    "link": "https://docs.btcpayserver.org/Drupal/",
+    "type": "plugin",
+    "tags": ["Self-hosted", "Ecommerce"],
+    "descriptionKey": "drupal-desc"
+  },
+  {
+    "id": "zapier",
+    "name": "Zapier",
+    "logo": "/img/zapier.svg",
+    "link": "https://zapier.com/apps/btcpay-server/integrations",
+    "type": "integration",
+    "tags": ["Automation"],
+    "descriptionKey": "zapier-desc"
+  }
+]

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="{{_to}}" data-theme="light">
+<html lang="{{_lnstr}}" dir="{{_to}}" data-theme="light">
   <head>
     <meta charset=UTF-8>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
@@ -9,16 +9,24 @@
     <meta property="og:title" content="BTCPay Server">
     <meta property="og:description" content="{{btcpay-server-is-proudly-free}}">
     <meta property="og:image" content="/card.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BTCPay Server">
+    <meta name="twitter:description" content="{{btcpay-server-is-proudly-free}}">
+    <meta name="twitter:image" content="/card.png">
+    <link rel="canonical" href="{{_canonical}}">
+    {{_hreflangLinks}}
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="msapplication-TileColor" content="#0f3b21">
     <meta name="theme-color" content="#ffffff">
     <title>{{donate}} | BTCPay Server</title>
+    <link rel="stylesheet" type="text/css" href="/css/design-tokens.css">
     <link rel="stylesheet" type="text/css" href="/css/fa_.min.css">
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <link rel="stylesheet" type="text/css" href="/css/page-styles.css">
   </head>
   <body>
+    <a class="skip-link" href="#p-nm-co-ho">Skip to content</a>
     <div id="p-nm-co-ho">
       <div class="pageContainerTopBackground __fal-{{_rl}}">
         <div>
@@ -95,6 +103,20 @@
         "price": "0",
         "priceCurrency": "BTC"
       }
+    }
+  </script>
+  <script type='application/ld+json'>
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "BTCPay Server",
+      "url": "https://btcpayserver.org/",
+      "logo": "https://btcpayserver.org/apple-touch-icon.png",
+      "sameAs": [
+        "https://twitter.com/BtcpayServer",
+        "https://t.me/btcpayserver",
+        "https://github.com/btcpayserver"
+      ]
     }
   </script>
   <script src="/js/scripts.js"></script>

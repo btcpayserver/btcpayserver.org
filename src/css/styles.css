@@ -1360,6 +1360,8 @@ a.nonJavascriptMessage {
   display: grid;
   display: var(--grid, grid);
   margin: auto;
+  overflow: hidden;
+  max-width: 100vw;
 }
 .pageContainer > div {
   margin-top: 50px;
@@ -1534,6 +1536,15 @@ svg {
   padding: 20px;
   width: 90vw;
   margin: auto;
+}
+#watchVideo{
+  background: linear-gradient(var(--light-grey-greenish),var(--light-grey-greenish));
+  margin: -50px 0 !important;
+  width: 100%;
+  padding: 50px 20px;
+}
+#watchVideo h2{
+  text-align: center;
 }
 .page-item-free {
   display: grid;

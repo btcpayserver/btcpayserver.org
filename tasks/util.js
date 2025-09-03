@@ -74,6 +74,7 @@ function getContributorJSON(resource) {
     return JSON.parse(content)
   } catch (err) {
     console.error('🚨  Could not read file', file, ':', err.message)
+    return []
   }
 }
 
