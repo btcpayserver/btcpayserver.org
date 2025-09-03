@@ -25,7 +25,7 @@ const _contributorsBlock = contributors.map((item) => `
 
 const { readFileSync, existsSync } = require('fs')
 
-function buildHreflangLinks (langs, pagePath = '') {
+function buildHreflangLinks(langs, pagePath = '') {
   const base = 'https://btcpayserver.org'
   const links = langs.map(code => {
     const [main, rgn] = code.split('_')
@@ -54,14 +54,14 @@ function buildIntegrations(json) {
     const type = it.type || ''
     const logo = it.logo || ''
     return `
-      <li class="int-card" data-tags="${tags}" data-type="${type}" data-name="${(it.name||'').toLowerCase()}">
+      <li class="int-card" data-tags="${tags}" data-type="${type}" data-name="${(it.name || '').toLowerCase()}">
         <a href="${it.link}" target="_blank" rel="noopener">
           ${logo ? `<img src="${logo}" alt="${it.name}" loading="lazy" decoding="async">` : ''}
           <h3>${it.name}</h3>
         </a>
       </li>`
   }).join('')
-  const popular = ['Shopify','WooCommerce','Drupal','Zapier','API']
+  const popular = ['Shopify', 'WooCommerce', 'Drupal', 'Zapier', 'API']
   const chips = popular.map(p => `<button class="int-chip" data-chip="${p.toLowerCase()}">${p}</button>`).join('')
   return { grid: items, filters: chips }
 }
@@ -74,13 +74,13 @@ function ensureMinCaseStudies(list) {
     { id: 'bitcoin-jungle', title: 'Bitcoin Jungle', excerpt: 'Enables 200+ stores in Costa Rica to embrace Bitcoin.', hero: '/img/case-studies/bitcoin-jungle.jpg', url: 'https://blog.btcpayserver.org/case-study-bitcoin-jungle-cr/', pdf: '/case-studies/BitcoinJungleCR2023.pdf' },
     { id: 'hodlhodl', title: 'HodlHodl', excerpt: 'A Bitcoin business case using BTCPay Server.', hero: '/img/case-studies/hodlhodl.jpg', url: 'https://blog.btcpayserver.org/category/case-studies/', pdf: null }
   ]
-  const seen = new Set((list||[]).map(it => it.id || it.title))
-  const padded = [...(list||[])]
+  const seen = new Set((list || []).map(it => it.id || it.title))
+  const padded = [...(list || [])]
   for (const f of fallback) { if (padded.length >= 5) break; if (!seen.has(f.id)) padded.push(f) }
-  return padded.slice(0,5)
+  return padded.slice(0, 5)
 }
 
-function buildCaseStudiesBlock (labels = { viewCaseStudy: 'View', downloadPdf: 'Download PDF', viewAll: 'View all', rl: 'right' }) {
+function buildCaseStudiesBlock(labels = { viewCaseStudy: 'View', downloadPdf: 'Download PDF', viewAll: 'View all', rl: 'right' }) {
   try {
     const file = require('path').resolve(__dirname, '../data/caseStudies.json')
     if (existsSync(file)) {
@@ -106,7 +106,13 @@ function buildCaseStudiesBlock (labels = { viewCaseStudy: 'View', downloadPdf: '
               </div>
             </li>`
         }).join('')
-        return `<ul>${items}</ul>\n        <p>
+        return `
+        <div class="case-studies-wrapper">
+					<div class="page-item case-studies -bg-grey-l">
+            <ul>${items}</ul>
+          </div>
+        </div>
+        <p>
           <a title="${labels.viewAll}" class="modernLink featuresBlockLink"
           href="https://blog.btcpayserver.org/category/case-studies/" target="blank_">${labels.viewAll}&nbsp;&nbsp;<i
             class="fas fa-long-arrow-alt-${labels.rl}"></i>
@@ -118,53 +124,56 @@ function buildCaseStudiesBlock (labels = { viewCaseStudy: 'View', downloadPdf: '
     console.warn('⚠️ Case studies data not available:', e.message)
   }
   // Fallback to previous static block
-  return `
-        <ul>
-        <li>
-          <a href="https://blog.btcpayserver.org/case-study-namecheap/" target="_blank" rel="noopener">
-            <img src="/img/case-studies/namecheap-featured.png" alt="BTCPay Server Namecheap Study" loading="lazy" decoding="async" />
-          </a>
-          <h3>Namecheap</h3>
-          <p>Namecheap surpasses $73M in BTC revenue with 1.1m transactions through BTCPay</p>
-          <div class="buttons">
-            <a href="https://blog.btcpayserver.org/case-study-namecheap/" target="_blank" rel="noopener">${labels.viewCaseStudy || 'View case study'}</a>
-            <a href="/case-studies/namecheap.pdf" target="_blank" rel="noopener">${labels.downloadPdf || 'Download PDF'}</a>
-          </div>
-        </li>
-        <li>
-          <a href="https://blog.btcpayserver.org/case-study-bitcoin-atlantis/" target="_blank" rel="noopener">
-            <img src="/img/case-studies/bitcoin-atlantis-featured.png" alt="Bitcoin Atlantis" loading="lazy" decoding="async" />
-          </a>
-          <h3>Bitcoin Atlantis</h3>
-          <p>€115,100 from 8,750 Transactions in 3 Days, Showcasing Bitcoin's Role as a Payment Method.</p>
-          <div class="buttons">
-            <a href="https://blog.btcpayserver.org/case-study-bitcoin-atlantis/" target="_blank" rel="noopener">${labels.viewCaseStudy || 'View case study'}</a>
-            <a href="/case-studies/BitcoinAtlantis.pdf" target="_blank" rel="noopener">${labels.downloadPdf || 'Download PDF'}</a>
-          </div>
-        </li>
-        <li>
-          <a href="https://blog.btcpayserver.org/case-study-bitcoin-people/" target="_blank" rel="noopener">
-            <img src="/img/case-studies/bitcoin-people.jpg" alt="BTCPay Server Bitcoin People Case Study" loading="lazy" decoding="async" />
-          </a>
-          <h3>Bitcoin People</h3>
-          <p>Bitcoin People built a mobile app on top of BTCPay's API to scale bitcoin to 270 merchants.</p>
-          <div class="buttons">
-            <a href="https://blog.btcpayserver.org/case-study-bitcoin-people/" target="_blank" rel="noopener">${labels.viewCaseStudy || 'View case study'}</a>
-            <a href="/case-studies/BitcoinPeople2024.pdf" target="_blank" rel="noopener">${labels.downloadPdf || 'Download PDF'}</a>
-          </div>
-        </li>
-        <li>
-          <a href="https://blog.btcpayserver.org/case-study-bitcoin-jungle-cr/" target="_blank" rel="noopener">
-            <img src="/img/case-studies/bitcoin-jungle.jpg" alt="BTCPay Server Bitcoin Jungle Case Study" loading="lazy" decoding="async" />
-          </a>
-          <h3>Bitcoin Jungle</h3>
-          <p>Bitcoin Jungle enables 200+ stores in Costa Rica to embrace Bitcoin.</p>
-          <div class="buttons">
-            <a href="https://blog.btcpayserver.org/case-study-bitcoin-jungle-cr/" target="_blank" rel="noopener">${labels.viewCaseStudy || 'View case study'}</a>
-            <a href="/case-studies/BitcoinJungleCR2023.pdf" target="_blank" rel="noopener">${labels.downloadPdf || 'Download PDF'}</a>
-          </div>
-        </li>
-      </ul>
+  return `<div class="case-studies-wrapper">
+					<div class="page-item case-studies -bg-grey-l">
+            <ul>
+            <li>
+              <a href="https://blog.btcpayserver.org/case-study-namecheap/" target="_blank" rel="noopener">
+                <img src="/img/case-studies/namecheap-featured.png" alt="BTCPay Server Namecheap Study" loading="lazy" decoding="async" />
+              </a>
+              <h3>Namecheap</h3>
+              <p>Namecheap surpasses $73M in BTC revenue with 1.1m transactions through BTCPay</p>
+              <div class="buttons">
+                <a href="https://blog.btcpayserver.org/case-study-namecheap/" target="_blank" rel="noopener">${labels.viewCaseStudy || 'View case study'}</a>
+                <a href="/case-studies/namecheap.pdf" target="_blank" rel="noopener">${labels.downloadPdf || 'Download PDF'}</a>
+              </div>
+            </li>
+            <li>
+              <a href="https://blog.btcpayserver.org/case-study-bitcoin-atlantis/" target="_blank" rel="noopener">
+                <img src="/img/case-studies/bitcoin-atlantis-featured.png" alt="Bitcoin Atlantis" loading="lazy" decoding="async" />
+              </a>
+              <h3>Bitcoin Atlantis</h3>
+              <p>€115,100 from 8,750 Transactions in 3 Days, Showcasing Bitcoin's Role as a Payment Method.</p>
+              <div class="buttons">
+                <a href="https://blog.btcpayserver.org/case-study-bitcoin-atlantis/" target="_blank" rel="noopener">${labels.viewCaseStudy || 'View case study'}</a>
+                <a href="/case-studies/BitcoinAtlantis.pdf" target="_blank" rel="noopener">${labels.downloadPdf || 'Download PDF'}</a>
+              </div>
+            </li>
+            <li>
+              <a href="https://blog.btcpayserver.org/case-study-bitcoin-people/" target="_blank" rel="noopener">
+                <img src="/img/case-studies/bitcoin-people.jpg" alt="BTCPay Server Bitcoin People Case Study" loading="lazy" decoding="async" />
+              </a>
+              <h3>Bitcoin People</h3>
+              <p>Bitcoin People built a mobile app on top of BTCPay's API to scale bitcoin to 270 merchants.</p>
+              <div class="buttons">
+                <a href="https://blog.btcpayserver.org/case-study-bitcoin-people/" target="_blank" rel="noopener">${labels.viewCaseStudy || 'View case study'}</a>
+                <a href="/case-studies/BitcoinPeople2024.pdf" target="_blank" rel="noopener">${labels.downloadPdf || 'Download PDF'}</a>
+              </div>
+            </li>
+            <li>
+              <a href="https://blog.btcpayserver.org/case-study-bitcoin-jungle-cr/" target="_blank" rel="noopener">
+                <img src="/img/case-studies/bitcoin-jungle.jpg" alt="BTCPay Server Bitcoin Jungle Case Study" loading="lazy" decoding="async" />
+              </a>
+              <h3>Bitcoin Jungle</h3>
+              <p>Bitcoin Jungle enables 200+ stores in Costa Rica to embrace Bitcoin.</p>
+              <div class="buttons">
+                <a href="https://blog.btcpayserver.org/case-study-bitcoin-jungle-cr/" target="_blank" rel="noopener">${labels.viewCaseStudy || 'View case study'}</a>
+                <a href="/case-studies/BitcoinJungleCR2023.pdf" target="_blank" rel="noopener">${labels.downloadPdf || 'Download PDF'}</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
       <p>
         <a title="${labels.viewAll || 'View all case studies'}" class="modernLink featuresBlockLink"
         href="https://blog.btcpayserver.org/category/case-studies/" target="blank_">${labels.viewAll || 'View all case studies'}&nbsp;&nbsp;<i
@@ -173,7 +182,7 @@ function buildCaseStudiesBlock (labels = { viewCaseStudy: 'View', downloadPdf: '
       </p>`
 }
 
-function getLanguageOptions (langs, lang, pagePath = '') {
+function getLanguageOptions(langs, lang, pagePath = '') {
   return langs.reduce((res, code) => {
     if (code === lang) return res
     const [main, rgn] = code.split('_')
@@ -186,7 +195,7 @@ function getLanguageOptions (langs, lang, pagePath = '') {
   }, []).join('')
 }
 
-function getLanguageOptionsSubset (langs, lang, subset = [], pagePath = '') {
+function getLanguageOptionsSubset(langs, lang, subset = [], pagePath = '') {
   const set = subset.length ? langs.filter(c => subset.includes(c)) : langs
   return set.reduce((res, code) => {
     if (code === lang) return res
@@ -206,7 +215,7 @@ langs.forEach(lang => {
   const [lng] = lang.split('_')
   const isRtl = ['ar', 'fa', 'he'].includes(lng)
   const directory = lng === 'en' ? '' : lng === 'en_GB' ? '' : `${lang}/`
-  const translations  = getTransifexJSON(`website/${lang}`)
+  const translations = getTransifexJSON(`website/${lang}`)
   const lngName = getLanguageName(lang)
   if (!lngName) {
     console.warn(`🛑 Missing language name for "${lang}" – please add it to the LANGUAGE_NAMES in tasks/util.js`)
@@ -214,7 +223,7 @@ langs.forEach(lang => {
 
   const _sub = lngName || lang
   const _lngOpts = getLanguageOptions(langs, lang)
-  const TOP_LOCALES = ['en_GB','fr_FR','es_ES','de_DE','pt_BR','ru_RU','ja_JP','zh-Hans']
+  const TOP_LOCALES = ['en_GB', 'fr_FR', 'es_ES', 'de_DE', 'pt_BR', 'ru_RU', 'ja_JP', 'zh-Hans']
   const topAvailable = langs.filter(c => TOP_LOCALES.includes(c))
   const _topLngOpts = getLanguageOptionsSubset(langs, lang, topAvailable)
   const _allLngOpts = getLanguageOptions(langs, lang)
