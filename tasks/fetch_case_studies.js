@@ -24,7 +24,7 @@ function run() {
   if (jsonFeed) {
     try {
       const feed = JSON.parse(jsonFeed)
-      const items = (feed.items || []).filter(it => (it.tags || []).some(t => /case[- ]?stud/i.test(t))).map(it => ({
+      let items = (feed.items || []).filter(it => (it.tags || []).some(t => /case[- ]?stud/i.test(t))).map(it => ({
         id: it.id || it.url,
         title: it.title,
         excerpt: (it.summary || '').replace(/\s+/g, ' ').trim(),
@@ -32,7 +32,21 @@ function run() {
         url: it.url,
         pdf: null
       }))
-      if (items.length) return saveJSON('caseStudies.json', items)
+      // take top 5
+      if (items.length >= 5) {
+        return saveJSON('caseStudies.json', items.slice(0,5))
+      }
+      // pad to at least 5 with known fallbacks
+      const fallback = [
+        { id: 'namecheap', title: 'Namecheap', excerpt: 'Namecheap surpasses $73M in BTC revenue with 1.1m transactions through BTCPay', hero: '/img/case-studies/namecheap-featured.png', url: 'https://blog.btcpayserver.org/case-study-namecheap/', pdf: '/case-studies/namecheap.pdf' },
+        { id: 'bitcoin-atlantis', title: 'Bitcoin Atlantis', excerpt: '€115,100 from 8,750 transactions in 3 days.', hero: '/img/case-studies/bitcoin-atlantis-featured.png', url: 'https://blog.btcpayserver.org/case-study-bitcoin-atlantis/', pdf: '/case-studies/BitcoinAtlantis.pdf' },
+        { id: 'bitcoin-people', title: 'Bitcoin People', excerpt: "Built a mobile app atop BTCPay's API to scale to 270 merchants.", hero: '/img/case-studies/bitcoin-people.jpg', url: 'https://blog.btcpayserver.org/case-study-bitcoin-people/', pdf: '/case-studies/BitcoinPeople2024.pdf' },
+        { id: 'bitcoin-jungle', title: 'Bitcoin Jungle', excerpt: 'Enables 200+ stores in Costa Rica to embrace Bitcoin.', hero: '/img/case-studies/bitcoin-jungle.jpg', url: 'https://blog.btcpayserver.org/case-study-bitcoin-jungle-cr/', pdf: '/case-studies/BitcoinJungleCR2023.pdf' },
+        { id: 'hodlhodl', title: 'HodlHodl', excerpt: 'A Bitcoin business case using BTCPay Server.', hero: '/img/case-studies/hodlhodl.jpg', url: 'https://blog.btcpayserver.org/category/case-studies/', pdf: null }
+      ]
+      const seen = new Set(items.map(it => it.id))
+      for (const f of fallback) { if (items.length >= 5) break; if (!seen.has(f.id)) items.push(f) }
+      return saveJSON('caseStudies.json', items.slice(0,5))
     } catch {}
   }
 
@@ -45,9 +59,13 @@ function run() {
       hero: '/img/case-studies/namecheap-featured.png',
       url: 'https://blog.btcpayserver.org/case-study-namecheap/',
       pdf: '/case-studies/namecheap.pdf'
-    }
+    },
+    { id: 'bitcoin-atlantis', title: 'Bitcoin Atlantis', excerpt: '€115,100 from 8,750 transactions in 3 days.', hero: '/img/case-studies/bitcoin-atlantis-featured.png', url: 'https://blog.btcpayserver.org/case-study-bitcoin-atlantis/', pdf: '/case-studies/BitcoinAtlantis.pdf' },
+    { id: 'bitcoin-people', title: 'Bitcoin People', excerpt: "Built a mobile app atop BTCPay's API to scale to 270 merchants.", hero: '/img/case-studies/bitcoin-people.jpg', url: 'https://blog.btcpayserver.org/case-study-bitcoin-people/', pdf: '/case-studies/BitcoinPeople2024.pdf' },
+    { id: 'bitcoin-jungle', title: 'Bitcoin Jungle', excerpt: 'Enables 200+ stores in Costa Rica to embrace Bitcoin.', hero: '/img/case-studies/bitcoin-jungle.jpg', url: 'https://blog.btcpayserver.org/case-study-bitcoin-jungle-cr/', pdf: '/case-studies/BitcoinJungleCR2023.pdf' },
+    { id: 'hodlhodl', title: 'HodlHodl', excerpt: 'A Bitcoin business case using BTCPay Server.', hero: '/img/case-studies/hodlhodl.jpg', url: 'https://blog.btcpayserver.org/category/case-studies/', pdf: null }
   ]
-  saveJSON('caseStudies.json', fallback)
+  saveJSON('caseStudies.json', fallback.slice(0,5))
 }
 
 try {
@@ -56,4 +74,3 @@ try {
 } catch (e) {
   console.error('🚨 Could not generate case studies:', e.message)
 }
-

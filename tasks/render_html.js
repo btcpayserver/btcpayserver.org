@@ -66,13 +66,28 @@ function buildIntegrations(json) {
   return { grid: items, filters: chips }
 }
 
+function ensureMinCaseStudies(list) {
+  const fallback = [
+    { id: 'namecheap', title: 'Namecheap', excerpt: 'Namecheap surpasses $73M in BTC revenue with 1.1m transactions through BTCPay', hero: '/img/case-studies/namecheap-featured.png', url: 'https://blog.btcpayserver.org/case-study-namecheap/', pdf: '/case-studies/namecheap.pdf' },
+    { id: 'bitcoin-atlantis', title: 'Bitcoin Atlantis', excerpt: "€115,100 from 8,750 transactions in 3 days.", hero: '/img/case-studies/bitcoin-atlantis-featured.png', url: 'https://blog.btcpayserver.org/case-study-bitcoin-atlantis/', pdf: '/case-studies/BitcoinAtlantis.pdf' },
+    { id: 'bitcoin-people', title: 'Bitcoin People', excerpt: "Built a mobile app atop BTCPay's API to scale to 270 merchants.", hero: '/img/case-studies/bitcoin-people.jpg', url: 'https://blog.btcpayserver.org/case-study-bitcoin-people/', pdf: '/case-studies/BitcoinPeople2024.pdf' },
+    { id: 'bitcoin-jungle', title: 'Bitcoin Jungle', excerpt: 'Enables 200+ stores in Costa Rica to embrace Bitcoin.', hero: '/img/case-studies/bitcoin-jungle.jpg', url: 'https://blog.btcpayserver.org/case-study-bitcoin-jungle-cr/', pdf: '/case-studies/BitcoinJungleCR2023.pdf' },
+    { id: 'hodlhodl', title: 'HodlHodl', excerpt: 'A Bitcoin business case using BTCPay Server.', hero: '/img/case-studies/hodlhodl.jpg', url: 'https://blog.btcpayserver.org/category/case-studies/', pdf: null }
+  ]
+  const seen = new Set((list||[]).map(it => it.id || it.title))
+  const padded = [...(list||[])]
+  for (const f of fallback) { if (padded.length >= 5) break; if (!seen.has(f.id)) padded.push(f) }
+  return padded.slice(0,5)
+}
+
 function buildCaseStudiesBlock (labels = { viewCaseStudy: 'View', downloadPdf: 'Download PDF', viewAll: 'View all', rl: 'right' }) {
   try {
     const file = require('path').resolve(__dirname, '../data/caseStudies.json')
     if (existsSync(file)) {
-      const json = JSON.parse(readFileSync(file, 'utf8'))
-      if (Array.isArray(json) && json.length) {
-        const items = json.map(item => {
+      const json = JSON.parse(readFileSync(file, 'utf8')) || []
+      const list = ensureMinCaseStudies(json)
+      if (Array.isArray(list) && list.length) {
+        const items = list.map(item => {
           const img = item.hero || '/img/case-studies/placeholder.png'
           const title = item.title || ''
           const excerpt = item.excerpt || ''
