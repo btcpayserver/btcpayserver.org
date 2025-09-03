@@ -66,7 +66,7 @@ function buildIntegrations(json) {
   return { grid: items, filters: chips }
 }
 
-function buildCaseStudiesBlock () {
+function buildCaseStudiesBlock (labels = { viewCaseStudy: 'View', downloadPdf: 'Download PDF', viewAll: 'View all', rl: 'right' }) {
   try {
     const file = require('path').resolve(__dirname, '../data/caseStudies.json')
     if (existsSync(file)) {
@@ -86,15 +86,15 @@ function buildCaseStudiesBlock () {
               <h3>${title}</h3>
               <p>${excerpt}</p>
               <div class="buttons">
-                <a href="${url}" target="_blank" rel="noopener">{{view-case-study}}</a>
-                ${pdf ? `<a href="${pdf}" target="_blank" rel="noopener">{{download-pdf}}</a>` : ''}
+                <a href="${url}" target="_blank" rel="noopener">${labels.viewCaseStudy}</a>
+                ${pdf ? `<a href="${pdf}" target="_blank" rel="noopener">${labels.downloadPdf}</a>` : ''}
               </div>
             </li>`
         }).join('')
         return `<ul>${items}</ul>\n        <p>
-          <a title="{{view-all-case-studies}}" class="modernLink featuresBlockLink"
-          href="https://blog.btcpayserver.org/category/case-studies/" target="blank_">{{view-all-case-studies}}&nbsp;&nbsp;<i
-            class="fas fa-long-arrow-alt-{{_rl}}"></i>
+          <a title="${labels.viewAll}" class="modernLink featuresBlockLink"
+          href="https://blog.btcpayserver.org/category/case-studies/" target="blank_">${labels.viewAll}&nbsp;&nbsp;<i
+            class="fas fa-long-arrow-alt-${labels.rl}"></i>
           </a>
         </p>`
       }
@@ -112,8 +112,8 @@ function buildCaseStudiesBlock () {
           <h3>Namecheap</h3>
           <p>Namecheap surpasses $73M in BTC revenue with 1.1m transactions through BTCPay</p>
           <div class="buttons">
-            <a href="https://blog.btcpayserver.org/case-study-namecheap/" target="_blank" rel="noopener">{{view-case-study}}</a>
-            <a href="/case-studies/namecheap.pdf" target="_blank" rel="noopener">{{download-pdf}}</a>
+            <a href="https://blog.btcpayserver.org/case-study-namecheap/" target="_blank" rel="noopener">${labels.viewCaseStudy || 'View case study'}</a>
+            <a href="/case-studies/namecheap.pdf" target="_blank" rel="noopener">${labels.downloadPdf || 'Download PDF'}</a>
           </div>
         </li>
         <li>
@@ -123,8 +123,8 @@ function buildCaseStudiesBlock () {
           <h3>Bitcoin Atlantis</h3>
           <p>€115,100 from 8,750 Transactions in 3 Days, Showcasing Bitcoin's Role as a Payment Method.</p>
           <div class="buttons">
-            <a href="https://blog.btcpayserver.org/case-study-bitcoin-atlantis/" target="_blank" rel="noopener">{{view-case-study}}</a>
-            <a href="/case-studies/BitcoinAtlantis.pdf" target="_blank" rel="noopener">{{download-pdf}}</a>
+            <a href="https://blog.btcpayserver.org/case-study-bitcoin-atlantis/" target="_blank" rel="noopener">${labels.viewCaseStudy || 'View case study'}</a>
+            <a href="/case-studies/BitcoinAtlantis.pdf" target="_blank" rel="noopener">${labels.downloadPdf || 'Download PDF'}</a>
           </div>
         </li>
         <li>
@@ -134,8 +134,8 @@ function buildCaseStudiesBlock () {
           <h3>Bitcoin People</h3>
           <p>Bitcoin People built a mobile app on top of BTCPay's API to scale bitcoin to 270 merchants.</p>
           <div class="buttons">
-            <a href="https://blog.btcpayserver.org/case-study-bitcoin-people/" target="_blank" rel="noopener">{{view-case-study}}</a>
-            <a href="/case-studies/BitcoinPeople2024.pdf" target="_blank" rel="noopener">{{download-pdf}}</a>
+            <a href="https://blog.btcpayserver.org/case-study-bitcoin-people/" target="_blank" rel="noopener">${labels.viewCaseStudy || 'View case study'}</a>
+            <a href="/case-studies/BitcoinPeople2024.pdf" target="_blank" rel="noopener">${labels.downloadPdf || 'Download PDF'}</a>
           </div>
         </li>
         <li>
@@ -145,14 +145,14 @@ function buildCaseStudiesBlock () {
           <h3>Bitcoin Jungle</h3>
           <p>Bitcoin Jungle enables 200+ stores in Costa Rica to embrace Bitcoin.</p>
           <div class="buttons">
-            <a href="https://blog.btcpayserver.org/case-study-bitcoin-jungle-cr/" target="_blank" rel="noopener">{{view-case-study}}</a>
-            <a href="/case-studies/BitcoinJungleCR2023.pdf" target="_blank" rel="noopener">{{download-pdf}}</a>
+            <a href="https://blog.btcpayserver.org/case-study-bitcoin-jungle-cr/" target="_blank" rel="noopener">${labels.viewCaseStudy || 'View case study'}</a>
+            <a href="/case-studies/BitcoinJungleCR2023.pdf" target="_blank" rel="noopener">${labels.downloadPdf || 'Download PDF'}</a>
           </div>
         </li>
       </ul>
       <p>
-        <a title="{{view-all-case-studies}}" class="modernLink featuresBlockLink"
-        href="https://blog.btcpayserver.org/category/case-studies/" target="blank_">{{view-all-case-studies}}&nbsp;&nbsp;<i
+        <a title="${labels.viewAll || 'View all case studies'}" class="modernLink featuresBlockLink"
+        href="https://blog.btcpayserver.org/category/case-studies/" target="blank_">${labels.viewAll || 'View all case studies'}&nbsp;&nbsp;<i
           class="fas fa-long-arrow-alt-{{_rl}}"></i>
         </a>
       </p>`
@@ -206,7 +206,12 @@ langs.forEach(lang => {
   const _lngst = directory === 'en' ? '' : '/' + directory;
   const _canonical = `https://btcpayserver.org/${directory}`
   const _hreflangLinks = buildHreflangLinks(langs)
-  const _caseStudiesBlock = buildCaseStudiesBlock()
+  const _caseStudiesBlock = buildCaseStudiesBlock({
+    viewCaseStudy: (translations['view-case-study'] || master['view-case-study'] || 'View case study'),
+    downloadPdf: (translations['download-pdf'] || master['download-pdf'] || 'Download PDF'),
+    viewAll: (translations['view-all-case-studies'] || master['view-all-case-studies'] || 'View all case studies'),
+    rl: isRtl ? 'left' : 'right'
+  })
   const integrations = loadJSON('../data/integrations.json', [])
   const builtInt = buildIntegrations(integrations)
   const tmplVars = Object.assign({}, master, translations, {
