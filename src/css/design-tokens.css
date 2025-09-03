@@ -325,10 +325,7 @@ html, body {
 }
 
 /* When JS is active, disable native scrolling and snap; use programmatic centering */
-.js-vc .vc-track {
-  overflow: visible;
-  scroll-snap-type: none;
-}
+.js-vc .vc-track { overflow: visible; scroll-snap-type: none; }
 
 .vc-card {
   flex: 0 0 var(--vc-card-width, 88%);
@@ -439,6 +436,8 @@ html, body {
   border: 0;
   background: var(--color-border);
   cursor: pointer;
+  display: block;
+  aspect-ratio: 1/1;
 }
 
 .vc-dots button[aria-selected="true"] {
@@ -458,11 +457,15 @@ html, body {
 }
 
 @media (max-width: 600px) {
-  .video-carousel {
-    --vc-card-width: 90%;
-    --vc-card-overlap: 10%;
-  }
+  .video-carousel { --vc-card-width: 100%; --vc-card-overlap: 0%; }
+  .video-carousel .vc-nav { top: auto; bottom: -6px; transform: none; }
 }
+
+/* Fullscreen styles */
+.vc-inner:fullscreen, .vc-player:fullscreen { width: 100vw; height: 100vh; border-radius: 0; margin: 0; }
+.vc-inner:-webkit-full-screen, .vc-player:-webkit-full-screen { width: 100vw; height: 100vh; border-radius: 0; margin: 0; }
+.vc-inner:fullscreen iframe, .vc-player:fullscreen iframe { width: 100%; height: 100%; }
+.vc-inner:-webkit-full-screen iframe, .vc-player:-webkit-full-screen iframe { width: 100%; height: 100%; }
 
 @media (prefers-reduced-motion: reduce) {
   .vc-track {

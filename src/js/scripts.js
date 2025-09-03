@@ -180,6 +180,28 @@ if (document.getElementById("backgroundBubbles")) {
   // mark JS-enhanced
   root.classList.add('js-vc');
 
+  function isSmallScreen() { return window.innerWidth <= 700; }
+  function isLandscape() { return window.innerWidth > window.innerHeight; }
+
+
+  function isSmallScreen() { return window.innerWidth <= 700; }
+  function isLandscape() { return window.innerWidth > window.innerHeight; }
+  function reqFullscreen(el) {
+    try {
+      if (el.requestFullscreen) return el.requestFullscreen();
+      if (el.webkitRequestFullscreen) return el.webkitRequestFullscreen();
+      if (el.msRequestFullscreen) return el.msRequestFullscreen();
+    } catch(_) {}
+  }
+  function exitFullscreen() {
+    const d = document;
+    try {
+      if (d.exitFullscreen) return d.exitFullscreen();
+      if (d.webkitExitFullscreen) return d.webkitExitFullscreen();
+      if (d.msExitFullscreen) return d.msExitFullscreen();
+    } catch(_) {}
+  }
+
   function centerActivePx() {
     const active = cards[i];
     if (!active) return 0;
@@ -199,12 +221,16 @@ if (document.getElementById("backgroundBubbles")) {
       <button class="vc-play" aria-label="Play video">▶</button>`;
   }
 
-  function makeIframe(card, autoplay) {
+  function makeIframe(card, autoplay, requestFs) {
     const player = card.querySelector('.vc-player');
     if (!player || !player.dataset.yt) return;
     const id = player.dataset.yt;
     const auto = autoplay ? '1' : '0';
     player.innerHTML = `<iframe class="unfetteredVideoFrame" src="https://www.youtube-nocookie.com/embed/${id}?autoplay=${auto}" title="YouTube video player" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+    if (requestFs && isSmallScreen()) {
+      const inner = card.querySelector('.vc-inner') || player;
+      reqFullscreen(inner);
+    }
   }
 
   function stopNonActive() {
@@ -242,7 +268,7 @@ if (document.getElementById("backgroundBubbles")) {
     // autoplay if requested and current not yet iframe
     if (pendingAutoplay) {
       const player = cards[i].querySelector('.vc-player');
-      if (player && !player.querySelector('iframe')) makeIframe(cards[i], true);
+      if (player && !player.querySelector('iframe')) makeIframe(cards[i], true, true);
       pendingAutoplay = false;
     }
   }
@@ -265,7 +291,7 @@ if (document.getElementById("backgroundBubbles")) {
     if (!btn) return;
     const card = e.target.closest('.vc-card');
     const idx = cards.indexOf(card);
-    if (idx === i) makeIframe(card, true);
+    if (idx === i) makeIframe(card, true, true);
   });
 
   // touch swipe
@@ -303,6 +329,19 @@ if (document.getElementById("backgroundBubbles")) {
   cards.forEach(makeThumb);
   update();
   window.addEventListener('resize', ()=> update());
+  window.addEventListener('orientationchange', ()=>{
+    const active = cards[i];
+    if (!active) return;
+    const hasIframe = !!active.querySelector('.vc-player iframe');
+    if (window.innerWidth <= 700) {
+      if (window.innerWidth > window.innerHeight && hasIframe && !document.fullscreenElement) {
+        const inner = active.querySelector('.vc-inner') || active.querySelector('.vc-player');
+        if (inner && inner.requestFullscreen) try { inner.requestFullscreen(); } catch(_) {}
+      } else if (window.innerWidth <= window.innerHeight && document.fullscreenElement) {
+        if (document.exitFullscreen) try { document.exitFullscreen(); } catch(_) {}
+      }
+    }
+  });
 })();
 
 // Language modal + search
