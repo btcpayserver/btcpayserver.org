@@ -486,7 +486,7 @@ a {
   display: none;
 }
 #contributors,
-#caseStudies,
+.case-studies-container,
 .video-holder-watch-video {
   text-align: center;
   background: linear-gradient(
@@ -503,16 +503,21 @@ a {
 .video-holder-watch-video + .video-holder-watch-video {
   margin-top: 0 !important;
 }
+.case-studies-wrapper{
+  width: 100vw;
+  overflow: scroll;
+}
 #caseStudies h2 {
   margin: 0 0 3rem;
 }
 #caseStudies ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  max-width: 990px;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+  width: max-content;
   gap: 2rem;
-  justify-content: center;
+  /* justify-content: center; */
   margin: 0 auto 3rem;
   padding: 0;
 }
@@ -525,6 +530,8 @@ a {
   border: 1px solid var(--shadow-20);
   overflow: hidden;
   background: var(--light-grey);
+  max-width: 80vw;
+  width: 380px;
 }
 #caseStudies ul li img {
   width: 100%;
