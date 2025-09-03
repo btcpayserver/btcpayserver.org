@@ -109,8 +109,12 @@ function buildCaseStudiesBlock(labels = { viewCaseStudy: 'View', downloadPdf: 'D
         return `
         <div class="case-studies-wrapper">
 					<div class="page-item case-studies -bg-grey-l">
-            <ul>${items}</ul>
+            <ul aria-live="polite">${items}</ul>
           </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="prev" aria-label="Scroll left">‹</button>
+          <button class="next" aria-label="Scroll right">›</button>
         </div>
         <p>
           <a title="${labels.viewAll}" class="modernLink featuresBlockLink"
@@ -126,7 +130,7 @@ function buildCaseStudiesBlock(labels = { viewCaseStudy: 'View', downloadPdf: 'D
   // Fallback to previous static block
   return `<div class="case-studies-wrapper">
 					<div class="page-item case-studies -bg-grey-l">
-            <ul>
+            <ul aria-live="polite">
             <li>
               <a href="https://blog.btcpayserver.org/case-study-namecheap/" target="_blank" rel="noopener">
                 <img src="/img/case-studies/namecheap-featured.png" alt="BTCPay Server Namecheap Study" loading="lazy" decoding="async" />
@@ -173,6 +177,10 @@ function buildCaseStudiesBlock(labels = { viewCaseStudy: 'View', downloadPdf: 'D
             </li>
           </ul>
         </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="prev" aria-label="Scroll left">‹</button>
+        <button class="next" aria-label="Scroll right">›</button>
       </div>
       <p>
         <a title="${labels.viewAll || 'View all case studies'}" class="modernLink featuresBlockLink"

@@ -508,8 +508,22 @@ a {
 }
 .case-studies-wrapper{
   width: 100vw;
-  overflow: scroll;
   padding-left: 5vw;
+  /* Horizontal-only scroll */
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* Smooth & snap */
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 5vw;
+  /* iOS momentum */
+  -webkit-overflow-scrolling: touch;
+  /* Prevent chain scrolling into the page */
+  overscroll-behavior-x: contain;
+  /* Edge fade to hint more content */
+  --fade: 40px;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, var(--light-grey-greenish) 10%, var(--light-grey-greenish) 90%, transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0, var(--light-grey-greenish) 10%, var(--light-grey-greenish) 90%, transparent 100%);
 }
 .case-studies h2 {
   margin: 0 0 3rem;
@@ -517,16 +531,17 @@ a {
 .case-studies ul {
   list-style: none;
   display: flex;
-  /* flex-wrap: wrap; */
   flex-direction: row;
-  width: max-content;
   gap: 2rem;
-  /* justify-content: center; */
-  margin: 0 auto 3rem;
+  margin: 0 0 3rem;
   padding: 0;
+  width: max-content; /* allow natural overflow */
 }
 .case-studies ul li {
-  flex: 0 1 410px;
+  flex: 0 0 auto;
+  width: 380px;             /* stable card width */
+  max-width: 80vw;          /* mobile safety */
+  min-width: 320px;         /* optional lower bound */
   display: flex;
   flex-direction: column;
   gap: .5rem;
@@ -534,8 +549,9 @@ a {
   border: 1px solid var(--shadow-20);
   overflow: hidden;
   background: var(--light-grey);
-  max-width: 80vw;
-  min-width: 380px;
+  /* snap each card neatly to the left edge */
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 .case-studies ul li img {
   width: 100%;
@@ -572,6 +588,21 @@ a {
 .case-studies ul li .buttons a:hover {
   color: var(--sunkist-lime);
   border-color: var(--sunkist-lime);
+}
+
+/* Horizontal scrollbar polish */
+.case-studies-wrapper::-webkit-scrollbar { height: 10px; }
+.case-studies-wrapper::-webkit-scrollbar-track { background: transparent; }
+.case-studies-wrapper::-webkit-scrollbar-thumb { background: var(--shadow-20); border-radius: 6px; }
+
+/* Optional: controls container (only applies if buttons are added in HTML) */
+.carousel-controls { display: flex; gap: .5rem; justify-content: flex-end; padding: 0 5vw; margin-top: -1rem; }
+.carousel-controls button { appearance: none; border: 1px solid var(--shadow-20); background: var(--white); border-radius: 999px; padding: .5rem .9rem; cursor: pointer; transition: box-shadow .2s ease; }
+.carousel-controls button:hover { box-shadow: 0 6px 18px var(--shadow-10); }
+.carousel-controls button:disabled { opacity: .5; cursor: default; box-shadow: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .case-studies-wrapper { scroll-behavior: auto; }
 }
 .check-list {
   margin-left: 2rem;

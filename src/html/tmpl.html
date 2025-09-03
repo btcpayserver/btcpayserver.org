@@ -214,7 +214,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="case-studies-container" id="caseStudies">
+			<div class="case-studies-container" id="caseStudies" role="region" aria-label="Case studies carousel">
 					<h2>{{case-studies}}</h2>
 						{{_caseStudiesBlock}}
 			</div>
@@ -428,7 +428,52 @@
 
 	</div>
 	<!-- END OF THEME CONTAINER -->
+</script>
 	<script src="/js/scripts.js"></script>
+<script>
+(function () {
+  const regions = document.querySelectorAll('.case-studies-container');
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  regions.forEach(region => {
+    const wrapper = region.querySelector('.case-studies-wrapper');
+    const prev = region.querySelector('.carousel-controls .prev');
+    const next = region.querySelector('.carousel-controls .next');
+    if (!wrapper || !prev || !next) return;
+
+    // Compute step from first card + gap if possible
+    const firstCard = region.querySelector('.case-studies ul li');
+    const style = firstCard ? window.getComputedStyle(firstCard) : null;
+    const cardWidth = firstCard ? firstCard.getBoundingClientRect().width : 380;
+    const gap = style ? parseFloat(window.getComputedStyle(region.querySelector('.case-studies ul')).gap || 32) : 32;
+    const STEP = Math.round(cardWidth + gap);
+
+    function scrollByStep(dir) {
+      wrapper.scrollBy({ left: dir * STEP, top: 0, behavior: prefersReduced ? 'auto' : 'smooth' });
+    }
+
+    function updateButtons() {
+      const { scrollLeft, scrollWidth, clientWidth } = wrapper;
+      prev.disabled = scrollLeft <= 0;
+      next.disabled = scrollLeft + clientWidth >= scrollWidth - 1;
+    }
+
+    prev.addEventListener('click', () => scrollByStep(-1));
+    next.addEventListener('click', () => scrollByStep(1));
+
+    wrapper.addEventListener('scroll', updateButtons, { passive: true });
+    window.addEventListener('resize', updateButtons);
+    updateButtons();
+
+    // Keyboard support when region is focused
+    region.tabIndex = 0;
+    region.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); scrollByStep(1); }
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); scrollByStep(-1); }
+    });
+  });
+})();
+</script>
 </body>
 
 </html>
