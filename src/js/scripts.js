@@ -459,3 +459,38 @@ if (document.getElementById("backgroundBubbles")) {
     onScroll();
   }
 })();
+
+// Contributors: staggered pop-in (Mexican wave) when in view
+(function(){
+  const grid = document.getElementById('donGr');
+  if (!grid) return;
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  const items = Array.from(grid.querySelectorAll('.ind-icon'));
+  if (!items.length) return;
+
+  // Prepare initial state only when JS is active
+  grid.classList.add('-wave-ready');
+  items.forEach((el, i) => el.style.setProperty('--i', String(i)));
+
+  function activate() {
+    grid.classList.add('is-inview');
+  }
+
+  if ('IntersectionObserver' in window) {
+    const section = document.getElementById('contributors') || grid;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          activate();
+          io.disconnect(); // fire once
+        }
+      });
+    }, { root: null, threshold: 0.15 });
+    io.observe(section);
+  } else {
+    // Fallback without IO: trigger shortly after load
+    setTimeout(activate, 200);
+  }
+})();
