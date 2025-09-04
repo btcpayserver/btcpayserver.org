@@ -385,3 +385,77 @@ if (document.getElementById("backgroundBubbles")) {
     });
   });
 })();
+
+// Integrations grid subtle parallax
+(function(){
+  const root = document.querySelector('.integrations-grid');
+  if (!root) return;
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  const items = Array.from(root.querySelectorAll('.svg-link'));
+  if (!items.length) return;
+
+  // Stable depth pattern; increase overall depth and avoid zeros for more motion
+  const pattern = [0.85, 0.55, 0.2, -0.45, -0.8, 0.35, -0.25, -0.6, 0.5, -0.3, 0.7, 0.15, -0.5, 0.4];
+  items.forEach((el, idx) => {
+    const d = parseFloat(el.getAttribute('data-depth'));
+    const depth = Number.isFinite(d) ? Math.max(-1, Math.min(1, d)) : pattern[idx % pattern.length];
+    // @ts-ignore - stash for quick access
+    el._depth = depth;
+    // small perf hint
+    el.style.willChange = 'transform';
+  });
+
+  const MAX_SHIFT_DESKTOP = 36; // px
+  const MAX_SHIFT_MOBILE = 22;  // px
+
+  let ticking = false;
+  function onScroll() {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  }
+
+  function update() {
+    ticking = false;
+    const rect = root.getBoundingClientRect();
+    const vh = window.innerHeight || document.documentElement.clientHeight || 800;
+    const maxShift = (vh <= 700) ? MAX_SHIFT_MOBILE : MAX_SHIFT_DESKTOP;
+
+    // Visibility progress of the grid through the viewport: 0..1
+    const total = rect.height + vh || 1;
+    const seen = Math.min(total, Math.max(0, vh - rect.top));
+    const phase = seen / total; // 0 at first touch, 1 when fully passed
+    const base = (phase - 0.5) * 2 * maxShift; // -max..max around the midpoint
+
+    items.forEach((el) => {
+      // @ts-ignore
+      const depth = el._depth || 0;
+      const shift = Math.round((base * depth) * 100) / 100;
+      el.style.transform = `translateY(${shift}px)`;
+    });
+  }
+
+  // Only run reactions while in view to save work
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          window.addEventListener('scroll', onScroll, { passive: true });
+          window.addEventListener('resize', onScroll);
+          onScroll();
+        } else {
+          window.removeEventListener('scroll', onScroll);
+          window.removeEventListener('resize', onScroll);
+        }
+      });
+    }, { root: null, threshold: 0 });
+    io.observe(root);
+  } else {
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    onScroll();
+  }
+})();
