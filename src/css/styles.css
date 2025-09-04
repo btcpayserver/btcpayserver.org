@@ -643,17 +643,17 @@ a {
   transform: scaleX(-1);
 }
 .hero-artwork {
-  max-height: 600px;
-  height: 60vh;
+  max-height: 640px;
+  height: 58vh;
   min-height: calc(280px*1.856 + 20px);
   position: relative;
-  max-width: 860px;
+  max-width: 880px;
   display: grid;
   grid-template-columns: 280px 1fr 3fr;
   grid-template-rows: auto;
   align-items: center;
   justify-items: center;
-  width: 50vw;
+  width: 100%;
 }
 .i-a {
   position: absolute;
@@ -676,6 +676,12 @@ a {
   z-index: 2;
   height: auto;
   max-height: calc(280px * 1.856);
+  animation: heroFloat 6s ease-in-out infinite;
+}
+@keyframes heroFloat {
+  0% { transform: translateY(0) }
+  50% { transform: translateY(-6px) }
+  100% { transform: translateY(0) }
 }
 .no-js-toggle-parent {
   display: grid;
@@ -1039,10 +1045,14 @@ img.n_imagery {
 }
 .prpmpLinkOrg {
   display: inline-flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
-  margin: auto;
+  align-items: center;
+  gap: 12px 15px;
+  margin: 1.25rem 0 0 0;
 }
+.prpmpLinkOrg .button { margin: 0; 
+text-align: left;padding: .75rem 1rem;}
 #lnNom {
   position: relative;
 }
@@ -1413,6 +1423,15 @@ a.nonJavascriptMessage {
   display: grid;
   display: var(--grid, grid);
   background: linear-gradient(var(--light-grey), var(--white));
+  position: relative;
+}
+.pageContainerTopBackground::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(1200px 600px at 80% 40%, color-mix(in oklab, var(--secondary-green) 14%, transparent), transparent 70%);
+  opacity: 0.4;
 }
 .flu_bgH {
   display: block;
@@ -1429,22 +1448,23 @@ g#triangularis {
   display: none;
 }
 .promoArea {
-  display: flex;
-  flex-flow: row;
-  width: 90vw;
-  max-width: 1300px;
-  margin: 0 auto 0 auto;
-  transition: 0.1s ease;
+  display: grid;
+  grid-template-columns: minmax(300px, 1.05fr) minmax(340px, 0.95fr);
   align-items: center;
+  gap: clamp(24px, 5vw, 80px);
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+  transition: 0.1s ease;
+  padding: clamp(20px, 5vw, 60px) 0 0;
 }
 .promoDetails {
   background: 0 0;
   border-radius: 20px;
-  padding: 60px 0 0 0;
-  margin: auto;
+  padding: 0;
+  margin: 0;
   text-align: left;
-  max-width: 600px;
-  width: calc(50% - 120px);
+  max-width: 640px;
+  width: auto;
 }
 .pageItem a.modernLink,
 .promoButton,
@@ -1471,20 +1491,19 @@ g#triangularis {
   margin-left: 10px;
 }
 .promoDetails p {
-  font-size: 16.5px;
+  font-size: clamp(16px, 1.9vw, 18px);
+  line-height: 1.6;
   font-family: "Open Sans", Verdana;
   font-weight: 300;
-  margin-top: 0;
-  grid-row: 2/3;
-  grid-column: 1/3;
+  margin: 0.75rem 0 0;
+  max-width: 60ch;
 }
 .promoDetails h1 {
   color: var(--primary-green);
-  margin-top: 0;
-  font-size: 2.2em;
-  grid-row: 1/2;
-  grid-column: 1/3;
-  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  font-size: clamp(2rem, 4.2vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 .promoDetails .lnHo {
   margin-top: 20px;
@@ -2124,6 +2143,10 @@ figure {
     grid-column: 1/6;
     max-width: 250px;
   }
+  .promoArea {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
   .features-section > ul {
     width: 100vw;
   }
@@ -2133,6 +2156,9 @@ figure {
 }
 }
 @media (max-width: 700px) {
+.prpmpLinkOrg {
+  gap: 10px;
+}
   .integrations-grid {
     display: flex;
     flex-direction: row;
@@ -2171,7 +2197,8 @@ figure {
     max-width: 50vw;
   }
   .promoArea {
-    flex-flow: column;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
   .promoDetails,
   .promoDetails.__fal-left {
