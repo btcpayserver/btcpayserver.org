@@ -66,11 +66,3 @@ npm start
 # Build the site for production
 npm run prod
 ```
-
-## Modernisation (Phase 1)
-
-- Added `src/css/design-tokens.css` for color/spacing tokens and baseline a11y.
-- Added canonical and hreflang tags to all pages; structured data for Organisation.
-- Images/iframes use `loading="lazy"` and `decoding="async"`; hero image uses `fetchpriority="high"`.
-- Build-time case studies feed scaffolding: `tasks/fetch_case_studies.js` writes `data/caseStudies.json`; homepage renders from this JSON or falls back to static content.
-- Optional image optimiser `tasks/optimize_images.js` outputs WebP/AVIF into `dist/img` when `sharp` is available.
