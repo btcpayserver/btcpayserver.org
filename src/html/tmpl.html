@@ -10,11 +10,18 @@
 	<meta property="og:title" content="BTCPay Server">
 	<meta property="og:description" content="{{btcpay-server-tag-line}}">
 	<meta property="og:image" content="/card.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="BTCPay Server">
+	<meta name="twitter:description" content="{{btcpay-server-tag-line}}">
+	<meta name="twitter:image" content="/card.png">
+	<link rel="canonical" href="{{_canonical}}">
+	{{_hreflangLinks}}
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="manifest" href="/site.webmanifest">
 	<meta name="msapplication-TileColor" content="#0f3b21">
 	<meta name="theme-color" content="#ffffff">
 	<title>BTCPay Server</title>
+	<link rel="stylesheet" type="text/css" href="/css/design-tokens.css">
 	<link rel="stylesheet" type="text/css" href="/css/fa_.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/styles.css">
 	<link rel="stylesheet" type="text/css" href="/css/page-styles.css">
@@ -52,10 +59,25 @@
                     "priceCurrency": "BTC"
                 }
             }
-        </script>
+		</script>
+	<script type='application/ld+json'>
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "BTCPay Server",
+        "url": "https://btcpayserver.org/",
+        "logo": "https://btcpayserver.org/apple-touch-icon.png",
+        "sameAs": [
+          "https://twitter.com/BtcpayServer",
+          "https://t.me/btcpayserver",
+          "https://github.com/btcpayserver"
+        ]
+      }
+    </script>
 </head>
 
 <body>
+	<a class="skip-link" href="#pageContainer">Skip to content</a>
 	<div id="p-nm-co-ho">
 		<div class="pageContainerTopBackground __fal-{{_rl}}">
 			<div>
@@ -65,23 +87,22 @@
 			<div class="promoArea" id="promoArea">
 				<div class="promoDetails __fal-{{_rl}}">
 					<h1 title="{{start-accepting-bitcoin}}">{{start-accepting-bitcoin}}</h1>
-          <p>{{btcpay-server-tag-line}}</p>
+					<p>{{btcpay-server-tag-line}}</p>
 
 					<div class="prpmpLinkOrg {{_align}}" dir="{{_to}}">
-						<a title="{{live-demo}}" class="button-pri button" href="#watchVideo" target="blank_">{{learn-more}}&nbsp;&nbsp;<i
-								class="fas fa-play-circle"></i>
-            </a>
-
-						<a href="{{_lngst}}donate" class="button-sec button">{{donate}}&nbsp;&nbsp;<i class="fas fa-arrow-{{_rl}}"></i>
-						</a>
+						<a title="{{getting-started}}" class="button-pri button" href="https://docs.btcpayserver.org/Guide/"
+							target="_blank" rel="noopener">{{getting-started}}&nbsp;&nbsp;<i class="fas fa-arrow-{{_rl}}"></i></a>
+						<a href="https://mainnet.demo.btcpayserver.org" class="button-sec button" target="_blank"
+							rel="noopener">{{live-demo}}&nbsp;&nbsp;<i class="fas fa-play-circle"></i></a>
 					</div>
 				</div>
 				<div class="pos-rel">
 					<div class="dotted-back dots1"></div>
 
 					<div class="hero-artwork">
-						<img alt="Server" id="server-image" src="/img/server-light.png" class="i-a" />
-						<img alt="Invoice" id="invoice-image" src="/img/invoice-light.svg" class="i-b" />
+						<img alt="Server" id="server-image" src="/img/server-light.png" class="i-a" fetchpriority="high"
+							loading="eager" decoding="async" />
+						<img alt="Invoice" id="invoice-image" src="/img/invoice-light.svg" class="i-b" decoding="async" />
 					</div>
 				</div>
 			</div>
@@ -193,62 +214,10 @@
 					</ul>
 				</div>
 			</div>
-
-			<div class="page-item case-studies -bg-grey-l" id="caseStudies">
-				<h2>{{case-studies}}</h2>
-        <ul>
-			<li>
-				<a href="https://blog.btcpayserver.org/case-study-namecheap/" target="_blank">
-				  <img src="/img/case-studies/namecheap-featured.png" alt="BTCPay Server Namecheap Study" />
-				</a>
-				<h3>Namecheap</h3>
-				<p>Namecheap surpasses $73M in BTC revenue with 1.1m transactions through BTCPay</p>
-				<div class="buttons">
-				  <a href="https://blog.btcpayserver.org/case-study-namecheap/" target="_blank">{{view-case-study}}</a>
-				  <a href="/case-studies/namecheap.pdf" target="_blank">{{download-pdf}}</a>
-				</div>
-			  </li>
-			<li>
-				<a href="https://blog.btcpayserver.org/case-study-bitcoin-atlantis/" target="_blank">
-				  <img src="/img/case-studies/bitcoin-atlantis-featured.png" alt="Bitcoin Atlantis" />
-				</a>
-				<h3>Bitcoin Atlantis</h3>
-				<p>€115,100 from 8,750 Transactions in 3 Days, Showcasing Bitcoin's Role as a Payment Method.</p>
-				<div class="buttons">
-				  <a href="https://blog.btcpayserver.org/case-study-bitcoin-atlantis/" target="_blank">{{view-case-study}}</a>
-				  <a href="/case-studies/BitcoinAtlantis.pdf" target="_blank">{{download-pdf}}</a>
-				</div>
-			</li>
-          <li>
-            <a href="https://blog.btcpayserver.org/case-study-bitcoin-people/" target="_blank">
-              <img src="/img/case-studies/bitcoin-people.jpg" alt="BTCPay Server Bitcoin People Case Study" />
-            </a>
-            <h3>Bitcoin People</h3>
-            <p>Bitcoin People built a mobile app on top of BTCPay's API to scale bitcoin to 270 merchants.</p>
-            <div class="buttons">
-              <a href="https://blog.btcpayserver.org/case-study-bitcoin-people/" target="_blank">{{view-case-study}}</a>
-              <a href="/case-studies/BitcoinPeople2024.pdf" target="_blank">{{download-pdf}}</a>
-            </div>
-          </li>
-          <li>
-            <a href="https://blog.btcpayserver.org/case-study-bitcoin-jungle-cr/" target="_blank">
-              <img src="/img/case-studies/bitcoin-jungle.jpg" alt="BTCPay Server Bitcoin Jungle Case Study" />
-            </a>
-            <h3>Bitcoin Jungle</h3>
-            <p>Bitcoin Jungle enables 200+ stores in Costa Rica to embrace Bitcoin.</p>
-            <div class="buttons">
-              <a href="https://blog.btcpayserver.org/case-study-bitcoin-jungle-cr/" target="_blank">{{view-case-study}}</a>
-              <a href="/case-studies/BitcoinJungleCR2023.pdf" target="_blank">{{download-pdf}}</a>
-            </div>
-          </li>
-        </ul>
-        <p>
-          <a title="{{view-all-case-studies}}" class="modernLink featuresBlockLink"
-          href="https://blog.btcpayserver.org/category/case-studies/" target="blank_">{{view-all-case-studies}}&nbsp;&nbsp;<i
-            class="fas fa-long-arrow-alt-{{_rl}}"></i>
-          </a>
-        </p>
- 			</div>
+			<div class="case-studies-container" id="caseStudies" role="region" aria-label="Case studies carousel">
+					<h2>{{case-studies}}</h2>
+						{{_caseStudiesBlock}}
+			</div>
 
 			<div class="page-item-free -bg-grey" id="po0">
 				<div class="pageItemInnerSpacer -ta-c">
@@ -256,7 +225,8 @@
 
 					<div class="integrations-grid">
 
-						<a class="svg-link opencart" href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=44269">
+						<a class="svg-link opencart"
+							href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=44269">
 							<span class="opencart">{{opencart}}</span>
 						</a>
 
@@ -267,7 +237,7 @@
 						<a class="svg-link wix" href="https://docs.btcpayserver.org/Wix/">
 							<span class="wix">{{wix}}</span>
 						</a>
-						
+
 						<a class="svg-link pretix" href="https://docs.btcpayserver.org/Pretix/">
 							<span class="pretix">{{pretix}}</span>
 						</a>
@@ -277,7 +247,7 @@
 						</a>
 
 						<a class="svg-link api" href="https://docs.btcpayserver.org/API/Greenfield/v1/">
-						<span class="api">{{api}}</span>
+							<span class="api">{{api}}</span>
 						</a>
 
 						<a class="svg-link xenforo" href="https://docs.btcpayserver.org/Xenforo/">
@@ -285,7 +255,7 @@
 						</a>
 
 						<a class="svg-link woo" href="https://wordpress.org/plugins/btcpay-greenfield-for-woocommerce/">
-						<span class="woo">{{woocommerce}}</span>
+							<span class="woo">{{woocommerce}}</span>
 						</a>
 
 						<a class="svg-link phocacart" href="https://docs.btcpayserver.org/PhocaCart/">
@@ -293,7 +263,7 @@
 						</a>
 
 						<a class="svg-link drupal" href="https://docs.btcpayserver.org/Drupal/">
-						<span class="drupal">{{drupal}}</span>
+							<span class="drupal">{{drupal}}</span>
 						</a>
 
 						<a class="svg-link shopify" href="https://docs.btcpayserver.org/ShopifyV2/">
@@ -324,21 +294,24 @@
 							<span class="ghost">{{ghost}}</span>
 						</a>
 
-            			<a class="svg-link custom" href="https://docs.btcpayserver.org/CustomIntegration/">
+						<a class="svg-link custom" href="https://docs.btcpayserver.org/CustomIntegration/">
 							<span class="custom">{{custom-integration}}</span>
 						</a>
 
-						<a class="svg-link whmcs" href="https://marketplace.whmcs.com/product/7348-accept-bitcoin-payments-with-ease-and-no-fees-btcpay-server-for-whmcs">
+						<a class="svg-link whmcs"
+							href="https://marketplace.whmcs.com/product/7348-accept-bitcoin-payments-with-ease-and-no-fees-btcpay-server-for-whmcs">
 							<span class="whmcs">{{whmcs}}</span>
 						</a>
 
-						<a class="svg-link mag" href="https://docs.btcpayserver.org/Magento/"><span class="mag">{{magento}}</span></a>
+						<a class="svg-link mag" href="https://docs.btcpayserver.org/Magento/"><span
+								class="mag">{{magento}}</span></a>
 
 						<a class="svg-link presta" href="https://docs.btcpayserver.org/PrestaShop/">
-						<span class="presta">{{prestashop}}</span>
+							<span class="presta">{{prestashop}}</span>
 						</a>
 
-						<a class="svg-link zapier" href="https://zapier.com/apps/btcpay-server/integrations"><span class="zapier">{{zapier}}</span></a>
+						<a class="svg-link zapier" href="https://zapier.com/apps/btcpay-server/integrations"><span
+								class="zapier">{{zapier}}</span></a>
 
 						<a class="svg-link invoiceninja" href="https://docs.btcpayserver.org/InvoiceNinja/">
 							<span class="invoiceninja">{{invoiceninja}}</span>
@@ -346,22 +319,42 @@
 
 					</div>
 
-          <h2 class="mobile-only">{{integrations-and-plugins}}</h2>
+					<h2 class="mobile-only">{{integrations-and-plugins}}</h2>
 				</div>
 			</div>
 
-			<div class="page-item  video-holder-watch-video -bg-grey-l" id="watchVideo">
-				<h3>{{what-is-btcpay}}</h3>
-				<figure>
-					<iframe class="unfetteredVideoFrame" src="https://www.youtube-nocookie.com/embed/XHj7EVUunJ4" title="What is BTCPay Server"></iframe>
-				</figure>
- 			</div>
-
-			<div class="page-item  video-holder-watch-video -bg-grey-l">
-				<h3>{{btcpay-for-communities}}</h3>
-				<figure>
-					<iframe class="unfetteredVideoFrame" src="https://www.youtube-nocookie.com/embed/9n81qnzlPf8" title="BTCPay Server for local communities"></iframe>
-				</figure>
+			<div class="page-item -bg-grey-l" id="watchVideo">
+				<h2>{{what-is-btcpay}}</h2>
+				<div class="video-carousel__container">
+					<div class="video-carousel" data-vc>
+						<button class="vc-nav -prev" aria-label="Previous video" data-vc-prev>&larr;</button>
+						<ul class="vc-track" aria-live="polite">
+							<li class="vc-card is-active">
+								<div class="vc-inner">
+									<h4 class="vc-title">What is BTCPay Server</h4>
+									<div class="vc-player" data-yt="XHj7EVUunJ4">
+										<img class="vc-thumb" src="https://i.ytimg.com/vi/XHj7EVUunJ4/hqdefault.jpg"
+											alt="What is BTCPay Server thumbnail" loading="lazy" decoding="async" />
+										<button class="vc-play" aria-label="Play video">▶</button>
+									</div>
+								</div>
+							</li>
+							<li class="vc-card">
+								<div class="vc-inner">
+									<h4 class="vc-title">{{btcpay-for-communities}}</h4>
+									<div class="vc-player" data-yt="9n81qnzlPf8">
+										<img class="vc-thumb" src="https://i.ytimg.com/vi/9n81qnzlPf8/hqdefault.jpg"
+											alt="{{btcpay-for-communities}} thumbnail" loading="lazy" decoding="async" />
+										<button class="vc-play" aria-label="Play video">▶</button>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<button class="vc-nav -next" aria-label="Next video" data-vc-next>&rarr;</button>
+						<div class="vc-dots" role="tablist" aria-label="Slides"></div>
+						<div class="vc-aria sr-only" aria-live="polite" aria-atomic="true"></div>
+					</div>
+				</div>
 			</div>
 
 			<div class="page-item-free -bg-grey">
@@ -369,8 +362,8 @@
 					<div class="pageItemTextContent floatContentLeft">
 						<h2>{{docs}}</h2>
 						<p>{{need-help-using}}</p>
-						<a title="{{read-docs}}" class="modernLink" href="http://docs.btcpayserver.org/" target="blank_">{{read-docs}}&nbsp;&nbsp;<i
-								class="fas fa-long-arrow-alt-{{_rl}}"></i>
+						<a title="{{read-docs}}" class="modernLink" href="http://docs.btcpayserver.org/"
+							target="blank_">{{read-docs}}&nbsp;&nbsp;<i class="fas fa-long-arrow-alt-{{_rl}}"></i>
 						</a>
 
 						<p>{{having-a-technical}}</p>
@@ -379,7 +372,8 @@
 						</a>
 					</div>
 
-					<img class="floatContentRight standalone __fal-{{_rl}}" src="/img/docs.png" alt="Screenshot - docs.png">
+					<img class="floatContentRight standalone __fal-{{_rl}}" src="/img/docs.png" alt="Screenshot - docs.png"
+						loading="lazy" decoding="async">
 				</div>
 			</div>
 
@@ -412,12 +406,12 @@
 								href="https://www.youtube.com/channel/UCpG9WL6TJuoNfFVkaDMp9ug" target="blank_">
 								<i class="fab fa-youtube"></i>YouTube</a>
 						</div>
-          </div>
-        </div>
-      </div>
-      <div class="pageItem" id="contributors">
-        <div class="pageItemInnerSpacer -ta-c">
-          <div class="pageItemTextContent floatContentLeft">
+					</div>
+				</div>
+			</div>
+			<div class="pageItem" id="contributors">
+				<div class="pageItemInnerSpacer -ta-c">
+					<div class="pageItemTextContent floatContentLeft">
 						<div class="donation-type">
 							<h2>Contributors</h2>
 							<div class="individual-grid" id="donGr" style="    max-height: 50vh;overflow: auto; margin:0 auto auto">
@@ -434,6 +428,52 @@
 
 	</div>
 	<!-- END OF THEME CONTAINER -->
-<script src="/js/scripts.js"></script>
+</script>
+	<script src="/js/scripts.js"></script>
+<script>
+(function () {
+  const regions = document.querySelectorAll('.case-studies-container');
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  regions.forEach(region => {
+    const wrapper = region.querySelector('.case-studies-wrapper');
+    const prev = region.querySelector('.carousel-controls .prev');
+    const next = region.querySelector('.carousel-controls .next');
+    if (!wrapper || !prev || !next) return;
+
+    // Compute step from first card + gap if possible
+    const firstCard = region.querySelector('.case-studies ul li');
+    const style = firstCard ? window.getComputedStyle(firstCard) : null;
+    const cardWidth = firstCard ? firstCard.getBoundingClientRect().width : 380;
+    const gap = style ? parseFloat(window.getComputedStyle(region.querySelector('.case-studies ul')).gap || 32) : 32;
+    const STEP = Math.round(cardWidth + gap);
+
+    function scrollByStep(dir) {
+      wrapper.scrollBy({ left: dir * STEP, top: 0, behavior: prefersReduced ? 'auto' : 'smooth' });
+    }
+
+    function updateButtons() {
+      const { scrollLeft, scrollWidth, clientWidth } = wrapper;
+      prev.disabled = scrollLeft <= 0;
+      next.disabled = scrollLeft + clientWidth >= scrollWidth - 1;
+    }
+
+    prev.addEventListener('click', () => scrollByStep(-1));
+    next.addEventListener('click', () => scrollByStep(1));
+
+    wrapper.addEventListener('scroll', updateButtons, { passive: true });
+    window.addEventListener('resize', updateButtons);
+    updateButtons();
+
+    // Keyboard support when region is focused
+    region.tabIndex = 0;
+    region.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); scrollByStep(1); }
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); scrollByStep(-1); }
+    });
+  });
+})();
+</script>
 </body>
+
 </html>

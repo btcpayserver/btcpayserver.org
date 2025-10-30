@@ -77,19 +77,16 @@
 
             <div class="menuLinkParent mobileOnly">
                 <div class="menuLinkParent lnNomPar">
-
-                    <div id="lnNom" title="Language" class="menuLink nullTrans" onclick="toggle_('#LanguagePicker')">
+                    <div id="lnNom" title="Language" class="menuLink nullTrans" onclick="toggle_('#LanguagePickerMobile')">
                         <span class="nullTrans">
                             &nbsp;{{_exp0}}&nbsp;<i class="fas fa-caret-down nullTrans"></i>
                         </span>
-
-                        <ul id="LanguagePicker">
-                            {{_lngOpts}}
+                        <ul id="LanguagePickerMobile" class="compact-langs">
+                            {{_topLngOpts}}
+                            <li><a href="#" class="open-lang-modal" aria-haspopup="dialog">More…</a></li>
                         </ul>
-
                     </div>
                 </div>
-
             </div>
             <div class="menuLinkParent mobileOnly">
                 <a class="menuLink go_dark" href="#" data-theme-switch="dark">
@@ -110,26 +107,25 @@
 
             </div>
             <div class="menuLinkParent mobileOnly">
-                <a title="{{live-demo}}" class="button-light button-pri button" href="https://mainnet.demo.btcpayserver.org"
-                    target="blank_">{{live-demo}}</a>
+                <a title="{{getting-started}}" class="button-light button-pri button" href="https://docs.btcpayserver.org/Guide/" target="_blank" rel="noopener">{{getting-started}}</a>
+                <a title="{{live-demo}}" class="button-light button" href="https://mainnet.demo.btcpayserver.org"
+                    target="blank_" rel="noopener">{{live-demo}}</a>
             </div>
         </div>
     </div>
 
     <div class="desktop-only -inl-ti">
-        <a title="{{live-demo}}" class="button-light button-pri button" href="https://mainnet.demo.btcpayserver.org"
-            target="blank_">{{live-demo}}</a>&nbsp;&nbsp;&nbsp;
+        <a title="{{getting-started}}" class="button-light button-pri button" href="https://docs.btcpayserver.org/Guide/" target="_blank" rel="noopener">{{getting-started}}</a>&nbsp;&nbsp;&nbsp;
+        <a title="{{live-demo}}" class="button-light button" href="https://mainnet.demo.btcpayserver.org" target="blank_" rel="noopener">{{live-demo}}</a>&nbsp;&nbsp;&nbsp;
         <div class="menuLinkParent lnNomPar">
-
-            <div id="lnNom" title="Language" class="menuLink nullTrans" onclick="toggle_('#LanguagePicker')">
+            <div id="lnNom" title="Language" class="menuLink nullTrans" onclick="toggle_('#LanguagePickerTop')">
                 <span class="nullTrans">
                     &nbsp;{{_exp0}}&nbsp;<i class="fas fa-caret-down nullTrans"></i>
                 </span>
-
-                <ul id="LanguagePicker">
-                    {{_lngOpts}}
+                <ul id="LanguagePickerTop" class="compact-langs">
+                    {{_topLngOpts}}
+                    <li><a href="#" class="open-lang-modal" aria-haspopup="dialog">More…</a></li>
                 </ul>
-
             </div>
         </div>
 
@@ -152,5 +148,18 @@
         </div>
 
 
+    </div>
+    <!-- Language modal -->
+    <div id="langModal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle" hidden>
+        <div class="lang-modal__dialog" role="document">
+            <div class="lang-modal__header">
+                <h3 id="langModalTitle">Choose language</h3>
+                <button class="lang-modal__close" data-lang-modal-close aria-label="Close">×</button>
+            </div>
+            <div class="lang-modal__body">
+                <input id="langSearch" type="search" placeholder="Search language…" aria-label="Search language" />
+                <ul id="langAllList" class="lang-list">{{_allLngOpts}}</ul>
+            </div>
+        </div>
     </div>
 </div>
