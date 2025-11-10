@@ -172,7 +172,7 @@ body {
 }
 .invoiceninja {
   grid-column: 6/8;
-  grid-row: 8/12;
+  grid-row: 10/12;
 }
 .svg-link.joomla::before {
   background-image: url(/img/joomla.svg);
@@ -197,7 +197,7 @@ body {
   width: 60px;
 }
 .nopcommerce {
-  grid-column: 1/3;
+  grid-column: 2/3;
   grid-row: 7/10;
 }
 .svg-link.opencart::before {
@@ -216,6 +216,8 @@ body {
 }
 .svg-link.wix::before {
   background-image: url(/img/wix.svg);
+  width: 75px;
+  height: 75px;
 }
 .wix {
   grid-column: 4/7;
@@ -234,6 +236,15 @@ body {
 .bigcommerce {
   grid-column: 8/10;
   grid-row: 6/8;
+}
+.svg-link.easywebshop::before {
+  background-image: url(/img/easywebshop.svg);
+  height: 75px;
+  width: 75px;
+}
+.easywebshop {
+  grid-column: 7/8;
+  grid-row: 6/11;
 }
 .svg-link.presta::before {
   background-image: url(/img/presta.svg);
@@ -262,6 +273,8 @@ body {
 }
 .svg-link.ecwid::before {
   background-image: url(/img/ecwid.svg);
+  height: 75px;
+  width: 75px;
 }
 .ecwid {
   grid-column: 12/12;
