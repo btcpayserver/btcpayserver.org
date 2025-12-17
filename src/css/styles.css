@@ -144,12 +144,13 @@ body {
 }
 .svg-link.custom::before {
   background-image: url(/img/custom.svg);
-  height: 80px;
-  width: 80px;
+  height: 75px;
+  width: 75px;
 }
 .custom {
   grid-column: 4/5;
-  grid-row: 7/12;
+  grid-row: 6/12;
+ 
 }
 .svg-link.drupal::before {
   background-image: url(/img/drupal.svg);
@@ -167,12 +168,22 @@ body {
   grid-column: 4/8;
   grid-row: 5/10;
 }
+.svg-link.edd::before {
+  background-image: url(/img/edd.svg);
+  height: 90px;
+  width: 90px;
+}
+.edd {
+  grid-column: 4/8;
+  grid-row: 9/12;
+}
 .svg-link.invoiceninja::before {
   background-image: url(/img/invoiceninja.svg);
 }
 .invoiceninja {
-  grid-column: 6/8;
-  grid-row: 10/12;
+  grid-column: 7/8;
+  grid-row: 11/12;
+  padding-left: 20px;
 }
 .svg-link.joomla::before {
   background-image: url(/img/joomla.svg);
@@ -282,6 +293,8 @@ body {
 }
 .svg-link.ghost::before {
   background-image: url(/img/ghost.svg);
+  height: 75px;
+  width: 75px;
 }
 .ghost {
   grid-column: 5/10;
@@ -310,15 +323,17 @@ body {
 .phocacart {
   grid-column: 2/6;
   grid-row: 2/6;
+  padding-left: 90px;
 }
 .svg-link.xenforo::before {
   background-image: url(/img/xenforo.svg);
-  height: 90px;
-  width: 90px;
+  height: 80px;
+  width: 80px;
 }
 .xenforo {
-  grid-column: 8/12;
+  grid-column: 7/12;
   grid-row: 8/11;
+  padding-left: 20px;
 }
 .svg-link.zapier::before {
   background-image: url(/img/zapier.svg);
@@ -2104,6 +2119,7 @@ figure {
   }
   .svg-link {
     margin: 0 auto 40px auto;
+    padding: 0;
   }
   .svg-link::before {
     border: 20px solid transparent;
